@@ -1,0 +1,488 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head> <title>Artificial Neural Networks </title> </head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <!-- <img src="../images/logo.jpg" /> -->
+
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Artificial Neural Networks Virtual Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Hopfield model with stochastic update
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Objective
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            <p>
+<P>
+ The objective of this experiment is to illustrate the problem of false minima in the energy landscape and 
+the concept of probabilistic update in Hopfield model to overcome the effect of false minima. 
+<BR>
+ Following are the goals of the experiment: 
+</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P>To understand the problem of error in recall of a desired 
+			pattern in a Hopfield Model.</P>
+			<LI><P>To illustrate the concept of probabilistic update in 
+			Hopfield model and the effect of temperature parameter on the probabilistic update of states.</P> 
+		</UL>
+	</OL>
+</OL>
+<P><BR><BR>
+            </p>
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      </section>
+
+      <section id="experiment-article-section-2">
+   
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	<img src="../images/theory.jpg" />	
+	</div>
+
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+         Tutorial 
+        </div>
+
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+        <h3>Problem of false minima</h3>
+<p>
+It is possible to design (determine a set of weights) a Hopfield model with energy minima at desired states of the model, 
+which correspond to stable states of the network, provided these states are representable in the network.
+<BR>But for a given set of weights, there may be more than the desired number of stable states (energy minima). Some of them correspond to desired patterns 
+and the rest of the stable states correspond to false minima in the energy landscape. The presence of such additional stable states may result in recalling a pattern not present in the set
+of desired patterns. 
+</p>
+
+<p>
+The errors in recall due to the false minima can be reduced by the following methods: 
+</P>
+<OL>
+	<OL>
+		<OL>
+			<LI><P>Designing the minima in such a way that the given patterns correspond to the lowest energy minima in the energy landscape of the network.</P>
+			<LI><P>Using probabilistic (stochastic) update for the state for each unit, instead of the deterministic update of the states of the units as dictated 
+			by the activation value and the ouput function.</P>
+
+</OL></OL></OL>
+        <h2>Stochastic Update</h2>
+<p>
+Error in pattern recall due to the presence of false minima can be reduced significantly using suitable activation dynamics. 
+Let us assume that we are able to determine weights in such a way that the desired patterns are stored at the lowest energy minima. 
+The activation dynamics can be modified so that initially the network can move even to a state with higher energy from the current state, 
+and then settle down to a nearest deep energy minimum. Its possible to realize a transition to a higher energy state from the lower energy state 
+using stochastic update for each unit, instead of the deterministic update of the output function in the Hopfield Model. 
+In the stochastic update model, the transition from one state to another, is expressed in probabilistic terms, i.e., 
+probability of firing is greater than 0.5, if activation value exceeds the threshold and the probability of firing is less than 0.5, 
+if the activation value is below the threshold value.<BR>
+</p>
+<p>
+The output function is still a nonlinear function, either hard limiting or a sigmoid semilinear function. 
+</p>        
+<P>
+We can see that the probability function depends on a parameter called temperature (T). For T=0, the update is actually deterministic. 
+But as the temperature is increased, the probability of firing increases rapidly when the activation value exceeds the threshold. 
+</P>
+<p>Figure 1 shows the probability function and the output function of a given unit.</p>
+                <!--Figure HERE -->
+<table width = "750"><tr><td height = "450">
+                    <img src="images/probabilistic_update.jpg" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 1 : </b><em>Illustration of output function \( f(x) \) and probability of firing function \( p(1/x) \) for state update. </em></caption>
+</table>
+
+
+</div>
+        </section>
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-3">
+
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+        Illustration 
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+<h3>Illustration of stochastic update of Hopfield model and probabilistic transitions</h3>
+
+          <p> For the illustration, let us consider a three unit Hopfield model. At temperature T=0, the state update reduces to deterministic case. 
+But as with increase in the temperature parameter value, the activation dynamics become stochastic in nature. The probability of firing keeps changing 
+with change in the temperature according to the given probability function. For nonzero values of the temperature, there is a tendency to jump to states 
+having higher energy values. As T approaches infinity, the state update no longer depends on the activation values, and hence \( \Delta V \le 0\) is no longer true,
+where V is the energy.<BR><BR> 
+The following diagram (Figure 1) illustrates the behaviour of the state 010 at T=0 temperature. 
+</p>
+	   <!--Figure HERE -->
+		<table width = "800"><tr><td height = "600">
+		    <img src="images/ST0.png" style="height:90%;width:90%"/></td></tr>
+		    <caption align="bottom"><b>Figure 1: </b><em>State transition diagram for T = 0</em></caption>
+		</table>
+		<br>
+<p>
+If the temperature is increased to T = 0.3, the state transition diagram is as shown in the Figure 2. 
+It can be seen that there is nonzero probability of transition from a given state to a state having higher energy. 
+</p>
+		<!--Figure HERE -->
+		<table width = "800"><tr><td height = "600">
+	    <img src="images/ST1.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 2: </b><em>State transition diagram for T = 0.3 </em></caption>
+		</table>
+		<br>
+<p>
+The probability of transition to higher energy state increases as the value of the temperature parameter is increased further, as shown in Figure 3 for T = 1.0 .
+</p>
+		<!--Figure HERE -->
+	<table width = "800"><tr><td height = "600">
+            <img src="images/ST01.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 3: </b><em>State transition diagram for T = 1.0 </em></caption>
+                </table>
+
+		<h3>Simulated Annealing</h3>
+<p>
+For the 3-unit network, the stationary probability distribution of states for a given temperature is obtained using the equation 
+<p> \( p_{i}(t+1) = \sum\limits_{j}p_{j}(t)p(i/j), ~ for ~ i = 0,1,2, ..., 7 \)</p>
+<p> where \( p_{i}(t) \) is the probability of the state \(i\) at time t and \( p(i/j) \) is the transition probability from state \(j\) to state \(i\) for a given temperature.
+Starting with equal probabilities for all the states \( p_{i}(0) = \frac{1}{8}, ~ i = 0,1, ..., 7,~ \) the above equation converges to stationary probability distribution after 
+a few iterations. At that stage, the value of T is decreased according to some annealing schedule, until the value of T is close to zero. The resulting state transition
+probabilities for different iterations and at different temperatures of the annealing schedule can be seen in the table in second part of experiment. Note that at T = 0,
+there are only a few states which have nonzero probabilities and all other states have zero probability.
+The distribution of the nonzero probabilities are inversely related to the energy of those states according to Boltzmann-Gibb's law.
+The table illustrates the principle of simulated annealing for overwriting the effects of false minima.
+It is important to note that while performing the annealing of the network, we always slowly lower the temperature. 
+</p>
+</p>
+<table width = "800"><tr><td height = "600">
+<img src="images/ST2.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 4: </b><em>Initial state of annealing schedule at temperature T = 1.0</em> </caption>
+</table>
+
+<br>
+<table width = "800"><tr><td height = "600">
+<img src="images/ST3.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 5: </b><em>State of annealing schedules after running through for a couple of temperature values.</em></caption>
+</table>
+<br>
+
+
+<table width = "800"><tr><td height = "600">
+<img src="images/ST4.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"> <b>Figure 6: </b><em> Final annealing state for T = 0 </em></caption>
+</table>
+
+</div>
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	<img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+         Procedure 
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+<UL>
+	<LI><P>Ensure that the temperature pointer is set to zero intially.</p>
+	<LI><P>Move the mouse cursor over the states in the state transition diagram to find the possible transition from each state.</P>
+	<LI><P>Increase the temperature by clicking at some place on temperature bar.</P>
+	<LI><P>Move the mouse cursor again over the states in the state transition diagram, and note the change in the nature of the transition to stochastic update.</P>
+	<LI><P>Keep increasing and decreasing the temperature, and check the change in probability of transition to states with higher energy in the table provided in the experiment panel.</P>
+	<LI><P>Click on the "Click Here to View the Annealing Schedule" button to go to next panel.</P>
+	<LI><P>Make sure that the temprature of the bar is at 1.0, observe the values obtained for one run of the schedule.</P>
+	<LI><P>Click on successive lower values of temprature on the bar to lower the temprature from 1.0 to 0.0 .</P>
+	<LI><P>Observe the change in the state probabilities in the table provided.</P>
+</UL>
+	        
+          </p>
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-5">
+
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+        Experiment 
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+          <p>
+               <!-- <a href="http://speech.iiit.ac.in/vlabs/weboctave"> Click here to start weboctave.</a> -->
+          </p>
+
+                <IFRAME src="applet/index.html" width="1000" height="800" >     </IFRAME>		
+		<!--
+                <IFRAME src="stochastichopfield.html" width="1200" height="1200" >     </IFRAME>
+		-->
+
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+           Observations 
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <p>
+	<OL>
+		<OL>
+			<UL>
+				<LI><P>Take any state in the state transition diagram and observe the change in the probabilities of transition with change in temperature.</P>
+				<LI><P>Observe the trend of probability with temperature while transiting to a state with higher energy.</P>
+				<LI><P>Try annealing schedule for a couple of times with different set of temparatures, see whether the states settle to similar probabilities or different.</P>
+			</UL>
+		</OL>
+	</OL>
+            
+  
+            </p>
+
+          </div>
+
+        </section>
+
+	 
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-7">
+      
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+           Assignment 
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+
+<p>
+<OL>
+	<OL>
+		<OL>
+			<LI><P>Explain with the help of a state transition diagram the meaning of stable states and false minima.</P>
+			<LI><P>How to overcome the effects of false minima?</P>
+			<LI><P>What is meant by stochastic update of a neuron?</P>
+			<LI><P>Explain the concept of equilibrium in stochastic neural networks.</P>
+		</OL>
+	</OL>
+</OL>
+ </p>
+        
+          </div>
+
+        </section>
+
+ 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<section id="experiment-article-section-8">
+	<div id="experiment-article-section-8-icon" 
+	class="icon">
+
+	<!-- Enclose the icon image of your lab.-->
+	<img src="../images/readings.jpg" />
+	</div>
+	<div id="experiment-article-section-8-heading" 
+	class="heading">
+	References
+	</div>
+	<div id="experiment-article-section-8-content"                                                          
+	class="content">
+<p>
+	<OL>
+		<OL>
+			<UL>
+			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 165, 1999.</P>
+			<LI><P>B. Muller and J. Reinhardt, <i>Neural Networks</i>, New York: Springer-Verlag, pg.147, 1990.</P>
+			<LI><P>J.A. Hertz, A. Krogh, and R.G. Palmer, <i>Introduction to the Theory of Neural Computation</i>, New York: Addison-Wesley, 1991.</P>
+			</UL>
+		</OL>
+	</OL>
+</p>
+
+</div>
+
+</section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+  <footer id="lab-header" class="heading">
+  <!-- Put the content here-->
+  <div id="lab-header-heading" class="heading">
+  <!-- Write the name of your lab and link it to the home page
+  of your lab. -->
+
+  <center>
+  <table><tr>
+  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></table>
+  </center>
+  </div>
+
+  </footer>
+
+</div>		
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head> <title>Artificial Neural Networks </title> </head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+     <img src="../images/logo.jpg" />
+
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Artificial Neural Networks Virtual Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+        Perceptron learning 
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/objective.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Objective
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            <p>
+<P>The objective of this experiment is to illustrate the concept of
+perceptron learning in the context of pattern classification task.
+Following are the goals of the experiment:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P>To demonstrate the perceptron learning law.</P>
+			<LI><P>To illustrate the convergence of the weights for linearly
+			separable classes.</P>
+			<LI><P>To observe the behaviour of the neural network for two
+			classes which are not linearly separable.</P>
+		</UL>
+	</OL>
+</OL>
+<P><BR><BR>
+            </p>
+
+
+          <!-- <img src="../images/Pendulum.JPG" alt="pendulum"> -->
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      </section>
+
+      <section id="experiment-article-section-2">
+   
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	<img src="../images/theory.jpg" />
+	</div>
+
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+         Tutorial 
+        </div>
+
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+        <h3>Structure of two-layer feedforward neural network</h3>
+<p>
+A perceptron is a model of a biological neuron. 
+The input to a perceptron is an M-dimensional vector, and each
+component/dimension of the vector is scaled by a weight.
+The sum of weighted inputs is computed and compared against a threshold.
+If the weighted sum exceeds the threshold, the output of the perceptron is '1'. 
+Otherwise, the output of the perceptron is '-1' (or '0').
+The output function of a perceptron is hard-limiting function.
+Thus the output of the perceptron is binary in nature. 
+The following figure illustrates a perceptron.
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/Perceptron.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b> Figure 1: </b><em>Perceptron Model.</em></caption></table>
+<p>where M = number of the elements in the input vector
+</p>
+<p>
+A two-layer feedforward neural network with hard-limiting output function for the unit in the output layer can be used to perform the task of pattern classification.
+The number of units in the input layer is equal to the dimension of the input vectors. 
+The units in the input layer are all linear units, and the input layer merely contributes to fan-out the input to each of the the output units.
+The output layer may consist of one or more perceptrons.
+The number of perceptron units in the output layer depends on the number of distinct classes in the pattern classification task.
+If there are only two classes, then one perceptron in the output layer is sufficient.
+Two perceptrons in the output layer can be used when dealing with four different classes in the pattern classification task.
+Here, we consider a two-class classification problem, and hence only one perceptron in the output layer.
+</p>
+
+        <h3>Two-class pattern classification problem</h3>
+<p>
+Let us assume that one subset of input pattern vectors belong to one class, say, class \(A_1\), and the remaining subset of input pattern vectors belong to another class, say, class  \(A_2\).
+Let <b>a</b> = \( (a_1, a_2,...,a_M) \) denote an input pattern vector. 
+The objective in a pattern classification problem is to determine a set of weights <b>w</b> = \((w_1, w_2,...,w_M) \), such that the weighted sum
+<P>$$  \sum\limits_{i=1}^{M} w_i a_i \gt \theta, \qquad(1)$$ if \( a \) belongs to \(A_1\), and </P>
+<P> $$ \sum\limits_{i=1}^{M} w_i a_i \le \theta, \qquad(2)$$ if  \( a \) belongs to \(A_2\).</P>
+<P>The dividing surface between the two classes is given by</P>
+<P>$$ \sum\limits_{i=1}^{M} w_i a_i = \theta. \qquad(3)$$</P>
+<P>This equation represents a linear hyperplane in the \( M \)-dimensional space.
+For two-dimensional input vectors, this equation represents a straight line.
+The solution of the classification problem involves determining the weights and the threshold value, such that the resulting hyperplane acts as a dividing surface between the two classes.
+This is achieved by means of a learning rule, which specifies the manner in which the weights and the threshold value need to be updated.</P>
+</p>
+
+        <h3>Perceptron learning law</h3>
+<p>
+<P>The goal of perceptron learning law is to systematically adjust the weights and the threshold in such a manner that a dividing surface between two classes is obtained. 
+The perceptron learning law for a two-class pattern classification problem may be stated as follows:</P>
+<P> <b>w</b>\((m+1) = \)<b>w</b>\((m) + \eta \) <b>a</b>, if <b>a</b> \(\epsilon A_1 \) and <b>w</b>\(^{T}(m).\)<b>a</b> \( \le 0, \) and</P>
+<P> <b>w</b>\((m+1) = \)<b>w</b>\((m) - \eta \) <b>a</b>, if <b>a</b> \(\epsilon A_2 \) and <b>w</b>\(^{T}(m).\)<b>a</b> \( \gt 0.  \qquad(4)\)</P>
+<P>Here \( m \) denotes the index of iteration, or time step. 
+Also, <b>a</b> and <b>w</b> are augmented input and weight vectors. 
+That is</P>
+<P> <b>a</b> = \((-1, a_1,a_2,...,a_M)\), and </P> <P> <b>w</b> = \((\theta, w_1,w_2,...,w_M).\)</P>
+<P>The term \( \eta \) denotes the learning rate, and can be set to a small value (say, 0.1 to 0.5). 
+The value of \( \eta \) can be varied in each learning step, although it is kept constant in perceptron learning.
+Note that the learning rule modifies the weights only when an input vector is misclassified.
+When an input vector is classified correctly, there is no adjustment of weights and the threshold. 
+When presenting the input vectors to the network (any neural network in general), we use a term called epoch, which denotes one presentation of all the input pattern vectors to the network. 
+To obtain suitable weights, the learning rule may need to be applied for more than one epoch, typically several epochs. 
+After each epoch, it is verified whether the existing set of weights can correctly classify the input vectors. 
+If so, then the process of updating the weights is terminated. 
+Otherwise the process continues till a desired set of weights is obtained. 
+Note that once a separating hypersurface is achieved, the weights are not modified.</P>
+</p>
+	<h3>Perceptron convergence theorem</h3>
+<P>This theorem states that the perceptron learning law converges to a final set of weight values in a finite number of steps, if the classes are linearly separable. 
+The proof of this theorem first assumes that there exists a set of weights which can correctly classify the input vectors. 
+Then, a bound is obtained on the number of steps used to arrive at the optimum set of weights.
+This can be illustrated by the figure below, where begining intially with a set of random weight, the decision boundary finally 
+settles as a valid classifier in finite number of steps. </P>
+             <!--Figure HERE -->
+<table width="750"><tr><td height = "400">
+<img src = "perceptron_convergence.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b> Figure 2: </b><em>Example to illustrate the perceptron convergence in pattern classification problem.</em></caption></table>
+
+          </div>
+        </section>
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-3">
+
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+        Illustration 
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+<h3>Illustration of perceptron learning for two-dimensional input</h3>
+
+          <p>
+Consider two linearly separable classes, where each class consists of two-dimensional input pattern vectors. 
+An example of two-class classification problem is shown below. 
+The input vectors belonging to each class are shown in different colours in the following figure.
+The line is defined by the equation \( w_1 x + w_2 y = \theta.\) The straight line is defined by the initial values of the weights and the threshold.
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/perceptron_2class_1.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"> <b>Figure 1: </b><em>Initial weights and the classes to be separated.</em></caption></table>
+<p>
+<br>
+After the convergence of weights, the line separates the two classes. 
+This is shown in the following figure.
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/perceptron_2class_2.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"> <b>Figure 2: </b><em>After the weights have converged, the final values of weights determine the line separating the classes.</em></caption></table>
+<br>
+
+<h3>Convergence of weights and threshold value</h3>
+
+ <p>
+The following figures show the variation of threshold \( \theta \), and the weights \( w_1 \) and \(w_2\), as functions of the iteration index.
+The convergence of  \( \theta, w_1 \) and \( w_2 \) can be noted.
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/thetaVsTime.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b> Figure 3: </b><em>The variation in values of \(\theta\) with iterations as network reaches convergence.</em></caption></table>
+<br>
+
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/w1VsTime.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"> <b>Figure 4: </b><em>The variation in values of weight  \(w_1\) with iterations as network reaches convergence.</em></caption></table>
+<br>	
+
+<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/w2VsTime.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"> <b>Figure 5: </b><em>The variation in values of weight  \(w_2\) with iterations as network reaches convergence.</em></caption></table>
+<br>
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	<img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+         Procedure 
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+          <p>
+<UL>
+	<LI><P>Select a problem type for generating two classes as 'Linearly separable' or 'Linearly inseparable'.</P>
+	<LI><P>Choose for a number of samples per class and number of iterations the perceptron network must go through.</P>
+	<LI><P>Choose a step size to move over the number of iterations for display of results for the perceptron network.</P>
+	<LI><P>Intialize the perceptron network by clicking on the 'Init perceptron' button.</P>
+	<LI><P>Click on button for display of results according to the given step size.</P>
+</UL>
+	        
+          </p>
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-5">
+
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+        Experiment 
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+       class="content">
+
+
+<p>                <IFRAME src="perceptron.php" width="1000" height="1200" >     </IFRAME> </p>
+
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	<img src="../images/manual.jpg" />
+	    <!-- Enclose the icon image of your lab.-->
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+           Observations 
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <p>
+	<OL>
+		<OL>
+			<UL>
+				<LI><P>For the given perceptron network, observe that the intial assignment of weights is completely random.</P>
+				<LI><P>Observe the number of iterations required for the weights to converge, i.e. to achieve classification for the given case.</P>
+				<LI><P>Repeat the experiment for different number of samples per class and observe if there exists a 
+				       relation between the number of samples per class and iteration steps required to converge .</P>
+			</UL>
+		</OL>
+	</OL>
+            
+  
+            </p>
+
+          </div>
+
+        </section>
+
+	 
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-7">
+      
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+           Assignment 
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+
+<p>
+<OL>
+	<OL>
+		<OL>
+			<LI><P>Observe the behaviour of perceptron learning algorithm, for
+			two classes which are (a) linearly separable and (b) linearly inseparable. 
+			What is the number of iterations required in each case ?</P>
+			<LI><P>How does the perceptron behave if the two classes are not
+			linearly separable. Assuming that the two classes are overlapping,
+			do the weights converge, or do they oscillate around an optimum
+			value ? In either case, what is the nature of the separating
+			line/hyperplane.</P>
+		</OL>
+	</OL>
+</OL>
+ </p>
+        
+          </div>
+
+</section>
+
+<section id="experiment-article-section-8">
+	<div id="experiment-article-section-8-icon" 
+	class="icon">	
+	<img src="../images/readings.jpg" />			    
+	<!-- Enclose the icon image of your lab.-->
+	</div>  
+	<div id="experiment-article-section-8-heading" 
+	 class="heading">								  
+	   References								
+	</div>								
+	<div id="experiment-article-section-8-content" 								
+	 class="content">								
+<p>
+    <OL>
+	    <OL>
+		    <UL>
+			    <LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 100, 1999.</P>
+		    </UL>
+	    </OL>
+    </OL>
+</p>
+</div>
+</section>
+																													            </div>
+
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+  <footer id="lab-header" class="heading">
+  <!-- Put the content here-->
+  <div id="lab-header-heading" class="heading">
+  <!-- Write the name of your lab and link it to the home page
+  of your lab. -->
+
+  <center>
+  <table><tr>
+  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></table>
+  </center>
+  </div>
+
+  </footer>
+
+</div>		
+
+</body>
+</html>

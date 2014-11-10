@@ -1,0 +1,560 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head> <title>Artificial Neural Networks </title> </head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+       <img src="../images/logo.jpg" />
+
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Artificial Neural Networks Virtual Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+Parallel and distributed processing - II: Constraint satisfaction neural network models
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/objective.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Objective
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            <p>
+<P>The objective of Parallel and Distributed Processing (PDP) Models is to demonstrate some of the features of the biological neural networks.
+Constraint Satisfaction (CS) Model illustrates how we attempt to build concepts or arrive at conclusions based on some limited, partial, and sometimes partially erroneous knowledge.
+Following are the goals of the experiment:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P>To illustrate how a large number of weak constraints together will evolve into a definitive conclusion.</P>
+			<LI><P>To illustrate how our concepts of various types of rooms can be captured by the CS PDP model from samples of description of these rooms.</P>
+		</UL>
+	</OL>
+</OL>
+<P><BR><BR>
+            </p>
+
+
+          <!-- <img src="../images/Pendulum.JPG" alt="pendulum"> -->
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      </section>
+
+      <section id="experiment-article-section-2">
+   
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	<img src="../images/theory.jpg" />
+	</div>
+
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+         Tutorial 
+        </div>
+
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+        <h3>Example of recognition of handwritten characters</h3>
+<p> In an apparently simple task of recognition of handwritten characters, it is difficult to articulate
+precisely what we capture as features in the patterns of several samples of each character. But when we are presented with a new
+sample of a handwritten character, most of the time we have no difficulty in recognizing it correctly. It is likely that from the samples
+of a handwritten character we may have captured a large number of weak evidence of features in our memory, so that with a new sample
+as input, the memory relaxes to a state that satisfies as many constraints as possible to the maximum extent.
+</p>
+
+	<h3> Constraint satisfaction model</h3>
+
+<p>The above idea of constraint satisfaction can be captured in a
+PDP model consisting of several units and connections among the
+units. In this model the units represent <i>hypotheses</i> and the
+connections represent the <i>knowledge</i> in the form of constraints
+between any two hypotheses. It is obvious that the knowledge cannot
+be precise and hence the representation of the knowledge in the form
+of constraints may not also be precise. So the solution being sought
+is to satisfy simultaneously as many constraints as possible. Note
+that the constraints usually are weak constraints, and hence all of
+them need not be satisfied fully as in the normal constrained
+optimization problems. The degree of satisfaction is evaluated using
+a <i>goodness-of-fit</i> function, defined in terms of the output values of
+the units as well as the weights on the connections between units.
+
+</p>
+
+        <h3>Example of capturing the concept of the type of room from descriptors</h3>
+<p>
+The constraint satisfaction PDP model is illustrated here with an example of how our concepts of various types of rooms can be captured
+by the model from samples of description of these rooms. Let us assume that we collect data from subjects about their understanding of the following five types
+of rooms: Living room, kitchen, bedroom, office and bathroom. In order to elicit information from the subjects, 40 descriptors are
+provided to them, in terms of which each subject can be asked to give his/her view of the above room types. The descriptors are shown in the following figure.
+</p>
+                    <!--Figure HERE -->
+	   <table width = "750"><tr><td height="450">
+	   <img src="images/descriptors3.jpg" style="height:90%;width:90%" />
+	   </tr></td><caption align="bottom"> <b>Figure 1: </b><em>Table showing the descriptors used in the example.</em>
+	   </caption></table>
+<p>
+Each subject can be asked to mark which of these descriptors are
+valid for each room type. From the data collected from a number of
+subjects, the weights between units are computed. Here the units
+represent the descriptors. The output of a unit is binary, indicating
+whether the description is present or not. The connection weights
+between units are derived fiom the co-occurrence patterns of the
+descriptors in the responses of the subjects for all the room types.
+One method of deriving the weights is as follows:
+</p>
+<p>
+$$ w_{ij} = -log\frac{P(x_i = 0 ~ and ~ x_j = 1) P(x_i = 1 ~ and ~ x_j = 0)}{P(x_i = 0 ~ and ~ x_j = 0)P(x_i = 1 ~ and ~ x_j = 1)}  \qquad(1)$$
+</p>	
+
+<p>
+where \(w_{ij}\) represents the symmetric weight connecting the unit \(j\) and
+unit \(i\). The numerator represents the product of probabilities that the
+hypotheses of the units i and j are competing with each other, i.e.,
+one unit has the value \(x_i\) = 1 and the other has the value \(x_j\) = 0.
+The denominator represents the product of probabilities that the
+hypotheses of units i and j support each other. Thus if the evidence
+is greater for supporting hypotheses, then the weight \(w_{ij}\) will be
+positive, otherwise it is negative. Note that the probabilities are
+replaced by the relative frequencies in the data. In addition, each
+unit can have a bias reflecting the prior information about the
+hypothesis the unit represents. In this case the bias is given by
+$$ b_i = -log\frac{P(x_i=0)}{P(x_i=1)} \qquad(2)$$
+</p>
+
+<P>
+There can be direct evidence for a hypothesis through an external
+input. The corresponding input unit could be clamped indicating that
+the hypothesis is either always 'ON' or always 'OFF'. Other types of
+external input could be a graded one indicating a weak evidence.
+</P>
+<P>
+A constraint satisfaction model can be displayed by means of a
+Hinton diagram as shown in the following figure. Each larger square in the figure represents a unit. There
+are 40 units corresponding to 40 descriptors. Within the square of
+each unit a replica of all the 40 units are displayed as dots, each dot
+representing the unit in its relative position in the diagram. Around
+each dot, a white square indicates a positive weight connecting the
+unit representing the dot and the unit enclosing the dot. Thus for
+example, the white square on the second dot in the unit for 'ceiling'
+indicates that the 'walls' unit is connected to the ceiling unit with a
+positive weight. The size of the white square indicates the
+strength of the positive connection. Likewise in the last unit
+corresponding to 'oven', the small dark square around the last but
+one dot indicates that the units 'oven' and 'computer' are connected
+with a negative weight. There are many units which have no
+connections at all.
+</P>
+
+	<table width="750"><tr><td height="450">
+	<img src="images/figA2.jpg" style="height:90%;width:90%"/>
+	</tr></td><caption align="bottom"><b>Figure 2: </b><em>Hinton diagram for the 'rooms' example.</em></caption></table>
+
+<p>
+The model is allowed to relax by computing the next state for
+each unit selected at random, computing sum of its weighted inputs
+and thresholding the weighted sum using a hard-limiting output
+function. For a given external evidence, say like 'oven' and 'ceiling'
+in the following figure, the state of the network after each cycle is shown in
+the figure. After 17 cycles the model settles down to an equilibrium
+state closest to the given external evidence, and the state description
+gives a description of the concept of the room satisfying the external
+evidence, namely 'kitchen', in this case. Thus the PDP model clearly
+demonstrates the concepts of rooms captured by the weak constraints
+derived from the data given by the subjects. The model captures the
+concepts of the five room types at the equilibrium states
+corresponding to the description that best fits each room type. A
+goodness-of-fit function (<i>g</i>) is defined for each state (\(x_1,x_2, ...,x_N)\) ,
+where \(x_i\) = 1 or 0, as 
+$$ g = \sum\limits_{i,j=1}^{N}w_{ij} x_i x_j + \sum\limits_{i=1}^{N} e_i x_i + \sum\limits_{i=1}^{N} b_i x_i \qquad(3)$$
+</p>
+<p>
+where \(e_i\) is the external input given as output of the \(i^{th}\) unit and \(b_i\) is the bias of the
+unit \(i\). At each of the equilibrium states the goodness-of-fit function
+is maximum.
+The model not only captures the concepts of the room types, but
+it also gives an idea of their relative separation in the 40 dimensional
+space.
+
+</p>
+                 <!--Figure HERE -->
+	<table width="750"><tr><td height="650">
+            <img src="images/clamping.png" style="height:90%;width:90%"/>
+	</tr></td><caption align="bottom"><b>Figure 3: </b><em>The state of the CS model after each cycle, starting with an initial state where the units 'ceiling' and 'oven' are clamped.</em></caption>
+	</table>
+
+
+          </div>
+        </section>
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-3">
+
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+        Illustration 
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+ <h3>Illustration of Constraint Satisfaction Model</h3>
+<P>
+In this experiment, we use the PDP model called the Constraint Satisfaction Model, to 
+illustrate how we as humans, attempt building of concepts as well as to arrive at conclusions given weak evidences. 
+We start with a set of 40 descriptors used to characterize different room types. These descriptors can also be 
+referred as <i>hypotheses</i> . Also present with the model is the relationship between these descriptors, 
+acting as <i>constraints</i>, which can either be weak or strong. So eventually given a set of such hypotheses and 
+weak or strong constraints between these, we arrive at some knowledge towards a particular room type in this example.          
+The experiment first shows all the 40 descriptors involved in capturing knowledge for a given room type.
+</P>
+
+<P>
+<table width="800"><tr><td height = 600">
+<img src = "images/CSNN_1.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 1: </b><em>Experiment window showing descriptors and other buttons.</em></caption></table>
+</P>
+
+<P>
+The constraint satisfaction model which is illustrated in this experiment is already trained. 
+We can view the model using  <i>Hinton Diagram</i> by clicking on the 
+"CLICK" button on top. A new panel showing the Hinton Diagram for all the descriptors appears 
+where 40 hypotheses have their corresponding squares with constraints between them and other hypotheses 
+being displayed within the larger square. Moving the mouse over the squares presents their zoomed picture 
+at the bottom of the page. 
+</P>
+
+<P>
+<table width="800"><tr><td height = "600">
+<img src = "images/CSNN_2.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 2: </b><em>Experiment panel showing the Hinton diagram for the descriptors.</em></caption></table>
+</P>
+<P>
+In the above diagram we notice that each large square represents a unit. There are 40 units corresponding to 40 descriptors. 
+Within the square of each unit a replica of all the 40 units are displayed as smaller squares or dots, each dot representing the 
+unit in its relative position in the diagram. Around each dot, weak constraints are depicted by smaller squares in lighter gray shade. 
+Similarly  strong constraints is represented by darker gray or black color with a square of larger size. 
+There are many units which have no connections at all.
+</P>
+<P>
+The constraint satisfaction model is used to illustrate the ability of human beings to build concepts or arrive 
+at conclusion based on partial and sometime erroneous knowledge. The key idea of the model is that a large 
+number of weak constraints when put together, evolve into a definitive conclusion. To test the model, some units can 
+be clamped or say provided a constant external bias. As shown in the figure below, we can click on the units and have these clamped. 
+</P>
+<P>
+<table width="800"><tr><td height = "600">
+<img src = "images/CSNN_3.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 3: </b><em>Testing of the model by clamping some units.</em></caption></table>
+</P>
+<P>
+After clamping the model is allowed to relax by computing the next state for each unit selected at random. The 
+state computation is done by computing sum of the weighted inputs and thresholding the weighted sum using hard-limiting 
+output function.  
+After we click the test network button, we find that after running through 
+some iterations the network settles to a state where no further change in the state of descriptors is visible.
+And then the state description gives the description of the concept of the room satisfying the external evidence or <i>clamping</i> 
+</P>
+<P>
+<table width="800"><tr><td height = "600">
+<img src = "images/CSNN_4.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 4: </b><em>Figure showing the states of descriptors after reaching equilibrium.</em></caption></table>
+</P>
+
+</div>
+        </section> 
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	<img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+         Procedure 
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+<p>
+<UL>
+	<LI><P>Click on the "CLICK" button on the top to see the Hinton diagram of the descriptors.</P>
+	<LI><P>Move your mouse on various squares to see a zoomed version of the descriptor states.</P>
+	<LI><P>Observe the relationship between various descriptors being depicted by the Hinton diagram.</P>
+        <LI><P>Click on the "BACK" button on the bottom to go back to the main panel of the experiment.</P>
+	<LI><P>Click on "Click here for testing the model" button to test the model.</P>
+	<LI><P>Select a few descriptors so as to clamp them, which provides external input or external bias. 
+	The selection of the descriptors can be undone by clicking again over these</P>
+	<LI><P>Click on "TEST" button to test the network after clamping has been done.</P>
+	<LI><P>Observe the change in the state of some of the descriptors to provide evidence towards one of the room-types.</P>
+
+</UL>
+	        
+          </p>
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-5">
+
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+        Experiment 
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+
+        <p>        <IFRAME src="applet/index.html" width="900" height="800" >     </IFRAME> </p>
+
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+           Observations 
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+      <OL><OL><UL>  
+	<P>
+	<LI><P>The constraint satisfaction model has a set of weak constraints defined between 
+		a given number of descriptos which is utilized to build conclusions.</P>	
+	<LI><P>The Hinton diagram presents a pictorial view of the constraints present in the model. 
+		The relation between the descriptors trained for different room types is developed using \(w_{ij}\) given in the tutorial. </P>
+	<LI><P>While testing the model when some units are clamped, rest of the units experience a change in their states according the 
+		constraints between them and the clamped states. This can be verified from the Hinton diagram.</P>
+	<LI><P>Clamping different units while testing the model results in settling of the model in different equilibrium states. These 
+		equilibrium states may correspond to either the same or different room type.</P>
+	</P>
+	</OL></OL></UL>
+          </div>
+
+        </section>
+
+	 
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-7">
+      
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+           Assignment 
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+
+<p>
+<OL>
+	<OL>
+		<OL>
+			<LI><P>Try to observe how the number of clamped units affect the equilibrium state of the model.</P>
+			<LI><P>Try to relate the final equilibrium state of the model descriptors with a particular room 
+				type using Hinton diagram while clamping different set of descriptors.</P>
+		</OL>
+	</OL>
+</OL>
+ </p>
+          </div>
+
+        </section>
+
+	
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<section id="experiment-article-section-8">
+	<div id="experiment-article-section-8-icon" 
+	class="icon">
+<img src="../images/readings.jpg" />				        
+	<!-- Enclose the icon image of your lab.-->			        
+	</div>
+	<div id="experiment-article-section-8-heading" 
+	class="heading">
+	References
+	</div>
+	<div id="experiment-article-section-8-content"                                                          
+	class="content">
+
+	<p>
+	<OL>
+		<OL>
+			<UL>
+			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 117, 1999.</P>
+			<LI><P>J.L. McClelland and D.E. Rumelhart, <i>Parallel Distributed Processing</i>, vol. 2, Cambridge, MA: MIT Press, 1986.</P>
+			<LI><P>J.L. McClelland and D.E. Rumelhart, <i>Explorations in Parallel Distributed Processing</i>, Cambridge MA: MIT Press, 1988.</P>
+			<LI><P>D.E. Rumelhart, P. Smolensky, J.L. McClelland, and G.E.Hinton, "Schemata and sequential thought processes in PDP	models", in 
+			<i>Parallel Distributed Processing: Explorations in Microstructure of Cognition</i>, vol. 2 (J.L. McClelland, D.E. Rumelhart, and the PDP Research Group, eds.), 
+			Cambridge, MA: MIT Press, pp. 7-57, 1986b.</P>
+			</UL>
+		</OL>
+	</OL>
+	</p>
+	</div>
+</section>
+
+	                         	
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+  <footer id="lab-header" class="heading">
+  <!-- Put the content here-->
+  <div id="lab-header-heading" class="heading">
+  <!-- Write the name of your lab and link it to the home page
+  of your lab. -->
+
+  <center>
+  <table><tr>
+  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></table>
+  </center>
+  </div>
+
+  </footer>
+
+</div>		
+
+</body>
+</html>
