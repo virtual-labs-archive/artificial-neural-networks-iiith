@@ -4,10 +4,10 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": [], 
+                    "build": ["make -C ../src"], 
                     "configure": [], 
-                    "post_build": [], 
-                    "pre_build": [], 
+                    "post_build": ["service apache2 restart"], 
+                    "pre_build": ["sudo apt-get update", "sudo apt-get install -y apache2 php5"], 
                     "status": []
                 }, 
                 "installer": [], 
@@ -21,13 +21,13 @@
                 {
                     "contact": {
                         "alternate_email": "", 
-                        "email": "yegna@iiit.ac.in", 
+                        "email": "jawahar@iiit.ac.in", 
                         "mobile_number": "", 
                         "office_number": ""
                     }, 
                     "department": "", 
                     "institute": "IIIT Hyderabad", 
-                    "name": "Yegnanarayana B", 
+                    "name": "Jawahar C.V", 
                     "organization": "", 
                     "role": "Lab Developer", 
                     "title": "", 
@@ -36,13 +36,13 @@
                 {
                     "contact": {
                         "alternate_email": "", 
-                        "email": "dhanu@research.iiit.ac.in", 
+                        "email": "phani@iiit.ac.in", 
                         "mobile_number": "", 
                         "office_number": ""
                     }, 
                     "department": "", 
                     "institute": "IIIT Hyderabad", 
-                    "name": "Dhananjaya N", 
+                    "name": "Phani Phani", 
                     "organization": "", 
                     "role": "Lab RA", 
                     "title": "", 
@@ -51,13 +51,43 @@
                 {
                     "contact": {
                         "alternate_email": "", 
-                        "email": "thati_sathya@students.iiit.ac.in", 
+                        "email": "kumarsrijan@students.iiit.ac.in", 
                         "mobile_number": "", 
                         "office_number": ""
                     }, 
                     "department": "", 
                     "institute": "IIIT Hyderabad", 
-                    "name": "Sathya Adithya", 
+                    "name": "Kumar Srijan", 
+                    "organization": "", 
+                    "role": "Lab RA", 
+                    "title": "", 
+                    "web": ""
+                }, 
+                {
+                    "contact": {
+                        "alternate_email": "", 
+                        "email": "jayaguru.pandaug08@students.iiit.ac.in", 
+                        "mobile_number": "", 
+                        "office_number": ""
+                    }, 
+                    "department": "", 
+                    "institute": "IIIT Hyderabad", 
+                    "name": "Jay Panda", 
+                    "organization": "", 
+                    "role": "Lab RA", 
+                    "title": "", 
+                    "web": ""
+                }, 
+                {
+                    "contact": {
+                        "alternate_email": "", 
+                        "email": "shashank.sharmaug08@students.iiit.ac.in", 
+                        "mobile_number": "", 
+                        "office_number": ""
+                    }, 
+                    "department": "", 
+                    "institute": "IIIT Hyderabad", 
+                    "name": "Shashank Sharma", 
                     "organization": "", 
                     "role": "Lab RA", 
                     "title": "", 
@@ -67,9 +97,9 @@
             "discipline": [
                 "Computer Science & Engineering"
             ], 
-            "id": "cse22", 
-            "integration_level": 4, 
-            "name": "Artificial Neural Networks", 
+            "id": "cse02", 
+            "integration_level": 5, 
+            "name": "Computer Programming", 
             "server-side": true, 
             "status": "Released", 
             "type": ""
@@ -78,17 +108,17 @@
             "platform": {
                 "arch": "i386", 
                 "hosting": "dedicated", 
-                "installer": ["sudo apt-get update", "sudo apt-get install -y octave3.2", "sudo apt-get install -y apache2 php5"], 
+                "installer": [], 
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": [], 
+                    "init": ["mv /var/www/index.html index.html.default", "cp -r ../build/* /var/www/", "sh config_server.sh"], 
                     "pause": [], 
                     "publish": [], 
                     "restore": [], 
                     "resume": [], 
-                    "shutdown": [], 
-                    "start": [], 
+                    "shutdown": ["service apache2 stop"], 
+                    "start": ["service apache2 start"],  
                     "stats": [], 
                     "stop": []
                 }, 
