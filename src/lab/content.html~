@@ -153,22 +153,22 @@ If the equations are not visible, you may have to refresh or reload the page.</p
       </section>
 
       <!-- New section of the article-->	
-      <section id="lab-article-section-3">
+      <section id="lab-overview-section-3">
         
-        <div id="lab-article-section-3-icon" class="icon">
+        <div id="lab-overview-section-3-icon" class="icon">
           <!-- Enclose the icon image for the section. -->
 	  <img src="images/introduction.jpg" />
 	</div>
 
         <!-- The heading for the section can be enclosed in a 
         div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-3-heading" class="heading">
+	<div id="lab-overview-section-3-heading" class="heading">
 	  Target audience
 	</div>
 				
 	<!-- Write the section content inside a paragraph 
         element, You can also include images with <img> tag -->
-        <div id="lab-article-section-3-content" class="content">
+        <div id="lab-overview-section-3-content" class="content">
 		<ul>
 		<li>Senior undergraduate students</li>
 		<li>Postgraduate students</li>
@@ -180,22 +180,22 @@ If the equations are not visible, you may have to refresh or reload the page.</p
 	</section>
 
       <!-- New section of the article-->	
-      <section id="lab-article-section-4">
+      <section id="lab-overview-section-4">
         
-        <div id="lab-article-section-4-icon" class="icon">
+        <div id="lab-overview-section-4-icon" class="icon">
           <!-- Enclose the icon image for the section. -->
 	  <img src="images/readings.jpg" />
 	</div>
 
         <!-- The heading for the section can be enclosed in a 
         div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-4-heading" class="heading">
+	<div id="lab-overview-section-4-heading" class="heading">
 	 Courses aligned
 	</div>
 				
 	<!-- Write the section content inside a paragraph 
         element, You can also include images with <img> tag -->
-        <div id="lab-article-section-4-content" class="content">
+        <div id="lab-overview-section-4-content" class="content">
 		<ul><li>Artificial Neural Networks</li></ul>
 		<br>
 	<p>This virtual lab on Artificial neural networks is to be used as a supplement to a parallel course on the same topic. It is not designed to be a complete course/tutorial by itself where a student can learn the concepts of neural network models just by going through the designed experiments.</p>
@@ -203,22 +203,22 @@ If the equations are not visible, you may have to refresh or reload the page.</p
 	</section>
 
       <!-- New section of the article-->	
-      <section id="lab-article-section-5">
+      <section id="lab-overview-section-5">
         
-        <div id="lab-article-section-5-icon" class="icon">
+        <div id="lab-overview-section-5-icon" class="icon">
           <!-- Enclose the icon image for the section. -->
 	  <img src="images/procedure.jpg" />
 	</div>
 
         <!-- The heading for the section can be enclosed in a 
         div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-5-heading" class="heading">
+	<div id="lab-overview-section-5-heading" class="heading">
 	  Pre-requisites
 	</div>
 				
 	<!-- Write the section content inside a paragraph 
         element, You can also include images with <img> tag -->
-        <div id="lab-article-section-5-content" class="content">
+        <div id="lab-overview-section-5-content" class="content">
 	<p><b>Course requirements</b></p>
 	<ul>	<li>None</li>
 	</ul>
@@ -244,23 +244,23 @@ If the equations are not visible, you may have to refresh or reload the page.</p
 
 
       <!-- New section of the article-->	
-      <section id="lab-article-section-6">
+      <section id="lab-overview-section-6">
         
-        <div id="lab-article-section-6-icon" class="icon">
+        <div id="lab-overview-section-6-icon" class="icon">
           <!-- Enclose the icon image for the section. -->
 	  <img src="images/readings.jpg" />
 	</div>
 
         <!-- The heading for the section can be enclosed in a 
         div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-6-heading" class="heading">
+	<div id="lab-overview-section-6-heading" class="heading">
 <!--	  References -->
 	Feedback
 	</div>
 				
 	<!-- Write the section content inside a paragraph 
         element, You can also include images with <img> tag -->
-        <div id="lab-article-section-6-content" class="content">
+        <div id="lab-overview-section-6-content" class="content">
 <!--		<h3>Text books</h3>
 		<ul>
 		<li>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, 1999.</li>
