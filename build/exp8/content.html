@@ -1,0 +1,563 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head> <title>Artificial Neural Networks </title> </head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <!-- <img src="../images/logo.jpg" /> -->
+
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Artificial Neural Networks Virtual Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+       Solution of optimization problems 
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/objective.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Objective
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            <p>
+<P>The objective of this experiment is to provide a suboptimal solution to the Travelling Salesman Problem (TSP), 
+using the properties of self-organization feature maps (SOM). The
+focus is:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P STYLE="margin-bottom: 0cm">To illustrate the principle of
+			self-organization for addressing the  travelling salesman problem</P>
+			<LI><P STYLE="margin-bottom: 0cm">To observe the suboptimal nature
+			of the solution provided by SOM</P>
+			<LI><P STYLE="margin-bottom: 0cm">To study the effect of structure
+			of SOM on the solution</P>
+		</UL>
+	</OL>
+</OL>
+            </p>
+
+          <!-- <img src="../images/Pendulum.JPG" alt="pendulum"> -->
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      </section>
+
+      <section id="experiment-article-section-2">
+   
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	<img src="../images/theory.jpg" />
+	</div>
+
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+         Tutorial 
+        </div>
+
+        <div id="experiment-article-section-2-content" 
+        class="content">
+        <h3>Description of self-organizing feature map </h3>
+<p>
+Self-organizing map (SOM) was proposed by T. Kohonen [Kohonen, 1982a], and it
+provides a way of visualizing data. In particular, high dimensional
+data can be reduced to lower dimensions using SOM. The map also helps
+in grouping similar data together. Thus the map helps in visualizing
+the concept of clustering by grouping data with similar characteristics.
+A SOM attempts to cluster the training data by detecting
+similarity between data points/ feature vectors. The map does not
+require external supervision, and hence represents an unsupervised
+way of learning.
+</p>
+
+
+<h3>Architecture of SOM </h3>
+<p>
+In a self-organizing map, the input is represented by an
+\(M\)-dimensional feature vector. The output layer consists of \(N\)
+units, where the units are arranged in the form of a grid. Each unit
+is a neuron/node. Each dimension of the input feature vector is
+associated with a unit/neuron in the input layer. A weight
+vector is associated with a unit/node/neuron in the output layer, and the dimension of
+this weight vector is same as that of the input feature vector. The
+map operates in two modes, namely, <i>training</i> and <i>mapping</i>. The process
+of <i>training</i> helps to build the map using (a large number of) input
+feature vectors, which are also known as training examples. The
+process of <i>mapping</i> a new input feature vector automatically identifies 
+the region in the output whose neighbourhood units have similar properties.
+</p>
+
+                <!--Figure HERE -->
+
+
+<table width = "550"><tr><td height = "350">
+<img src="SOM.png" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 1: </b><em>Architecture of SOM</em></caption>
+</table>
+
+
+
+
+
+
+        <h3> Algorithm for learning</h3>
+<p>
+The training of SOM is based on the principle of competitive learning (<i>Refer experiment 7, Artificial Neural Networks virtual labs</i>).
+A training example is a set of inputs with some given number of nodes. 
+Initially weights in the SOM network are assigned randomly. When a training example is presented to the network, Euclidean
+distances between the training feature vector and all the weight
+vectors are computed. The neuron in the output unit for which the distance is found minumum is
+said to <EM>fire</EM>.
+Which mean that the weights of this neuron and the neurons close to it in the SOM
+network are adjusted towards the input vector. The magnitude of the
+adjustment decreases with time and with distance of other neurons from the fired neuron.&nbsp;
+A neighborhood function is defined to specify the neurons whose
+weight vectors are updated along with that of the fired neuron. The region of the 
+neighborhood function&nbsp; is broad initially, and the region shrinks
+gradually with successive iterations. This process is repeated for
+each input vector for a&nbsp; number of iterations. The SOM
+associates the output nodes with groups or patterns in the input data
+set.
+</p>
+<P>Let us consider an \(N\)-unit output layer and \(M\)-dimensional input
+feature vectors. The following sequence of steps is involved in the
+learning process, i.e., the process of updating the weights.</P>
+</P>
+<OL>
+	<OL>
+		<OL>
+		
+			
+			<LI><P>Initialize the weights from \(M\) inputs to the \(N\) output units to small random
+			values. Initialize the size of the neighbourhood region.</P>
+			<LI><P>Present	a new input feature vector. </P>
+			<LI><P>Compute the distance between the input feature vector the weight vector
+			associated with each neuron.</P>
+			<LI><P>Select the neuron <i>k</i> which minimizes the distance.</P>
+			<LI><P>Update the weight vector associated with neuron <i>k</i>, and also the weight
+			vectors associated with neurons in the neighbourhood of neuron <i>k</i>.</P>
+			<LI><P>Repeat steps 2 through 5 for all inputs, several times.</P>
+			
+		</OL>
+	</OL>
+</OL>
+
+
+        <h3>Mapping using a test feature vector</h3>
+<p>
+During mapping again, there will be one <em>winning</em> 
+neuron, the neuron whose weight vector lies closest to the input
+vector. This will be determined by calculating the Euclidean
+distance between input vector and all the weight vectors. And then the test feature vector will be said to  
+<EM>fire</EM> the winning neuron. The updation of weights for rest of the cycles follow the same algorithm as above. 
+</p>
+          </div>
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-3">
+
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+         Illustration 
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+<h3>Application of SOM to travelling salesman problem</h3>
+<P>
+Let us consider a SOM&nbsp; network with 1000 neurons in the
+output layer, for the travelling salesman problem of 100 cities. The
+2-dimensional input represents the coordinate values of a city. The
+units in the output layer are arranged (indexed) along a closed curve or ring. The 
+weights vectors corresponding to adjacent units are joined in the weight space.
+In the following demonstration, the plots show the
+coordinates of the cities (marked by symbol 'x')&nbsp; and the weight
+vectors (marked by symbol 'o'). The initialization of weight vectors
+along the rim of a ring is known as elastic ring approach in feature
+mapping. Plots show the closed path after 500, 1000 and 10000
+iterations, respectively. Some of the cities may not be visited,
+which indicates the suboptimal nature of the algorithm.
+
+<h3>For 100 cities and a SOM with 1000 neurons in the output layer</h3>
+</P>
+		<!--Figure HERE -->
+	
+<table width = "650"><tr><td height = "400">
+<img src="images/agif-som-100cities-1000units.gif" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 1: </b><em>Kohonen's self-organization feature map for TSP for 100 cities and 1000 units in the output layer.</em></caption>
+</table>
+
+
+</P>
+
+<h3>Effect of varying the number of units in output layer of SOM</h3>
+<P><BR>For the travelling salesman problem of 50 cities, we consider
+SOM networks with different number of units/nodes in the output
+layer. In the following demonstration, the plots show the coordinates
+of the cities (marked in black)&nbsp; and the weight vectors (marked
+in red).&nbsp; Plots show the closed path after 50, 100, 200 and 300
+units in the output layer of SOM. Some of the cities may not be
+visited, which indicates the suboptimal nature of the algorithm.</P>
+
+<h3>For 50 cities</h3>
+</P>
+		<!--Figure HERE -->
+
+<table width = "650"><tr><td height = "400">
+<img src="images/agifTspDifferentNumberOfUnits.gif" style="height:90%;width:90%"/></td></tr>
+<caption align="bottom"><b>Figure 2: </b><em>Illustration of sub-optimal nature of the algorithm</em></caption>
+</table>
+
+</P>
+        </div>
+
+        </section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-4">
+      
+          <div id="experiment-article-section-4-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/procedure.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-4-heading" 
+          class="heading">
+           Procedure 
+          </div>
+
+          <div id="experiment-article-section-4-content" 
+          class="content">
+            
+            <p>
+<OL>
+	<OL>
+		<UL>
+			<LI><P>Choose the number of input units to intialize the SOM. In this case, the
+			input vector represents the coordinates of a city. So the input
+			dimension is 2.</P>
+			<LI><P>Choose the number <i>K</i> of nodes/neurons in the output layer.
+			If <i>N</i> denotes the number of cities, then <i>K</i> should be greater than
+			or equal to <i>N</i>.  
+			</P>
+			<LI><P> Choose over the total number of iterations the SOM will go through. Each 
+				iteration involves adjustment of weights for all the neurons.</P>
+			<LI><P> Choose the step size for iteration results display purpose for number 
+				of cities i.e. units in the output network. Also choose the iteration 
+				step size for generation of output.</P>
+			<LI><P>Click on 'Next city' button or the 'Next Itern' button to run simulations. </P>
+		</UL>
+	</OL>
+</OL>
+	   </p>
+
+          </div>
+
+        </section>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-5">
+      
+          <div id="experiment-article-section-5-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/simulation.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-5-heading" 
+          class="heading">
+           Experiment 
+          </div>
+
+          <div id="experiment-article-section-5-content" 
+          class="content">
+            
+           	<!--<a href="http://speech.iiit.ac.in/vlabs/weboctave"> Click here to start weboctave.</a> -->
+<p>		<IFRAME src="som.php" width="1000" height="1200" > 	</IFRAME> </p>
+
+          </div>
+
+        </section>
+
+
+      
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+		<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+           Observations 
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <p>
+  <OL>
+	<OL>
+		<UL>
+			<LI><P>Observe the behaviour of the SOM network as a function of
+			number of iterations. As the number of iterations increases,
+			the weights of the SOM network align closer to the coordinates of
+			the cities.  Let us consider a SOM network with <i>K</i>-unit output
+			layer and a 2-unit input layer. In this case, <i>K</i>=100 and <i>N</i>=30 (i.e.,
+			30 cities and 100 neurons in the output layer). The 2-dimensional
+			input represents the coordinate values of a city. The units in the
+			output layer are arranged along a closed curve. The&nbsp; weights
+			vectors corresponding to adjacent units are joined to form a
+			closed curve. In the following figure, plot (a) shows the
+			coordinates of the cities (marked by symbol 'x')&nbsp; and the
+			weight vectors (marked by symbol 'o'). The initialization of weight
+			vectors along the rim of a ring is known as elastic ring approach
+			in feature mapping. Plots (b), (c) and (d) show the closed path
+			after 200, 500 and 1000 iterations, respectively. Note that some
+			of the cities may not be visited.</P>
+<p>
+		<!--Figure HERE -->
+	  
+<table width = "750"><tr><td height = "450">
+            <img src="images/som-tsp-elastic-1.jpg" style="height:90%;width:90%"/></td></tr>
+                </table>
+
+</p>
+			<LI><P>Observe the output of the network for different number of
+			cities. Start from a small number of cities (such as 10), and go up
+			to a large number of cities (such as 100 or more). Note that the
+			solution provided by SOM is suboptimal, in the sense that
+			coordinates of some cities may not be covered by the weights of
+			the network. Observe this behaviour for varying number of cities.</P>
+			<LI><P>The variation of neighbourhood function for different
+			iterations needs to be scheduled. A larger neighbourhood function
+			is used initially, and the size of the neighbourhood is reduced
+			progressively. The effect of this change can be
+			observed.</P>
+		</UL>
+	</OL>
+</OL>
+
+            </p>
+
+          </div>
+
+        </section>
+
+	 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-7">
+      
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+         Assignment 
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+
+<p>
+<OL>
+	<OL>
+		<OL>
+			<P>Observe the performance of self-organizing map for
+			travelling salesman problem for the following conditions:</P>
+			<UL><UL>
+				<LI><P>Number of cities = 100 and number of neurons in the output
+				layer = 2000</P>
+				<LI><P>Number of cities = 100 and number of neurons in the output
+                                layer = 50</P>
+				<LI><P>In each case, compute the number of cities that have not been
+				visited even once.</P>
+				<LI><P>Plot the percentage of cities visited, as a function of the
+				number of iterations in either cases.</P>
+			<!--	<LI><P>For initializing the weight vectors, use both elastic ring
+				appraoch and also random initialization.</P> -->
+			</UL></UL>
+		</OL>
+	</OL>
+</OL>
+
+ </p>
+        
+          </div>
+
+        </section>
+
+ 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<section id="experiment-article-section-8">
+	<div id="experiment-article-section-8-icon" 
+	class="icon">
+
+	<!-- Enclose the icon image of your lab.-->
+	<img src="../images/readings.jpg" />
+	</div>
+	<div id="experiment-article-section-8-heading" 
+	class="heading">
+	References
+	</div>
+	<div id="experiment-article-section-8-content"                                                          
+	class="content">
+<p>
+	<OL>
+		<OL>
+			<UL>
+			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, p. 298, 1999.</P>
+			<LI><P>T. Kohonen, "Analysis of simple self-organizing process",<i> Biol. Cybernet.</i>, vol. 44, pp. 135-140, 1982a.</P>
+			<LI><P>J.J. Hopfield and D.W. Tank, "Neural computation of decisions in optimization problems", <i>Biol. Cybernet.</i>, vol. 52, pp. 141-152, 1985.</P>
+			</UL>
+		</OL>
+	</OL>
+</p>
+
+</div>
+
+</section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+  <footer id="lab-header" class="heading">
+  <!-- Put the content here-->
+  <div id="lab-header-heading" class="heading">
+  <!-- Write the name of your lab and link it to the home page
+  of your lab. -->
+
+  <center>
+  <table><tr>
+  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></table>
+  </center>
+  </div>
+
+  </footer>
+
+</div>		
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head> <title>Artificial Neural Networks </title> </head>
+<body>
+
+<div id="experiment"> <!-- The Experiment Document Container-->
+
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">Artificial Neural Networks Virtual Lab</a>	
+    </div>
+
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
+
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+Hopfield model for pattern storage task
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
+
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/objective.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Objective
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            <p>
+<P>The objective in a pattern storage task is to store a given set of patterns, so that any of them can be recalled exactly, even when an approximate version of the corresponding pattern 
+is presented to the network.
+Following are the goals of the experiment:</P>
+<OL>
+	<OL>
+		<UL>
+			<LI><P>To illustrate the state transition diagram of a Hopfield model.</P>
+			<LI><P>To understand and analyze pattern storage task using a 3-unit discrete Hopfield network model.</P>
+		<!--	<LI><P>.</P> -->
+		</UL>
+	</OL>
+</OL>
+<P><BR><BR>
+            </p>
+
+
+          <!-- <img src="../images/Pendulum.JPG" alt="pendulum"> -->
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+      </section>
+
+      <section id="experiment-article-section-2">
+   
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	<img src="../images/theory.jpg" />
+	</div>
+
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+         Tutorial 
+        </div>
+
+        <div id="experiment-article-section-2-content" 
+        class="content">
+
+        <h3>Pattern storage network</h3>
+<p>
+Pattern storage is generally accomplished by a feedback network consisting of processing units with non-linear output functions.
+The outputs of all the processing units at any instant of time define the output state of the network at that instant.
+Associated with each output state is an energy, which depends on the network parameters like the weights and bias, besides the state of the network.
+The energy as a function of state corresponds to an energy landscape. The feedback among the units and the non-linear processing in the units 
+may create basins of attraction in the energy landscape, when the weights satisfy certain constraints. The basins of attraction in the 
+energy landscape tend to be the regions of stable equilibrium states. The fixed points in these regions correspond to the state of the 
+energy minima, and they are used to store the desired patterns. These stored patterns can be recalled even with approximate patterns as inputs.
+The number of patterns that can be stored is called the capacity of the network.
+
+The following figures illustrates the concept of energy landscape. Figure 1(a) shows the energy landscapes with each minimum state supported by several nonminimum states around its
+neighbourhood. Figure 1(b) does not have any such support for the minimum states. Hence patterns can be stored
+if the energy landscape of the type in Figure 1(a) is realized by suitable design of the feedback network.
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "images/148.JPG" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 1: </b><em>Illustration of energy landscapes.</em></caption></table>
+		
+	<h3>The Hopfield Model</h3>
+<p>
+We use Hopfield model of a feedback network for addressing the task of pattern storage. The perceptron neuron model for the units of a feedback network is
+used, where the output of each unit is fed to all the other units with weights \(w_{ij}\), for all <i>i</i> and <i>j</i>. Let the output function of each of the units be
+bipolar (+1 or -1), so that </p>
+<P> \( (s_i) = f(x_i) = sgn(x_i) \qquad(1)\) </P> 
+<P> and </P>
+<P> \(x_i = \sum\limits_{j=1}^{N} w_{ij}s_j-\theta_i \qquad(2)\) </P>
+<P>where \(\theta\) is the threshold for the unit <i>i</i>. Due to feedback, the state of a unit depends on the states of 
+the other units. The update of the state of a unit can be done synchronously or asynchronously. In an asynchronous update, the updating using the 
+random choice of a unit is continued until no further change in the states takes place for all the units. That is, </P>
+<P> \( s_i(t+1) = s_i(t),\)  for all <i>i</i> </P> 
+<P>In this situation we can say that the network activation dynamics reached a stable state. </P>
+
+        <h3>Hopfield Network Algorithm to Store and Recall a Set of Bipolar Patterns</h3>
+<p>
+
+Let the network consist of N fully connected units wih each unit having hard-limiting bipolar threshold output function. Let  \( a_l , l\) = 1,2, ...., L 
+be the vectors to be stored. The vectors \(a_l\)  are assumed to have bipolar components, i.e.,  \(a_{li}\) = &#177 1, i = 1,2, ...., N. </p>
+<p>
+<OL><OL>
+        <LI>Assign the connection weights \begin{align} w_{ij} = \frac{1}{N}\sum\limits_{l=1}^{L}a_{li}a_{lj}, for ~  i \ne j \\ = 0, for ~ i = j, 1 \le i, j \le N \qquad(3)\\ \end{align} </LI>
+        <LI>Initialize the network output with the given unknown input pattern <b>a</b> $$ s_i(0) = a_i, for ~ i = 1, 2, ....,N \qquad(4)$$ where \( s_i(0)\) is the output of the unit \(i\) at time
+ \( t=0 \)</LI>
+        <LI>Iterate until convergence $$ s_i(t+1) = sgn \left [\sum\limits_{j=1}^{N}w_{ij}s_j(t) \right ], for ~ i = 1, 2, ....,N  \qquad(5)$$ The process is repeated until the outputs remain unchanged with further iteration. The steady outputs of the units represent the stored pattern that best matches the given input. </LI>
+</OL></OL>
+</p>
+
+        <h3>Energy analysis and State Transition Diagram </h3>
+<p>
+
+The energy V(<b>s</b>) as a function of the state <b>s</b> of the network describes the energy landscape in the state space. Its value always either reduces or remains 
+the same as the state of the network changes. Assuming the threshold value of the unit <i>i</i> to be \( \theta_i \), the energy function is given by 
+ $$ V(s) = V = -\frac{1}{2}\sum\limits_{i}\sum\limits_{j}w_{ij} s_i s_j + \sum\limits_{i}\theta_i s_i \qquad(6)$$
+<P> The energy analysis of the Hopfield network shows that the network either remains in the same state, or moves to a state having a lower energy.
+This can be demonstrated by means of a state transition diagram which gives the states of the network and their energies, together with the probability of 
+transition from one state to another.</P>
+</p>
+
+          </div>
+        </section>
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-3">
+
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+        Illustration 
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+<h3>Illustration of state transition diagram for a 3-unit feedback network</h3>
+
+          <p>
+ Consider a 3-unit feedback network with symmetric weights \( w_{ij} = w_{ji} \). The units have a threshold value of \( \theta_i \), i = 1, 2, 3
+and a binary {0, 1} output function. A binary output function is assumed for convenience, although the conclusions are equally valid for the bipolar {-1, +1} case.
+The following figure shows a 3-unit feedback network. The state update for the unit \(i\) is governed by the following equation. </p>
+<p>
+\begin{align} s_i(t+1) = 1, if ~  \sum\limits_{j}w_{ij}s_j(t) \gt \theta_i \\  = 0, if ~ \sum\limits_{j}w_{ij}s_j(t) \le \theta_i \qquad(1)\\ \end{align} 
+                
+<!--Figure HERE -->
+
+<table width="500"><tr><td height = "300">
+<img src = "images/3unitfeedback.png" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 1: </b><em>A 3-unit feedback network with symmetric weights \(w_{ij}\), threshold values \(\theta_{i}\) and the output states \(s_{i},~i = 1, 2 ,3\)</em></caption></table>
+<br>
+ 
+<!--
+<table width="750"><tr><td height = "450">
+<img src = "HFNW_1B.png" style="height:100%;width:90%"></td></tr>
+<caption align="bottom">Fig. 4 Adjusting weights for the Hopfield 3-unit feedback network.</caption></table>
+-->
+<p>
+Assuming the values
+</p>
+<p> \( w_{12} = w_{21} = -0.5, w_{23} = w_{32} = 0.4, w_{31} = w_{13} = 0.5 \)</p>
+<p> \( \theta_1 = -0.1, \theta_2 = -0.2, and ~ \theta_3 = 0.7, \) </p>
+<p> we get the following energy values for each state.</p>
+<p> V(000) = 0.0, V(001) = 0.7, V(010) = -0.2, V(100) = -0.1, V(011) = 0.1, V(101) = 0.1, V(110) = 0.2, V(111) = 0.0 </p>
+</p>
+
+<p>The transition from any state to the next state can be computed using the state update equation. For example, if the current state is 000, by selecting any one unit, 
+say unit 2, at random, we can find its next state by computing the activation value \( x_2 \) and comparing it with the threshold \(\theta_2\). Since \( x_2 (=0) \gt \theta_2 (= -0.2) \) 
+the state of the unit 2 changes from 0 to 1. Thus, if we select this unit, there will be a transition from the state 000 to 010. Since we can select any one of the three units with equal 
+probability, i.e., 1/3, the probability of making a transition from 000 to 010 is thus 1/3. Likewise by selecting the unit 1 for update, the network makes a transition from 
+000 to 100 with a probability 1/3. Selecting the unit 3 for update results in a transition from 000 to itself, since the activation \( x_3 (=0) \lt \theta_3 (=0.7).\) </p>
+<p>
+
+</p>
+<P>
+By computing the transition probabilities for all the states, we get the state transition diagram as shown in Fig. 2.  
+</p>
+		<!--Figure HERE -->
+<table width="750"><tr><td height = "750">
+<img src = "images/state_transition_diagram2.jpg" style="height:90%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 2: </b><em>Illustration of state transition diagram for a 3-unit feedback network.</em></caption></table>
+</p>
+
+<P>
+Thus a Hopfield Model generates an energy landscape where states in model are associated with different energy values. 
+Stable states are the states which lie in the bottom of this landscape or rather have minimum energies. These states 
+can then be used for the pattern storage task. Following figures show the steps involved in the experiment to choose 
+weights for a given hopfield model, which ascertain some chosen states to attain stability. The capacity of a Hopfield 
+model is determined by the number of patterns being stored as well as the probability of error that can be expected in 
+the recall of patterns. For a N-unit network; where say L patterns are to be stored, for a probability of error of recall 
+\(P_e=0.001\), the maximum storage capacity is given by \(L_{max}/N = 0.105\)  
+</P>
+  <!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "HFNW_1A.png" style="height:100%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 3: </b><em>Choosing minimum energy states in a Hopfield 3-unit feedback network.</em></caption></table>
+</p>
+
+<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "HFNW_1B.png" style="height:100%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 4: </b><em>djusting weights for the Hopfield 3-unit feedback network.</em></caption></table>
+</p>
+
+<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "HFNW_1.png" style="height:100%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 5: </b><em>State transition diagram with states and respective energy values in curly brackets. </em></caption></table>
+</p>
+
+<!--Figure HERE -->
+<table width="750"><tr><td height = "450">
+<img src = "HFNW_2.png" style="height:100%;width:90%"></td></tr>
+<caption align="bottom"><b>Figure 6: </b><em>State transition diagram with probabilities of transition in curly brackets.</em></caption></table>
+</p>
+
+
+
+
+</P>
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	<img src="../images/procedure.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+         Procedure 
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+<p>
+<UL>
+	<LI><P>First choose 2 states which you intend to make as minimum energy states. Make sure of them being apart for a Hamming distance more than 1.</P>
+	<LI><P>Click on the two states and then click SUBMIT. </P>
+	<LI><P>Check out for the inequalities required to be satisfied with appropraite choice of weights and threshold values.</P>
+	<LI><P>Adjust the weights and threshold sliders \( w_{12}, w_{13}, w_{23}, \theta_{1}, \theta_{2}, \theta_{3}, \) with values in the range -1 and 1 to satisfy the inequalities.</P>
+	<LI><P>Click on DONE to submit, and then see how does the Hopfield model and energy transition diagram looks like.</P>
+	<LI><P>Move the mouse over the transition diagram to see the possible paths from higher energy state to lower energy states.</P>
+</UL>
+	        
+          </p> 
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+      <section id="experiment-article-section-5">
+
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	<img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+        Experiment 
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+          <p>     
+                <IFRAME src="applet/index.html" width="900" height="700" >     </IFRAME> 
+          </p>
+
+        </div>
+
+        </section>
+
+
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+           Observations 
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+           <p>
+	<OL>
+		<OL>
+			<UL>
+				<LI><P>The chosen states which are within a Hamming distance of 1 can't be made stable states together.</P>
+				<LI><P>For states which can be made stable, there is a set of values of weights and thresholds that satisfies the corresponding inequalities
+					sufficing which, the model always has chosen states as ones with minimum energy.</P>	
+				<LI><P>The state transition diagram generated has positive probabilities to start from any state and end up in stable states.</P>
+			</UL>
+		</OL>
+	</OL>
+            
+  
+            </p> 
+
+          </div>
+
+        </section>
+
+	 
+ <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <section id="experiment-article-section-7">
+      
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+		<img src="../images/manual.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+           Assignment 
+          </div>
+
+          <div id="experiment-article-section-7-content" 
+          class="content">
+
+<p>
+<OL>
+	<OL>
+		<OL>
+			<LI><P>Explain the meaning of activation state and energy landscape of a feedback network.</P>
+                        <LI><P>What is the Hopfield model of a neural network?</P>
+                        <LI><P>What is a state transition diagram for a feedback network? Explain how to derive it for a given network.</P>
+                        <LI><P>Draw a state transition diagram for a 3-unit model with bipolar {-1, +1} units.</P>
+
+		</OL>
+	</OL>
+</OL>
+</p>
+    
+		  </div>
+
+        </section>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<section id="experiment-article-section-8">
+	<div id="experiment-article-section-8-icon" 
+	class="icon">
+
+	<!-- Enclose the icon image of your lab.-->
+	<img src="../images/readings.jpg" />
+	</div>
+	<div id="experiment-article-section-8-heading" 
+	class="heading">
+	References
+	</div>
+	<div id="experiment-article-section-8-content"                                                          
+	class="content">
+<p>
+	<OL>
+		<OL>
+			<UL>
+			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 146, 1999.</P>
+			<LI><P>J.A. Freeman and D.M. Skapura, <i>Neural Networks: Algorithms, Applications and Programming Techniques</i>, Reading, MA: Addison-Wesley, 1991. </P>
+			<LI><P>M.A. Cohen and S. Grossberg, "Absolute stability of global pattern formation and parallel memory storage by competitive neural networks", 
+			<i>IEEE Duns. Systems, Man and Cybernetics</i>, vol. 13, no. 5, pp. 815-826, 1983.</P>
+			<LI><P>J.J. Hopfield, "Neural networks and physical systems with emergent collective computational capabilitiesn, in 
+			<i>Proceedings of the National Academy of Sciences (USA)</i>, vol. 79, pp. 2554-2558, Nov. 1982.</P>
+			<LI><P>I. Aleksander and H. Morton, <i>An Introduction to Neural Computing</i>, London: Chapman and Hall, 1990.</P>
+			</UL>
+		</OL>
+	</OL>
+</p>
+
+</div>
+
+</section>
+
+ 
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+  <footer id="lab-header" class="heading">
+  <!-- Put the content here-->
+  <div id="lab-header-heading" class="heading">
+  <!-- Write the name of your lab and link it to the home page
+  of your lab. -->
+
+  <center>
+  <table><tr>
+  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></table>
+  </center>
+  </div>
+
+  </footer>
+
+</div>		
+
+</body>
+</html>
