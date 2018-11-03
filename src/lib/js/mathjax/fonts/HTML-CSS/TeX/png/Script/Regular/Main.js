@@ -12,5 +12,5 @@
  *      http://www.apache.org/licenses/LICENSE-2.0
  */
 
-MathJax.OutputJax["HTML-CSS"].defineImageData({MathJax_Script:{}});MathJax.Ajax.loadComplete(MathJax.OutputJax["HTML-CSS"].imgDir+"/Script/Regular"+MathJax.OutputJax["HTML-CSS"].imgPacked+"/Main.js");
+MathJax.OutputJax["HTML-CSS"].defineImageData({MathjaxScript:{}});MathJax.Ajax.loadComplete(MathJax.OutputJax["HTML-CSS"].imgDir+"/Script/Regular"+MathJax.OutputJax["HTML-CSS"].imgPacked+"/Main.js");
 
