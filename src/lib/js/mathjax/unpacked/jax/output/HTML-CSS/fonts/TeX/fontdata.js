@@ -39,7 +39,7 @@
     FONTDATA: {
       version: VERSION,
       
-      TeX_factor: 1,    // TeX em's to font em's
+      TexFactor: 1,    // TeX em's to font em's
       baselineskip: 1.2,
       lineH: .8, lineD: .2,
       
