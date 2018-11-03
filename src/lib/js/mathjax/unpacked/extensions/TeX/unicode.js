@@ -116,10 +116,10 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
   //
   // Override lookupChar to add unicode character to font
   //
-  var save_lookupChar = HTMLCSS.lookupChar;
+  var SaveLookupchar = HTMLCSS.lookupChar;
   HTMLCSS.Augment({
     lookupChar: function (variant,n) {
-      var font = save_lookupChar.call(this,variant,n);
+      var font = SaveLookupchar.call(this,variant,n);
       if (font[n][5] && font[n][5].isUnknown && UNICODE[n]) {font[n] = UNICODE[n]}
       return font;
     }
