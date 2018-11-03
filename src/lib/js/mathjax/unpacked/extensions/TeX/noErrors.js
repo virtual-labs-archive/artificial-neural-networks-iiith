@@ -133,13 +133,13 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
   // Override math toHTML routine so that error messages
   //   don't have the clipping and other unneeded overhead
   //
-  var math_toHTML = MML.math.prototype.toHTML;
+  var MathTohtml = MML.math.prototype.toHTML;
   MML.math.Augment({
     toHTML: function (span,node) {
       if (this.data[0] && this.data[0].data[0] && this.data[0].data[0].isError) {
         return this.data[0].data[0].toHTML(span);
       }
-      return math_toHTML.call(this,span,node);
+      return MathTohtml.call(this,span,node);
     }
   });
   
@@ -181,13 +181,13 @@ MathJax.Hub.Register.StartupHook("NativeMML Jax Ready",function () {
   // Override math toNativeMML routine so that error messages
   //   don't get placed inside math tags.
   //
-  var math_toNativeMML = MML.math.prototype.toNativeMML;
+  var MathTonativemml = MML.math.prototype.toNativeMML;
   MML.math.Augment({
     toNativeMML: function (span) {
       if (this.data[0] && this.data[0].data[0] && this.data[0].data[0].isError) {
         return this.data[0].data[0].toNativeMML(span);
       }
-      return math_toNativeMML.call(this,span);
+      return MathTonativemml.call(this,span);
     }
   });
   
