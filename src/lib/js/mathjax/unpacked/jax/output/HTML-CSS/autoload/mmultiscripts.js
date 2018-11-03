@@ -36,14 +36,14 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
         if (D != null) {HTMLCSS.Remeasured(this.data[this.base].HTMLstretchV(base,HW,D),base)}
         else if (HW != null) {HTMLCSS.Remeasured(this.data[this.base].HTMLstretchH(base,HW),base)}
       }
-      var x_height = HTMLCSS.TeX.x_height * scale,
+      var XHeight = HTMLCSS.TeX.XHeight * scale,
           s = HTMLCSS.TeX.scriptspace * scale * .75;  // FIXME: .75 can be removed when IC is right?
 
       var BOX = this.HTMLgetScripts(stack,s);
       var sub = BOX[0], sup = BOX[1], presub = BOX[2], presup = BOX[3];
 
       var sscale = (this.data[1]||this).HTMLgetScale();
-      var q = HTMLCSS.TeX.sup_drop * sscale, r = HTMLCSS.TeX.sub_drop * sscale;
+      var q = HTMLCSS.TeX.SupDrop * sscale, r = HTMLCSS.TeX.SubDrop * sscale;
       var u = base.bbox.h - q, v = base.bbox.d + r, delta = 0, p;
       if (base.bbox.ic) {delta = base.bbox.ic}
       if (this.data[this.base] &&
@@ -62,8 +62,8 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
 
       if (!sup && !presup) {
         v = Math.max(v,HTMLCSS.TeX.sub1*scale,min.subscriptshift);
-        if (sub)    {v = Math.max(v,sub.bbox.h-(4/5)*x_height)}
-        if (presub) {v = Math.max(v,presub.bbox.h-(4/5)*x_height)}
+        if (sub)    {v = Math.max(v,sub.bbox.h-(4/5)*XHeight)}
+        if (presub) {v = Math.max(v,presub.bbox.h-(4/5)*XHeight)}
         if (sub)    {HTMLCSS.placeBox(sub,dx+base.bbox.w+s-delta,-v)}
         if (presub) {HTMLCSS.placeBox(presub,0,-v)}
       } else {
@@ -71,18 +71,18 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
           values = this.getValues("displaystyle","texprimestyle");
           p = HTMLCSS.TeX[(values.displaystyle ? "sup1" : (values.texprimestyle ? "sup3" : "sup2"))];
           u = Math.max(u,p*scale,min.superscriptshift);
-          if (sup)    {u = Math.max(u,sup.bbox.d+(1/4)*x_height)}
-          if (presup) {u = Math.max(u,presup.bbox.d+(1/4)*x_height)}
+          if (sup)    {u = Math.max(u,sup.bbox.d+(1/4)*XHeight)}
+          if (presup) {u = Math.max(u,presup.bbox.d+(1/4)*XHeight)}
           if (sup)    {HTMLCSS.placeBox(sup,dx+base.bbox.w+s,u)}
           if (presup) {HTMLCSS.placeBox(presup,0,u)}
         } else {
           v = Math.max(v,HTMLCSS.TeX.sub2*scale);
-          var t = HTMLCSS.TeX.rule_thickness * scale;
+          var t = HTMLCSS.TeX.RuleThickness * scale;
           var h = (sub||presub).bbox.h, d = (sup||presup).bbox.d;
           if (presub) {h = Math.max(h,presub.bbox.h)}
           if (presup) {d = Math.max(d,presup.bbox.d)}
           if ((u - d) - (h - v) < 3*t) {
-            v = 3*t - u + d + h; q = (4/5)*x_height - (u - d);
+            v = 3*t - u + d + h; q = (4/5)*XHeight - (u - d);
             if (q > 0) {u += q; v -= q}
           }
           u = Math.max(u,min.superscriptshift); v = Math.max(v,min.subscriptshift);
