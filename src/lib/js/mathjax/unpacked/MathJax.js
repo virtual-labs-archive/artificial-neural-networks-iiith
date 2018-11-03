@@ -51,8 +51,8 @@ MathJax.fileversion = "1.1.7";
   //  Test for Safari 2.x bug (can't replace prototype for result of new Function()).
   //  (We don't use this version for everyone since it is a closure and we don't need that).
   //
-  var BUGTEST = CONSTRUCTOR(); BUGTEST.prototype = {bug_test: 1};
-  if (!BUGTEST.prototype.bug_test) {
+  var BUGTEST = CONSTRUCTOR(); BUGTEST.prototype = {BugTest: 1};
+  if (!BUGTEST.prototype.BugTest) {
     CONSTRUCTOR = function () {
       return function () {return arguments.callee.Init.call(this,arguments)};
     };
