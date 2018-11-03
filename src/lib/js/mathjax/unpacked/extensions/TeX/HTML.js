@@ -37,7 +37,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     //
     //  Implements \href{url}{math}
     //
-    HREF_attribute: function (name) {
+    HrefAttribute: function (name) {
       var url = this.GetArgument(name),
           arg = this.GetArgumentMML(name);
       this.Push(arg.With({href:url}));
@@ -56,7 +56,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     //
     //  Implements \style{style-string}{math}
     //
-    STYLE_attribute: function (name) {
+    StyleAttribute: function (name) {
       var style = this.GetArgument(name),
           arg   = this.GetArgumentMML(name);
       // check that it looks like a style string
