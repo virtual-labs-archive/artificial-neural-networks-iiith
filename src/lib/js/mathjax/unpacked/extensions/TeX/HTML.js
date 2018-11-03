@@ -46,7 +46,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     //
     //  Implements \class{name}{math}
     //
-    CLASS_attribute: function (name) {
+    ClassAttribute: function (name) {
       var CLASS = this.GetArgument(name),
           arg   = this.GetArgumentMML(name);
       if (arg["class"] != null) {CLASS = arg["class"] + " " + CLASS}
