@@ -70,7 +70,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     //
     //  Implements \cssId{id}{math}
     //
-    ID_attribute: function (name) {
+    IdAttribute: function (name) {
       var ID  = this.GetArgument(name),
           arg = this.GetArgumentMML(name);
       this.Push(arg.With({id:ID}));
