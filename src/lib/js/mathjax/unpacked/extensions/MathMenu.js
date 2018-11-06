@@ -167,7 +167,7 @@
      *  Display the menu
      */
     Post: function (event,parent) {
-      if (!event) {event = window.event};
+      if (!event) {event = window.event}
       var title = (!this.title ? null : [["div",{className: "MathJax_MenuTitle"},[this.title]]]);
       var div = document.getElementById("MathJax_MenuFrame");
       if (!div) {div = MENU.Background(this)}
