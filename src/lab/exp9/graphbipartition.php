@@ -67,7 +67,7 @@ $out=exec("rm -f tmp/$sessionID/input.png tmp/$sessionID/output.png");
 //exec("mkdir -p tmp/$sessionID");
 $cmd="cd tmp/$sessionID; octave --eval 'addpath ../../ ;initgraph(".$Nnodes.",".$edgestring.");cd ../../ ;quit;' 1> log.txt 2>&1 ";
 //sleep(1);
-$out=exec($cmd,$results,$status);
+
 //echo $cmd.':'.$out.':'.$result.':'.$status;
 }
 
