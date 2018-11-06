@@ -56,7 +56,7 @@ MathJax.fileversion = "1.1.7";
     CONSTRUCTOR = function () {
       return function () {return arguments.callee.Init.call(this,arguments)};
     };
-  };
+  }
 
   BASE.Object = OBJECT({
     constructor: CONSTRUCTOR(),
