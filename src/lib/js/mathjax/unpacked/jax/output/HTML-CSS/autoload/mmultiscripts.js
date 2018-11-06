@@ -57,7 +57,7 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
 
       var dx = 0;
       if (presub) {dx = presub.bbox.w+delta} else if (presup) {dx = presup.bbox.w-delta}
-      if (dx < 0) {dx = 0};
+      if (dx < 0) {dx = 0}
       HTMLCSS.placeBox(base,dx,0);
 
       if (!sup && !presup) {
