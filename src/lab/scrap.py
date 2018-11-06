@@ -14,7 +14,7 @@ def writefile(fname,s,s1,heading):
 	#print content
 	f.seek(0)
 	content=f.read()
-	k=content.index('<div class="col-md-10 lab-list-col-10">')
+	#k=content.index('<div class="col-md-10 lab-list-col-10">')
 	
 	t1=content.index('<!--edit1-->')
 	print t1
