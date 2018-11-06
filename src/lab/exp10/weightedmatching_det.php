@@ -51,7 +51,7 @@ if($initflag=='') $initflag=0;
 if($annealflag=='') $annealflag=0;
 
 function InitGraph(){
-global $Nnodes, $nodeloc, $sessionID;
+global  $nodeloc, $sessionID;
 
 $out=exec("rm -f tmp/$sessionID/*.png tmp/$sessionID/result.txt tmp/$sessionID/log*.txt 1> tmp/$sessionID/log1.txt 2>&1",$result,$status);
 
