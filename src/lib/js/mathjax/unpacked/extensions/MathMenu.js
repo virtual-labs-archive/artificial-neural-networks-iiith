@@ -161,7 +161,7 @@
     margin: 5,
 
     Init: function (def) {this.items = [].slice.call(arguments,0)},
-    With: function (def) {if (def) {HUB.Insert(this,def)}; return this},
+    With: function (def) {if (def) {HUB.Insert(this,def)} return this},
 
     /*
      *  Display the menu
