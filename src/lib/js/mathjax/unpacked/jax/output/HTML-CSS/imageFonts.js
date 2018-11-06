@@ -49,7 +49,7 @@
         c[0] = orig[0]*factor; c[1] = orig[1]*factor; c[2] = orig[2]*factor;
         c[3] = orig[3]*factor; c[4] = orig[4]*factor;
         var dir = this.imgDir+"/"+font.directory+"/"+this.imgSize[index];
-        var chr = n.toString(16).toUpperCase(); while (chr.length < 4) {chr = "0"+chr};
+        var chr = n.toString(16).toUpperCase(); while (chr.length < 4) {chr = "0"+chr}
         var file = dir+"/"+chr+".png";
         var img = c[5].img[index];
         var style = {width:Math.floor(img[0]/bscale+.5)+"px", height:Math.floor(img[1]/bscale+.5)+"px"};
