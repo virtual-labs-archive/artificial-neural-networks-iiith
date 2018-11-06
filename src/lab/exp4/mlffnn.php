@@ -59,7 +59,7 @@ if($numberOfhiddenNodes == '') $numberOfhiddenNodes = 0;
 
 
 function showOptionsDrop($array,$value){
-	global $numberOfBits;
+	
         $string = '';
         foreach($array as $k => $v){
             $string .= '<option value="'.$k.'" ';
@@ -74,7 +74,7 @@ function trainNN(){
 global $inputDim, $numberOfhiddenNodes,$sessionID;
 $cmd="cd tmp/$sessionID; octave --eval 'addpath ../../ ;trainXORcore(".$inputDim.",".$numberOfhiddenNodes.");cd ../../ ;quit;' 1> log.txt 2>&1 ";
 //echo $cmd;
-$out=exec($cmd,$results,$status);
+
 }
 
 function testNN(){
