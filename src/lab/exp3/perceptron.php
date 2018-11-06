@@ -73,8 +73,8 @@ $out=exec($cmd,$results,$status);
 //echo $_SERVER['PHP_SELF']."<br>";
 
 function initmlp(){
-$cmd="octave --eval 'addpath ../../ ;coreMlp(".$Nsamples.",".$Niterns.",0,0,".$Nsamplestep.",".$NIstep.",".$probtype.");cd ../../ ;quit;' 1> tmp/log.txt 2>&1 ";
-$out=exec($cmd,$results,$status);
+$cmd="octave --eval 'addpath ../../ ;coreMlp(".$Niterns.",0,0,".$Nsamplestep.",".$NIstep.",".$probtype.");cd ../../ ;quit;' 1> tmp/log.txt 2>&1 ";
+
 
 }
 
