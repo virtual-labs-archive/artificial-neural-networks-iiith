@@ -40,8 +40,8 @@ $out=exec($cmd,$results,$status);
 //echo $_SERVER['PHP_SELF']."<br>";
 
 function initsom(){
-$cmd="octave --eval 'coreSom(".$Ncities.",".$Nnodes.",".$Niterns.",0,0,".$NCstep.",".$NIstep.");quit;' 1> tmp/log.txt 2>&1 ";
-$out=exec($cmd,$results,$status);
+$cmd="octave --eval 'coreSom(".$Nnodes.",".$Niterns.",0,0,".$NCstep.",".$NIstep.");quit;' 1> tmp/log.txt 2>&1 ";
+
 
 }
 
