@@ -162,7 +162,7 @@
           },
           onclick: function () {
             if (DATA.div && DATA.fade === 0)
-              {if (DATA.timer) {clearTimeout(DATA.timer)}; DATA.div.style.display = "none"}
+              {if (DATA.timer) {clearTimeout(DATA.timer)} DATA.div.style.display = "none"}
           }
         },
         [["span",{style:{position:"relative", bottom:".2em"}},["x"]]]
