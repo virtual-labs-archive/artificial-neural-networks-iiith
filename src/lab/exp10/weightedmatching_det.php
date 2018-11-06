@@ -53,11 +53,11 @@ if($annealflag=='') $annealflag=0;
 function InitGraph(){
 global  $nodeloc, $sessionID;
 
-$out=exec("rm -f tmp/$sessionID/*.png tmp/$sessionID/result.txt tmp/$sessionID/log*.txt 1> tmp/$sessionID/log1.txt 2>&1",$result,$status);
+$out=exec("rm -f tmp/$sessionID/*.png tmp/$sessionID/result.txt tmp/$sessionID/log*.txt 1> tmp/$sessionID/log1.txt 2>&1",$status);
 
 $cmd="cd tmp/$sessionID; octave --eval 'addpath ../../ ; init_wmp(".$nodeloc.");cd ../../ ;quit;' 1> log2.txt 2>&1 ";
 //sleep(1);
-$out=exec($cmd,$results,$status);
+$out=exec($cmd,$status);
 //echo $cmd.':'.$out.':'.$result.':'.$status;
 }
 
