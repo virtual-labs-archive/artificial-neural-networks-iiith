@@ -23,7 +23,7 @@ if($annealflag=='') $annealflag=0;
 function InitGraph(){
 global  $nodeloc;
 
-$out=exec("rm -f tmp/*.png tmp/result.txt tmp/log*.txt 1> tmp/log1.txt 2>&1",$result,$status);
+$out=exec("rm -f tmp/*.png tmp/result.txt tmp/log*.txt 1> tmp/log1.txt 2>&1",$status);
 
 $cmd="octave --eval 'init_wmp(".$nodeloc.");quit;' 1> tmp/log2.txt 2>&1 ";
 //sleep(1);
