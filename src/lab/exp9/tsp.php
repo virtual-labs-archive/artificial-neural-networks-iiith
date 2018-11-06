@@ -21,13 +21,13 @@ if($initflag=='') $initflag=0;
 if($annealflag=='') $annealflag=0;
 
 function InitGraph(){
-global $Nnodes, $nodeloc;
+global  $nodeloc;
 
 $out=exec("rm -f tmp/*.png tmp/result.txt tmp/log*.txt 1> tmp/log1.txt 2>&1",$result,$status);
 
 $cmd="octave --eval 'init_wmp(".$nodeloc.");quit;' 1> tmp/log2.txt 2>&1 ";
 //sleep(1);
-$out=exec($cmd,$results,$status);
+$out=exec($cmd,$status);
 //echo $cmd.':'.$out.':'.$result.':'.$status;
 }
 
