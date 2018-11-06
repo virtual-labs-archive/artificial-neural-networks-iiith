@@ -83,7 +83,7 @@ if($typeOfMapping == 2) /* 2 -> 2D-1D */
 function showOptionsDrop($array){
         $string = '';
         foreach($array as $k => $v){
-            $string .= '<option value="'.$k.'"'.$s.'>'.$v.'</option>'."\n";
+            $string .= '<option value="'.$k.'">'.$v.'</option>'."\n";
         }
         return $string;
     }
@@ -92,7 +92,7 @@ function generateData(){
 global $inputDim, $numDataPoints, $regionType, $numIterations, $sessionID;
 $cmd="cd tmp/$sessionID; octave --eval 'addpath ../../ ; generateData(".$inputDim.",".$numDataPoints.",".$regionType.", ".$numIterations.");cd ../../ ; quit;' 1> log.txt 2>&1 ";
 
-$out=exec($cmd,$results,$status);
+
 }
 
 function nextIteration(){
