@@ -69,11 +69,11 @@
       var W = this.getComparisonWidths(font.testString,font.noStyleChar);
       if (W) {
         this.div.style.fontFamily = "'"+font.family+"',"+this.comparisonFont[0];
-        if (this.div.offsetWidth == W[0]) {
+        if (this.div.offsetWidth === W[0]) {
           this.div.style.fontFamily = "'"+font.family+"',"+this.comparisonFont[W[2]];
-          if (this.div.offsetWidth == W[1]) {return false}
+          if (this.div.offsetWidth === W[1]) {return false}
         }
-        if (this.div.offsetWidth != W[3]) {
+        if (this.div.offsetWidth !== W[3]) {
           if (font.noStyleChar || !HTMLCSS.FONTDATA || !HTMLCSS.FONTDATA.hasStyleChar) {return true}
           for (var i = 0, m = this.testSize.length; i < m; i++)
             {if (this.testStyleChar(font,this.testSize[i])) {return true}}
@@ -122,7 +122,7 @@
       }
       for (var i = 1, m = this.comparisonFont.length; i < m; i++) {
         this.div.style.fontFamily = this.comparisonFont[i];
-        if (this.div.offsetWidth != W) {return [W,this.div.offsetWidth,i,sW]}
+        if (this.div.offsetWidth !== W) {return [W,this.div.offsetWidth,i,sW]}
       }
       return null;
     },
