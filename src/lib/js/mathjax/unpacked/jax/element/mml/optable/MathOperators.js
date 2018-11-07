@@ -30,7 +30,7 @@
         '\u221C': MO.ORD11,    // fourth root
         '\u2221': MO.ORD,      // measured angle
         '\u2222': MO.ORD,      // spherical angle
-        '\u222C': MO.INTEGRAL, // double integral
+        "\u222C": MO.INTEGRAL, // double integral
         '\u222D': MO.INTEGRAL, // triple integral
         '\u222F': MO.INTEGRAL, // surface integral
         '\u2230': MO.INTEGRAL, // volume integral
