@@ -21,7 +21,7 @@
 MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_Caligraphic-bold'] = {
   directory: 'Caligraphic/Bold',
   family: 'MathJax_Caligraphic',
-  weight: 'bold',
+  weight: "bold",
   testString: "MATHJAX CALIGRAPHIC",
   skew: {
     0x41: 0.224,
