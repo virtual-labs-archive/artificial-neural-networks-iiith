@@ -1476,7 +1476,7 @@ MathJax.Hub = {
     element = [].concat(element); // make a copy so the original isn't changed
     for (var i = 0, m = element.length; i < m; i++)
       {if (typeof(element[i]) === 'string') {element[i] = document.getElementById(element[i])}}
-    if (element.length == 0) {element.push(document.body)}
+    if (element.length === 0) {element.push(document.body)}
     if (!callback) {callback = {}}
     return {elements: element, callback: callback};
   },
