@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_AMS'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_AMS"],
   {
     0x29EB: [716,132,667,56,612]       // BLACK LOZENGE
   }
