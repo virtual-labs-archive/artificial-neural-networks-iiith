@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['STIXGeneral-bold'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["STIXGeneral-bold"],
   {
     0x2102: [691,19,727,45,672],       // stix-mathematical bold oblique double-struck capital C
     0x2105: [688,12,873,38,835],       // CARE OF
