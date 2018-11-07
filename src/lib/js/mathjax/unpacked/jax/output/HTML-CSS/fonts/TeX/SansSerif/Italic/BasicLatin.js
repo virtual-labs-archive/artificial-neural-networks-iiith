@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_SansSerif-italic'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_SansSerif-italic"],
   {
     0x20: [0,0,250,0,0],               // SPACE
     0x21: [694,0,319,110,355],         // EXCLAMATION MARK
