@@ -495,7 +495,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
         }
         if(!(data instanceof Array))
         {
-          data=(data==null?[]:[data])
+          data=(data===null?[]:[data])
         }
         var callbacks=[{}];
         for(var i=0,m=hooks.length;i<m;i++)
@@ -689,7 +689,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
         this.hooks[msg].push(callback);
         for(var i=0,m=this.posted.length;i<m;i++)
         {
-          if(this.posted[i]==msg)
+          if(this.posted[i]===msg)
           {
             callback.reset();
             callback(this.posted[i])
@@ -1363,7 +1363,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
       clearTimeout(this.timer);
       delete this.timeout
     }
-    if(c==null)
+    if(c===null)
     {
       c=this.log.length;
       this.log[c]={}
@@ -1651,7 +1651,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                Update:function(b)
                {
                  var a=b.MathJax.elementJax;
-                 if(a&&a.originalText===(b.text==""?b.innerHTML:b.text))
+                 if(a&&a.originalText===(b.text===""?b.innerHTML:b.text))
                  {
                    b.MathJax.state=a.STATE.PROCESSED
                  }
@@ -1700,7 +1700,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                }
                var b=this.config;
                var g=a.previousSibling;
-               if(g&&g.nodeName=="#text"){
+               if(g&&g.nodeName==="#text"){
                  var d,f;
                  var c=a.nextSibling;
                  if(c&&c.nodeName!=="#text"){
@@ -1731,7 +1731,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                    g=g.previousSibling
                  }
                }
-               if(b.preRemoveClass&&g&&g.className==b.preRemoveClass)
+               if(b.preRemoveClass&&g&&g.className===b.preRemoveClass)
                {
                  try{g.innerHTML=""
                     }
@@ -1974,7 +1974,7 @@ MathJax.Hub.Startup={script:"",queue:MathJax.Callback.Queue(),signal:MathJax.Cal
                                                       break
                                                     }
                                                   }
-                                                  if(e==a-1){
+                                                  if(e===a-1){
                                                     b.pop()
                                                   }
                                                   else{
@@ -2260,7 +2260,7 @@ MathJax.Hub.Startup={script:"",queue:MathJax.Callback.Queue(),signal:MathJax.Cal
                                }
                                else{
                                  i.id=this.inputID=b.ElementJax.GetID();
-                                 this.newID=1}}h.originalText=(i.text==""?i.innerHTML:i.text);
+                                 this.newID=1}}h.originalText=(i.text===""?i.innerHTML:i.text);
                              h.inputJax=j;
                              if(h.root){
                                h.root.inputID=h.inputID
