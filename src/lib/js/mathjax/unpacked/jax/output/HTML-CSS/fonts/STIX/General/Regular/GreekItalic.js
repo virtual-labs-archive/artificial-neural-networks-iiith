@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['STIXGeneral'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["STIXGeneral"],
   {
     0x1D6E2: [667,0,717,35,685],       // MATHEMATICAL ITALIC CAPITAL ALPHA
     0x1D6E3: [653,0,696,38,686],       // MATHEMATICAL ITALIC CAPITAL BETA
