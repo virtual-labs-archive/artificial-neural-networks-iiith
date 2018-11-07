@@ -18,7 +18,7 @@
  *
  */
 
-MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_Fraktur'] = {
+MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_Fraktur"] = {
   directory: 'Fraktur/Regular',
   family: 'MathJax_Fraktur',
   testString: "MathJax Fraktur",
