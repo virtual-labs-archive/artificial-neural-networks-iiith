@@ -38,7 +38,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
      */
     Verb: function (name) {
       var c = this.GetNext(); var start = ++this.i;
-      if (c == "" ) {TEX.Error(name+" requires an argument")}
+      if (c === "" ) {TEX.Error(name+" requires an argument")}
       while (this.i < this.string.length && this.string.charAt(this.i) != c) {this.i++}
       if (this.i == this.string.length) 
         {TEX.Error("Can't find closing delimiter for "+name)}
