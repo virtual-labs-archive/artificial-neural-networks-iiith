@@ -113,12 +113,12 @@ MathJax.Extension.tex2jax = {
   
   sortLength: function (a,b) {
     if (a.length !== b.length) {return b.length - a.length}
-    return (a == b ? 0 : (a < b ? -1 : 1));
+    return (a === b ? 0 : (a < b ? -1 : 1));
   },
   
   scanElement: function (element,stop,ignore) {
     var cname, tname, ignoreChild;
-    while (element && element != stop) {
+    while (element && element !== stop) {
       if (element.nodeName.toLowerCase() === '#text') {
         if (!ignore) {element = this.scanText(element)}
       } else {
@@ -135,7 +135,7 @@ MathJax.Extension.tex2jax = {
   },
   
   scanText: function (element) {
-    if (element.nodeValue.replace(/\s+/,'') == '') {return element}
+    if (element.nodeValue.replace(/\s+/,'') === '') {return element}
     var match, prev;
     this.search = {start: true};
     this.pattern = this.start;
