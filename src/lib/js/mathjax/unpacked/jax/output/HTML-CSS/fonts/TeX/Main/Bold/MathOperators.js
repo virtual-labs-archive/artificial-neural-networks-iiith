@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_Main-bold'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_Main-bold"],
   {
     0x2200: [694,16,639,0,640],        // FOR ALL
     0x2202: [710,17,628,60,657],       // PARTIAL DIFFERENTIAL
