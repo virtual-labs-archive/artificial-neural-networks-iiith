@@ -20,7 +20,7 @@
 
 MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_AMS'] = {
   directory: "AMS/Regular",
-  family: 'MathJax_AMS',
+  family: "MathJax_AMS",
   testString: "MATHJAX AMS",
   Ranges: [
     [0x0,0x7F,"BBBold"],
