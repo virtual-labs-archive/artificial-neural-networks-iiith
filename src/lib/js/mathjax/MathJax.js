@@ -100,7 +100,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
        },
         Augment:function(g,h)
         {
-          var i;if(g!=null)
+          var i;if(g!==null)
           {
             for(i in g){
               if(g.hasOwnProperty(i))
@@ -110,7 +110,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
             }
             if(g.toString!==this.prototype.toString&&g.toString!=={}.toString)
             {
-              this.protoFunction("toString",g.toString)}}if(h!=null)
+              this.protoFunction("toString",g.toString)}}if(h!==null)
               {
                 for(i in h)
                 {
@@ -174,7 +174,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
                   SimpleSUPER:c({constructor:function(g){return this.SimpleSUPER.define(g)},
                                  define:function(g){
                                    var i={};
-                                   if(g!=null)
+                                   if(g!==null)
                                    {
                                      for(var h in g)
                                      {
@@ -1110,14 +1110,14 @@ if(document.getElementById&&document.childNodes&&document.createElement)
                                j+=n+"{"+this.StyleString(m[n])+"}\n"}
                              else
                              {
-                               if(m[n]!=null)
+                               if(m[n]!==null)
                                {
                                  l=[];
                                  for(var h in m[n])
                                  {
                                    if(m[n].hasOwnProperty(h))
                                    {
-                                     if(m[n][h]!=null)
+                                     if(m[n][h]!==null)
                                      {
                                        l[l.length]=h+": "+m[n][h]
                                      }
@@ -1273,7 +1273,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
       return false
     }
     if
-      (this.div&&this.div.parentNode==null)
+      (this.div&&this.div.parentNode===null)
     {
       this.div=document.getElementById("MathJax_Message");
       if(this.div)
@@ -1373,7 +1373,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
     if(typeof(this.log[c].next)==="undefined")
     {
       this.log[c].next=this.current;
-      if(this.current!=null)
+      if(this.current!==null)
       {
         this.log[this.current].prev=c
       }
@@ -1411,11 +1411,11 @@ if(document.getElementById&&document.childNodes&&document.createElement)
   },
     Clear:function(b,a)
   {
-    if(this.log[b].prev!=null)
+    if(this.log[b].prev!==null)
     {
       this.log[this.log[b].prev].next=this.log[b].next
     }
-    if(this.log[b].next!=null)
+    if(this.log[b].next!==null)
     {
       this.log[this.log[b].next].prev=this.log[b].prev
     }
@@ -1424,11 +1424,11 @@ if(document.getElementById&&document.childNodes&&document.createElement)
       this.current=this.log[b].next;
       if(this.text)
       {
-        if(this.div.parentNode==null)
+        if(this.div.parentNode===null)
         {
           this.Init()
         }
-        if(this.current==null)
+        if(this.current===null)
         {
           if(this.timer)
           {
@@ -1458,7 +1458,7 @@ if(document.getElementById&&document.childNodes&&document.createElement)
       {
         if(this.status)
         {
-          window.status=(this.current==null?"":this.log[this.current].text)
+          window.status=(this.current===null?"":this.log[this.current].text)
         }
       }
     }
@@ -1585,7 +1585,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                {
                  a=document.getElementById(a)
                }
-               if(a&&a.tagName!=null&&a.tagName.toLowerCase()==="script")
+               if(a&&a.tagName!==null&&a.tagName.toLowerCase()==="script")
                {if
                  (a.MathJax)
                {return(a.MathJax.state===MathJax.ElementJax.STATE.PROCESSED?1:-1)
@@ -1703,7 +1703,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                if(g&&g.nodeName=="#text"){
                  var d,f;
                  var c=a.nextSibling;
-                 if(c&&c.nodeName!="#text"){
+                 if(c&&c.nodeName!=="#text"){
                    c=null
                  }
                  if(b.preJax)
@@ -1840,7 +1840,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                  restart:MathJax.Callback(a)
                })},
              elementCallback:function(c,f){
-               if(f==null&&(c instanceof Array||typeof c==="function")){
+               if(f===null&&(c instanceof Array||typeof c==="function")){
                  try{
                    MathJax.Callback(c);
                    f=c;
@@ -1848,7 +1848,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                  }
                  catch(d){}
                }
-               if(c==null){
+               if(c===null){
                  c=this.config.elements||[]
                }
                if(!(c instanceof Array))
@@ -1860,7 +1860,7 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                    c[b]=document.getElementById(c[b])
                  }
                }
-               if(c.length==0){
+               if(c.length===0){
                  c.push(document.body)
                }
                if(!f){
@@ -1877,10 +1877,10 @@ MathJax.Hub={config:{root:"",config:[],styleSheets:[],styles:{},jax:[],extension
                {
                  a=document.getElementById(a)
                }
-               if(a==null){
+               if(a===null){
                  a=document.body
                }
-               if(a.tagName!=null&&a.tagName.toLowerCase()==="script"){
+               if(a.tagName!==null&&a.tagName.toLowerCase()==="script"){
                  return[a]
                }
                return a.getElementsByTagName("script")
@@ -2103,7 +2103,7 @@ MathJax.Hub.Startup={script:"",queue:MathJax.Callback.Queue(),signal:MathJax.Cal
                                    return(this.constructor.Subclass(i,h))()
                                  },
                                  Augment:function(k,j){
-                                   var i=this.constructor,h={};if(k!=null){for(var l in k)
+                                   var i=this.constructor,h={};if(k!==null){for(var l in k)
                                    {
                                      if(k.hasOwnProperty(l))
                                      {
@@ -2350,12 +2350,12 @@ MathJax.Hub.Startup={script:"",queue:MathJax.Callback.Queue(),signal:MathJax.Cal
     }
   }
   f.Ajax.config=u;
-  var a={isMac:(navigator.platform.substr(0,3)==="Mac"),isPC:(navigator.platform.substr(0,3)==="Win"),isMSIE:(window.ActiveXObject!=null&&window.clipboardData!=null),isFirefox:(window.netscape!=null&&document.ATTRIBUTE_NODE!=null&&!window.opera),isSafari:(navigator.userAgent.match(/ (Apple)?WebKit\//)!=null&&!window.chrome),isChrome:(window.chrome!=null&&window.chrome.loadTimes!=null),isOpera:(window.opera!=null&&window.opera.version!=null),isKonqueror:(window.hasOwnProperty&&window.hasOwnProperty("konqueror")&&navigator.vendor=="KDE"),
+  var a={isMac:(navigator.platform.substr(0,3)==="Mac"),isPC:(navigator.platform.substr(0,3)==="Win"),isMSIE:(window.ActiveXObject!==null&&window.clipboardData!==null),isFirefox:(window.netscape!==null&&document.ATTRIBUTE_NODE!==null&&!window.opera),isSafari:(navigator.userAgent.match(/ (Apple)?WebKit\//)!==null&&!window.chrome),isChrome:(window.chrome!==null&&window.chrome.loadTimes!==null),isOpera:(window.opera!==null&&window.opera.version!==null),isKonqueror:(window.hasOwnProperty&&window.hasOwnProperty("konqueror")&&navigator.vendor=="KDE"),
          versionAtLeast:function(x){
            var w=(this.version).split(".");
            x=(new String(x)).split(".");
            for(var y=0,j=x.length;y<j;y++){
-             if(w[y]!=x[y]){
+             if(w[y]!==x[y]){
                return parseInt(w[y]||"0")>=parseInt(x[y])
              }
            }
@@ -2382,8 +2382,8 @@ MathJax.Hub.Startup={script:"",queue:MathJax.Callback.Queue(),signal:MathJax.Cal
           continue
         }
         c.Browser=c.Insert(new String(t),a);
-        var p=new RegExp(".*(Version)/((?:\\d+\\.)+\\d+)|.*("+t+")"+(t=="MSIE"?" ":"/")+"((?:\\d+\\.)*\\d+)|(?:^|\\(| )([a-z][-a-z0-9._: ]+|(?:Apple)?WebKit)/((?:\\d+\\.)+\\d+)");
-        var s=p.exec(g)||["","","","unknown","0.0"];c.Browser.name=(s[1]=="Version"?t:(s[3]||s[5]));c.Browser.version=s[2]||s[4]||s[6];
+        var p=new RegExp(".*(Version)/((?:\\d+\\.)+\\d+)|.*("+t+")"+(t==="MSIE"?" ":"/")+"((?:\\d+\\.)*\\d+)|(?:^|\\(| )([a-z][-a-z0-9._: ]+|(?:Apple)?WebKit)/((?:\\d+\\.)+\\d+)");
+        var s=p.exec(g)||["","","","unknown","0.0"];c.Browser.name=(s[1]==="Version"?t:(s[3]||s[5]));c.Browser.version=s[2]||s[4]||s[6];
         break
       }
     }
