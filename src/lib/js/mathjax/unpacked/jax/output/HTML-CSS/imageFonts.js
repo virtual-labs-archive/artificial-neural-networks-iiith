@@ -42,7 +42,7 @@
         var orig = c[5].orig; if (!orig) {orig = c[5].orig = [c[0],c[1],c[2],c[3],c[4]]}
         var bscale = this.imgZoom; if (!span.scale) {span.scale = 1}
         var index = this.imgIndex(span.scale*bscale);
-        if (index == this.imgEmWidth.length-1 &&
+        if (index === this.imgEmWidth.length-1 &&
             this.em*span.scale*bscale/this.imgEmWidth[index] > 1.1)
               {bscale = this.imgEmWidth[index]/(this.em*span.scale)}
         var factor = this.imgEmWidth[index]/(this.em*(span.scale||1)*bscale);
@@ -55,7 +55,7 @@
         var style = {width:Math.floor(img[0]/bscale+.5)+"px", height:Math.floor(img[1]/bscale+.5)+"px"};
         if (img[2]) {style.verticalAlign = Math.floor(-img[2]/bscale+.5)+"px"}
         if (c[3] < 0) {style.marginLeft = this.Em(c[3]/1000)}
-        if (c[4] != c[2]) {style.marginRight = this.Em((c[2]-c[4])/1000)}
+        if (c[4] !== c[2]) {style.marginRight = this.Em((c[2]-c[4])/1000)}
         if (this.msieIE6) {
           style.filter = "progid:DXImageTransform.Microsoft." +
             "AlphaImageLoader(src='"+AJAX.fileURL(file)+"', sizingMethod='scale')";
