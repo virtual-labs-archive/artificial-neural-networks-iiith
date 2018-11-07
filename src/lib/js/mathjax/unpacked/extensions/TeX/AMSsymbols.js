@@ -34,7 +34,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       varkappa:               '03F0',
       
       // Uppercase Greek letters
-      varGamma:               ['0393',{mathvariant: MML.VARIANT.ITALIC}],
+      varGamma:               ["0393",{mathvariant: MML.VARIANT.ITALIC}],
       varDelta:               ['0394',{mathvariant: MML.VARIANT.ITALIC}],
       varTheta:               ['0398',{mathvariant: MML.VARIANT.ITALIC}],
       varLambda:              ['039B',{mathvariant: MML.VARIANT.ITALIC}],
@@ -47,20 +47,20 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       varOmega:               ['03A9',{mathvariant: MML.VARIANT.ITALIC}],
 
       // Hebrew letters
-      beth:                   '2136',
+      beth:                   "2136",
       gimel:                  '2137',
       daleth:                 '2138',
 
       // Miscellaneous symbols
 //    hbar:                   '0127',  // in MathJax_Main
-      backprime:              ['2035',{variantForm: true}],
+      backprime:              ["2035",{variantForm: true}],
       hslash:                 ['210F',{variantForm: true}],
       varnothing:             ['2205',{variantForm: true}],
       blacktriangle:          '25B2',
       triangledown:           '25BD',
       blacktriangledown:      '25BC',
       square:                 '25A1',
-      Box:                    '25A1',
+      Box:                    "25A1",
       blacksquare:            '25A0',
       lozenge:                '25CA',
       Diamond:                '25CA',
@@ -74,7 +74,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       complement:             '2201',
       mho:                    '2127',
       eth:                    ['00F0',{mathvariant: MML.VARIANT.NORMAL}],
-      Finv:                   '2132',
+      Finv:                   "2132",
       diagup:                 '2571',
       Game:                   '2141',
       diagdown:               '2572',
