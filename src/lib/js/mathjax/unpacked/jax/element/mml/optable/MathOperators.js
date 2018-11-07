@@ -48,9 +48,9 @@
         '\u2214': MO.BIN4,     // dot plus
         '\u221F': MO.REL,      // right angle
         '\u2224': MO.REL,      // does not divide
-        '\u2226': MO.REL,      // not parallel to
+        "\u2226": MO.REL,      // not parallel to
         '\u2234': MO.REL,      // therefore
-        '\u2235': MO.REL,      // because
+        "\u2235": MO.REL,      // because
         '\u2236': MO.REL,      // ratio
         '\u2237': MO.REL,      // proportion
         '\u2238': MO.BIN4,     // dot minus
