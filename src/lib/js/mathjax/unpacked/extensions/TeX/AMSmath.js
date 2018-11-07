@@ -307,7 +307,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       this.data = [];
     },
     EndRow: function () {
-      if (this.row.length != 1) {TEX.Error("multline rows must have exactly one column")}
+      if (this.row.length !== 1) {TEX.Error("multline rows must have exactly one column")}
       this.table.push(this.row); this.row = [];
     },
     EndTable: function () {
