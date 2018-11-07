@@ -1390,7 +1390,7 @@
       if (style == null) {style = "solid"}
       var top = this.stack.Top();
       if (top.type !== "array" || top.data.length) {TEX.Error("Misplaced "+name)}
-      if (top.table.length == 0) {
+      if (top.table.length === 0) {
         top.arraydef.frame = style;
       } else {
         var lines = (top.arraydef.rowlines ? top.arraydef.rowlines.split(/ /) : []);
@@ -1523,8 +1523,8 @@
            case '\\':  this.i++; break;
            case '{':   parens++; break;
            case '}':
-            if (parens == 0) {TEX.Error("Extra close brace")}
-            if (--parens == 0) {return this.string.slice(j,this.i-1)}
+            if (parens === 0) {TEX.Error("Extra close brace")}
+            if (--parens === 0) {return this.string.slice(j,this.i-1)}
             break;
           }
         }
@@ -1548,7 +1548,7 @@
           if (parens-- <= 0) {TEX.Error("Extra close brace while looking for ']'")}
           break;   
          case ']':
-          if (parens == 0) {return this.string.slice(j,this.i-1)}
+          if (parens === 0) {return this.string.slice(j,this.i-1)}
           break;
         }
       }
@@ -1601,11 +1601,11 @@
          case '\\':  c += this.GetCS(); break;
          case '{':   parens++; break;
          case '}':
-          if (parens == 0) {TEX.Error("Extra close brace while looking for "+token)}
+          if (parens === 0) {TEX.Error("Extra close brace while looking for "+token)}
           parens--;
           break;
         }
-        if (parens == 0 && c == token) {return this.string.slice(j,k)}
+        if (parens === 0 && c === token) {return this.string.slice(j,k)}
       }
       TEX.Error("Couldn't find "+token+" for "+name);
     },
