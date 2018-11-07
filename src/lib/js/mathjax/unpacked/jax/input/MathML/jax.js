@@ -65,7 +65,7 @@
       var mml = MML[type](), i, m, name, value;
       for (i = 0, m = node.attributes.length; i < m; i++) {
         name = node.attributes[i].name;
-        if (name == "xlink:href") {name = "href"}
+        if (name === "xlink:href") {name = "href"}
         if (name.match(/:/)) continue;
         value = node.attributes[i].value;
         if (value.toLowerCase() === "true") {value = true}
