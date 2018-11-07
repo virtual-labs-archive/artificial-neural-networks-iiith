@@ -12,5 +12,5 @@
  *      http://www.apache.org/licenses/LICENSE-2.0
  */
 
-MathJax.OutputJax["HTML-CSS"].defineImageData({MathJax_Typewriter:{}});MathJax.Ajax.loadComplete(MathJax.OutputJax["HTML-CSS"].imgDir+"/Typewriter/Regular"+MathJax.OutputJax["HTML-CSS"].imgPacked+"/Main.js");
+MathJax.OutputJax["HTML-CSS"].defineImageData({MathjaxTypewriter:{}});MathJax.Ajax.loadComplete(MathJax.OutputJax["HTML-CSS"].imgDir+"/Typewriter/Regular"+MathJax.OutputJax["HTML-CSS"].imgPacked+"/Main.js");
 
