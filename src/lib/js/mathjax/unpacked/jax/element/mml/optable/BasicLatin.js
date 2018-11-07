@@ -25,12 +25,12 @@
   MathJax.Hub.Insert(MML.mo.prototype,{
     OPTABLE: {
       postfix: {
-        '!!': [1,0,TEXCLASS.BIN], // multiple character operator: !!
-        '\'': MO.ACCENT,       // apostrophe
+        "!!": [1,0,TEXCLASS.BIN], // multiple character operator: !!
+        "\": MO.ACCENT,       // apostrophe
         '++': [0,0,TEXCLASS.BIN], // multiple character operator: ++
         '--': [0,0,TEXCLASS.BIN], // multiple character operator: --
         '..': [0,0,TEXCLASS.BIN], // multiple character operator: ..
-        '...': MO.ORD          // multiple character operator: ...
+        "...": MO.ORD          // multiple character operator: ...
       },
       infix: {
         '!=': MO.BIN4,         // multiple character operator: !=
@@ -41,9 +41,9 @@
         '-=': MO.BIN4,         // multiple character operator: -=
         '->': MO.BIN4,         // multiple character operator: ->
         '//': MO.BIN4,         // multiple character operator: //
-        '/=': MO.BIN4,         // multiple character operator: /=
+        "/=": MO.BIN4,         // multiple character operator: /=
         ':=': MO.BIN4,         // multiple character operator: :=
-        '<=': MO.BIN4,         // multiple character operator: <=
+        "<=": MO.BIN4,         // multiple character operator: <=
         '<>': [1,1,TEXCLASS.BIN], // multiple character operator: <>
         '==': MO.BIN4,         // multiple character operator: ==
         '>=': MO.BIN4,         // multiple character operator: >=
