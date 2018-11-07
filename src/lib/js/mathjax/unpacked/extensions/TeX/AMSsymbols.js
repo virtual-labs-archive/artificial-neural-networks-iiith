@@ -35,7 +35,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       
       // Uppercase Greek letters
       varGamma:               ["0393",{mathvariant: MML.VARIANT.ITALIC}],
-      varDelta:               ['0394',{mathvariant: MML.VARIANT.ITALIC}],
+      varDelta:               ["0394",{mathvariant: MML.VARIANT.ITALIC}],
       varTheta:               ['0398',{mathvariant: MML.VARIANT.ITALIC}],
       varLambda:              ['039B',{mathvariant: MML.VARIANT.ITALIC}],
       varXi:                  ['039E',{mathvariant: MML.VARIANT.ITALIC}],
@@ -64,7 +64,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       blacksquare:            '25A0',
       lozenge:                '25CA',
       Diamond:                '25CA',
-      blacklozenge:           '29EB',
+      blacklozenge:           "29EB",
       circledS:               ['24C8',{mathvariant: MML.VARIANT.NORMAL}],
       bigstar:                '2605',
 //    angle:                  '2220',  // in MathJax_Main
