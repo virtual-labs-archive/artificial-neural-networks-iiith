@@ -33,7 +33,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     span.appendChild(document.createTextNode("ABCXYZabcxyz"));
     var W = span.offsetWidth;
     span.style.fontWeight = "bold";
-    if (span.offsetWidth == W) {math = "\\bf {"+math+"}"}
+    if (span.offsetWidth === W) {math = "\\bf {"+math+"}"}
     span.parentNode.removeChild(span);
     return oldPrefilter.call(TEX,math,displaystyle,script);
   };
