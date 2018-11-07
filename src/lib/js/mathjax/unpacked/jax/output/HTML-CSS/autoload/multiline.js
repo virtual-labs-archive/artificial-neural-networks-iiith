@@ -66,7 +66,7 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
         if (values.SHIFT && values.SHIFT !== MML.INDENTSHIFT.INDENTSHIFT)
           {values.indentshift = values.SHIFT}
         //
-        if (values.indentalign == MML.INDENTALIGN.AUTO) 
+        if (values.indentalign === MML.INDENTALIGN.AUTO) 
           {values.indentalign = (isTop ? this.displayAlign : MML.INDENTALIGN.LEFT)}
         if (values.indentshift === "auto" || values.indentshift === "")
           {values.indentshift = (isTop ? this.displayIndent : "0")}
