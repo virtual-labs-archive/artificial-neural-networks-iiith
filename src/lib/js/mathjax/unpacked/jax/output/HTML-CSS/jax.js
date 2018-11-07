@@ -656,8 +656,8 @@
                 width:0, height:H, verticalAlign:D},
         bbox: {h:h, d:d, w:w, rw:w, lw:0}, noAdjust: true
       });
-      if (w > 0 && rule.offsetWidth == 0) {rule.style.width = this.Em(w)}
-      if (span.isBox || span.className == "mspace") {span.bbox = rule.bbox}
+      if (w > 0 && rule.offsetWidth === 0) {rule.style.width = this.Em(w)}
+      if (span.isBox || span.className === "mspace") {span.bbox = rule.bbox}
       return rule;
     },
     createFrame: function (span,h,d,w,t,style) {
@@ -994,7 +994,7 @@
         span.bbox.h *= span.scale; span.bbox.d *= span.scale;
         span.bbox.w *= span.scale; span.bbox.lw *= span.scale; span.bbox.rw *= span.scale;
       }
-      if (text.length == 1 && font.skew && font.skew[n]) {span.bbox.skew = font.skew[n]}
+      if (text.length === 1 && font.skew && font.skew[n]) {span.bbox.skew = font.skew[n]}
     },
 
     handleFont: function (span,font,force) {
