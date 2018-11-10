@@ -67,7 +67,7 @@
 
   var MathPlayer = false;
   if (!HUB.Browser.isIE9) // this crashes IE9 RC, so skip it for now
-    {try {new ActiveXObject("MathPlayer.Factory.1"); MathPlayer = true} catch(err) {}}
+    {try {new ActiveXObject("MathPlayer.Factory.1"); MathPlayer = true} }
 
   var canUseMML = (HUB.Browser.isFirefox && HUB.Browser.versionAtLeast("1.5")) ||
                   (HUB.Browser.isMSIE && MathPlayer) ||
