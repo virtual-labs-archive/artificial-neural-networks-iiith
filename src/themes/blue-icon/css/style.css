@@ -232,25 +232,22 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 	color: #fef4e9;
 	border: solid 1px #da7c0c;
 	background: #f78d1d;
-	background: -webkit-gradient(linear, left top, left bottom, 
-	                              from(#faa51a), to(#f47a20));
-	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	background: -webkit-gradient(...); /* Chrome,Safari4+ */
+	background: -moz-linear-gradient(...);   /* FF3.6+ */
   
 }
 .button:hover 
 {
 	background: #f47c20;
-	background: -webkit-gradient(linear, left top, left bottom, 
-	                              from(#f88e11), to(#f06015));
-	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	background: -webkit-gradient(...); /* Chrome,Safari4+ */
+	background: -moz-linear-gradient(...);  /* FF3.6+ */
 	
 }
 
 .button:active 
 {
-	background: -webkit-gradient(linear, left top, left bottom, 
-                              from(#f47a20), to(#faa51a));
-    background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	background: -webkit-gradient(...);  /* Chrome,Safari4+ */
+    background: -moz-linear-gradient(...);  /* FF3.6+ */
 }
  
 /* basic styles for button size, padding, etc. */
