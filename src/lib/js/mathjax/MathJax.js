@@ -28,10 +28,10 @@ MathJax.isPacked = true;
 
 if(document.getElementById&&document.childNodes&&document.createElement)
 {
-  if(!window.MathJax)
+  /*if(!window.MathJax)
   {
     window.MathJax={}
-  }
+  }*/
   if(!MathJax.Hub)
   {
     MathJax.version="1.1a";
