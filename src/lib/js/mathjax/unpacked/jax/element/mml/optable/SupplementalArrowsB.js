@@ -29,7 +29,7 @@
         '\u2901': MO.REL,      // rightwards two-headed arrow with double vertical stroke
         '\u2902': MO.REL,      // leftwards double arrow with vertical stroke
         '\u2903': MO.REL,      // rightwards double arrow with vertical stroke
-        '\u2904': MO.REL,      // left right double arrow with vertical stroke
+        "\u2904": MO.REL,      // left right double arrow with vertical stroke
         '\u2905': MO.REL,      // rightwards two-headed arrow from bar
         '\u2906': MO.REL,      // leftwards double arrow from bar
         '\u2907': MO.REL,      // rightwards double arrow from bar
@@ -38,7 +38,7 @@
         '\u290A': MO.WIDEREL,  // upwards triple arrow
         '\u290B': MO.WIDEREL,  // downwards triple arrow
         '\u290C': MO.WIDEREL,  // leftwards double dash arrow
-        '\u290D': MO.WIDEREL,  // rightwards double dash arrow
+        "\u290D": MO.WIDEREL,  // rightwards double dash arrow
         '\u290E': MO.WIDEREL,  // leftwards triple dash arrow
         '\u290F': MO.WIDEREL,  // rightwards triple dash arrow
         '\u2910': MO.WIDEREL,  // rightwards two-headed triple dash arrow
@@ -52,7 +52,7 @@
         '\u2918': MO.REL,      // rightwards two-headed arrow with tail with double vertical stroke
         '\u2919': MO.REL,      // leftwards arrow-tail
         '\u291A': MO.REL,      // rightwards arrow-tail
-        '\u291B': MO.REL,      // leftwards double arrow-tail
+        "\u291B": MO.REL,      // leftwards double arrow-tail
         '\u291C': MO.REL,      // rightwards double arrow-tail
         '\u291D': MO.REL,      // leftwards arrow to black diamond
         '\u291E': MO.REL,      // rightwards arrow to black diamond
@@ -66,7 +66,7 @@
         '\u2926': MO.REL,      // south west arrow with hook
         '\u2927': MO.REL,      // north west arrow and north east arrow
         '\u2928': MO.REL,      // north east arrow and south east arrow
-        '\u2929': MO.REL,      // south east arrow and south west arrow
+        "\u2929": MO.REL,      // south east arrow and south west arrow
         '\u292A': MO.REL,      // south west arrow and north west arrow
         '\u292B': MO.REL,      // rising diagonal crossing falling diagonal
         '\u292C': MO.REL,      // falling diagonal crossing rising diagonal
