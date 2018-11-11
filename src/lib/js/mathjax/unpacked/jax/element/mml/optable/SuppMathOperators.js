@@ -32,15 +32,15 @@
         '\u2A09': MO.OP,       // n-ary times operator
         '\u2A0A': MO.OP,       // modulo two sum
         '\u2A0B': MO.INTEGRAL2, // summation with integral
-        '\u2A0C': MO.INTEGRAL, // quadruple integral operator
+        "\u2A0C": MO.INTEGRAL, // quadruple integral operator
         '\u2A0D': MO.INTEGRAL2, // finite part integral
         '\u2A0E': MO.INTEGRAL2, // integral with double stroke
-        '\u2A0F': MO.INTEGRAL2, // integral average with slash
-        '\u2A10': MO.OP,       // circulation function
+        "\u2A0F": MO.INTEGRAL2, // integral average with slash
+        "\u2A10": MO.OP,       // circulation function
         '\u2A11': MO.OP,       // anticlockwise integration
         '\u2A12': MO.OP,       // line integration with rectangular path around pole
         '\u2A13': MO.OP,       // line integration with semicircular path around pole
-        '\u2A14': MO.OP,       // line integration not including the pole
+        "\u2A14": MO.OP,       // line integration not including the pole
         '\u2A15': MO.INTEGRAL2, // integral around a point operator
         '\u2A16': MO.INTEGRAL2, // quaternion integral operator
         '\u2A17': MO.INTEGRAL2, // integral with leftwards arrow with hook
@@ -63,7 +63,7 @@
         '\u2A24': MO.BIN4,     // plus sign with tilde above
         '\u2A25': MO.BIN4,     // plus sign with dot below
         '\u2A26': MO.BIN4,     // plus sign with tilde below
-        '\u2A27': MO.BIN4,     // plus sign with subscript two
+        "\u2A27": MO.BIN4,     // plus sign with subscript two
         '\u2A28': MO.BIN4,     // plus sign with black triangle
         '\u2A29': MO.BIN4,     // minus sign with comma above
         '\u2A2A': MO.BIN4,     // minus sign with dot below
