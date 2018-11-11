@@ -19,7 +19,7 @@
  */
 
 MathJax.Hub.Insert(
-  MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_AMS'],
+  MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_AMS"],
   {
     0xA0: [0,0,250,0,0],               // NO-BREAK SPACE
     0xA5: [684,0,750,11,738],          // YEN SIGN
