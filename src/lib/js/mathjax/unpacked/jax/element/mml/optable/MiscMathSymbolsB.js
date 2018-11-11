@@ -26,7 +26,7 @@
     OPTABLE: {
       prefix: {
         '\u2983': MO.OPEN,     // left white curly bracket
-        '\u2985': MO.OPEN,     // left white parenthesis
+        "\u2985": MO.OPEN,     // left white parenthesis
         '\u2987': MO.OPEN,     // z notation left image bracket
         '\u2989': MO.OPEN,     // z notation left binding bracket
         '\u298B': MO.OPEN,     // left square bracket with underbar
@@ -40,10 +40,10 @@
       },
       postfix: {
         '\u2984': MO.CLOSE,    // right white curly bracket
-        '\u2986': MO.CLOSE,    // right white parenthesis
+        "\u2986": MO.CLOSE,    // right white parenthesis
         '\u2988': MO.CLOSE,    // z notation right image bracket
-        '\u298A': MO.CLOSE,    // z notation right binding bracket
-        '\u298C': MO.CLOSE,    // right square bracket with underbar
+        "\u298A": MO.CLOSE,    // z notation right binding bracket
+        "\u298C": MO.CLOSE,    // right square bracket with underbar
         '\u298E': MO.CLOSE,    // right square bracket with tick in bottom corner
         '\u2990': MO.CLOSE,    // right square bracket with tick in top corner
         '\u2992': MO.CLOSE,    // right angle bracket with dot
@@ -61,7 +61,7 @@
         '\u299B': MO.BIN3,     // measured angle opening left
         '\u299C': MO.BIN3,     // right angle variant with square
         '\u299D': MO.BIN3,     // measured right angle with dot
-        '\u299E': MO.BIN3,     // angle with s inside
+        "\u299E": MO.BIN3,     // angle with s inside
         '\u299F': MO.BIN3,     // acute angle
         '\u29A0': MO.BIN3,     // spherical angle opening left
         '\u29A1': MO.BIN3,     // spherical angle opening up
