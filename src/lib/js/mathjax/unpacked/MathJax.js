@@ -61,7 +61,7 @@ MathJax.fileversion = "1.1.7";
   BASE.Object = OBJECT({
     constructor: CONSTRUCTOR(),
     
-    Subclass: function (def,classdef) {
+    Subclass(def,classdef) {
       var obj = CONSTRUCTOR();
       obj.SUPER = this; obj.Init = this.Init;
       obj.Subclass = this.Subclass; obj.Augment = this.Augment;
@@ -94,7 +94,7 @@ MathJax.fileversion = "1.1.7";
       return this;
     },
   
-    protoFunction: function (id,def) {
+    protoFunction(id,def) {
       this.prototype[id] = def;
       if (typeof def === "function") {def.SUPER = this.SUPER.prototype}
     },
@@ -102,8 +102,8 @@ MathJax.fileversion = "1.1.7";
     prototype: {
       Init: function () {},
       SUPER: function (fn) {return fn.callee.SUPER},
-      can: function (method) {return typeof(this[method]) === "function"},
-      has: function (property) {return typeof(this[property]) !== "undefined"},
+      can(method) {return typeof(this[method]) === "function"},
+      has(property) {return typeof(this[property]) !== "undefined"},
       isa: function (obj) {return (obj instanceof Object) && (this instanceof obj)}
     },
   
