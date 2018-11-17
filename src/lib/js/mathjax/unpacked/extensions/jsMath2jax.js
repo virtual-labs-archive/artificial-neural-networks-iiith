@@ -39,7 +39,7 @@ MathJax.Extension.jsMath2jax = {
                       //   the preview.
   },
   
-  PreProcess: function (element) {
+  PreProcess(element) {
     if (!this.configured) {
       this.config = MathJax.Hub.CombineConfig("jsMath2jax",this.config);
       if (this.config.Augment) {MathJax.Hub.Insert(this,this.config.Augment)}
@@ -87,7 +87,7 @@ MathJax.Extension.jsMath2jax = {
     return script;
   },
   
-  filterTeX: function (tex) {return tex}
+  filterTeX(tex) {return tex}
   
 };
 

@@ -18,7 +18,7 @@
  *
  */
 
-MathJax.OutputJax['HTML-CSS'].FONTDATA.FONTS['MathJax_Main-bold'] = {
+MathJax.OutputJax["HTML-CSS"].FONTDATA.FONTS["MathJax_Main-bold"] = {
   directory: 'Main/Bold',
   family: 'MathJax_Main',
   weight: 'bold',

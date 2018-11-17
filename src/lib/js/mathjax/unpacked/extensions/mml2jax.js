@@ -34,7 +34,7 @@ MathJax.Extension.mml2jax = {
   },
   MMLnamespace: "http://www.w3.org/1998/Math/MathML",
   
-  PreProcess: function (element) {
+  PreProcess(element){
     if (!this.configured) {
       this.config = MathJax.Hub.CombineConfig("mml2jax",this.config);
       if (this.config.Augment) {MathJax.Hub.Insert(this,this.config.Augment)}
@@ -144,7 +144,7 @@ MathJax.Extension.mml2jax = {
     }
     return html;
   },
-  OuterHTML: function (node) {
+  OuterHTML(node){
     if (node.nodeName.charAt(0) === "#") {return this.NodeHTML(node)}
     if (!this.AttributeBug) {return node.outerHTML}
     var html = this.NodeHTML(node);

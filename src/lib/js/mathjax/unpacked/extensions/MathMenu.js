@@ -160,8 +160,8 @@
     title: null,
     margin: 5,
 
-    Init: function (def) {this.items = [].slice.call(arguments,0)},
-    With: function (def) {if (def) {HUB.Insert(this,def)}; return this},
+    Init(def) {this.items = [].slice.call(arguments,0)},
+    With(def) {if (def) {HUB.Insert(this,def)}; return this},
 
     /*
      *  Display the menu
@@ -217,7 +217,7 @@
     /*
      *  Remove the menu from the screen
      */
-    Remove: function (event,menu) {
+    Remove(event,menu) {
       var div = document.getElementById("MathJax_MenuFrame");
       if (div) {
         div.parentNode.removeChild(div);
