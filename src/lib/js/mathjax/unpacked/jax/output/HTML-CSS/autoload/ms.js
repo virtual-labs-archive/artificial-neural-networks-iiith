@@ -32,9 +32,9 @@ MathJax.Hub.Register.StartupHook("HTML-CSS Jax Ready",function () {
       var values = this.getValues("lquote","rquote");
       var text = this.data.join("");  // FIXME:  handle mglyph?
       var pattern = [];
-      if (values.lquote.length === 1) {pattern.push(this.HTMLquoteRegExp(values.lquote))}
-      if (values.rquote.length === 1) {pattern.push(this.HTMLquoteRegExp(values.rquote))}
-      if (pattern.length) {text = text.replace(RegExp("("+pattern.join("|")+")","g"),"\\$1")}
+      if (values.lquote.length === 1) {pattern.push(this.HTMLquoteRegExp(values.lquote));}
+      if (values.rquote.length === 1) {pattern.push(this.HTMLquoteRegExp(values.rquote));}
+      if (pattern.length) {text = text.replace(RegExp("("+pattern.join("|")+")","g"),"\\$1");}
       this.HTMLhandleVariant(span,this.HTMLgetVariant(),values.lquote+text+values.rquote);
       this.HTMLhandleSpace(span);
       this.HTMLhandleColor(span);
