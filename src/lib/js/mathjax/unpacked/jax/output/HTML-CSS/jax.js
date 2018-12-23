@@ -447,9 +447,9 @@
       if (HTMLCSS.config.showMathMenu) {
         if (!event) {event = window.event}
         if (HTMLCSS.settings.context === "MathJax") {
-          if (!HTMLCSS.noContextMenuBug || event.button !== 2) return
+          if (!HTMLCSS.noContextMenuBug || event.button !== 2) return true;
         } else {
-          if (!event[HTMLCSS.MENUKEY] || event.button !== HTMLCSS.LEFTBUTTON) return
+          if (!event[HTMLCSS.MENUKEY] || event.button !== HTMLCSS.LEFTBUTTON) return true;
         }
         return HTMLCSS.ContextMenu.call(this,event,true);
       }
