@@ -228,9 +228,9 @@
       if (nMML.config.showMathMenu) {
         if (!event) {event = window.event}
         if (nMML.settings.context === "MathJax") {
-          if (!nMML.noContextMenuBug || event.button !== 2) return
+          if (!nMML.noContextMenuBug || event.button !== 2) return true;
         } else {
-          if (!event[nMML.MENUKEY] || event.button !== nMML.LEFTBUTTON) return
+          if (!event[nMML.MENUKEY] || event.button !== nMML.LEFTBUTTON) return true;
         }
         return nMML.ContextMenu.call(this,event,true);
       }
