@@ -918,7 +918,7 @@ if (typeof Object.create !== "function") {
                     return false;
                 }
                 if (base.itemsAmount <= base.options.items) {
-                    return;
+                    return true;
                 }
                 if (base.isCssFinish === false && !base.options.dragBeforeAnimFinish) {
                     return false;
