@@ -788,7 +788,7 @@ font-size: 30px;
 
 .nounderline:HOVER
 {
-	text-decoration: none !important;
+	text-decoration: underline;
 }
 .text-normal-gray-medium
 {
