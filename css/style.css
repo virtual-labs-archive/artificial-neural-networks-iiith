@@ -789,6 +789,7 @@ font-size: 30px;
 .nounderline:HOVER
 {
 	text-decoration: none !important;
+	color: blue;
 }
 .text-normal-gray-medium
 {
