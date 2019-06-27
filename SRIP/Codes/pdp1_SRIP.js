@@ -1,76 +1,77 @@
+let isRunning = true;
 let units = [];
 //let nameList = [];
 //let actrest = -0.1;
-let nameList=[ 
-  "Jets",  
-  "Sharks",  
-  "in20s",  
-  "in30s",  
-  "in40s",  
-  "JH",  
-  "HS",  
-  "College",  
-  "Single",  
-  "Married",  
-  "Divorced",  
-  "Pusher",  
-  "Burglar",  
-  "Bookie",  
-  "Art",  
-  "Al",  
-  "Sam",  
-  "Clyde",  
-  "Mike",  
-  "Jim",  
-  "Greg",  
-  "John",  
-  "Doug",  
-  "Lance",  
-  "George",  
-  "Pete",  
-  "Fred",  
-  "Gene",  
-  "Ralph",  
-  "Phil",  
-  "Ike",  
-  "Nick",  
-  "Don",  
-  "Ned",  
-  "Karl",  
-  "Ken",  
-  "Earl",  
-  "Rick",  
-  "Ol",  
-  "Neal",  
-  "Dave",  
-  "Art'",  
-  "Al'",  
-  "Sam'",  
-  "Clyde'",  
-  "Mike'",  
-  "Jim'",  
-  "Greg'",  
-  "John'",  
-  "Doug'",  
-  "Lance'",  
-  "George'",  
-  "Pete'",  
-  "Fred'",  
-  "Gene'",  
-  "Ralph'",  
-  "Phil'",  
-  "Ike'",  
-  "Nick'",  
-  "Don'",  
-  "Ned'",  
-  "Karl'",  
-  "Ken'",  
-  "Earl'",  
-  "Rick'",  
-  "Ol'",  
-  "Neal'",  
-  "Dave'",  
-  ];
+let nameList = [
+  "Jets",
+  "Sharks",
+  "in20s",
+  "in30s",
+  "in40s",
+  "JH",
+  "HS",
+  "College",
+  "Single",
+  "Married",
+  "Divorced",
+  "Pusher",
+  "Burglar",
+  "Bookie",
+  "Art",
+  "Al",
+  "Sam",
+  "Clyde",
+  "Mike",
+  "Jim",
+  "Greg",
+  "John",
+  "Doug",
+  "Lance",
+  "George",
+  "Pete",
+  "Fred",
+  "Gene",
+  "Ralph",
+  "Phil",
+  "Ike",
+  "Nick",
+  "Don",
+  "Ned",
+  "Karl",
+  "Ken",
+  "Earl",
+  "Rick",
+  "Ol",
+  "Neal",
+  "Dave",
+  "Art'",
+  "Al'",
+  "Sam'",
+  "Clyde'",
+  "Mike'",
+  "Jim'",
+  "Greg'",
+  "John'",
+  "Doug'",
+  "Lance'",
+  "George'",
+  "Pete'",
+  "Fred'",
+  "Gene'",
+  "Ralph'",
+  "Phil'",
+  "Ike'",
+  "Nick'",
+  "Don'",
+  "Ned'",
+  "Karl'",
+  "Ken'",
+  "Earl'",
+  "Rick'",
+  "Ol'",
+  "Neal'",
+  "Dave'",
+];
 let weights = [];
 let decay = 0.1;
 let beta = 0.1;
@@ -79,14 +80,15 @@ let estr = 0.4;
 let actmax = 1.0;
 let actmin = -1.0;
 let actrest = -0.1;
-let difx,dify;
-let click=false;
-let wx=".v.......................................ddddddddddddddd............ v.......................................................dddddddddddd ...vv......................................d..ddd.ddddd.......d..... ..v.v.....................................d..d...d.....dddddd...dddd ..vv.....................................d..d................d.d.... ......vv.................................dd.ddd.d.dd...d.d.......... .....v.v.......................................d.d..dd....d..dddd.dd .....vv....................................d..........d.d..dd....d.. .........vv..............................d.ddd...d..dddd.dd...d...d. ........v.v...............................d....dd.d.....d..ddd.d.d.. ........vv....................................d....d............d..d ............vv...........................d.....d.....dddd.d......d.d ...........v.v............................d...d.d.dd.......d..ddd... ...........vv..............................ddd...d..d....d..dd....d. ...............vvvvvvvvvvvvvvvvvvvvvvvvvvd.......................... ..............v.vvvvvvvvvvvvvvvvvvvvvvvvv.d......................... ..............vv.vvvvvvvvvvvvvvvvvvvvvvvv..d........................ ..............vvv.vvvvvvvvvvvvvvvvvvvvvvv...d....................... ..............vvvv.vvvvvvvvvvvvvvvvvvvvvv....d...................... ..............vvvvv.vvvvvvvvvvvvvvvvvvvvv.....d..................... ..............vvvvvv.vvvvvvvvvvvvvvvvvvvv......d.................... ..............vvvvvvv.vvvvvvvvvvvvvvvvvvv.......d................... ..............vvvvvvvv.vvvvvvvvvvvvvvvvvv........d.................. ..............vvvvvvvvv.vvvvvvvvvvvvvvvvv.........d................. ..............vvvvvvvvvv.vvvvvvvvvvvvvvvv..........d................ ..............vvvvvvvvvvv.vvvvvvvvvvvvvvv...........d............... ..............vvvvvvvvvvvv.vvvvvvvvvvvvvv............d.............. ..............vvvvvvvvvvvvv.vvvvvvvvvvvvv.............d............. ..............vvvvvvvvvvvvvv.vvvvvvvvvvvv..............d............ ..............vvvvvvvvvvvvvvv.vvvvvvvvvvv...............d........... ..............vvvvvvvvvvvvvvvv.vvvvvvvvvv................d.......... ..............vvvvvvvvvvvvvvvvv.vvvvvvvvv.................d......... ..............vvvvvvvvvvvvvvvvvv.vvvvvvvv..................d........ ..............vvvvvvvvvvvvvvvvvvv.vvvvvvv...................d....... ..............vvvvvvvvvvvvvvvvvvvv.vvvvvv....................d...... ..............vvvvvvvvvvvvvvvvvvvvv.vvvvv.....................d..... ..............vvvvvvvvvvvvvvvvvvvvvv.vvvv......................d.... ..............vvvvvvvvvvvvvvvvvvvvvvv.vvv.......................d... ..............vvvvvvvvvvvvvvvvvvvvvvvv.vv........................d.. ..............vvvvvvvvvvvvvvvvvvvvvvvvv.v.........................d. ..............vvvvvvvvvvvvvvvvvvvvvvvvvv...........................d u...uu..u..u..u...........................hhhhhhhhhhhhhhhhhhhhhhhhhh u..u.u...u..u..u.........................h.hhhhhhhhhhhhhhhhhhhhhhhhh u.u....uu....u..u........................hh.hhhhhhhhhhhhhhhhhhhhhhhh u...uu..u....u...u.......................hhh.hhhhhhhhhhhhhhhhhhhhhhh u..u.u..u....u....u......................hhhh.hhhhhhhhhhhhhhhhhhhhhh u.u..u....u.u......u.....................hhhhh.hhhhhhhhhhhhhhhhhhhhh u.u...u..u.u........u....................hhhhhh.hhhhhhhhhhhhhhhhhhhh u.u..u...u..u........u...................hhhhhhh.hhhhhhhhhhhhhhhhhhh u..u..u.u....u........u..................hhhhhhhh.hhhhhhhhhhhhhhhhhh u.u..u...u..u..........u.................hhhhhhhhh.hhhhhhhhhhhhhhhhh u.u..u....u.u...........u................hhhhhhhhhh.hhhhhhhhhhhhhhhh u.u...u.u....u...........u...............hhhhhhhhhhh.hhhhhhhhhhhhhhh u.u...u.u..u..............u..............hhhhhhhhhhhh.hhhhhhhhhhhhhh u.u....uu..u...............u.............hhhhhhhhhhhhh.hhhhhhhhhhhhh u..u.u..u..u................u............hhhhhhhhhhhhhh.hhhhhhhhhhhh .u.u...u.u.u.................u...........hhhhhhhhhhhhhhh.hhhhhhhhhhh .u.u.u..u....u................u..........hhhhhhhhhhhhhhhh.hhhhhhhhhh .u.u..u.u..u...................u.........hhhhhhhhhhhhhhhhh.hhhhhhhhh .u.u...u.u..u...................u........hhhhhhhhhhhhhhhhhh.hhhhhhhh .u.u...u.u...u...................u.......hhhhhhhhhhhhhhhhhhh.hhhhhhh .u..u.u..u...u....................u......hhhhhhhhhhhhhhhhhhhh.hhhhhh .uu...u.u...u......................u.....hhhhhhhhhhhhhhhhhhhhh.hhhhh .u..u.u..u..u.......................u....hhhhhhhhhhhhhhhhhhhhhh.hhhh .u.u..u...u.u........................u...hhhhhhhhhhhhhhhhhhhhhhh.hhh .u.u...u.u.u..........................u..hhhhhhhhhhhhhhhhhhhhhhhh.hh .u.u..u.u....u.........................u.hhhhhhhhhhhhhhhhhhhhhhhhh.h .u.u..u...uu............................uhhhhhhhhhhhhhhhhhhhhhhhhhh."
-let maxSteps=350;
-let prev=[];
-let gDel=0.0;
-let maxGDel=0.001;
-let cycle=0;
+let difx, dify;
+let slowmo=false;
+let click = false;
+let wx = ".v.......................................ddddddddddddddd............ v.......................................................dddddddddddd ...vv......................................d..ddd.ddddd.......d..... ..v.v.....................................d..d...d.....dddddd...dddd ..vv.....................................d..d................d.d.... ......vv.................................dd.ddd.d.dd...d.d.......... .....v.v.......................................d.d..dd....d..dddd.dd .....vv....................................d..........d.d..dd....d.. .........vv..............................d.ddd...d..dddd.dd...d...d. ........v.v...............................d....dd.d.....d..ddd.d.d.. ........vv....................................d....d............d..d ............vv...........................d.....d.....dddd.d......d.d ...........v.v............................d...d.d.dd.......d..ddd... ...........vv..............................ddd...d..d....d..dd....d. ...............vvvvvvvvvvvvvvvvvvvvvvvvvvd.......................... ..............v.vvvvvvvvvvvvvvvvvvvvvvvvv.d......................... ..............vv.vvvvvvvvvvvvvvvvvvvvvvvv..d........................ ..............vvv.vvvvvvvvvvvvvvvvvvvvvvv...d....................... ..............vvvv.vvvvvvvvvvvvvvvvvvvvvv....d...................... ..............vvvvv.vvvvvvvvvvvvvvvvvvvvv.....d..................... ..............vvvvvv.vvvvvvvvvvvvvvvvvvvv......d.................... ..............vvvvvvv.vvvvvvvvvvvvvvvvvvv.......d................... ..............vvvvvvvv.vvvvvvvvvvvvvvvvvv........d.................. ..............vvvvvvvvv.vvvvvvvvvvvvvvvvv.........d................. ..............vvvvvvvvvv.vvvvvvvvvvvvvvvv..........d................ ..............vvvvvvvvvvv.vvvvvvvvvvvvvvv...........d............... ..............vvvvvvvvvvvv.vvvvvvvvvvvvvv............d.............. ..............vvvvvvvvvvvvv.vvvvvvvvvvvvv.............d............. ..............vvvvvvvvvvvvvv.vvvvvvvvvvvv..............d............ ..............vvvvvvvvvvvvvvv.vvvvvvvvvvv...............d........... ..............vvvvvvvvvvvvvvvv.vvvvvvvvvv................d.......... ..............vvvvvvvvvvvvvvvvv.vvvvvvvvv.................d......... ..............vvvvvvvvvvvvvvvvvv.vvvvvvvv..................d........ ..............vvvvvvvvvvvvvvvvvvv.vvvvvvv...................d....... ..............vvvvvvvvvvvvvvvvvvvv.vvvvvv....................d...... ..............vvvvvvvvvvvvvvvvvvvvv.vvvvv.....................d..... ..............vvvvvvvvvvvvvvvvvvvvvv.vvvv......................d.... ..............vvvvvvvvvvvvvvvvvvvvvvv.vvv.......................d... ..............vvvvvvvvvvvvvvvvvvvvvvvv.vv........................d.. ..............vvvvvvvvvvvvvvvvvvvvvvvvv.v.........................d. ..............vvvvvvvvvvvvvvvvvvvvvvvvvv...........................d u...uu..u..u..u...........................hhhhhhhhhhhhhhhhhhhhhhhhhh u..u.u...u..u..u.........................h.hhhhhhhhhhhhhhhhhhhhhhhhh u.u....uu....u..u........................hh.hhhhhhhhhhhhhhhhhhhhhhhh u...uu..u....u...u.......................hhh.hhhhhhhhhhhhhhhhhhhhhhh u..u.u..u....u....u......................hhhh.hhhhhhhhhhhhhhhhhhhhhh u.u..u....u.u......u.....................hhhhh.hhhhhhhhhhhhhhhhhhhhh u.u...u..u.u........u....................hhhhhh.hhhhhhhhhhhhhhhhhhhh u.u..u...u..u........u...................hhhhhhh.hhhhhhhhhhhhhhhhhhh u..u..u.u....u........u..................hhhhhhhh.hhhhhhhhhhhhhhhhhh u.u..u...u..u..........u.................hhhhhhhhh.hhhhhhhhhhhhhhhhh u.u..u....u.u...........u................hhhhhhhhhh.hhhhhhhhhhhhhhhh u.u...u.u....u...........u...............hhhhhhhhhhh.hhhhhhhhhhhhhhh u.u...u.u..u..............u..............hhhhhhhhhhhh.hhhhhhhhhhhhhh u.u....uu..u...............u.............hhhhhhhhhhhhh.hhhhhhhhhhhhh u..u.u..u..u................u............hhhhhhhhhhhhhh.hhhhhhhhhhhh .u.u...u.u.u.................u...........hhhhhhhhhhhhhhh.hhhhhhhhhhh .u.u.u..u....u................u..........hhhhhhhhhhhhhhhh.hhhhhhhhhh .u.u..u.u..u...................u.........hhhhhhhhhhhhhhhhh.hhhhhhhhh .u.u...u.u..u...................u........hhhhhhhhhhhhhhhhhh.hhhhhhhh .u.u...u.u...u...................u.......hhhhhhhhhhhhhhhhhhh.hhhhhhh .u..u.u..u...u....................u......hhhhhhhhhhhhhhhhhhhh.hhhhhh .uu...u.u...u......................u.....hhhhhhhhhhhhhhhhhhhhh.hhhhh .u..u.u..u..u.......................u....hhhhhhhhhhhhhhhhhhhhhh.hhhh .u.u..u...u.u........................u...hhhhhhhhhhhhhhhhhhhhhhh.hhh .u.u...u.u.u..........................u..hhhhhhhhhhhhhhhhhhhhhhhh.hh .u.u..u.u....u.........................u.hhhhhhhhhhhhhhhhhhhhhhhhh.h .u.u..u...uu............................uhhhhhhhhhhhhhhhhhhhhhhhhhh."
+let maxSteps = 350;
+let prev = [];
+let gDel = 0.0;
+let maxGDel = 0.001;
+let cycle = 0;
 //function preload() {
 //  nameList = loadStrings('data/names.txt');
 //  w = loadBytes('data/network.txt');
@@ -106,7 +108,7 @@ function getWeights() {
   for (let i = 0; i < 68; i++) {
     weights[i] = [];
     for (let j = 0; j < 68; j++) {
-      
+
       let a = wx[i * 69 + j];
       if (a == '.') {
         weights[i][j] = 0.0;
@@ -117,7 +119,7 @@ function getWeights() {
       else if ((a == 'd') || (a == 'u')) {
         weights[i][j] = 1.0;
       }
-      
+
     }
   }
 }
@@ -128,7 +130,7 @@ function getNames() {
     //console.log('"'+nameList[i]+'",');
     units[i] = new Unit(i, nameList[i], 20, 20);
   }
-  
+
 }
 function draw() {
   background(100);
@@ -140,7 +142,7 @@ function draw() {
   noSmooth();
   fill(255, 255, 255, 255);
 
-  text("Interactive Activation v. 1.1 - click on units to activate, SPACE to pause, 'r' to reset", 10, 13);
+  text("Interactive Activation and Competition - click on units to activate, SPACE to pause, 'r' to reset, 's' for slow motion view", 10, 13);
   text("Cycle: ", 10, 595);
   text(cycle, 50, 595);
   text("Global Change: ", 100, 595);
@@ -151,21 +153,35 @@ function draw() {
   }
   text(gDel, 190, 595);
   smooth();
+ 
     plotgDelta();
+  if(slowmo)
+  {
+    for(let i=0;i<50000000;i++)
+    {
+
+    }
+  }
+  
   for (let i = 0; i < 68; i++) {
     units[i].display();
   }
-  for (let i = 0; i < 68; i++) {
-    units[i].net();
+  if (isRunning) {
+    for (let i = 0; i < 68; i++) {
+      units[i].net();
+    }
+    //gDel=0.0;
+    for (let i = 0; i < 68; i++) {
+      units[i].update();
+    }
+    cycle++;
   }
-  for (let i = 0; i < 68; i++) {
-    units[i].update();
-  }
-  for (let i = 0; i < 68; i++) {
-    units[i].userIn();
-  }
-  cycle++;
+    for (let i = 0; i < 68; i++) {
+      units[i].userIn();
+    }
+    
 }
+
 
 function placeUnits() {
   let r = 60;
@@ -235,24 +251,26 @@ function placeUnits() {
 
 }
 
-function plotgDelta()
-{
-  let c=cycle;
-  if (c > maxSteps - 1) {
-    c = maxSteps - 1;
-    for (let i = 0; i < maxSteps - 1; i++) {
-     prev[i] = prev[i + 1];
-     }
+function plotgDelta() {
+  let c = cycle;
+  if(isRunning)
+  {
+    if (c > maxSteps - 1) {
+      c = maxSteps - 1;
+      for (let i = 0; i < maxSteps - 1; i++) {
+        prev[i] = prev[i + 1];
+      }
+    }
+    //rescale
+    if (gDel > maxGDel) {
+      maxGDel = gDel;
+    }
+    prev[c] = gDel;
   }
-  //rescale
-  if (gDel > maxGDel) {
-    maxGDel = gDel;
-  }
-  prev[c] = gDel;
   stroke(0, 255, 0, 255);
-   for (let i = 0; i < maxSteps - 1; i++) {
-    line (250+i, 595, 250+i, (594 - (12*(prev[i]/maxGDel))));
-}
+  for (let i = 0; i < maxSteps - 1; i++) {
+    line(280 + i, 595, 280 + i, (594 - (12 * (prev[i] / maxGDel))));
+  }
 }
 class Unit {
 
@@ -263,7 +281,7 @@ class Unit {
     this.py = py;
     this.rx = 20;
     this.ry = 20;
-    this.extIn =0.0;
+    this.extIn = 0.0;
     this.q = this.delEx = this.delInh = this.netIn = this.inhibition = this.excitation = 0.0;
     this.activation = actrest;
     this.highlight = false;
@@ -351,14 +369,14 @@ class Unit {
     smooth();
     if (this.highlight) {
       for (let j = 0; j < 68; j++) {
-    if (weights[this.id][j] > 0) {
+        if (weights[this.id][j] > 0) {
           strokeWeight(1);
           stroke(0, 255, 100, 255);
           //curve(posx, posy, 200, 200, 200, 200, Units[j].posx, Units[j].posy);
           line(this.px, this.py, units[j].px, units[j].py);
           strokeWeight(1);
         }
-        else if (weights[this.id][j] < 0) {    
+        else if (weights[this.id][j] < 0) {
           strokeWeight(1);
           stroke(255, 0, 100, 255);
           //curve(posx, posy, 200, 200, 200, 200, Units[j].posx, Units[j].posy);
@@ -376,18 +394,24 @@ class Unit {
         if (weights[this.id][j] > 0) {
           this.q = weights[this.id][j] * units[j].activation;
           this.excitation += this.q;
-          stroke(0, 255, 0, this.q*200);
-          //curve(posx, posy, 200, 200, 200, 200, Units[j].posx, Units[j].posy);
-        line(this.px, this.py, units[j].px, units[j].py);}
+          if (units[j].activation > 0.65) {
+            stroke(0, 255, 0, this.q * 200);
+            //curve(posx, posy, 200, 200, 200, 200, Units[j].posx, Units[j].posy);
+            line(this.px, this.py, units[j].px, units[j].py);
+
+          }
+
+        }
         else if (weights[this.id][j] < 0) {
           this.q = weights[this.id][j] * units[j].activation;
           this.inhibition += this.q;
-          stroke(255, 0, 0, abs(this.q)*200);
+          //stroke(255, 0, 0, abs(this.q)*200);
           //curve(posx, posy, 200, 200, 200, 200, Units[j].posx, Units[j].posy);
-        line(this.px, this.py, units[j].px, units[j].py);}
+          //line(this.px, this.py, units[j].px, units[j].py);
+        }
       }
-      this.netIn = (0.4 * this.extIn) + (0.1 * (this.excitation+this.inhibition));
-    //if (i == 60) {println(netinput);}
+      this.netIn = (0.4 * this.extIn) + (0.1 * (this.excitation + this.inhibition));
+      //if (i == 60) {println(netinput);}
     }
   }
   update() {
@@ -395,37 +419,80 @@ class Unit {
     if (this.netIn > 0) {
       this.delEx = (actmax - this.activation) * this.netIn - decay * (this.activation - actrest);
       this.activation += this.delEx;
-      gDel += abs(this.delEx);
+      gDel =gDel + abs(this.delEx);
+      parseFloat(gDel);
     }
     else if (this.netIn < 0) {
       this.delInh = (this.activation - actmin) * this.netIn - decay * (this.activation - actrest);
       this.activation += this.delInh;
-      gDel += abs(this.deltaInh);
+      gDel =gDel + abs(this.deltaInh);
+      parseFloat(gDel);
     }
-  if(this.activation > actmax) {this.activation = actmax;}
-  if(this.activation < actmin) {this.activation = actmin;}
+    if (this.activation > actmax) { this.activation = actmax; }
+    if (this.activation < actmin) { this.activation = actmin; }
   }
-  userIn(){
-    difx= this.px - mouseX;
-    dify= this.py - mouseY;
-    if(sqrt(sq(difx)+sq(dify))<10){
-      this.highlight=true;
-      if(this.id<41 && click==true){
-        if(this.extIn==0.0){this.extIn=1.0;}
-        else {this.extIn=0.0;}
-        click=false;
+  userIn() {
+    difx = this.px - mouseX;
+    dify = this.py - mouseY;
+    if (sqrt(sq(difx) + sq(dify)) < 10) {
+      this.highlight = true;
+      if (this.id < 41 && click == true) {
+        if (this.extIn == 0.0) { this.extIn = 1.0; }
+        else { this.extIn = 0.0; }
+        click = false;
       }
-      else{
-        click=false;
+      else {
+        click = false;
       }
     }
-    else{
-      this.highlight=false;
+    else {
+      this.highlight = false;
     }
+  }
+  reset() {
+    this.extIn = 0.0;
+    this.q = this.delEx = this.delInh = this.netIn = this.inhibition = this.excitation = 0.0;
+    this.activation = actrest;
+    this.highlight = false;
   }
 }
 
-function mouseReleased()
+function mouseReleased() {
+  if(isRunning)
+  {
+    for(let i=0;i<68;i++)
+    {
+      if(units[i].highlight==true)
+      {
+        click = true;
+        break;
+      }
+    }
+    
+  }
+  
+}
+
+
+
+function keyReleased()
 {
-  click=true;
+  if(key===' ')
+  {
+    if(isRunning===true){isRunning=false;}
+    else{isRunning=true;}
+  }
+  else if(key==='r')
+  {
+    for(let i=0;i<68;i++)
+    {
+      units[i].reset();
+    }
+    cycle=0;
+  }
+  else if(key==='s')
+  {
+    if(slowmo==true){slowmo=false;}
+    else{slowmo=true;}
+  }
 }
