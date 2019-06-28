@@ -81,7 +81,7 @@ let actmax = 1.0;
 let actmin = -1.0;
 let actrest = -0.1;
 let difx, dify;
-let slowmo=false;
+let slowmo = false;
 let click = false;
 let wx = ".v.......................................ddddddddddddddd............ v.......................................................dddddddddddd ...vv......................................d..ddd.ddddd.......d..... ..v.v.....................................d..d...d.....dddddd...dddd ..vv.....................................d..d................d.d.... ......vv.................................dd.ddd.d.dd...d.d.......... .....v.v.......................................d.d..dd....d..dddd.dd .....vv....................................d..........d.d..dd....d.. .........vv..............................d.ddd...d..dddd.dd...d...d. ........v.v...............................d....dd.d.....d..ddd.d.d.. ........vv....................................d....d............d..d ............vv...........................d.....d.....dddd.d......d.d ...........v.v............................d...d.d.dd.......d..ddd... ...........vv..............................ddd...d..d....d..dd....d. ...............vvvvvvvvvvvvvvvvvvvvvvvvvvd.......................... ..............v.vvvvvvvvvvvvvvvvvvvvvvvvv.d......................... ..............vv.vvvvvvvvvvvvvvvvvvvvvvvv..d........................ ..............vvv.vvvvvvvvvvvvvvvvvvvvvvv...d....................... ..............vvvv.vvvvvvvvvvvvvvvvvvvvvv....d...................... ..............vvvvv.vvvvvvvvvvvvvvvvvvvvv.....d..................... ..............vvvvvv.vvvvvvvvvvvvvvvvvvvv......d.................... ..............vvvvvvv.vvvvvvvvvvvvvvvvvvv.......d................... ..............vvvvvvvv.vvvvvvvvvvvvvvvvvv........d.................. ..............vvvvvvvvv.vvvvvvvvvvvvvvvvv.........d................. ..............vvvvvvvvvv.vvvvvvvvvvvvvvvv..........d................ ..............vvvvvvvvvvv.vvvvvvvvvvvvvvv...........d............... ..............vvvvvvvvvvvv.vvvvvvvvvvvvvv............d.............. ..............vvvvvvvvvvvvv.vvvvvvvvvvvvv.............d............. ..............vvvvvvvvvvvvvv.vvvvvvvvvvvv..............d............ ..............vvvvvvvvvvvvvvv.vvvvvvvvvvv...............d........... ..............vvvvvvvvvvvvvvvv.vvvvvvvvvv................d.......... ..............vvvvvvvvvvvvvvvvv.vvvvvvvvv.................d......... ..............vvvvvvvvvvvvvvvvvv.vvvvvvvv..................d........ ..............vvvvvvvvvvvvvvvvvvv.vvvvvvv...................d....... ..............vvvvvvvvvvvvvvvvvvvv.vvvvvv....................d...... ..............vvvvvvvvvvvvvvvvvvvvv.vvvvv.....................d..... ..............vvvvvvvvvvvvvvvvvvvvvv.vvvv......................d.... ..............vvvvvvvvvvvvvvvvvvvvvvv.vvv.......................d... ..............vvvvvvvvvvvvvvvvvvvvvvvv.vv........................d.. ..............vvvvvvvvvvvvvvvvvvvvvvvvv.v.........................d. ..............vvvvvvvvvvvvvvvvvvvvvvvvvv...........................d u...uu..u..u..u...........................hhhhhhhhhhhhhhhhhhhhhhhhhh u..u.u...u..u..u.........................h.hhhhhhhhhhhhhhhhhhhhhhhhh u.u....uu....u..u........................hh.hhhhhhhhhhhhhhhhhhhhhhhh u...uu..u....u...u.......................hhh.hhhhhhhhhhhhhhhhhhhhhhh u..u.u..u....u....u......................hhhh.hhhhhhhhhhhhhhhhhhhhhh u.u..u....u.u......u.....................hhhhh.hhhhhhhhhhhhhhhhhhhhh u.u...u..u.u........u....................hhhhhh.hhhhhhhhhhhhhhhhhhhh u.u..u...u..u........u...................hhhhhhh.hhhhhhhhhhhhhhhhhhh u..u..u.u....u........u..................hhhhhhhh.hhhhhhhhhhhhhhhhhh u.u..u...u..u..........u.................hhhhhhhhh.hhhhhhhhhhhhhhhhh u.u..u....u.u...........u................hhhhhhhhhh.hhhhhhhhhhhhhhhh u.u...u.u....u...........u...............hhhhhhhhhhh.hhhhhhhhhhhhhhh u.u...u.u..u..............u..............hhhhhhhhhhhh.hhhhhhhhhhhhhh u.u....uu..u...............u.............hhhhhhhhhhhhh.hhhhhhhhhhhhh u..u.u..u..u................u............hhhhhhhhhhhhhh.hhhhhhhhhhhh .u.u...u.u.u.................u...........hhhhhhhhhhhhhhh.hhhhhhhhhhh .u.u.u..u....u................u..........hhhhhhhhhhhhhhhh.hhhhhhhhhh .u.u..u.u..u...................u.........hhhhhhhhhhhhhhhhh.hhhhhhhhh .u.u...u.u..u...................u........hhhhhhhhhhhhhhhhhh.hhhhhhhh .u.u...u.u...u...................u.......hhhhhhhhhhhhhhhhhhh.hhhhhhh .u..u.u..u...u....................u......hhhhhhhhhhhhhhhhhhhh.hhhhhh .uu...u.u...u......................u.....hhhhhhhhhhhhhhhhhhhhh.hhhhh .u..u.u..u..u.......................u....hhhhhhhhhhhhhhhhhhhhhh.hhhh .u.u..u...u.u........................u...hhhhhhhhhhhhhhhhhhhhhhh.hhh .u.u...u.u.u..........................u..hhhhhhhhhhhhhhhhhhhhhhhh.hh .u.u..u.u....u.........................u.hhhhhhhhhhhhhhhhhhhhhhhhh.h .u.u..u...uu............................uhhhhhhhhhhhhhhhhhhhhhhhhhh."
 let maxSteps = 350;
@@ -89,6 +89,7 @@ let prev = [];
 let gDel = 0.0;
 let maxGDel = 0.001;
 let cycle = 0;
+let inpnew;
 //function preload() {
 //  nameList = loadStrings('data/names.txt');
 //  w = loadBytes('data/network.txt');
@@ -151,18 +152,18 @@ function draw() {
   } else {
     fill(255, 255, 255, 255);
   }
-  text(gDel, 190, 595);
+
+  text(gDel.toFixed(6), 190, 595);
+  //console.log(gDel);
   smooth();
- 
-    plotgDelta();
-  if(slowmo)
-  {
-    for(let i=0;i<50000000;i++)
-    {
+
+  plotgDelta();
+  if (slowmo) {
+    for (let i = 0; i < 50000000; i++) {
 
     }
   }
-  
+
   for (let i = 0; i < 68; i++) {
     units[i].display();
   }
@@ -176,10 +177,10 @@ function draw() {
     }
     cycle++;
   }
-    for (let i = 0; i < 68; i++) {
-      units[i].userIn();
-    }
-    
+  for (let i = 0; i < 68; i++) {
+    units[i].userIn();
+  }
+
 }
 
 
@@ -253,8 +254,7 @@ function placeUnits() {
 
 function plotgDelta() {
   let c = cycle;
-  if(isRunning)
-  {
+  if (isRunning) {
     if (c > maxSteps - 1) {
       c = maxSteps - 1;
       for (let i = 0; i < maxSteps - 1; i++) {
@@ -343,12 +343,12 @@ class Unit {
       fill(255, 255, 255, 255);
       noSmooth();
       text("Unit no.", 25, 74);
-      text(this.id, 60, 74);
+      text(this.id, 90, 74);
       text("Activation: ", 25, 93);
       text("Net Input: ", 25, 112);
       text(this.name, 139, 74);
-      text(this.activation, 139, 93);
-      text(this.netIn, 139, 112);
+      text(this.activation.toFixed(4), 139, 93);
+      text(this.netIn.toFixed(4), 139, 112);
       smooth();
 
     } else {
@@ -410,23 +410,24 @@ class Unit {
           //line(this.px, this.py, units[j].px, units[j].py);
         }
       }
-      this.netIn = (0.4 * this.extIn) + (0.1 * (this.excitation + this.inhibition));
+
       //if (i == 60) {println(netinput);}
     }
+    this.netIn = (estr * this.extIn) + (beta * this.excitation) + (gamma * this.inhibition);
   }
   update() {
     gDel = 0.0;
     if (this.netIn > 0) {
       this.delEx = (actmax - this.activation) * this.netIn - decay * (this.activation - actrest);
       this.activation += this.delEx;
-      gDel =gDel + abs(this.delEx);
-      parseFloat(gDel);
+      gDel = gDel + abs(this.delEx);
+      //parseFloat(gDel);
     }
     else if (this.netIn < 0) {
       this.delInh = (this.activation - actmin) * this.netIn - decay * (this.activation - actrest);
       this.activation += this.delInh;
-      gDel =gDel + abs(this.deltaInh);
-      parseFloat(gDel);
+      gDel = gDel + abs(this.delInh);
+      //parseFloat(gDel);
     }
     if (this.activation > actmax) { this.activation = actmax; }
     if (this.activation < actmin) { this.activation = actmin; }
@@ -458,41 +459,101 @@ class Unit {
 }
 
 function mouseReleased() {
-  if(isRunning)
-  {
-    for(let i=0;i<68;i++)
-    {
-      if(units[i].highlight==true)
-      {
+  if (isRunning) {
+    for (let i = 0; i < 68; i++) {
+      if (units[i].highlight == true) {
         click = true;
         break;
       }
     }
-    
+
   }
-  
+
 }
 
 
 
-function keyReleased()
-{
-  if(key===' ')
-  {
-    if(isRunning===true){isRunning=false;}
-    else{isRunning=true;}
+function keyReleased() {
+  if (key === ' ') {
+    if (isRunning === true) { isRunning = false; }
+    else { isRunning = true; }
   }
-  else if(key==='r')
-  {
-    for(let i=0;i<68;i++)
-    {
-      units[i].reset();
-    }
-    cycle=0;
+  else if (key === 'r') {
+    initReset();
   }
-  else if(key==='s')
-  {
-    if(slowmo==true){slowmo=false;}
-    else{slowmo=true;}
+  else if (key === 's') {
+    if (slowmo == true) { slowmo = false; }
+    else { slowmo = true; }
   }
+}
+
+function initReset() {
+  for (let i = 0; i < 68; i++) {
+    units[i].reset();
+  }
+  cycle = 0;
+  click = false;
+  slowmo = false;
+}
+
+function resetOriginalValues() {
+  decay = 0.1;
+  beta = 0.1;
+  gamma = 0.1;
+  estr = 0.4;
+  actmax = 1.0;
+  actmin = -1.0;
+  actrest = -0.1;
+  select("#decay_inp").html('0.1');
+  select("#beta_inp").html('0.1');
+  select("#gamma_inp").html('0.1');
+  initReset();
+}
+
+function setNewValues() {
+  if (select("#estr_inp").value() == '' || select("#actmax_inp").value() == '' || select("#actmin_inp").value() == '' || select("#actrest_inp").value() == '' || select("#decay_inp").value() == '' || select("#beta_inp").value() == '' || select("#gamma_inp").value() == '') {
+    alert("no value entered");
+  }
+  else if (isNaN(select("#estr_inp").value()) || isNaN(select("#actmax_inp").value()) || isNaN(select("#actmin_inp").value()) || isNaN(select("#actrest_inp").value()) || isNaN(select("#decay_inp").value()) || isNaN(select("#beta_inp").value()) || isNaN(select("#gamma_inp").value())) {
+    alert("please enter a number");
+  }
+  else if(float(select("#decay_inp").value())>0.6||float(select("#decay_inp").value())<-0.4)
+  {
+    alert("decay must be between -0.4 and 0.6");
+  }
+  else if(float(select("#beta_inp").value())>0.6||float(select("#beta_inp").value())<-0.4)
+  {
+    alert("beta must be between -0.4 and 0.6");
+  }
+  else if(float(select("#gamma_inp").value())>0.6||float(select("#gamma_inp").value())<-0.4)
+  {
+    alert("gamma must be between -0.4 and 0.6");
+  }
+  else if(float(select("#actmax_inp").value())>1.5||float(select("#actmax_inp").value())<0.5)
+  {
+    alert("actmax must be between 0.5 and 1.5");
+  }
+  else if(float(select("#actmin_inp").value())>-0.5||float(select("#actmin_inp").value())<-1.5)
+  {
+    alert("actmin must be between -0.5 and 1.5");
+  }
+  else if(float(select("#actrest_inp").value())>0.4||float(select("#actrest_inp").value())<-0.6)
+  {
+    alert("beta must be between -0.6 and 0.4");
+  }
+  else if(float(select("#estr_inp").value())>0.9||float(select("#estr_inp").value())<-0.1)
+  {
+    alert("estr must be between -0.4 and 0.6");
+  }
+  else {
+    decay = float(select("#decay_inp").value());
+    beta = float(select("#beta_inp").value());
+    gamma = float(select("#gamma_inp").value());
+    estr = float(select("#estr_inp").value());
+    actmax = float(select("#actmax_inp").value());
+    actmin = float(select("#actmin_inp").value());
+    actrest = float(select("#actrest_inp").value());
+    initReset();
+  }
+
 }

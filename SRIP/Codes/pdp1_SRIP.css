@@ -1,0 +1,27 @@
+#heading{
+	background-color: black;
+	color:white;
+	text-align: center;
+	border-style: solid;
+    border-color: blue;
+    border-width: 3 px;
+    
+}
+
+.btn {
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color:lightblue;
+    text-align: center;
+  }
+
+  #centre_button{
+      text-align: center;
+  }
+
+  #one{
+      float:right;
+      margin-right: 36%;
+  }
