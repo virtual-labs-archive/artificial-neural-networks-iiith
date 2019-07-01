@@ -95,7 +95,8 @@ let inpnew;
 //  w = loadBytes('data/network.txt');
 //}
 function setup() {
-  createCanvas(800, 600);
+  var for_posn=createCanvas(800, 600);
+  for_posn.position(100,190);
   smooth();
   noStroke();
   background(100);
@@ -537,9 +538,9 @@ function setNewValues() {
   {
     alert("actmin must be between -0.5 and 1.5");
   }
-  else if(float(select("#actrest_inp").value())>0.4||float(select("#actrest_inp").value())<-0.6)
+  else if(float(select("#actrest_inp").value())>0||float(select("#actrest_inp").value())<-1)
   {
-    alert("beta must be between -0.6 and 0.4");
+    alert("beta must be between -1 and 0");
   }
   else if(float(select("#estr_inp").value())>0.9||float(select("#estr_inp").value())<-0.1)
   {
