@@ -95,15 +95,16 @@ let inpnew;
 //  w = loadBytes('data/network.txt');
 //}
 function setup() {
-  var for_posn=createCanvas(800, 600);
-  for_posn.position(100,190);
+  var for_posn=createCanvas(800,600);
+  //for_posn.position(windowWidth*0.07-20,windowHeight*0.2+50);
+  for_posn.parent('flex-container');
   smooth();
   noStroke();
   background(100);
   getNames();
   getWeights();
   placeUnits();
-
+  console.log(windowHeight);
 }
 
 function getWeights() {
