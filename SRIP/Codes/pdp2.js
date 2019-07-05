@@ -44,6 +44,9 @@ let names = [
 let roomtype = ["KITCHEN", "BEDROOM", "OFFICE"];
 let weights = [];
 let tempArrH = [];
+let markDescriptors = [];
+let iterationActivation = [];
+let setTestNetwork=false;
 function preload() {
     //names=loadStrings('roomunames.txt');
     //console.log(names[3]);
@@ -56,6 +59,7 @@ function setup() {
     noStroke();
     background(100);
     getWeights();
+    setDescriptors();
 }
 
 function draw() {
@@ -68,18 +72,25 @@ function draw() {
         drawStageTwo();
     }
     else if (stage == 3) {
+        background(100);
         drawStageThree();
+    }
+}
+
+function setDescriptors() {
+    for (let i = 0; i < 40; i++) {
+        markDescriptors[i] = false;
     }
 }
 
 function drawStageOne() {
     smooth();
-  noStroke();
-  fill(153, 153, 136, 255);
-  rect(0, 0, 800, 20);
-  noSmooth();
-  fill(255, 255, 255, 255);
-  text("Constraint Satisfaction Neural Network Models", 10, 13);
+    noStroke();
+    fill(153, 153, 136, 255);
+    rect(0, 0, 800, 20);
+    noSmooth();
+    fill(255, 255, 255, 255);
+    text("Constraint Satisfaction Neural Network Models", 10, 13);
     textSize(13);
     fill(200, 250, 0);
     noSmooth();
@@ -135,14 +146,14 @@ function getWeights() {
 
 function drawStageTwo() {
     smooth();
-  noStroke();
-  fill(153, 153, 136, 255);
-  rect(0, 0, 800, 20);
-  noSmooth();
-  fill(255, 255, 255, 255);
-  textSize(13);
-  text("Constraint Satisfaction Neural Network Models", 10, 13);
-  
+    noStroke();
+    fill(153, 153, 136, 255);
+    rect(0, 0, 800, 20);
+    noSmooth();
+    fill(255, 255, 255, 255);
+    textSize(13);
+    text("Constraint Satisfaction Neural Network Models", 10, 13);
+
     //making big box
     let drawX = 10;
     let drawY = 115;
@@ -175,7 +186,7 @@ function drawStageTwo() {
     textSize(18);
     fill(255, 200, 20);
     text("Hover mouse over unit to see enlarged version of it's Hinton diagram", 100, 80);
-        
+
     let k = 0, min = 0.0, max = 0.0;
     for (let i = 0; i < 40; i++) {
         for (let j = 0; j < 40; j++) {
@@ -204,9 +215,9 @@ function drawStageTwo() {
         for (let j = 0; j < 8; j++) {
             let t = (8 * i) + j;
             //fill(0);
-            for (let inp = 0; inp < 5; inp++) {
-                for (let out = 0; out < 8; out++) {
-                    let dd = (8 * inp) + out;
+            for (let in1 = 0; in1 < 5; in1++) {
+                for (let ou1 = 0; ou1 < 8; ou1++) {
+                    let dd = (8 * in1) + ou1;
                     let tt = int((tempArrH[(40 * t) + dd] * 100));
                     //console.log(tt);
                     //if(i==0&&j==0&&inp==0&&out==0)
@@ -214,7 +225,7 @@ function drawStageTwo() {
                     let tempX = drawX + 95 * j + 4;
                     let tempY = drawY + 70 * i + 5;
                     fill(120 - tt);
-                    rect(tempX + 10 * out, tempY + 9 * inp, 2 + 7 * tempArrH[40 * t + dd], 2 + 6 * tempArrH[40 * t + dd]);
+                    rect(tempX + 10 * ou1, tempY + 9 * in1, 2 + 7 * tempArrH[40 * t + dd], 2 + 6 * tempArrH[40 * t + dd]);
                     //console.log("what hap");
 
                 }
@@ -224,54 +235,237 @@ function drawStageTwo() {
     checkForHover();
 }
 
-function checkForHover()
-{
+function checkForHover() {
     let drawX = 20;
-  let drawY = 125;
- // fill(40);
- // rect(0, 490, 600, 100);
-  for (let i=0;i<5;i++)
-  {
-    for (let j=0;j<8;j++)
-    { 
-      let t = (8*i)+j;
-      if (mouseX>drawX+95*j && mouseX<drawX+95*j+85 && mouseY>drawY+70*i && mouseY<drawY+70*i+50)
-      {
-        fill(120);
-        rect(260, 490, 260, 100);
-        fill(255);
-        rect(265, 495, 250, 90);
-        fill(255);
-        textSize(18);
-        text(names[(8*i)+j], 120, 550);
-        let t2 = (8*i)+j;
-        fill(0);
-        for (let out=0;out<5;out++)
-        {
-          stroke(30);
-          //          line(275, 495+18*out, 515, 495+18*out);
-          noStroke();
-          for (let inp=0;inp<8;inp++)
-          {
-            stroke(30);
-            //            line(275+in*30, 495, 275+in*30, 585);
-            noStroke();
-            let cc = (8*out)+inp;
-            let tt = int((tempArrH[(40*t)+cc]*100)); 
-            fill(120-tt);
+    let drawY = 125;
+    // fill(40);
+    // rect(0, 490, 600, 100);
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 8; j++) {
+            let t = (8 * i) + j;
+            if (mouseX > drawX + 95 * j && mouseX < drawX + 95 * j + 85 && mouseY > drawY + 70 * i && mouseY < drawY + 70 * i + 50) {
+                fill(120);
+                rect(260, 490, 260, 100);
+                fill(255);
+                rect(265, 495, 250, 90);
+                fill(255);
+                textSize(18);
+                text(names[(8 * i) + j], 120, 550);
+                let t2 = (8 * i) + j;
+                fill(0);
+                for (let ou1 = 0; ou1 < 5; ou1++) {
+                    stroke(30);
+                    //          line(275, 495+18*out, 515, 495+18*out);
+                    noStroke();
+                    for (let in1 = 0; in1 < 8; in1++) {
+                        stroke(30);
+                        //            line(275+in*30, 495, 275+in*30, 585);
+                        noStroke();
+                        let cc = (8 * ou1) + in1;
+                        let tt = int((tempArrH[(40 * t) + cc] * 100));
+                        fill(120 - tt);
 
-            //            2+7*tempARRh[40*t+(8*in)+out], 2+6*tempARRh[40*t+(8*in)+out]
-            rect(275+inp*30+2, 495+18*out+2, 3+10*tempArrH[40*t2+cc], 3+10*tempArrH[40*t2+cc]);
-          }
+                        //            2+7*tempARRh[40*t+(8*in)+out], 2+6*tempARRh[40*t+(8*in)+out]
+                        rect(275 + in1 * 30 + 2, 495 + 18 * ou1 + 2, 3 + 10 * tempArrH[40 * t2 + cc], 3 + 10 * tempArrH[40 * t2 + cc]);
+                    }
+                }
+                noStroke();
+                break;
+            }
         }
-        noStroke();
-        break;
-      }
     }
-  }
 }
 
+function drawStageThree() {
+    smooth();
+    noStroke();
+    fill(153, 153, 136, 255);
+    rect(0, 0, 800, 20);
+    noSmooth();
+    fill(255, 255, 255, 255);
+    textSize(13);
+    text("Constraint Satisfaction Neural Network Models", 10, 13);
+    fill(255);
+    rect(610, 560, 80, 30);
+    stroke(0);
+    rect(612, 562, 76, 26);
+    textSize(13);
+    fill(0);
+    text("HOME", 630, 580);
+    // click here to start testing the nw after clamping the descriptors
+    fill(255);
+    rect(150, 560, 140, 30);
+    stroke(0);
+    rect(152, 562, 136, 26);
+    //fill(0);
+    textSize(13);
+    fill(0);
+    text("TEST NETWORK", 167, 580);
+    textSize(15);
+    fill(255, 200, 20);
+    text("Click on descriptor to clamp it and click again to unclamp", 190, 40);
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 8; j++) {
+            if (markDescriptors[i * 8 + j] == false) {
+                fill(178, 255, 102);
+            }
+            else {
+                fill(255, 0, 0);
+            }
+            rect(20 + j * 95, 50 + 20 * i, 95, 20);
+            fill(0);
+            textSize(13);
+            text(names[i * 8 + j], 25 + j * 95, 65 + 20 * i);
+        }
+    }
+    if(setTestNetwork==true)
+    {
+        testNetwork();
+    }
+}
 
+function clampDescriptor() {
+    let flag = 0;
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 8; j++) {
+            if (mouseX > 20 + j * 95 && mouseX < 20 + (j + 1) * 95 && mouseY < 50 + 20 * (i + 1) && mouseY > 50 + 20 * i) {
+                if (markDescriptors[i * 8 + j] == false) {
+                    markDescriptors[i * 8 + j] = true;
+                }
+                else {
+                    markDescriptors[i * 8 + j] = false;
+                }
+
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 1) { break; }
+    }
+
+}
+
+function testNetwork() {
+    let clampInput = [];
+    let activation = [];
+    let nextState = [];
+    let nextStateBool = [];
+    console.log("beginning test");
+    let iterNum = 1;
+    let threshold= 0;
+    for (let i = 0; i < 40; i++) {
+        if (markDescriptors[i] == true) {
+            clampInput[i] = 1;
+            activation[i] = 1;
+        }
+        else {
+            clampInput[i] = 0;
+            activation[i] = 0;
+        }
+        nextState[i] = 0.0;
+        nextStateBool[i]= false;
+    }
+
+    for (let i = 0; i < 40; i++) {
+        iterationActivation[i] = [];
+        iterationActivation[0][i] = activation[i];
+    }
+    console.log("beginning do");
+    do {
+        for (let i = 0; i < 40; i++) {
+            for (let j = 0; j < 40; j++) {
+
+                nextState[i]=nextState[i] + activation[j]*weights[i][j];
+            }
+            if(nextState[i]>threshold)
+            {
+                nextStateBool[i]=true;
+            }
+            else
+            {
+                nextStateBool[i]=false;
+            }
+        }
+        
+        for(let i=0;i<40;i++)
+        {
+            if(nextStateBool[i])
+            {
+                activation[i]=1;
+            }
+        }
+
+        for(let i=0;i<40;i++)
+        {
+            iterationActivation[iterNum][i]=activation[i];
+            nextState[i]=0.0;
+            nextStateBool[i]=false;
+        }
+        iterNum++;
+    } while (iterNum < 16)
+    console.log("completed do");
+    displayTestedNetwork();
+}
+
+function displayTestedNetwork()
+{
+    stroke(200, 200, 0);
+    fill(100);
+    rect(10, 155, 400, 400);
+    rect(415, 155, 380, 400);
+    noStroke();
+    let x = 20;
+    let y = 170;
+    console.log("leseeee");
+    for (let i=0;i<20;i++)
+    {
+      fill(255);
+      textSize(13);
+      text(names[i], x, y+20*i);
+      text(names[20+i], x+400, y+20*i);
+    }
+    for (let i = 0;i<20;i++)
+    {
+      for (let j = 0;j<14;j++)
+      {
+        stroke(0);
+        let fill1 = int(iterationActivation[j][i]*120);
+        let fill2 = int(iterationActivation[j][20+i]*120);
+
+
+        ///////////////////////////////////////////////////////////////////////////////////?
+        if(iterationActivation[0][i]!=1)
+        {
+           if(iterationActivation[j][i]==1 && j<6)
+           {
+            fill(fill1); 
+            rect(x+100+20*j, (y-10)+20*i, 4+iterationActivation[j][i]*j, 4+iterationActivation[j][i]*j);
+            fill(fill2);
+            rect(x+500+20*j, (y-10)+20*i, 4+iterationActivation[j][20+i]*j, 4+iterationActivation[j][20+i]*j);
+           }
+           else
+           {
+            fill(fill1);
+            rect(x+100+20*j, (y-10)+20*i, iterationActivation[j][i]*10, iterationActivation[j][i]*10);
+            fill(fill2);
+            rect(x+500+20*j, (y-10)+20*i, iterationActivation[j][20+i]*10, iterationActivation[j][20+i]*10); 
+           }
+        }
+        else
+        {
+            fill(fill1);
+            rect(x+100+20*j, (y-10)+20*i, iterationActivation[j][i]*10, iterationActivation[j][i]*10);
+            fill(fill2);
+            rect(x+500+20*j, (y-10)+20*i, iterationActivation[j][20+i]*10, iterationActivation[j][20+i]*10);
+        }
+        
+        ///////////////////////////////////////////////////////////////////////////////////?        
+        
+        noFill();
+        noStroke();
+      }
+    }
+}
 
 function mouseReleased() {
     if (stage == 1) {
@@ -282,10 +476,21 @@ function mouseReleased() {
             stage = 3;
         }
     }//612, 522, 76, 26
-    else if(stage==2){
-        if(mouseY > 522 && mouseY<548 && mouseX>612 && mouseX<688)
-        {
-            stage=1;
+    else if (stage == 2) {
+        if (mouseY > 522 && mouseY < 548 && mouseX > 612 && mouseX < 688) {
+            stage = 1;
+        }
+    }
+    else if (stage == 3) {
+        if (mouseX > 20 && mouseX < 780 && mouseY > 50 && mouseY < 150) {
+            clampDescriptor();
+        }//610, 560, 80, 30
+        else if (mouseX > 610 && mouseX < 690 && mouseY > 560 && mouseY < 590) {
+            stage = 1;
+        }//150, 560, 140, 30
+        else if (mouseX > 150 && mouseX < 290 && mouseY > 560 && mouseY < 590) {
+            console.log("clicking button");
+            setTestNetwork=true;
         }
     }
 }
