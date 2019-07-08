@@ -83,7 +83,7 @@ let actrest = -0.1;
 let difx, dify;
 let slowmo = false;
 let click = false;
-let wx = ".v.......................................ddddddddddddddd............ v.......................................................dddddddddddd ...vv......................................d..ddd.ddddd.......d..... ..v.v.....................................d..d...d.....dddddd...dddd ..vv.....................................d..d................d.d.... ......vv.................................dd.ddd.d.dd...d.d.......... .....v.v.......................................d.d..dd....d..dddd.dd .....vv....................................d..........d.d..dd....d.. .........vv..............................d.ddd...d..dddd.dd...d...d. ........v.v...............................d....dd.d.....d..ddd.d.d.. ........vv....................................d....d............d..d ............vv...........................d.....d.....dddd.d......d.d ...........v.v............................d...d.d.dd.......d..ddd... ...........vv..............................ddd...d..d....d..dd....d. ...............vvvvvvvvvvvvvvvvvvvvvvvvvvd.......................... ..............v.vvvvvvvvvvvvvvvvvvvvvvvvv.d......................... ..............vv.vvvvvvvvvvvvvvvvvvvvvvvv..d........................ ..............vvv.vvvvvvvvvvvvvvvvvvvvvvv...d....................... ..............vvvv.vvvvvvvvvvvvvvvvvvvvvv....d...................... ..............vvvvv.vvvvvvvvvvvvvvvvvvvvv.....d..................... ..............vvvvvv.vvvvvvvvvvvvvvvvvvvv......d.................... ..............vvvvvvv.vvvvvvvvvvvvvvvvvvv.......d................... ..............vvvvvvvv.vvvvvvvvvvvvvvvvvv........d.................. ..............vvvvvvvvv.vvvvvvvvvvvvvvvvv.........d................. ..............vvvvvvvvvv.vvvvvvvvvvvvvvvv..........d................ ..............vvvvvvvvvvv.vvvvvvvvvvvvvvv...........d............... ..............vvvvvvvvvvvv.vvvvvvvvvvvvvv............d.............. ..............vvvvvvvvvvvvv.vvvvvvvvvvvvv.............d............. ..............vvvvvvvvvvvvvv.vvvvvvvvvvvv..............d............ ..............vvvvvvvvvvvvvvv.vvvvvvvvvvv...............d........... ..............vvvvvvvvvvvvvvvv.vvvvvvvvvv................d.......... ..............vvvvvvvvvvvvvvvvv.vvvvvvvvv.................d......... ..............vvvvvvvvvvvvvvvvvv.vvvvvvvv..................d........ ..............vvvvvvvvvvvvvvvvvvv.vvvvvvv...................d....... ..............vvvvvvvvvvvvvvvvvvvv.vvvvvv....................d...... ..............vvvvvvvvvvvvvvvvvvvvv.vvvvv.....................d..... ..............vvvvvvvvvvvvvvvvvvvvvv.vvvv......................d.... ..............vvvvvvvvvvvvvvvvvvvvvvv.vvv.......................d... ..............vvvvvvvvvvvvvvvvvvvvvvvv.vv........................d.. ..............vvvvvvvvvvvvvvvvvvvvvvvvv.v.........................d. ..............vvvvvvvvvvvvvvvvvvvvvvvvvv...........................d u...uu..u..u..u...........................hhhhhhhhhhhhhhhhhhhhhhhhhh u..u.u...u..u..u.........................h.hhhhhhhhhhhhhhhhhhhhhhhhh u.u....uu....u..u........................hh.hhhhhhhhhhhhhhhhhhhhhhhh u...uu..u....u...u.......................hhh.hhhhhhhhhhhhhhhhhhhhhhh u..u.u..u....u....u......................hhhh.hhhhhhhhhhhhhhhhhhhhhh u.u..u....u.u......u.....................hhhhh.hhhhhhhhhhhhhhhhhhhhh u.u...u..u.u........u....................hhhhhh.hhhhhhhhhhhhhhhhhhhh u.u..u...u..u........u...................hhhhhhh.hhhhhhhhhhhhhhhhhhh u..u..u.u....u........u..................hhhhhhhh.hhhhhhhhhhhhhhhhhh u.u..u...u..u..........u.................hhhhhhhhh.hhhhhhhhhhhhhhhhh u.u..u....u.u...........u................hhhhhhhhhh.hhhhhhhhhhhhhhhh u.u...u.u....u...........u...............hhhhhhhhhhh.hhhhhhhhhhhhhhh u.u...u.u..u..............u..............hhhhhhhhhhhh.hhhhhhhhhhhhhh u.u....uu..u...............u.............hhhhhhhhhhhhh.hhhhhhhhhhhhh u..u.u..u..u................u............hhhhhhhhhhhhhh.hhhhhhhhhhhh .u.u...u.u.u.................u...........hhhhhhhhhhhhhhh.hhhhhhhhhhh .u.u.u..u....u................u..........hhhhhhhhhhhhhhhh.hhhhhhhhhh .u.u..u.u..u...................u.........hhhhhhhhhhhhhhhhh.hhhhhhhhh .u.u...u.u..u...................u........hhhhhhhhhhhhhhhhhh.hhhhhhhh .u.u...u.u...u...................u.......hhhhhhhhhhhhhhhhhhh.hhhhhhh .u..u.u..u...u....................u......hhhhhhhhhhhhhhhhhhhh.hhhhhh .uu...u.u...u......................u.....hhhhhhhhhhhhhhhhhhhhh.hhhhh .u..u.u..u..u.......................u....hhhhhhhhhhhhhhhhhhhhhh.hhhh .u.u..u...u.u........................u...hhhhhhhhhhhhhhhhhhhhhhh.hhh .u.u...u.u.u..........................u..hhhhhhhhhhhhhhhhhhhhhhhh.hh .u.u..u.u....u.........................u.hhhhhhhhhhhhhhhhhhhhhhhhh.h .u.u..u...uu............................uhhhhhhhhhhhhhhhhhhhhhhhhhh."
+let wx = ".v.......................................ddddddddddddddd............ v.......................................................dddddddddddd ...vv......................................d..ddd.ddddd.......d..... ..v.v.....................................d..d...d.....dddddd...dddd ..vv.....................................d..d................d.d.... ......vv.................................dd.ddd.d.dd...d.d.......... .....v.v.......................................d.d..dd....d..dddd.dd .....vv....................................d..........d.d..dd....d.. .........vv..............................d.ddd...d..dddd.dd...d...d. ........v.v...............................d....dd.d.....d..ddd.d.d.. ........vv....................................d....d............d..d ............vv...........................d.....d.....dddd.d......d.d ...........v.v............................d...d.d.dd.......d..ddd... ...........vv..............................ddd...d..d....d..dd....d. ...............vvvvvvvvvvvvvvvvvvvvvvvvvvd.......................... ..............v.vvvvvvvvvvvvvvvvvvvvvvvvv.d......................... ..............vv.vvvvvvvvvvvvvvvvvvvvvvvv..d........................ ..............vvv.vvvvvvvvvvvvvvvvvvvvvvv...d....................... ..............vvvv.vvvvvvvvvvvvvvvvvvvvvv....d...................... ..............vvvvv.vvvvvvvvvvvvvvvvvvvvv.....d..................... ..............vvvvvv.vvvvvvvvvvvvvvvvvvvv......d.................... ..............vvvvvvv.vvvvvvvvvvvvvvvvvvv.......d................... ..............vvvvvvvv.vvvvvvvvvvvvvvvvvv........d.................. ..............vvvvvvvvv.vvvvvvvvvvvvvvvvv.........d................. ..............vvvvvvvvvv.vvvvvvvvvvvvvvvv..........d................ ..............vvvvvvvvvvv.vvvvvvvvvvvvvvv...........d............... ..............vvvvvvvvvvvv.vvvvvvvvvvvvvv............d.............. ..............vvvvvvvvvvvvv.vvvvvvvvvvvvv.............d............. ..............vvvvvvvvvvvvvv.vvvvvvvvvvvv..............d............ ..............vvvvvvvvvvvvvvv.vvvvvvvvvvv...............d........... ..............vvvvvvvvvvvvvvvv.vvvvvvvvvv................d.......... ..............vvvvvvvvvvvvvvvvv.vvvvvvvvv.................d......... ..............vvvvvvvvvvvvvvvvvv.vvvvvvvv..................d........ ..............vvvvvvvvvvvvvvvvvvv.vvvvvvv...................d....... ..............vvvvvvvvvvvvvvvvvvvv.vvvvvv....................d...... ..............vvvvvvvvvvvvvvvvvvvvv.vvvvv.....................d..... ..............vvvvvvvvvvvvvvvvvvvvvv.vvvv......................d.... ..............vvvvvvvvvvvvvvvvvvvvvvv.vvv.......................d... ..............vvvvvvvvvvvvvvvvvvvvvvvv.vv........................d.. ..............vvvvvvvvvvvvvvvvvvvvvvvvv.v.........................d. ..............vvvvvvvvvvvvvvvvvvvvvvvvvv...........................d u...uu..u..u..u...........................hhhhhhhhhhhhhhhhhhhhhhhhhh u..u.u...u..u..u.........................h.hhhhhhhhhhhhhhhhhhhhhhhhh u.u....uu....u..u........................hh.hhhhhhhhhhhhhhhhhhhhhhhh u...uu..u....u...u.......................hhh.hhhhhhhhhhhhhhhhhhhhhhh u..u.u..u....u....u......................hhhh.hhhhhhhhhhhhhhhhhhhhhh u.u..u....u.u......u.....................hhhhh.hhhhhhhhhhhhhhhhhhhhh u.u...u..u.u........u....................hhhhhh.hhhhhhhhhhhhhhhhhhhh u.u..u...u..u........u...................hhhhhhh.hhhhhhhhhhhhhhhhhhh u..u..u.u....u........u..................hhhhhhhh.hhhhhhhhhhhhhhhhhh u.u..u...u..u..........u.................hhhhhhhhh.hhhhhhhhhhhhhhhhh u.u..u....u.u...........u................hhhhhhhhhh.hhhhhhhhhhhhhhhh u.u...u.u....u...........u...............hhhhhhhhhhh.hhhhhhhhhhhhhhh u.u...u.u..u..............u..............hhhhhhhhhhhh.hhhhhhhhhhhhhh u.u....uu..u...............u.............hhhhhhhhhhhhh.hhhhhhhhhhhhh u..u.u..u..u................u............hhhhhhhhhhhhhh.hhhhhhhhhhhh .u.u...u.u.u.................u...........hhhhhhhhhhhhhhh.hhhhhhhhhhh .u.u.u..u....u................u..........hhhhhhhhhhhhhhhh.hhhhhhhhhh .u.u..u.u..u...................u.........hhhhhhhhhhhhhhhhh.hhhhhhhhh .u.u...u.u..u...................u........hhhhhhhhhhhhhhhhhh.hhhhhhhh .u.u...u.u...u...................u.......hhhhhhhhhhhhhhhhhhh.hhhhhhh .u..u.u..u...u....................u......hhhhhhhhhhhhhhhhhhhh.hhhhhh .uu...u.u...u......................u.....hhhhhhhhhhhhhhhhhhhhh.hhhhh .u..u.u..u..u.......................u....hhhhhhhhhhhhhhhhhhhhhh.hhhh .u.u..u...u.u........................u...hhhhhhhhhhhhhhhhhhhhhhh.hhh .u.u...u.u.u..........................u..hhhhhhhhhhhhhhhhhhhhhhhh.hh .u.u..u.u....u.........................u.hhhhhhhhhhhhhhhhhhhhhhhhh.h .u.u..u...uu............................uhhhhhhhhhhhhhhhhhhhhhhhhhh.";
 let maxSteps = 350;
 let prev = [];
 let gDel = 0.0;
@@ -94,97 +94,25 @@ let inpnew;
 //  nameList = loadStrings('data/names.txt');
 //  w = loadBytes('data/network.txt');
 //}
-function setup() {
-  var for_posn=createCanvas(800,600);
-  //for_posn.position(windowWidth*0.07-20,windowHeight*0.2+50);
-  for_posn.parent('flex-container');
-  smooth();
-  noStroke();
-  background(100);
-  getNames();
-  getWeights();
-  placeUnits();
-  //console.log(windowHeight);
-}
-
 function getWeights() {
   for (let i = 0; i < 68; i++) {
     weights[i] = [];
     for (let j = 0; j < 68; j++) {
 
       let a = wx[i * 69 + j];
-      if (a == '.') {
+      if (a === ".") {
         weights[i][j] = 0.0;
       }
-      else if ((a == 'h') || (a == 'v')) {
+      else if ((a === "h") || (a === "v")) {
         weights[i][j] = -1.0;
       }
-      else if ((a == 'd') || (a == 'u')) {
+      else if ((a === "d") || (a === "u")) {
         weights[i][j] = 1.0;
       }
 
     }
   }
 }
-
-function getNames() {
-  //console.log('[')
-  for (let i = 0; i < 68; i++) {
-    //console.log('"'+nameList[i]+'",');
-    units[i] = new Unit(i, nameList[i], 20, 20);
-  }
-
-}
-function draw() {
-  background(100);
-  smooth();
-  noStroke();
-  fill(153, 153, 136, 255);
-  rect(0, 580, 800, 20);
-  rect(0, 0, 800, 20);
-  noSmooth();
-  fill(255, 255, 255, 255);
-
-  text("Interactive Activation and Competition - click on units to activate, SPACE to pause, 'r' to reset, 's' for slow motion view", 10, 13);
-  text("Cycle: ", 10, 595);
-  text(cycle, 50, 595);
-  text("Global Change: ", 100, 595);
-  if ((gDel < 0.0001) && (gDel > 0)) {
-    fill(0, 255, 0, 255);
-  } else {
-    fill(255, 255, 255, 255);
-  }
-
-  text(gDel.toFixed(6), 190, 595);
-  //console.log(gDel);
-  smooth();
-
-  plotgDelta();
-  if (slowmo) {
-    for (let i = 0; i < 50000000; i++) {
-
-    }
-  }
-
-  for (let i = 0; i < 68; i++) {
-    units[i].display();
-  }
-  if (isRunning) {
-    for (let i = 0; i < 68; i++) {
-      units[i].net();
-    }
-    //gDel=0.0;
-    for (let i = 0; i < 68; i++) {
-      units[i].update();
-    }
-    cycle++;
-  }
-  for (let i = 0; i < 68; i++) {
-    units[i].userIn();
-  }
-
-}
-
 
 function placeUnits() {
   let r = 60;
@@ -203,7 +131,7 @@ function placeUnits() {
     len = 2 * PI * r; //circumference of a circle with radius r
     n = int(len / interval); //# of units I can put on the circle
     for (j = 0; ((j < n) && (i >= 0)); j++ , i--) {
-      if ((i == 40) || (i == 13) || (i == 10) || (i == 7) || (i == 4) || (i == 1)) {
+      if ((i === 40) || (i === 13) || (i === 10) || (i === 7) || (i === 4) || (i === 1)) {
         j += 1;
       }
 
@@ -439,7 +367,7 @@ class Unit {
     dify = this.py - mouseY;
     if (sqrt(sq(difx) + sq(dify)) < 10) {
       this.highlight = true;
-      if (this.id < 41 && click == true) {
+      if (this.id < 41 && click === true) {
         if (this.extIn == 0.0) { this.extIn = 1.0; }
         else { this.extIn = 0.0; }
         click = false;
@@ -484,7 +412,7 @@ function keyReleased() {
     initReset();
   }
   else if (key === 's') {
-    if (slowmo == true) { slowmo = false; }
+    if (slowmo === true) { slowmo = false; }
     else { slowmo = true; }
   }
 }
@@ -512,6 +440,15 @@ function resetOriginalValues() {
   initReset();
 }
 
+function getNames() {
+  //console.log('[')
+  for (let i = 0; i < 68; i++) {
+    //console.log('"'+nameList[i]+'",');
+    units[i] = new Unit(i, nameList[i], 20, 20);
+  }
+
+}
+
 function setNewValues() {
   if (select("#estr_inp").value() == '' || select("#actmax_inp").value() == '' || select("#actmin_inp").value() == '' || select("#actrest_inp").value() == '' || select("#decay_inp").value() == '' || select("#beta_inp").value() == '' || select("#gamma_inp").value() == '') {
     alert("no value entered");
@@ -519,32 +456,25 @@ function setNewValues() {
   else if (isNaN(select("#estr_inp").value()) || isNaN(select("#actmax_inp").value()) || isNaN(select("#actmin_inp").value()) || isNaN(select("#actrest_inp").value()) || isNaN(select("#decay_inp").value()) || isNaN(select("#beta_inp").value()) || isNaN(select("#gamma_inp").value())) {
     alert("please enter a number");
   }
-  else if(float(select("#decay_inp").value())>0.6||float(select("#decay_inp").value())<-0.4)
-  {
+  else if (float(select("#decay_inp").value()) > 0.6 || float(select("#decay_inp").value()) < -0.4) {
     alert("decay must be between -0.4 and 0.6");
   }
-  else if(float(select("#beta_inp").value())>0.6||float(select("#beta_inp").value())<-0.4)
-  {
+  else if (float(select("#beta_inp").value()) > 0.6 || float(select("#beta_inp").value()) < -0.4) {
     alert("beta must be between -0.4 and 0.6");
   }
-  else if(float(select("#gamma_inp").value())>0.6||float(select("#gamma_inp").value())<-0.4)
-  {
+  else if (float(select("#gamma_inp").value()) > 0.6 || float(select("#gamma_inp").value()) < -0.4) {
     alert("gamma must be between -0.4 and 0.6");
   }
-  else if(float(select("#actmax_inp").value())>1.5||float(select("#actmax_inp").value())<0.5)
-  {
+  else if (float(select("#actmax_inp").value()) > 1.5 || float(select("#actmax_inp").value()) < 0.5) {
     alert("actmax must be between 0.5 and 1.5");
   }
-  else if(float(select("#actmin_inp").value())>-0.5||float(select("#actmin_inp").value())<-1.5)
-  {
+  else if (float(select("#actmin_inp").value()) > -0.5 || float(select("#actmin_inp").value()) < -1.5) {
     alert("actmin must be between -0.5 and 1.5");
   }
-  else if(float(select("#actrest_inp").value())>0||float(select("#actrest_inp").value())<-1)
-  {
+  else if (float(select("#actrest_inp").value()) > 0 || float(select("#actrest_inp").value()) < -1) {
     alert("beta must be between -1 and 0");
   }
-  else if(float(select("#estr_inp").value())>0.9||float(select("#estr_inp").value())<-0.1)
-  {
+  else if (float(select("#estr_inp").value()) > 0.9 || float(select("#estr_inp").value()) < -0.1) {
     alert("estr must be between -0.4 and 0.6");
   }
   else {
@@ -556,6 +486,69 @@ function setNewValues() {
     actmin = float(select("#actmin_inp").value());
     actrest = float(select("#actrest_inp").value());
     initReset();
+  }
+}
+
+function setup() {
+  var forPosn = createCanvas(800, 600);
+  //for_posn.position(windowWidth*0.07-20,windowHeight*0.2+50);
+  forPosn.parent("flex-container");
+  smooth();
+  noStroke();
+  background(100);
+  getNames();
+  getWeights();
+  placeUnits();
+  //console.log(windowHeight);
+}
+
+
+function draw() {
+  background(100);
+  smooth();
+  noStroke();
+  fill(153, 153, 136, 255);
+  rect(0, 580, 800, 20);
+  rect(0, 0, 800, 20);
+  noSmooth();
+  fill(255, 255, 255, 255);
+
+  text("Interactive Activation and Competition - click on units to activate, SPACE to pause, 'r' to reset, 's' for slow motion view", 10, 13);
+  text("Cycle: ", 10, 595);
+  text(cycle, 50, 595);
+  text("Global Change: ", 100, 595);
+  if ((gDel < 1e-4) && (gDel > 0)) {
+    fill(0, 255, 0, 255);
+  } else {
+    fill(255, 255, 255, 255);
+  }
+
+  text(gDel.toFixed(6), 190, 595);
+  //console.log(gDel);
+  smooth();
+
+  plotgDelta();
+  if (slowmo) {
+    for (let i = 0; i < 5e7; i++) {
+
+    }
+  }
+
+  for (let i = 0; i < 68; i++) {
+    units[i].display();
+  }
+  if (isRunning) {
+    for (let i = 0; i < 68; i++) {
+      units[i].net();
+    }
+    //gDel=0.0;
+    for (let i = 0; i < 68; i++) {
+      units[i].update();
+    }
+    cycle++;
+  }
+  for (let i = 0; i < 68; i++) {
+    units[i].userIn();
   }
 
 }
