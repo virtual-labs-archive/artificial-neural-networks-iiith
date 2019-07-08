@@ -104,7 +104,7 @@ function setup() {
   getNames();
   getWeights();
   placeUnits();
-  console.log(windowHeight);
+  //console.log(windowHeight);
 }
 
 function getWeights() {
