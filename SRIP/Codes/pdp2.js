@@ -42,6 +42,7 @@ let names = [
     "computer",
     "oven"];
 let roomtype = ["KITCHEN", "BEDROOM", "OFFICE"];
+let setNewHinton= false;
 let weights = [];
 let tempArrH = [];
 let markDescriptors = [];
@@ -51,6 +52,7 @@ let roomChoice = -1;
 let markBedroom = [];
 let markOffice = [];
 let markKitchen = [];
+let weightsCopy=[];
 function preload() {
     //names=loadStrings('roomunames.txt');
     //console.log(names[3]);
@@ -94,6 +96,10 @@ function draw() {
     else if (stage == 22) {
         background(100);
         drawStageTwoTwo();
+    }
+    else if(stage == 221) {
+        background(100);
+        drawStageTwoTwoOne();
     }
 }
 
@@ -156,8 +162,10 @@ function getWeights() {
     let k = 0;
     for (let i = 0; i < 40; i++) {
         weights[i] = [];
+        weightsCopy[i]= [];
         for (let j = 0; j < 40; j++) {
             weights[i][j] = begWeight[k];
+            weightsCopy[i][j]= begWeight[k];
             k++;
         }
     }
@@ -174,16 +182,19 @@ function drawStageTwoMain() {
     textSize(13);
     text("Constraint Satisfaction Neural Network Models", 10, 13);
     fill(200, 160, 0);
+    stroke(2);
     rect(110, 230, 590, 30);
     textSize(15);
     fill(0);
     text("CLICK HERE TO SEE THE ORIGINAL HINTON DIAGRAM WITH PRESET WEIGHTS", 120, 250);
     fill(200, 160, 0);
+    stroke(2);
     rect(220, 330, 345, 30);
     textSize(15);
     fill(0);
     text("CLICK HERE TO FURTHER TRAIN THE MODEL", 230, 350);
     fill(200, 160, 0);
+    stroke(2);
     rect(360, 430, 70, 30);
     textSize(15);
     fill(0);
@@ -319,7 +330,7 @@ function getRoomChoice() {   //160+180*i, 30, 100, 30
 
 function validateTrainNetwork() {
     let flag=[0,0,0];
-    let run =true;
+    //let run =true;
     for(let i=0;i<40;i++)
     {
         if(markKitchen[i]==true)
@@ -333,19 +344,21 @@ function validateTrainNetwork() {
     {
         if(flag[i]==0)
         {
-            run=false;
-            alert("Train network for all three room types");
+      //      run=false;
+            return false;
         }
     }
-    if(run==true)
-    {
-        trainNewHinton();
-    }
+    return true;
+    //if(run==true)
+    //{
+    //    trainNewHinton();
+    //}
 }
 
-function trainNewHinton()
+function drawStageTwoTwoOne()
 {
-    
+    setNewHinton=true;
+    drawStageTwoOne();
 }
 function setRoomDescriptor() {//20 + j * 95, 80 + 20 * i, 95, 20
     for (let i = 0; i < 5; i++) {
@@ -410,11 +423,86 @@ function drawStageTwoOne() {
     textSize(18);
     fill(255, 200, 20);
     text("Hover mouse over unit to see enlarged version of it's Hinton diagram", 100, 80);
+    makeHinton();
+    
+}
 
+function makeNewHinton()
+{
+    
+    for(let i=0;i<40;i++)
+    {
+        for(let j=0;j<40;j++)
+        {
+            if(i!=j)
+            {
+                if(markKitchen[i]==true)
+                {
+                    if(markKitchen[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                    }
+                    if(markBedroom[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                    if(markOffice[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                }
+                if(markBedroom[i]==true)
+                {
+                    if(markKitchen[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                    if(markBedroom[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                    }
+                    if(markOffice[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                }
+                if(markOffice[i]==true)
+                {
+                    if(markKitchen[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                    if(markBedroom[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                    }
+                    if(markOffice[j]==true)
+                    {
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                    }
+                }
+            }
+        }
+    }
+    //makeHinton();
+}
+
+
+
+function makeHinton()
+{
+    let drawX=20,drawY=125;
     let k = 0, min = 0.0, max = 0.0;
     for (let i = 0; i < 40; i++) {
         for (let j = 0; j < 40; j++) {
-            tempArrH[k] = weights[i][j];
+            if(setNewHinton)
+            {
+                tempArrH[k]= weightsCopy[i][j];
+            }
+            else
+            {
+                tempArrH[k] = weights[i][j];
+            }
             if (tempArrH[k] > max) {
                 max = tempArrH[k];
             }
@@ -456,8 +544,10 @@ function drawStageTwoOne() {
             }
         }
     }
-    checkForHover();
+    //checkForHover();
 }
+    
+
 
 function checkForHover() {
     let drawX = 20;
@@ -711,7 +801,15 @@ function mouseReleased() {
             else { setRoomDescriptor(); }
         }//40,500,310,30
         else if (mouseX > 40 && mouseX < 350 && mouseY > 500 && mouseY < 530) {
-            validateTrainNetwork();
+            if(validateTrainNetwork())
+            {
+                makeNewHinton();
+                stage=221;
+            }
+            else
+            {
+                alert("please select descriptors for all three room types");
+            }
         }//400,500,60,30
         else if (mouseX > 400 && mouseX < 460 && mouseY > 500 && mouseY < 530) {
             stage = 2;
