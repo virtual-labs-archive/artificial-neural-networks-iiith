@@ -46,22 +46,34 @@ let weights = [];
 let tempArrH = [];
 let markDescriptors = [];
 let iterationActivation = [];
-let setTestNetwork=false;
+let setTestNetwork = false;
+let roomChoice = -1;
+let markBedroom = [];
+let markOffice = [];
+let markKitchen = [];
 function preload() {
     //names=loadStrings('roomunames.txt');
     //console.log(names[3]);
     //weights=loadStrings('csroomwt.txt');
 }
 function setup() {
-    var for_posn = createCanvas(800, 600);
-    for_posn.position(100, 190);
+    var forPosn = createCanvas(800, 600);
+    forPosn.position(100, 190);
     smooth();
     noStroke();
     background(100);
     getWeights();
     setDescriptors();
+    setRooms();
 }
 
+function setRooms() {
+    for (let i = 0; i < 40; i++) {
+        markBedroom[i] = false;
+        markKitchen[i] = false;
+        markOffice[i] = false;
+    }
+}
 function draw() {
     if (stage == 1) {
         background(100);
@@ -69,11 +81,19 @@ function draw() {
     }
     else if (stage == 2) {
         background(100);
-        drawStageTwo();
+        drawStageTwoMain();
     }
     else if (stage == 3) {
         background(100);
         drawStageThree();
+    }
+    else if (stage == 21) {
+        background(100);
+        drawStageTwoOne();
+    }
+    else if (stage == 22) {
+        background(100);
+        drawStageTwoTwo();
     }
 }
 
@@ -118,7 +138,7 @@ function drawStageOne() {
 
     textSize(13);
     fill(255, 200, 20);
-    text("CLICK HERE TO SEE THE HINTON DIAGRAM", 250, 50);
+    text("CLICK HERE TO SEE THE HINTON DIAGRAMS", 250, 50);
     fill(200, 160, 0);
     rect(340, 60, 100, 30);
     stroke(0);
@@ -144,7 +164,211 @@ function getWeights() {
     //console.log(k);
 }
 
-function drawStageTwo() {
+function drawStageTwoMain() {
+    smooth();
+    noStroke();
+    fill(153, 153, 136, 255);
+    rect(0, 0, 800, 20);
+    noSmooth();
+    fill(255, 255, 255, 255);
+    textSize(13);
+    text("Constraint Satisfaction Neural Network Models", 10, 13);
+    fill(200, 160, 0);
+    rect(110, 230, 590, 30);
+    textSize(15);
+    fill(0);
+    text("CLICK HERE TO SEE THE ORIGINAL HINTON DIAGRAM WITH PRESET WEIGHTS", 120, 250);
+    fill(200, 160, 0);
+    rect(220, 330, 345, 30);
+    textSize(15);
+    fill(0);
+    text("CLICK HERE TO FURTHER TRAIN THE MODEL", 230, 350);
+    fill(200, 160, 0);
+    rect(360, 430, 70, 30);
+    textSize(15);
+    fill(0);
+    text("HOME", 370, 450);
+}
+
+function drawStageTwoTwo() {
+    smooth();
+    noStroke();
+    fill(153, 153, 136, 255);
+    rect(0, 0, 800, 20);
+    noSmooth();
+    fill(255, 255, 255, 255);
+    textSize(13);
+    text("Constraint Satisfaction Neural Network Models", 10, 13);
+    for (let i = 0; i < 3; i++) {
+        stroke(1);
+        if (roomChoice == i) {
+            fill(255, 0, 0);
+        }
+        else {
+            fill(255, 255, 0);
+        }
+        rect(160 + 180 * i, 30, 100, 30);
+        fill(0);
+        textSize(13);
+        if (i == 1) {
+            text(roomtype[i], 170 + 185 * i, 50);
+        }
+        else {
+            text(roomtype[i], 180 + 185 * i, 50);
+        }
+    }
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 8; j++) {
+
+            if (roomChoice == 0) {
+                if (markKitchen[i * 8 + j] == false) { fill(178, 255, 102); }
+                else { fill(255, 0, 0); }
+            }
+            else if (roomChoice == 1) {
+                if (markBedroom[i * 8 + j] == false) { fill(178, 255, 102); }
+                else { fill(255, 0, 0); }
+            }
+            else if (roomChoice == 2) {
+                if (markOffice[i * 8 + j] == false) { fill(178, 255, 102); }
+                else { fill(255, 0, 0); }
+            }
+            else {
+                fill(178, 255, 102);
+            }
+            rect(20 + j * 95, 80 + 20 * i, 95, 20);
+            fill(0);
+            textSize(13);
+            text(names[i * 8 + j], 25 + j * 95, 95 + 20 * i);
+        }
+    }
+    if (roomChoice != -1) {
+        fill(255);
+        textSize(15);
+        text("The descriptors chosen for the " + roomtype[roomChoice] + " are:", 20, 200);
+        let k = 0;
+        let h = 0;
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 8; j++) {
+                if (roomChoice == 0) {
+                    if (markKitchen[i * 8 + j] == true) {
+                        fill(255);
+                        textSize(15);
+                        text(names[i * 8 + j], 20 + 120 * h, 220 + k * 20);
+                        k++;
+                        if (k > 12) {
+                            h++;
+                            k = 0;
+                        }
+
+                    }
+                }
+                else if (roomChoice == 1) {
+                    if (markBedroom[i * 8 + j] == true) {
+                        fill(255);
+                        textSize(15);
+                        text(names[i * 8 + j], 20 + 120 * h, 220 + k * 20);
+                        k++;
+                        if (k > 12) {
+                            h++;
+                            k = 0;
+                        }
+
+                    }
+                }
+                if (roomChoice == 2) {
+                    if (markOffice[i * 8 + j] == true) {
+                        fill(255);
+                        textSize(15);
+                        text(names[i * 8 + j], 20 + 120 * h, 220 + k * 20);
+                        k++;
+                        if (k > 12) {
+                            h++;
+                            k = 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    fill(255, 255, 0);
+    rect(40, 500, 310, 30);
+    fill(0);
+    textSize(15);
+    text("Train model and show Hinton Diagram", 50, 520);
+    fill(255, 255, 0);
+    rect(400, 500, 60, 30);
+    fill(0);
+    textSize(15);
+    text("BACK", 410, 520);
+}
+
+function getRoomChoice() {   //160+180*i, 30, 100, 30
+    for (let i = 0; i < 3; i++) {
+        if (mouseX > 160 + 180 * i && mouseX < 260 + 180 * i && mouseY > 30 && mouseY < 60) {
+            if (roomChoice == i) {
+                roomChoice = -1;
+            }
+            else {
+                roomChoice = i;
+            }
+
+        }
+    }
+}
+
+function validateTrainNetwork() {
+    let flag=[0,0,0];
+    let run =true;
+    for(let i=0;i<40;i++)
+    {
+        if(markKitchen[i]==true)
+        {flag[0]++;}
+        else if(markBedroom[i]==true)
+        {flag[1]++;}
+        else if(markOffice[i]==true)
+        {flag[2]++;}
+    }
+    for(let i=0;i<3;i++)
+    {
+        if(flag[i]==0)
+        {
+            run=false;
+            alert("Train network for all three room types");
+        }
+    }
+    if(run==true)
+    {
+        trainNewHinton();
+    }
+}
+
+function trainNewHinton()
+{
+    
+}
+function setRoomDescriptor() {//20 + j * 95, 80 + 20 * i, 95, 20
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 8; j++) {
+            if (mouseX > 20 + j * 95 && mouseX < 20 + (j + 1) * 95 && mouseY > 80 + 20 * i && mouseY < 80 + 20 * (i + 1)) {
+                if (roomChoice == 0) {
+                    if (markKitchen[i * 8 + j] == false) { markKitchen[i * 8 + j] = true; }
+                    else { markKitchen[i * 8 + j] = false; }
+
+                }
+                else if (roomChoice == 1) {
+                    if (markBedroom[i * 8 + j] == false) { markBedroom[i * 8 + j] = true; }
+                    else { markBedroom[i * 8 + j] = false; }
+                }
+                else if (roomChoice == 2) {
+                    if (markOffice[i * 8 + j] == false) { markOffice[i * 8 + j] = true; }
+                    else { markOffice[i * 8 + j] = false; }
+                }
+            }
+        }
+    }
+}
+function drawStageTwoOne() {
     smooth();
     noStroke();
     fill(153, 153, 136, 255);
@@ -182,7 +406,7 @@ function drawStageTwo() {
     rect(612, 522, 76, 26);
     textSize(17);
     fill(255);
-    text("HOME", 625, 542);
+    text("BACK", 625, 542);
     textSize(18);
     fill(255, 200, 20);
     text("Hover mouse over unit to see enlarged version of it's Hinton diagram", 100, 80);
@@ -318,8 +542,7 @@ function drawStageThree() {
             text(names[i * 8 + j], 25 + j * 95, 65 + 20 * i);
         }
     }
-    if(setTestNetwork==true)
-    {
+    if (setTestNetwork == true) {
         testNetwork();
     }
 }
@@ -352,7 +575,7 @@ function testNetwork() {
     let nextStateBool = [];
     console.log("beginning test");
     let iterNum = 1;
-    let threshold= 0;
+    let threshold = 0;
     for (let i = 0; i < 40; i++) {
         if (markDescriptors[i] == true) {
             clampInput[i] = 1;
@@ -363,7 +586,7 @@ function testNetwork() {
             activation[i] = 0;
         }
         nextState[i] = 0.0;
-        nextStateBool[i]= false;
+        nextStateBool[i] = false;
     }
 
     for (let i = 0; i < 40; i++) {
@@ -375,31 +598,26 @@ function testNetwork() {
         for (let i = 0; i < 40; i++) {
             for (let j = 0; j < 40; j++) {
 
-                nextState[i]=nextState[i] + activation[j]*weights[i][j];
+                nextState[i] = nextState[i] + activation[j] * weights[i][j];
             }
-            if(nextState[i]>threshold)
-            {
-                nextStateBool[i]=true;
+            if (nextState[i] > threshold) {
+                nextStateBool[i] = true;
             }
-            else
-            {
-                nextStateBool[i]=false;
-            }
-        }
-        
-        for(let i=0;i<40;i++)
-        {
-            if(nextStateBool[i])
-            {
-                activation[i]=1;
+            else {
+                nextStateBool[i] = false;
             }
         }
 
-        for(let i=0;i<40;i++)
-        {
-            iterationActivation[iterNum][i]=activation[i];
-            nextState[i]=0.0;
-            nextStateBool[i]=false;
+        for (let i = 0; i < 40; i++) {
+            if (nextStateBool[i]) {
+                activation[i] = 1;
+            }
+        }
+
+        for (let i = 0; i < 40; i++) {
+            iterationActivation[iterNum][i] = activation[i];
+            nextState[i] = 0.0;
+            nextStateBool[i] = false;
         }
         iterNum++;
     } while (iterNum < 16)
@@ -407,8 +625,7 @@ function testNetwork() {
     displayTestedNetwork();
 }
 
-function displayTestedNetwork()
-{
+function displayTestedNetwork() {
     stroke(200, 200, 0);
     fill(100);
     rect(10, 155, 400, 400);
@@ -417,53 +634,46 @@ function displayTestedNetwork()
     let x = 20;
     let y = 170;
     console.log("leseeee");
-    for (let i=0;i<20;i++)
-    {
-      fill(255);
-      textSize(13);
-      text(names[i], x, y+20*i);
-      text(names[20+i], x+400, y+20*i);
+    for (let i = 0; i < 20; i++) {
+        fill(255);
+        textSize(13);
+        text(names[i], x, y + 20 * i);
+        text(names[20 + i], x + 400, y + 20 * i);
     }
-    for (let i = 0;i<20;i++)
-    {
-      for (let j = 0;j<14;j++)
-      {
-        stroke(0);
-        let fill1 = int(iterationActivation[j][i]*120);
-        let fill2 = int(iterationActivation[j][20+i]*120);
+    for (let i = 0; i < 20; i++) {
+        for (let j = 0; j < 14; j++) {
+            stroke(0);
+            let fill1 = int(iterationActivation[j][i] * 120);
+            let fill2 = int(iterationActivation[j][20 + i] * 120);
 
 
-        ///////////////////////////////////////////////////////////////////////////////////?
-        if(iterationActivation[0][i]!=1)
-        {
-           if(iterationActivation[j][i]==1 && j<6)
-           {
-            fill(fill1); 
-            rect(x+100+20*j, (y-10)+20*i, 4+iterationActivation[j][i]*j, 4+iterationActivation[j][i]*j);
-            fill(fill2);
-            rect(x+500+20*j, (y-10)+20*i, 4+iterationActivation[j][20+i]*j, 4+iterationActivation[j][20+i]*j);
-           }
-           else
-           {
-            fill(fill1);
-            rect(x+100+20*j, (y-10)+20*i, iterationActivation[j][i]*10, iterationActivation[j][i]*10);
-            fill(fill2);
-            rect(x+500+20*j, (y-10)+20*i, iterationActivation[j][20+i]*10, iterationActivation[j][20+i]*10); 
-           }
+            ///////////////////////////////////////////////////////////////////////////////////?
+            if (iterationActivation[0][i] != 1) {
+                if (iterationActivation[j][i] == 1 && j < 6) {
+                    fill(fill1);
+                    rect(x + 100 + 20 * j, (y - 10) + 20 * i, 4 + iterationActivation[j][i] * j, 4 + iterationActivation[j][i] * j);
+                    fill(fill2);
+                    rect(x + 500 + 20 * j, (y - 10) + 20 * i, 4 + iterationActivation[j][20 + i] * j, 4 + iterationActivation[j][20 + i] * j);
+                }
+                else {
+                    fill(fill1);
+                    rect(x + 100 + 20 * j, (y - 10) + 20 * i, iterationActivation[j][i] * 10, iterationActivation[j][i] * 10);
+                    fill(fill2);
+                    rect(x + 500 + 20 * j, (y - 10) + 20 * i, iterationActivation[j][20 + i] * 10, iterationActivation[j][20 + i] * 10);
+                }
+            }
+            else {
+                fill(fill1);
+                rect(x + 100 + 20 * j, (y - 10) + 20 * i, iterationActivation[j][i] * 10, iterationActivation[j][i] * 10);
+                fill(fill2);
+                rect(x + 500 + 20 * j, (y - 10) + 20 * i, iterationActivation[j][20 + i] * 10, iterationActivation[j][20 + i] * 10);
+            }
+
+            ///////////////////////////////////////////////////////////////////////////////////?        
+
+            noFill();
+            noStroke();
         }
-        else
-        {
-            fill(fill1);
-            rect(x+100+20*j, (y-10)+20*i, iterationActivation[j][i]*10, iterationActivation[j][i]*10);
-            fill(fill2);
-            rect(x+500+20*j, (y-10)+20*i, iterationActivation[j][20+i]*10, iterationActivation[j][20+i]*10);
-        }
-        
-        ///////////////////////////////////////////////////////////////////////////////////?        
-        
-        noFill();
-        noStroke();
-      }
     }
 }
 
@@ -476,9 +686,35 @@ function mouseReleased() {
             stage = 3;
         }
     }//612, 522, 76, 26
-    else if (stage == 2) {
-        if (mouseY > 522 && mouseY < 548 && mouseX > 612 && mouseX < 688) {
+    else if (stage == 2) {//110, 230, 590, 30
+        if (mouseX > 110 && mouseX < 700 && mouseY > 230 && mouseY < 260) {
+            stage = 21;
+        }//220, 330, 345, 30
+        else if (mouseX > 220 && mouseX < 220 + 345 && mouseY > 330 && mouseY < 360) {
+            stage = 22;
+        }//360, 430, 70, 30
+        else if (mouseX > 360 && mouseX < 430 && mouseY > 430 && mouseY < 460) {
             stage = 1;
+        }
+    }
+    else if (stage == 21) {
+        if (mouseY > 522 && mouseY < 548 && mouseX > 612 && mouseX < 688) {
+            stage = 2;
+        }
+    }
+    else if (stage == 22) {//160+180*i, 30, 100, 30
+        if (mouseX > 160 && mouseX < 620 && mouseY > 30 && mouseY < 60) {
+            getRoomChoice();
+        }
+        else if (mouseX > 20 && mouseX < 780 && mouseY > 80 && mouseY < 180) {
+            if (roomChoice == -1) { alert("select a room first by clicking on one of the rooms"); }
+            else { setRoomDescriptor(); }
+        }//40,500,310,30
+        else if (mouseX > 40 && mouseX < 350 && mouseY > 500 && mouseY < 530) {
+            validateTrainNetwork();
+        }//400,500,60,30
+        else if (mouseX > 400 && mouseX < 460 && mouseY > 500 && mouseY < 530) {
+            stage = 2;
         }
     }
     else if (stage == 3) {
@@ -490,7 +726,7 @@ function mouseReleased() {
         }//150, 560, 140, 30
         else if (mouseX > 150 && mouseX < 290 && mouseY > 560 && mouseY < 590) {
             console.log("clicking button");
-            setTestNetwork=true;
+            setTestNetwork = true;
         }
     }
 }
