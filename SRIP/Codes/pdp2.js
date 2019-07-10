@@ -60,7 +60,7 @@ function preload() {
 }
 function setup() {
     var forPosn = createCanvas(800, 600);
-    forPosn.position(100, 190);
+    forPosn.parent("flex-container");
     smooth();
     noStroke();
     background(100);
@@ -312,6 +312,11 @@ function drawStageTwoTwo() {
     fill(0);
     textSize(15);
     text("BACK", 410, 520);
+    fill(255, 255, 0);
+    rect(510, 500, 70, 30);
+    fill(0);
+    textSize(15);
+    text("RESET", 520, 520);
 }
 
 function getRoomChoice() {   //160+180*i, 30, 100, 30
@@ -335,9 +340,9 @@ function validateTrainNetwork() {
     {
         if(markKitchen[i]==true)
         {flag[0]++;}
-        else if(markBedroom[i]==true)
+        if(markBedroom[i]==true)
         {flag[1]++;}
-        else if(markOffice[i]==true)
+        if(markOffice[i]==true)
         {flag[2]++;}
     }
     for(let i=0;i<3;i++)
@@ -440,45 +445,45 @@ function makeNewHinton()
                 {
                     if(markKitchen[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j]));
                     }
                     if(markBedroom[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                     if(markOffice[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                 }
                 if(markBedroom[i]==true)
                 {
                     if(markKitchen[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                     if(markBedroom[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j]));
                     }
                     if(markOffice[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                 }
                 if(markOffice[i]==true)
                 {
                     if(markKitchen[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                     if(markBedroom[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] - (Math.abs(weights[i][j])/2);
                     }
                     if(markOffice[j]==true)
                     {
-                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j])/3);
+                        weightsCopy[i][j]=weightsCopy[i][j] + (Math.abs(weights[i][j]));
                     }
                 }
             }
@@ -544,7 +549,7 @@ function makeHinton()
             }
         }
     }
-    //checkForHover();
+    checkForHover();
 }
     
 
@@ -615,6 +620,14 @@ function drawStageThree() {
     textSize(13);
     fill(0);
     text("TEST NETWORK", 167, 580);
+    fill(255);
+    rect(407, 560, 63, 30);
+    stroke(0);
+    rect(409, 562, 59, 26);
+    //fill(0);
+    textSize(13);
+    fill(0);
+    text("RESET", 417, 580);
     textSize(15);
     fill(255, 200, 20);
     text("Click on descriptor to clamp it and click again to unclamp", 190, 40);
@@ -638,7 +651,7 @@ function drawStageThree() {
 }
 
 function clampDescriptor() {
-    let flag = 0;
+    let flag = 0,count=0;
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 8; j++) {
             if (mouseX > 20 + j * 95 && mouseX < 20 + (j + 1) * 95 && mouseY < 50 + 20 * (i + 1) && mouseY > 50 + 20 * i) {
@@ -646,6 +659,18 @@ function clampDescriptor() {
                     markDescriptors[i * 8 + j] = true;
                 }
                 else {
+                    for(let k=0;k<40;k++)
+                    {
+                        if(markDescriptors[k]==true)
+                        {
+                            count++;
+                        }
+                    }
+                    if(count==1)
+                    {
+                        setTestNetwork = false;        
+                    }
+                    count=0;
                     markDescriptors[i * 8 + j] = false;
                 }
 
@@ -663,7 +688,7 @@ function testNetwork() {
     let activation = [];
     let nextState = [];
     let nextStateBool = [];
-    console.log("beginning test");
+    //console.log("beginning test");
     let iterNum = 1;
     let threshold = 0;
     for (let i = 0; i < 40; i++) {
@@ -683,7 +708,7 @@ function testNetwork() {
         iterationActivation[i] = [];
         iterationActivation[0][i] = activation[i];
     }
-    console.log("beginning do");
+    //console.log("beginning do");
     do {
         for (let i = 0; i < 40; i++) {
             for (let j = 0; j < 40; j++) {
@@ -711,7 +736,7 @@ function testNetwork() {
         }
         iterNum++;
     } while (iterNum < 16)
-    console.log("completed do");
+    //console.log("completed do");
     displayTestedNetwork();
 }
 
@@ -723,7 +748,7 @@ function displayTestedNetwork() {
     noStroke();
     let x = 20;
     let y = 170;
-    console.log("leseeee");
+    //console.log("leseeee");
     for (let i = 0; i < 20; i++) {
         fill(255);
         textSize(13);
@@ -735,9 +760,6 @@ function displayTestedNetwork() {
             stroke(0);
             let fill1 = int(iterationActivation[j][i] * 120);
             let fill2 = int(iterationActivation[j][20 + i] * 120);
-
-
-            ///////////////////////////////////////////////////////////////////////////////////?
             if (iterationActivation[0][i] != 1) {
                 if (iterationActivation[j][i] == 1 && j < 6) {
                     fill(fill1);
@@ -759,14 +781,23 @@ function displayTestedNetwork() {
                 rect(x + 500 + 20 * j, (y - 10) + 20 * i, iterationActivation[j][20 + i] * 10, iterationActivation[j][20 + i] * 10);
             }
 
-            ///////////////////////////////////////////////////////////////////////////////////?        
-
             noFill();
             noStroke();
         }
     }
 }
 
+function validateClampNetwork()
+{
+    for(let i=0;i<40;i++)
+    {
+        if(markDescriptors[i]==true)
+        {
+            return true;
+        }
+    }
+    return false;
+}
 function mouseReleased() {
     if (stage == 1) {
         if (mouseY > 60 && mouseY < 90 && mouseX > 340 && mouseX < 440) {
@@ -813,6 +844,17 @@ function mouseReleased() {
         }//400,500,60,30
         else if (mouseX > 400 && mouseX < 460 && mouseY > 500 && mouseY < 530) {
             stage = 2;
+        }//510, 500, 70, 30
+        else if(mouseX>510&&mouseX<580&&mouseY>500&&mouseY<530)
+        {
+            roomChoice=-1;
+            setRooms();
+        }
+    }
+    else if( stage == 221 )
+    {
+        if (mouseY > 522 && mouseY < 548 && mouseX > 612 && mouseX < 688) {
+            stage = 22;
         }
     }
     else if (stage == 3) {
@@ -823,8 +865,21 @@ function mouseReleased() {
             stage = 1;
         }//150, 560, 140, 30
         else if (mouseX > 150 && mouseX < 290 && mouseY > 560 && mouseY < 590) {
-            console.log("clicking button");
-            setTestNetwork = true;
+            //console.log("clicking button");
+            if(validateClampNetwork())
+            {
+                setTestNetwork = true;
+            }
+            else
+            {
+                alert("select a descriptor to clamp");
+            }
+            
+        }//407, 560, 63, 30
+        else if(mouseX>407 && mouseX<470 && mouseY>560 && mouseY<590)
+        {
+            setTestNetwork=false;
+            setDescriptors();
         }
     }
 }

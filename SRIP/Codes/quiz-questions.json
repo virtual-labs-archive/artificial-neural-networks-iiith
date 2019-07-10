@@ -1,0 +1,511 @@
+{
+
+    "artciles": [
+
+        {
+
+            "quiztitle":"Quiz for Experiment",
+
+            "containers":"5"
+
+        },
+
+        {
+
+            "q": "CSNN model works even if the knowledge possessed is partially erroneous",
+
+            "option": [
+
+                "True",
+
+                "False"
+            ],
+
+            "answer": "True",
+
+            "description": "we attempt to build concepts or arrive at conclusions based on some limited, partial, and sometimes partially erroneous knowledge."
+
+        },
+
+        {
+
+            "q": "What kind of constraints does CSNN model operate on",
+
+            "option": [
+
+                "few strong constraints",
+
+                "many weak constraints",
+
+                "combination of both weak and strong consraints"
+
+            ],
+
+            "answer": "many weak constraints",
+
+            "description": "The key idea in this model is that a large number of weak constraints together will evolve into a definitive conclusion."
+
+        },
+
+        {
+
+            "q": "which of these is an example of our brain exhibiting CSNN",
+
+            "option": [
+
+                "being reminded of other memories by something such as smell",
+
+                "recognition of handwritten characters",
+
+                "none of the above"
+
+            ],
+
+            "answer": "recognition of handwritten characters",
+
+            "description": "memories due to another memory or sense is IAC."
+
+        },
+
+        {
+
+            "q": "how does our brain react when we attempt to read a new handwritten character",
+
+            "option": [
+
+                "tries to satisfy as many weak constraints as it can and arrive at a conclusion",
+
+                "remembers every time youv've read a character and tries to arrive at a conclusion",
+
+                "perfroms competition between each character with different characters"
+
+            ],
+
+            "answer": "tries to satisfy as many weak constraints as it can and arrive at a conclusion",
+
+            "description": "the samples of a handwritten character we may have captured a large number of weak evidence of features in our memory, so that with a new sample as input, the memory relaxes to a state that satisfies as many constraints as possible to the maximum extent."
+
+        },
+
+        {
+
+            "q": "What do 'units' represent in the PDP model of CSNN",
+
+            "option": [
+
+                "Hypotheses",
+
+                "Knowledge",
+
+                "none of the above"
+
+            ],
+
+            "answer": "Hypotheses",
+
+            "description": "In this model the units represent hypotheses and the connections represent the knowledge in the form of constraints between any two hypotheses."
+
+        },
+
+        {
+
+            "q": "What do 'connections' represent in the PDP model of CSNN",
+
+            "option": [
+
+                "Hypotheses",
+
+                "Knowledge",
+
+                "none of the above"
+            ],
+
+            "answer": "Knowledge",
+
+            "description": "In this model the units represent hypotheses and the connections represent the knowledge in the form of constraints between any two hypotheses."
+
+        },
+
+        {
+
+            "q": "What is the solution for a CSNN",
+
+            "option": [
+
+                "When each constraint is satisfied",
+
+                "When as many constraints as possible are satisfied simultaneously",
+
+                "when the 'knowledge' is complete"
+
+            ],
+
+            "answer": "When as many constraints as possible are satisfied simultaneously",
+
+            "description": "theory"
+
+        },
+
+        {
+
+            "q": "what is the purpose of 'goodness-of-fit' function?",
+
+            "option": [
+
+                "if goodness of fit function is minimum, CSNN is at equilibrium",
+
+                "if goodness of fit function is minimum, CSNN is at equilibrium",
+
+                "to evaluate the degree of satisfaction at any given cycle"
+
+            ],
+
+            "answer": "to evaluate the degree of satisfaction at any given cycle",
+
+            "description": "theory"
+
+        },
+
+        {
+
+            "q": "what does goodness-of-fit function depend on?",
+
+            "option": [
+
+                "output values of units",
+
+                "weights",
+
+                "both"
+
+            ],
+
+            "answer": "both",
+
+            "description": "theory"
+
+        },
+
+        {
+
+            "q": "Question 10",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 10"
+
+        },
+
+        {
+
+            "q": "Question 11",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 3",
+
+            "description": "Explanation for Question 11"
+
+        },
+
+        {
+
+            "q": "Question 12",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 12"
+
+        },
+
+        {
+
+            "q": "Question 13",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 2",
+
+            "description": "Explanation for Question 13"
+
+        },
+
+        {
+
+            "q": "Question 14",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 14"
+
+        },
+
+        {
+
+            "q": "Question 15",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 3",
+
+            "description": "Explanation for Question 15"
+
+        },
+
+        {
+
+            "q": "Question 16",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 2",
+
+            "description": "Explanation for Question 16"
+
+        },
+
+        {
+
+            "q": "Question 17",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 2",
+
+            "description": "Explanation for Question 17"
+
+        },
+
+        {
+
+            "q": "Question 18",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 18"
+
+        },
+
+        {
+
+            "q": "Question 19",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 3",
+
+            "description": "Explanation for Question 19"
+
+        },
+
+        {
+
+            "q": "Question 20",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 20"
+
+        },
+
+        {
+
+            "q": "Question 21",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 21"
+
+        },
+
+        {
+
+            "q": "Question 22",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 22"
+
+        },
+
+        {
+
+            "q": "Question 23",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 23"
+
+        },
+
+        {
+
+            "q": "Question 24",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 24"
+
+        },
+
+        {
+
+            "q": "Question 25",
+
+            "option": [
+
+                "Option 1",
+
+                "Option 2",
+
+                "Option 3"
+
+            ],
+
+            "answer": "Option 1",
+
+            "description": "Explanation for Question 25"
+
+        }
+
+    ]
+
+}

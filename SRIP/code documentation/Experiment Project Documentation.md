@@ -12,11 +12,7 @@ Project
 
 **Experiment Name :** Parallel and distributed processing 2: Constraint Satisfaction Neural Network model
 
-//still have to write for the project
-*
-*
-*
-*
+The above idea of constraint satisfaction can be captured in a PDP model consisting of several units and connections among the units. In this model the units represent hypotheses and the connections represent the knowledge in the form of constraints between any two hypotheses. It is obvious that the knowledge cannot be precise and hence the representation of the knowledge in the form of constraints may not also be precise. So the solution being sought is to satisfy simultaneously as many constraints as possible. Note that the constraints usually are weak constraints, and hence all of them need not be satisfied fully as in the normal constrained optimization problems. The degree of satisfaction is evaluated using a goodness-of-fit function, defined in terms of the output values of the units as well as the weights on the connections between units. 
 
 Purpose of the project:
 
