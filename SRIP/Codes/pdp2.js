@@ -849,6 +849,7 @@ function mouseReleased() {
         {
             roomChoice=-1;
             setRooms();
+            getWeights();
         }
     }
     else if( stage == 221 )
