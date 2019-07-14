@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <!-- Plotly.js -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="clnn_srip.js"></script>
+      <link rel="stylesheet" type="text/css" href="clnn_srip.css">
+</head>
+
+<body onLoad="document.getElementById('region').options[0].selected = 'selected';">
+            <h1 id="heading">Competitive Learning Neural Networks</h1>
+            <br><br>
+            <div id="centre_button">
+      
+      <select class="styleSelect" id="region">
+            <option value="default">Region</option>
+            <option value="square">Square</option>
+            <option value="circle">Circle</option>
+            <option value="triangle">Triangle</option>
+      </select>
+
+      <button class="btn" onclick="generateData()">Generate Data</button>
+      <button class="btn" onclick="nextIteration()">nextIteration</button>
+      <button class="btn" onclick="document.location.reload(true)">Reset</button>
+      <br><br><br><br>
+      </div>
+      <div id="flex-container">
+                  <div id="data-distribution">
+                              <!-- Plotly chart will be drawn inside this DIV -->
+                        </div>
+                  <table id="one">
+                      <tr>
+                          <th>Variables</th>
+                          <th>Value</th> 
+                      </tr>
+                      <tr>
+                          <td>Number of data points</td>
+                          <td><input type="text" autocomplete="off" id="num_points" value='500'></td>
+                      </tr>
+                      <tr>
+                          <td>Iteration Step Size</td>
+                          <td><input type="text" autocomplete="off" id="iter_step_size" value='1'></td>
+                      </tr>
+                      <tr>
+                          <td>Initial sigma0</td>
+                          <td><input type="text" autocomplete="off" id="init_sig0" value='1.0'></td>
+                      </tr>
+                      <tr>
+                          <td>Initial learning rate</td>
+                          <td><input type="text" autocomplete="off" id="init_learn_rate" value='0.05'></td>
+                      </tr>
+                      <tr>
+                          <td>Dimensions of 2D-2D(NxN)</td>
+                          <td><input type="text" autocomplete="off" id="dimension" value='6'></td>
+                      </tr>
+                  </table>
+      <div id="weight-distribution">
+            <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
+</div>
+</body>
+
+</html>
