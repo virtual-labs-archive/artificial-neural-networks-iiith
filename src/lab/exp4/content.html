@@ -1,31 +1,30 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head> <title>Artificial Neural Networks </title> </head>
-<body>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--> <title>Artificial Neural Networks </title> </head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
       <!-- <img src="../images/logo.jpg" />-->
 
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -47,7 +46,7 @@ edit -->
     menu, number of sections, an optional sidebar and a closing 
     footer-->
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
         Multilayer feedforward neural networks 
@@ -57,7 +56,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -74,27 +73,24 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/objective.jpg" />
+	    <img src="../images/objective.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Objective
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-          <div id="experiment-article-section-1-content" 
-          class="content">	
+          <div class="content" id="experiment-article-section-1-content">	
             <p>
 	The objective of this experiment is to demonstrate the ability of a multilayer feedforward neural network (MLFFNN) in solving linearly inseparable pattern classification problems.
 	</p>
-</OL>
+
 
           <!-- <img src="../images/Pendulum.JPG" alt="pendulum"> -->
         </div>
@@ -106,23 +102,20 @@ edit -->
 
 
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      </section>
+      
 
       <section id="experiment-article-section-2">
    
-        <div id="experiment-article-section-2-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-2-icon">
 	  <!-- Enclose the icon image of your lab.-->
-	<img src="../images/theory.jpg" />
+	<img src="../images/theory.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-2-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-2-heading">
          Tutorial 
         </div>
 
-        <div id="experiment-article-section-2-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-2-content">
 
         <h3>Architecture of multilayer feedforward neural network</h3>
 <p>
@@ -145,9 +138,9 @@ layer, and not for the units in the hidden layers. This issue is
 addressed by employing backpropagation algorithm.
 </p>
 		<!--Figure HERE -->
-<table width="750"><tr><td height = "450">
-<img src = "images/structure.png" style="height:90%;width:90%"></td></tr>
-<caption align="bottom"><b> Figure 1: </b><em>Architecture of a multilayer feedforward neural network</em></caption></table>
+<table width="750"><tbody><tr><td height="450">
+<img src="images/structure.png" style="height:90%;width:90%"/></td></tr>
+</tbody><caption align="bottom"><b> Figure 1: </b><em>Architecture of a multilayer feedforward neural network</em></caption></table>
 <h2>Backpropagation learning rule for modifying the weights of MLFFNN</h2>
 <h3>Nature of error surface</h3>
 <p>
@@ -170,7 +163,7 @@ the weights need to be modified in a manner so as to traverse the
 error surface in such a way that the minimum is achieved.
 </p>
 
-<p> <h3>Generalized delta rule</h3> </p>
+<p> </p><h3>Generalized delta rule</h3> <p></p>
 <p>
 The rule is basically a gradient descent along the the error
 surface. For a given set of input-output pattern pairs, the overall
@@ -184,15 +177,15 @@ layer, and with respect to the weights of the hidden layers. This results in an
 expression for the gradient, whose negative is used to modify the
 weights. Note that the units in the hidden layer and the output layer
 need to be differentiable, because the overall error is
-differentiated with respect to the weights. The increment in the weight connecting the units \(j\) and \(i\) is given by: </P>
+differentiated with respect to the weights. The increment in the weight connecting the units \(j\) and \(i\) is given by: </p>
 
 <p>$$ \Delta w_{ij}(m) = -\eta\frac{\partial E(m)}{\partial w_{ij}}, \qquad(1)$$ </p>
 <p>where \(m\) is the step number and \(\eta \gt 0\) is a learning rate parameter, which may also vary for each presentation of the training pair.</p>
-<P>&nbsp;</P>
+<p> </p>
 
 <h2>Discussion on backpropagation rule</h2>
 <h3>Features of backpropagation</h3>
-<P>The key idea is the backpropagation of error from the output layer
+<p>The key idea is the backpropagation of error from the output layer
 to the hidden layers, which is possible because of the nonlinear 
 nature of the units. If the units were to be linear, the MLFFNN
 transforms into a linear associative network, and its ability to
@@ -201,12 +194,12 @@ classification problem is lost. The modification of weights can be
 done in a pattern mode or in a batch mode. In the pattern mode, the
 weights are updated once for every input vector. In the batch mode,
 the weights are updated once after all the input vectors have been
-presented to the network.</P>
-<P>There is no proof of convergence of the  backpropagation learning.
+presented to the network.</p>
+<p>There is no proof of convergence of the  backpropagation learning.
 Some heuristic criteria are used to stop the process of
-learning.</P>
-<p><h3>Performance of backpropagation learning</h3></p>
-<P>The performance of  backpropagation learning law depends on the
+learning.</p>
+<p></p><h3>Performance of backpropagation learning</h3><p></p>
+<p>The performance of  backpropagation learning law depends on the
 initial settings of the weights, learning rate parameter, output
 functions of the units, and presentation of the training data. The
 performance also depends on the specific pattern recognition task (such
@@ -215,7 +208,7 @@ function approximation and probability estimation).  The value of
 the learning rate depends on the distribution of the input data. The
 learning rate can be changed as a function of the iteration.  A
 number of refinements can be added to the backpropagation learning,
-in order to speed up the learning. </P>
+in order to speed up the learning. </p>
 
           </div>
         </section>
@@ -226,18 +219,15 @@ in order to speed up the learning. </P>
 
       <section id="experiment-article-section-3">
 
-        <div id="experiment-article-section-3-icon" 
-        class="icon">
-	<img src="../images/simulation.jpg" />
+        <div class="icon" id="experiment-article-section-3-icon">
+	<img src="../images/simulation.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-3-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-3-heading">
         Illustration 
         </div>
 
-        <div id="experiment-article-section-3-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-3-content">
 
 <h3>Illustration of MLFFNN for classifying linearly inseparable data into classes </h3>
 
@@ -248,21 +238,21 @@ The input vectors belonging to each class are shown in different colours in the 
 </p>
 		<!--Figure HERE -->
 		<center>
-<table width="550"><tr><td height = "450">
-<img src = "images/mlffnn-nl-trainingdata.png" style="height:90%;width:90%"></td></tr>
-<caption align="bottom"><b>Figure 1: </b><em>Initial weights and the classes to be separated.</em></caption></table>
+<table width="550"><tbody><tr><td height="450">
+<img src="images/mlffnn-nl-trainingdata.png" style="height:90%;width:90%"/></td></tr>
+</tbody><caption align="bottom"><b>Figure 1: </b><em>Initial weights and the classes to be separated.</em></caption></table>
 </center>
-<br>
+<br/>
 <p>
 The mean squared error obtained during training as a function of the number of iterations is shown in the following figure (Figure 2).
 </p>
 		<!--Figure HERE -->
 		<center>
-<table width="550"><tr><td height = "450">
-<img src = "images/mlffnn-nl-trainingerror.png" style="height:90%;width:90%"></td></tr>
-<caption align="bottom"><b>Figure 2: </b><em>The error obtained during training.</em></caption></table>
+<table width="550"><tbody><tr><td height="450">
+<img src="images/mlffnn-nl-trainingerror.png" style="height:90%;width:90%"/></td></tr>
+</tbody><caption align="bottom"><b>Figure 2: </b><em>The error obtained during training.</em></caption></table>
 </center>
-<br>
+<br/>
 
 <h3>Convergence of weights and threshold value</h3>
 
@@ -271,31 +261,28 @@ The following figure (Figure 3) shows the initial data and the classification of
 </p>
 		<!--Figure HERE -->
 		<center>
-<table width="900"><tr><td height = "450">
-<img src = "images/mlffnn-nl-testing.png" style="height:90%;width:90%"></td></tr>
-<caption align="bottom"><b>Figure 3: </b><em>Illustration of classification of test data.</em></caption></table>
+<table width="900"><tbody><tr><td height="450">
+<img src="images/mlffnn-nl-testing.png" style="height:90%;width:90%"/></td></tr>
+</tbody><caption align="bottom"><b>Figure 3: </b><em>Illustration of classification of test data.</em></caption></table>
 </center>
-</section>
+</div></section>
 
 
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
       <section id="experiment-article-section-4">
 
-        <div id="experiment-article-section-4-icon" 
-        class="icon">
-	<img src="../images/procedure.jpg" />
+        <div class="icon" id="experiment-article-section-4-icon">
+	<img src="../images/procedure.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-4-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-4-heading">
          Procedure 
         </div>
 
-        <div id="experiment-article-section-4-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-4-content">
           <p>
-<UL>
+</p><ul>
 <!--
 	<LI><P>Architecture of the MLFFNN:</P>
 	<P>(a) Select the number of layers in the MLFFNN, including the
@@ -319,12 +306,12 @@ The following figure (Figure 3) shows the initial data and the classification of
 	obtain the output.</P>
 	-->
 
-	<LI><P>This is a 3 layer MLFFNN with one hidden layer, one input layer, and one output layer. </P>
-	<LI><P>Select the problem type and the number of nodes in the hidden layer, and click on train MLFFNN.</P>
-	<LI><P>Now click on test MLFFNN to test the network and to see the results of pattern classification.</P>
-</UL>
+	<li><p>This is a 3 layer MLFFNN with one hidden layer, one input layer, and one output layer. </p>
+	</li><li><p>Select the problem type and the number of nodes in the hidden layer, and click on train MLFFNN.</p>
+	</li><li><p>Now click on test MLFFNN to test the network and to see the results of pattern classification.</p>
+</li></ul>
 	        
-          </p>
+          <p></p>
         </div>
 
         </section>
@@ -332,21 +319,18 @@ The following figure (Figure 3) shows the initial data and the classification of
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-5">
       
-          <div id="experiment-article-section-5-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-5-icon">
 	    <!-- Enclose the icon imae of your lab.-->	
-	<img src="../images/simulation.jpg" />
+	<img src="../images/simulation.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-5-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-5-heading">
            Experiment 
           </div>
 
-          <div id="experiment-article-section-5-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-5-content">
             
-<p>	<IFRAME src="mlffnn.php" width="1200" height="1200" >     </IFRAME> </p>
+<p>	<iframe height="1200" src="mlffnn.php" width="1200">     </iframe> </p>
 <!--            <p>
 		<a href="http://speech.iiit.ac.in/vlabs/weboctave"> Click here to start weboctave.</a>
             </p>
@@ -360,49 +344,46 @@ The following figure (Figure 3) shows the initial data and the classification of
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-6">
       
-          <div id="experiment-article-section-6-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-6-icon">
 	    <!-- Enclose the icon image of your lab.-->	
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-6-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-6-heading">
            Observations 
           </div>
 
-          <div id="experiment-article-section-6-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-6-content">
             
             <p>
-	<OL>
-		<OL>
-			<UL>
-				<LI><P>Variation of error as a function of time-step/epoch</P>
-			<P>(a) Observe the variation in case of pattern mode and batch
+	</p><ol>
+		<ol>
+			<ul>
+				<li><p>Variation of error as a function of time-step/epoch</p>
+			<p>(a) Observe the variation in case of pattern mode and batch
 			mode. In the former case, the variation of error would be less
-			smoother than in the latter case.</P>
-			<P>(b) In each case, observe the number of epochs required for the
-			error to converge to a given value.</P>
-			<LI><P>Convergence of weight values</P>
-			<P>(a) Observe the plot of individual weight values as functions
+			smoother than in the latter case.</p>
+			<p>(b) In each case, observe the number of epochs required for the
+			error to converge to a given value.</p>
+			</li><li><p>Convergence of weight values</p>
+			<p>(a) Observe the plot of individual weight values as functions
 			of time-step/epoch. Each weight value may converge over time, or
 			oscillate within limits, indicating that it is near a minimum in
-			the error surface.</P>
-			<P>(b) Observe the number of epochs required for convergence in
-			the case of pattern mode and batch mode.</P>
-			<LI><P>Cross-validation</P>
-			<P>(a) For the subset of input patterns, observe the values of the
+			the error surface.</p>
+			<p>(b) Observe the number of epochs required for convergence in
+			the case of pattern mode and batch mode.</p>
+			</li><li><p>Cross-validation</p>
+			<p>(a) For the subset of input patterns, observe the values of the
 			corresponding outputs, and compare the obtained outputs with
-			desired outputs. What is the error between the two ?</P>
-			<P>(b) Is the cross-validation error lesser for batch mode or for
-			the pattern mode ?</P>
-			</UL>
-		</OL>
-	</OL>
+			desired outputs. What is the error between the two ?</p>
+			<p>(b) Is the cross-validation error lesser for batch mode or for
+			the pattern mode ?</p>
+			</li></ul>
+		</ol>
+	</ol>
             
   
-            </p>
+            <p></p>
 
           </div>
 
@@ -412,36 +393,33 @@ The following figure (Figure 3) shows the initial data and the classification of
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-7">
       
-          <div id="experiment-article-section-7-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-7-icon">
 	    <!-- Enclose the icon image of your lab.-->	
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-7-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-7-heading">
          Assignment 
           </div>
 
-          <div id="experiment-article-section-7-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-7-content">
 
 <p>
-<OL>
-        <OL>
-                <OL>
-                        <LI><P>Comment on the nature of the error surface for a multilayer feedforward neural network.</P>
-                        <LI><P>Discuss various interpretations of the results of backpropagation learning.</P>
-                        <LI><P>What is meant by generalization in feedforward neural networks? Why should it depend on the size and efficiency of training set, architecture of the network  
-                        and the complexity of the problem? </P>
-                        <LI><P>Generalize the XOR problem to a parity problem for N (\(\gt\)2) variables by considering a network for the two variables first, and then extending the network
+</p><ol>
+        <ol>
+                <ol>
+                        <li><p>Comment on the nature of the error surface for a multilayer feedforward neural network.</p>
+                        </li><li><p>Discuss various interpretations of the results of backpropagation learning.</p>
+                        </li><li><p>What is meant by generalization in feedforward neural networks? Why should it depend on the size and efficiency of training set, architecture of the network  
+                        and the complexity of the problem? </p>
+                        </li><li><p>Generalize the XOR problem to a parity problem for N (\(\gt\)2) variables by considering a network for the two variables first, and then extending the network
                         considering the output of the first network as one variable and the third variable as another. Repeat this for N=4 and design a network for solving the parity 
-                        problem for 4 variables.</P>
-                </OL>
-        </OL>
-</OL>
+                        problem for 4 variables.</p>
+                </li></ol>
+        </ol>
+</ol>
 
-</p>
+<p></p>
         
           </div>
 
@@ -451,46 +429,43 @@ The following figure (Figure 3) shows the initial data and the classification of
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
  
 <section id="experiment-article-section-8">
-	<div id="experiment-article-section-8-icon" 
-	class="icon">
+	<div class="icon" id="experiment-article-section-8-icon">
 				    
 	<!-- Enclose the icon image of your lab.-->
-	<img src="../images/readings.jpg" />
+	<img src="../images/readings.jpg"/>
 	</div>  
-	<div id="experiment-article-section-8-heading" 
-	 class="heading">								  
+	<div class="heading" id="experiment-article-section-8-heading">								  
 	   References								
 	</div>								
-	<div id="experiment-article-section-8-content" 								
-	 class="content">								
+	<div class="content" id="experiment-article-section-8-content">								
 <p>
-    <OL>
-	    <OL>
-		    <UL>
-			    <LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 117, 1999.</P>
-			    <LI><P>S. Haykin, <i>Neural Networks: A Comprehensive Foundation</i>, New York: Macmillan College Publishing Company Inc., 1994.</P>
-			    <LI><P>A.P. Russo, "Neural networks for sonar signal processing", in <i>IEEE Conference on Neural Networks for Ocean Engineering</i>, vol. 51 (Washington, DC), 
-			    1991.</P>
-			    <LI><P>I. Guyon, "Applications of neural networks to character recognition", <i>Int. J. Pattern Recognition a n d Artificial Intelligence</i>, vol. 5, 
-			    pp. 353-382, 1991.</P>
-			    <LI><P>D.R. Hush, J.M. Salas, and B. Horne, "Error surfaces for multilayer perceptrons, in <i>International Joint Conference on Neural Networks</i>, vol. 1 
-			    (Seattle), IEEE, New York, pp. 759-764, 1991.</P>
-			    <LI><P>P.J. Werbos, <i>The Roots of Backpropagation: From Ordered Derivatives to Neural Networks and Political Forecasting</i>; New York: John Wiley, 1994.</P>
-		    </UL>
-	    </OL>
-    </OL>
-</p>
+    </p><ol>
+	    <ol>
+		    <ul>
+			    <li><p>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, pg. 117, 1999.</p>
+			    </li><li><p>S. Haykin, <i>Neural Networks: A Comprehensive Foundation</i>, New York: Macmillan College Publishing Company Inc., 1994.</p>
+			    </li><li><p>A.P. Russo, "Neural networks for sonar signal processing", in <i>IEEE Conference on Neural Networks for Ocean Engineering</i>, vol. 51 (Washington, DC), 
+			    1991.</p>
+			    </li><li><p>I. Guyon, "Applications of neural networks to character recognition", <i>Int. J. Pattern Recognition a n d Artificial Intelligence</i>, vol. 5, 
+			    pp. 353-382, 1991.</p>
+			    </li><li><p>D.R. Hush, J.M. Salas, and B. Horne, "Error surfaces for multilayer perceptrons, in <i>International Joint Conference on Neural Networks</i>, vol. 1 
+			    (Seattle), IEEE, New York, pp. 759-764, 1991.</p>
+			    </li><li><p>P.J. Werbos, <i>The Roots of Backpropagation: From Ordered Derivatives to Neural Networks and Political Forecasting</i>; New York: John Wiley, 1994.</p>
+		    </li></ul>
+	    </ol>
+    </ol>
+<p></p>
 </div>
 </section>
 																													            </div>
 
-      </div>
+      </article></div>
 
 
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
-    <aside id="lab-article-sidebar" class="default">
+    <aside class="default" id="lab-article-sidebar">
       <!-- put the content that you want to appear in the 
       sidebar -->	
     </aside>
@@ -498,35 +473,74 @@ The following figure (Figure 3) shows the initial data and the classification of
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
-      <!-- Put the content that you want to appear here -->
-    </footer>
+    <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
-  </article>
+  
 
 
   <!-- Links to other labs, about us page can be kept the lab 
   footer-->
-  <footer id="lab-footer" class="default">
+  <footer class="default" id="lab-footer">
     <!-- Put the content here-->
   </footer>
 
-  <footer id="lab-header" class="heading">
+  <footer class="heading" id="lab-header">
   <!-- Put the content here-->
-  <div id="lab-header-heading" class="heading">
+  <div class="heading" id="lab-header-heading">
   <!-- Write the name of your lab and link it to the home page
   of your lab. -->
 
   <center>
-  <table><tr>
-  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
-  </tr></table>
+  <table><tbody><tr>
+  <td><a href="http://speech.iiit.ac.in/" target="_blank"><font size="-3">Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></tbody></table>
   </center>
   </div>
 
   </footer>
 
-</div>		
+		
 
-</body>
-</html>
+
+
+</body></html>

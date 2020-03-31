@@ -1,31 +1,30 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head> <title>Artificial Neural Networks </title> </head>
-<body>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--> <title>Artificial Neural Networks </title> </head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
       <!-- <img src="../images/logo.jpg" /> -->
 
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -47,7 +46,7 @@ edit -->
     menu, number of sections, an optional sidebar and a closing 
     footer-->
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
         Hopfield models for solution to optimization problems
@@ -57,7 +56,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -74,25 +73,22 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/objective.jpg" />
+	    <img src="../images/objective.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Objective
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-          <div id="experiment-article-section-1-content" 
-          class="content">	
+          <div class="content" id="experiment-article-section-1-content">	
             <p>
-<P>The objective of this experiment is to demonstrate the use of Hopfield models for solving optimization problems.
+</p><p>The objective of this experiment is to demonstrate the use of Hopfield models for solving optimization problems.
 The main issue in solving optimization problems using neural networks is mapping of the problem to a neural network architecture.
 This experiment demonstrates how an optimization problem such as the graph bipartition problem, can be mapped on to an Hopfield model (feedback neural network).
 </p>
@@ -107,57 +103,54 @@ This experiment demonstrates how an optimization problem such as the graph bipar
 
 
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      </section>
+      
 
       <section id="experiment-article-section-2">
    
-        <div id="experiment-article-section-2-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-2-icon">
 	  <!-- Enclose the icon image of your lab.-->
-	<img src="../images/theory.jpg" />
+	<img src="../images/theory.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-2-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-2-heading">
          Tutorial 
         </div>
 
-        <div id="experiment-article-section-2-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-2-content">
 
 <h3>Graph bipartition problem</h3>
-<P>
+<p>
 The problem illustrated here is the graph bipartition problem, using Hopfield model to solve it. The problem is to
 partition a given graph of \(N\) nodes equally, as shown in the following figure, such that the connectivity 
 (measured in the terms of the number of links) between the two partitioned graphs is minimum.  
-</P>
+</p>
 
-<P>
+<p>
 
 
-<table width = "750"><tr><td height = "450">
+</p><table width="750"><tbody><tr><td height="450">
 <img src="images/GrapBip1.png" style="height:90%;width:90%"/></td></tr>
-<caption align="bottom"><b>Figure 1: </b><em>Graph bipartition problem</em></caption>
+</tbody><caption align="bottom"><b>Figure 1: </b><em>Graph bipartition problem</em></caption>
 </table>
-</P>
+<p></p>
 
-<P>
+<p>
 The problem can be mapped onto a Hopfield network, in which each bipolar unit corresponds to a node in the graph, with the state \(s_i = +1\) representing the node in one half and state \(s_i = -1\) representing the nodes in the other half. Let state \(c_{ij} = 1\) if the nodes <i>i</i> and <i>j</i> are connected and \(c_{ij} = 0\) if the nodes are not connected. Thus the cost term \(c_{ij}s_i s_j\) contributes to a non-zero value only if the nodes are connected.  
 We have \(c_{ij}s_i s_j = +1\) if the nodes are in the same partition, and \(c_{ij}s_i s_j = -1\) if they are in different partitions. For equal division of the nodes \(\sum\limits_{j} s_i=0\). Therefore the cost term with equality constraint is given by
-<OL><OL><OL><OL>
+</p><ol><ol><ol><ol>
 \(  E = -\frac{1}{2}\)\(\sum\limits_{i,j}c_{ij}s_i s_j + \frac{\alpha}{2} [\sum\limits_{i}s_i]^2 \qquad(1)\)
-</OL></OL></OL></OL>
-</P>
-<P>
+</ol></ol></ol></ol>
+<p></p>
+<p>
 where the positive constant \(\alpha\) is used to indicate the relative strengths of the two terms in the energy function. 
 Due to conflicting requirements of the two terms, there will be several minima in the energy function. The cost functions E can be written in the Hopfield energy form as
-</P>
-<OL><OL><OL><OL>
+</p>
+<ol><ol><ol><ol>
 \(  E = -\frac{1}{2}\)\( \sum\limits_{ij}w_{ij}s_i s_j + \frac{N\alpha}{2}  \qquad(2)\)
-</OL></OL></OL></OL>
-<P>
+</ol></ol></ol></ol>
+<p>
 where \(w_{ij} = c_{ij}- \alpha\). The term \(N\alpha/2\) is to take care of the term corresponding to \(i=j\), since \(w_{ii} = 0\) for a Hopfield Model. 
-</P>
+</p>
 
 
         </div>
@@ -168,66 +161,63 @@ where \(w_{ij} = c_{ij}- \alpha\). The term \(N\alpha/2\) is to take care of the
 
       <section id="experiment-article-section-3">
 
-        <div id="experiment-article-section-3-icon" 
-        class="icon">
-<img src="../images/simulation.jpg" />	
+        <div class="icon" id="experiment-article-section-3-icon">
+<img src="../images/simulation.jpg"/>	
 </div>
 
-        <div id="experiment-article-section-3-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-3-heading">
         Illustration 
         </div>
 
-        <div id="experiment-article-section-3-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-3-content">
 
 
-<P>
+<p>
 The Hopfield model for the solution of graph bipartition problem is discussed here. 
 While performing this experiment it is necessary to understand the issues 
 associated with annealing of Hopfield model.   
-</P> 
+</p> 
 
-<P>
-<table width = "600"><tr><td height = "450">
+<p>
+</p><table width="600"><tbody><tr><td height="450">
             <img src="images/init14.png" style="height:90%;width:90%"/></td></tr>
-	    <caption align="bottom"><b>Figure 1: </b><em>Illustration of graph with 4 nodes before annealing. </em></caption>
+	    </tbody><caption align="bottom"><b>Figure 1: </b><em>Illustration of graph with 4 nodes before annealing. </em></caption>
                 </table>
-</P>
+<p></p>
 <p>
 Figure 1 illustrates a graph with 4 nodes before the process of annealing. Figure 2 shows the input graph and the bipartitioned graph.
 </p>
 
-<P>
-<table width = "800"><tr><td height = "450">
+<p>
+</p><table width="800"><tbody><tr><td height="450">
             <img src="images/anneal14.png" style="height:90%;width:90%"/></td></tr>
-	    <caption align="bottom"><b>Figure 2: </b><em>Illustration of graph with 4 nodes after annealing.</em></caption>
+	    </tbody><caption align="bottom"><b>Figure 2: </b><em>Illustration of graph with 4 nodes after annealing.</em></caption>
                 </table>
-</P>
+<p></p>
 
-<P>We see that even if there exists a solution through annealing, it need not lead to the optimum solution of the bipartition.
-The graph still is not divided in parts containing equal number of nodes as illustrated in Figure 2.</P>
+<p>We see that even if there exists a solution through annealing, it need not lead to the optimum solution of the bipartition.
+The graph still is not divided in parts containing equal number of nodes as illustrated in Figure 2.</p>
 
-<P>
-<table width = "600"><tr><td height = "450">
+<p>
+</p><table width="600"><tbody><tr><td height="450">
             <img src="images/init614.png" style="height:90%;width:90%"/></td></tr>
-<caption align="bottom"><b>Figure 3: </b><em>Illustration of graph with 14 nodes before annealing.</em></caption>
+</tbody><caption align="bottom"><b>Figure 3: </b><em>Illustration of graph with 14 nodes before annealing.</em></caption>
                 </table>
-</P>
+<p></p>
 
 <p>
 Figuew 3 illustrates a graph with 14 nodes before the process of annealing. Figure 4 shows the input graph and the bipartitioned graph.
 </p>
 
-<P>
-<table width = "800"><tr><td height = "450">
+<p>
+</p><table width="800"><tbody><tr><td height="450">
             <img src="images/anneal614.png" style="height:90%;width:90%"/></td></tr>
-<caption align="bottom"><b>Figure 4: </b><em>Illustration of graph with 14 nodes after annealing.</em></caption>
+</tbody><caption align="bottom"><b>Figure 4: </b><em>Illustration of graph with 14 nodes after annealing.</em></caption>
                 </table>
-</P>
+<p></p>
 
-<P>We see that in the case of more number of nodes, annealing leads to the optimum solution of the bipartition.
-The graph still is now divided in parts containing equal number of nodes as illustrated in Fig. 4.</P>
+<p>We see that in the case of more number of nodes, annealing leads to the optimum solution of the bipartition.
+The graph still is now divided in parts containing equal number of nodes as illustrated in Fig. 4.</p>
 
 </div>
 
@@ -238,29 +228,26 @@ The graph still is now divided in parts containing equal number of nodes as illu
 
       <section id="experiment-article-section-4">
 
-        <div id="experiment-article-section-4-icon" 
-        class="icon">
-<img src="../images/procedure.jpg" />
+        <div class="icon" id="experiment-article-section-4-icon">
+<img src="../images/procedure.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-4-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-4-heading">
          Procedure 
         </div>
-	<div id="experiment-article-section-4-content" 
-        class="content">
+	<div class="content" id="experiment-article-section-4-content">
         
 <h3>For the graph bipartition problem</h3>
-	<P>
-	<OL><OL><OL>
-	<LI><P>First select a graph type, how many nodes it has to contain.</P>
-	<LI><P>Select the number of nodes and number of edges, and then mention nodes sharing the edges</P>
-	<LI><P>Give the value of \(\alpha\) and \(\delta T\) (decrement in temperature) to be used. \(\delta T\) 
-	       is the temprature gradient controlling annealing process helping the network to settle down (Refer to Artificial Neural Networks virtual lab, Experiment 6).</P>
-	<LI><P>Press 'Init' to generate the required graph. Observe the graph generated.</P>
-	<LI><P>Click on 'Anneal' to the initiated Hopfield and then observe the output.</P>
-	</OL></OL></OL>
-	</P>
+	<p>
+	</p><ol><ol><ol>
+	<li><p>First select a graph type, how many nodes it has to contain.</p>
+	</li><li><p>Select the number of nodes and number of edges, and then mention nodes sharing the edges</p>
+	</li><li><p>Give the value of \(\alpha\) and \(\delta T\) (decrement in temperature) to be used. \(\delta T\) 
+	       is the temprature gradient controlling annealing process helping the network to settle down (Refer to Artificial Neural Networks virtual lab, Experiment 6).</p>
+	</li><li><p>Press 'Init' to generate the required graph. Observe the graph generated.</p>
+	</li><li><p>Click on 'Anneal' to the initiated Hopfield and then observe the output.</p>
+	</li></ol></ol></ol>
+	<p></p>
 
 </div>
 
@@ -271,24 +258,21 @@ The graph still is now divided in parts containing equal number of nodes as illu
 
       <section id="experiment-article-section-5">
 
-        <div id="experiment-article-section-5-icon" 
-        class="icon">
-<img src="../images/simulation.jpg" />	
+        <div class="icon" id="experiment-article-section-5-icon">
+<img src="../images/simulation.jpg"/>	
 </div>
 
-        <div id="experiment-article-section-5-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-5-heading">
         Experiment 
         </div>
 
-        <div id="experiment-article-section-5-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-5-content">
 <!--
           <p>
                 <a href="http://speech.iiit.ac.in/vlabs/weboctave"> Click here to start weboctave.</a>
           </p>
 -->
-<p>                <IFRAME src="graphbipartition.php" width="1200" height="1200" >     </IFRAME></p>
+<p>                <iframe height="1200" src="graphbipartition.php" width="1200">     </iframe></p>
 
         </div>
 
@@ -298,26 +282,23 @@ The graph still is now divided in parts containing equal number of nodes as illu
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-6">
       
-          <div id="experiment-article-section-6-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-6-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-6-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-6-heading">
            Observations 
           </div>
 
-          <div id="experiment-article-section-6-content" 
-          class="content">
-            <P>
-		<OL><OL><OL>
-	<LI><P>Observe the connected graph has been partitioned into required spaces with the minimum number of connections in between.</P>
-	<LI><P>Observe the effect of changing the parameters \(\alpha\) and \(\delta T\) for the annealing schedule. </P>
-	<LI><P>Vary the number of nodes and edges and observe if there exists any relation between \(\delta T\) and number of nodes/edges. </P>	
-		</OL></OL></OL>
-		</P>
+          <div class="content" id="experiment-article-section-6-content">
+            <p>
+		</p><ol><ol><ol>
+	<li><p>Observe the connected graph has been partitioned into required spaces with the minimum number of connections in between.</p>
+	</li><li><p>Observe the effect of changing the parameters \(\alpha\) and \(\delta T\) for the annealing schedule. </p>
+	</li><li><p>Vary the number of nodes and edges and observe if there exists any relation between \(\delta T\) and number of nodes/edges. </p>	
+		</li></ol></ol></ol>
+		<p></p>
 
           </div>
 
@@ -327,36 +308,33 @@ The graph still is now divided in parts containing equal number of nodes as illu
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-7">
       
-          <div id="experiment-article-section-7-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-7-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-7-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-7-heading">
            Assignment 
           </div>
 
-          <div id="experiment-article-section-7-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-7-content">
 
 	<p>
-<OL>
-        <OL>
-                <OL>
-			<LI><P>Explain the formulation of the graph bipartition problem as an optimization problem.</P>
-                        <LI><P>Study the performance of the graph bipartition problem for the example shown in the following figure for \(\delta T\) values between 0.1 and 0.5 .</P>
-				<P>
-<table width = "600"><tr><td height = "450">
+</p><ol>
+        <ol>
+                <ol>
+			<li><p>Explain the formulation of the graph bipartition problem as an optimization problem.</p>
+                        </li><li><p>Study the performance of the graph bipartition problem for the example shown in the following figure for \(\delta T\) values between 0.1 and 0.5 .</p>
+				<p>
+</p><table width="600"><tbody><tr><td height="450">
             <img src="images/GrapBip1.png" style="height:90%;width:90%"/></td></tr>
-                </table>				
-				</P>
-                </OL>
-        </OL>
-</OL>
+                </tbody></table>				
+				<p></p>
+                </li></ol>
+        </ol>
+</ol>
 
-</p>
+<p></p>
 		
 			  </div>
 
@@ -366,29 +344,26 @@ The graph still is now divided in parts containing equal number of nodes as illu
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
 <section id="experiment-article-section-8">
-	<div id="experiment-article-section-8-icon" 
-	class="icon">
+	<div class="icon" id="experiment-article-section-8-icon">
 
 	<!-- Enclose the icon image of your lab.-->
-	<img src="../images/readings.jpg" />
+	<img src="../images/readings.jpg"/>
 	</div>
-	<div id="experiment-article-section-8-heading" 
-	class="heading">
+	<div class="heading" id="experiment-article-section-8-heading">
 	References
 	</div>
-	<div id="experiment-article-section-8-content"                                                          
-	class="content">
+	<div class="content" id="experiment-article-section-8-content">
 <p>
-	<OL>
-		<OL>
-			<OL>
-			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, p. 296, 1999.</P>
-			<LI><P>C. Peterson and B. Soderberg, "A new method of mapping optimization problems onto neural networks", <i>Int. J. Neural Systems</i>, 
-			vol. 1, pp. 3-22, April 1989.</P>
-			</OL>
-		</OL>
-	</OL>
-</p>
+	</p><ol>
+		<ol>
+			<ol>
+			<li><p>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, p. 296, 1999.</p>
+			</li><li><p>C. Peterson and B. Soderberg, "A new method of mapping optimization problems onto neural networks", <i>Int. J. Neural Systems</i>, 
+			vol. 1, pp. 3-22, April 1989.</p>
+			</li></ol>
+		</ol>
+	</ol>
+<p></p>
 
 </div>
 
@@ -401,7 +376,7 @@ The graph still is now divided in parts containing equal number of nodes as illu
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
-    <aside id="lab-article-sidebar" class="default">
+    <aside class="default" id="lab-article-sidebar">
       <!-- put the content that you want to appear in the 
       sidebar -->	
     </aside>
@@ -409,29 +384,67 @@ The graph still is now divided in parts containing equal number of nodes as illu
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
-      <!-- Put the content that you want to appear here -->
-    </footer>
+    <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
   </article>
 
 
   <!-- Links to other labs, about us page can be kept the lab 
 		  footer-->
-		  <footer id="lab-footer" class="default">
+		  <footer class="default" id="lab-footer">
 	    <!-- Put the content here-->
   </footer>
 
-  <footer id="lab-header" class="heading">
+  <footer class="heading" id="lab-header">
   <!-- Put the content here-->
-  <div id="lab-header-heading" class="heading">
+  <div class="heading" id="lab-header-heading">
   <!-- Write the name of your lab and link it to the home page
   of your lab. -->
 
   <center>
-  <table><tr>
-  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
-  </tr></table>
+  <table><tbody><tr>
+  <td><a href="http://speech.iiit.ac.in/" target="_blank"><font size="-3">Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></tbody></table>
   </center>
   </div>
 
@@ -439,5 +452,6 @@ The graph still is now divided in parts containing equal number of nodes as illu
 
 	</div>		
 
-	</body>
-</html>
+	
+
+</body></html>

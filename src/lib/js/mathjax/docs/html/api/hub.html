@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The MathJax.Hub Object &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The MathJax.Hub Object — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="The MathJax API" href="index.html" />
-    <link rel="next" title="The MathJax.Ajax Object" href="ajax.html" />
-    <link rel="prev" title="The MathJax variable" href="variable.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="The MathJax API"/>
+    <link href="ajax.html" rel="next" title="The MathJax.Ajax Object"/>
+    <link href="variable.html" rel="prev" title="The MathJax variable"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="ajax.html" title="The MathJax.Ajax Object"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="variable.html" title="The MathJax variable"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">The MathJax API</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="ajax.html" title="The MathJax.Ajax Object">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="variable.html" title="The MathJax variable">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>  
 
@@ -79,7 +76,7 @@ Options</em></a> reference page.</p>
 <dt>
 <tt class="descname">processUpdateTime: 250</tt></dt>
 <dd><p>The minimum time (in milliseconds) between updates of the
-&#8220;Processing Math&#8221; message.</p>
+“Processing Math” message.</p>
 </dd></dl>
 
 <dl class="describe">
@@ -92,7 +89,7 @@ Options</em></a> reference page.</p>
 <dl class="describe">
 <dt>
 <tt class="descname">queue</tt></dt>
-<dd><p>MathJax&#8217;s main processing queue.  Use <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Queue()</span></tt> to push
+<dd><p>MathJax’s main processing queue.  Use <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Queue()</span></tt> to push
 callbacks onto this queue.</p>
 </dd></dl>
 
@@ -106,7 +103,7 @@ additional properties and methods concerning the browser:</p>
 <dl class="describe">
 <dt>
 <tt class="descname">version</tt></dt>
-<dd><p>The browser version number, e.g., <tt class="docutils literal"><span class="pre">&quot;4.0&quot;</span></tt></p>
+<dd><p>The browser version number, e.g., <tt class="docutils literal"><span class="pre">"4.0"</span></tt></p>
 </dd></dl>
 
 <dl class="describe">
@@ -142,11 +139,11 @@ for instance.</p>
 browsers and whose values are the functions to be performed.
 Each function is passed one parameter, which is the
 <tt class="docutils literal"><span class="pre">MathJax.Hub.Browser</span></tt> object.  You do not need to include
-every browser as one of your choices &#8212; only those for which you
+every browser as one of your choices — only those for which you
 need to do special processing.  For example:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Browser</span><span class="p">.</span><span class="nx">Select</span><span class="p">(</span>
   <span class="nx">MSIE</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">browser</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">versionAtLeast</span><span class="p">(</span><span class="s2">&quot;8.0&quot;</span><span class="p">))</span> <span class="p">{...</span> <span class="k">do</span> <span class="nx">version</span> <span class="mi">8</span> <span class="nx">stuff</span> <span class="p">...</span> <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">browser</span><span class="p">.</span><span class="nx">versionAtLeast</span><span class="p">(</span><span class="s2">"8.0"</span><span class="p">))</span> <span class="p">{...</span> <span class="k">do</span> <span class="nx">version</span> <span class="mi">8</span> <span class="nx">stuff</span> <span class="p">...</span> <span class="p">}</span>
     <span class="p">...</span> <span class="k">do</span> <span class="nx">general</span> <span class="nx">MSIE</span> <span class="nx">stuff</span> <span class="p">...</span>
   <span class="p">},</span>
 
@@ -172,11 +169,11 @@ to the values stored in the <cite>options</cite> object.  See
 <a class="reference internal" href="../options/index.html#configuration"><em>Configuring MathJax</em></a> for details on how this
 is used and the options that you can set.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>options</strong> &#8212; object containing options to be set</li>
+<li><strong>options</strong> — object containing options to be set</li>
 </ul>
 </td>
 </tr>
@@ -191,12 +188,12 @@ is used and the options that you can set.</p>
 <dt>
 <tt class="descname">Configured()</tt></dt>
 <dd><p>When <tt class="docutils literal"><span class="pre">delayStartupUntil</span></tt> is specified in the configuration file or
-in the script that loads <tt class="docutils literal"><span class="pre">MathJax.js</span></tt>, MathJax&#8217;s startup sequence is
+in the script that loads <tt class="docutils literal"><span class="pre">MathJax.js</span></tt>, MathJax’s startup sequence is
 delayed until this routine is called.  See <a class="reference internal" href="../options/index.html#configuration"><em>Configuring MathJax</em></a> for details on how this is used.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Returns :</th><td class="field-body"><tt class="docutils literal"><span class="pre">null</span></tt></td>
 </tr>
 </tbody>
@@ -210,11 +207,11 @@ delayed until this routine is called.  See <a class="reference internal" href=".
 they will be called during the <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.PreProcess()</span></tt>
 action.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>callback</strong> &#8212;  the callback specification for the preprocessor</li>
+<li><strong>callback</strong> —  the callback specification for the preprocessor</li>
 </ul>
 </td>
 </tr>
@@ -234,12 +231,12 @@ hub processing signal (where <cite>PreProcessing</cite>, <cite>Processing</cite>
 <cite>type</cite>, the <cite>callback</cite> will be called with the message as its
 parameter.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>type</strong> &#8212; a string indicating the message to look for</li>
-<li><strong>callback</strong> &#8212; a callback specification</li>
+<li><strong>type</strong> — a string indicating the message to look for</li>
+<li><strong>callback</strong> — a callback specification</li>
 </ul>
 </td>
 </tr>
@@ -260,12 +257,12 @@ messages are sent).  When the message equals the <cite>type</cite>, the
 See the <a class="reference internal" href="../signals.html#using-signals"><em>Using Signals</em></a> documentation for
 more details.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>type</strong> &#8212; a string indicating the message to look for</li>
-<li><strong>callback</strong> &#8212; a callback specification</li>
+<li><strong>type</strong> — a string indicating the message to look for</li>
+<li><strong>callback</strong> — a callback specification</li>
 </ul>
 </td>
 </tr>
@@ -283,14 +280,14 @@ more details.</p>
 completely loaded and processed.  (The callback is called when the
 file makes its <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.loadComplete()</span></tt> call.) The
 <cite>file</cite> should be the complete file name, e.g.,
-<tt class="docutils literal"><span class="pre">&quot;[MathJax]/config/default.js&quot;</span></tt>.</p>
+<tt class="docutils literal"><span class="pre">"[MathJax]/config/default.js"</span></tt>.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; the name of the file to wait for</li>
-<li><strong>callback</strong> &#8212; a callback specification</li>
+<li><strong>file</strong> — the name of the file to wait for</li>
+<li><strong>callback</strong> — a callback specification</li>
 </ul>
 </td>
 </tr>
@@ -312,11 +309,11 @@ to use queues, and the MathJax queue in particular.  You may
 supply as many <cite>callback</cite> specifications in one call to the
 <a class="reference internal" href="callback.html#Queue" title="Queue"><tt class="xref py py-meth docutils literal"><span class="pre">Queue()</span></tt></a> method as you wish.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>callback</strong> &#8212; a callback specification</li>
+<li><strong>callback</strong> — a callback specification</li>
 </ul>
 </td>
 </tr>
@@ -334,17 +331,17 @@ supply as many <cite>callback</cite> specifications in one call to the
 array of elements), and then typesets any math elements within the
 element.  If no <cite>element</cite> is provided, the whole document is processed.
 The <cite>element</cite> is either the DOM <cite>id</cite> of the element, a reference to
-the DOM element itself, or an array of id&#8217;s or refereneces.  The
+the DOM element itself, or an array of id’s or refereneces.  The
 <cite>callback</cite> is called when the process is complete.  See the
 <a class="reference internal" href="../typeset.html#typeset-math"><em>Modifying Math</em></a> section for details of how to use
 this method properly.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element(s) whose math is to be typeset</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>element</strong> — the element(s) whose math is to be typeset</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -361,15 +358,15 @@ this method properly.</p>
 <dd><p>Calls the loaded preprocessors on the entire document, or on the given
 DOM element (or elements, if it is an array of elements).  The
 <cite>element</cite> is either the DOM <cite>id</cite> of the element, a reference to the
-DOM element itself, or an array of id&#8217;s or references.  The <cite>callback</cite>
+DOM element itself, or an array of id’s or references.  The <cite>callback</cite>
 is called when the processing is complete.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element to be preprocessed</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>element</strong> — the element to be preprocessed</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -386,15 +383,15 @@ is called when the processing is complete.</p>
 <dd><p>Scans either the entire document or a given DOM <cite>element</cite> (or array of
 elements) for MathJax <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tags and processes the math those
 tags contain.  The <cite>element</cite> is either the DOM <cite>id</cite> of the element to
-scan, a reference to the DOM element itself, or an array of id&#8217;s or
+scan, a reference to the DOM element itself, or an array of id’s or
 references.  The <cite>callback</cite> is called when the processing is complete.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element(s) to be processed</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>element</strong> — the element(s) to be processed</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -412,15 +409,15 @@ references.  The <cite>callback</cite> is called when the processing is complete
 it is an array of elements) for mathematics that has changed since the
 last time it was processed, or is new, and typesets the mathematics
 they contain.  The <cite>element</cite> is either the DOM <cite>id</cite> of the element to
-scan, a reference to the DOM element itself, or an array of id&#8217;s or
+scan, a reference to the DOM element itself, or an array of id’s or
 references.  The <cite>callback</cite> is called when the processing is complete.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element(s) to be updated</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>element</strong> — the element(s) to be updated</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -440,15 +437,15 @@ mathematics again, re-typesetting everything.  This may be necessary,
 for example, if the CSS styles have changed and those changes would
 affect the mathematics.  The <cite>element</cite> is either the DOM <cite>id</cite> of the
 element to scan, a reference to the DOM element itself, or an array of
-id&#8217;s or references.  The <cite>callback</cite> is called when the processing is
+id’s or references.  The <cite>callback</cite> is called when the processing is
 complete.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element(s) to be reprocessed</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>element</strong> — the element(s) to be reprocessed</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -466,11 +463,11 @@ complete.</p>
 specific DOM element.  The <cite>element</cite> is either the DOM <cite>id</cite> of the
 element, or a reference to the DOM element itself.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element to be searched</li>
+<li><strong>element</strong> — the element to be searched</li>
 </ul>
 </td>
 </tr>
@@ -489,12 +486,12 @@ document or a specific DOM element.  The <cite>element</cite> is either the
 DOM <cite>id</cite> of the element to search, or a reference to the DOM
 element itself.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>type</strong> &#8212; MIME-type of <cite>element jax</cite> to find</li>
-<li><strong>element</strong> &#8212; the element to be searched</li>
+<li><strong>type</strong> — MIME-type of <cite>element jax</cite> to find</li>
+<li><strong>element</strong> — the element to be searched</li>
 </ul>
 </td>
 </tr>
@@ -514,12 +511,12 @@ element or the whole document.  The <cite>element</cite> is either the DOM
 <cite>id</cite> of the element to search, or a reference to the DOM element
 itself.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>type</strong> &#8212; MIME-type of input (e.g., <tt class="docutils literal"><span class="pre">&quot;math/tex&quot;</span></tt>)</li>
-<li><strong>element</strong> &#8212; the element to be searched</li>
+<li><strong>type</strong> — MIME-type of input (e.g., <tt class="docutils literal"><span class="pre">"math/tex"</span></tt>)</li>
+<li><strong>element</strong> — the element to be searched</li>
 </ul>
 </td>
 </tr>
@@ -538,11 +535,11 @@ element.  If the element does not have an associated element jax,
 <tt class="docutils literal"><span class="pre">null</span></tt> is returned.  The <cite>element</cite> is either the DOM <cite>id</cite> of the
 element, or a reference to the DOM element itself.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element whose element jax is required</li>
+<li><strong>element</strong> — the element whose element jax is required</li>
 </ul>
 </td>
 </tr>
@@ -562,11 +559,11 @@ if the element is an unprocessed <tt class="docutils literal"><span class="pre">
 handled by MathJax, and returns <tt class="docutils literal"><span class="pre">1</span></tt> if the element is a processed
 <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tag or an element that is the result of an output jax.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>element</strong> &#8212; the element to inspect</li>
+<li><strong>element</strong> — the element to inspect</li>
 </ul>
 </td>
 </tr>
@@ -584,15 +581,15 @@ handled by MathJax, and returns <tt class="docutils literal"><span class="pre">1
 <cite>key:value</cite> pairs in <cite>src</cite> are (recursively) copied into <cite>dst</cite>, so
 that if <cite>value</cite> is itself an object, its content is copied into
 the corresponding object in <cite>dst</cite>.  That is, objects within <cite>src</cite>
-are merged into the corresponding objects in <cite>dst</cite> (they don&#8217;t
+are merged into the corresponding objects in <cite>dst</cite> (they don’t
 replace them).</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>dst</strong> &#8212; the destination object</li>
-<li><strong>src</strong> &#8212; the source object</li>
+<li><strong>dst</strong> — the destination object</li>
+<li><strong>src</strong> — the source object</li>
 </ul>
 </td>
 </tr>
@@ -616,12 +613,12 @@ configuration in order to perform some other action.
 <tt class="docutils literal"><span class="pre">MathJax.Hub.lastError</span></tt> holds the <tt class="docutils literal"><span class="pre">error</span></tt> value of the last
 error on the page.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>script</strong> &#8212; the <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tag causing the error</li>
-<li><strong>error</strong> &#8212; the <tt class="docutils literal"><span class="pre">Error</span></tt> object for the error</li>
+<li><strong>script</strong> — the <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tag causing the error</li>
+<li><strong>error</strong> — the <tt class="docutils literal"><span class="pre">Error</span></tt> object for the error</li>
 </ul>
 </td>
 </tr>
@@ -651,18 +648,16 @@ error on the page.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="variable.html"
-                        title="previous chapter">The MathJax variable</a></p>
+  <p class="topless"><a href="variable.html" title="previous chapter">The MathJax variable</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="ajax.html"
-                        title="next chapter">The MathJax.Ajax Object</a></p>
+  <p class="topless"><a href="ajax.html" title="next chapter">The MathJax.Ajax Object</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -677,22 +672,19 @@ error on the page.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="ajax.html" title="The MathJax.Ajax Object"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="variable.html" title="The MathJax variable"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >The MathJax API</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="ajax.html" title="The MathJax.Ajax Object">next</a> |</li>
+        <li class="right">
+          <a href="variable.html" title="The MathJax variable">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

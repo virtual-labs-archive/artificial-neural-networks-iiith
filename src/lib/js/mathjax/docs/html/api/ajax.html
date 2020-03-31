@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The MathJax.Ajax Object &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The MathJax.Ajax Object — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="The MathJax API" href="index.html" />
-    <link rel="next" title="The MathJax.Message Object" href="message.html" />
-    <link rel="prev" title="The MathJax.Hub Object" href="hub.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="The MathJax API"/>
+    <link href="message.html" rel="next" title="The MathJax.Message Object"/>
+    <link href="hub.html" rel="prev" title="The MathJax.Hub Object"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="message.html" title="The MathJax.Message Object"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="hub.html" title="The MathJax.Hub Object"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">The MathJax API</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="message.html" title="The MathJax.Message Object">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="hub.html" title="The MathJax.Hub Object">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>  
 
@@ -101,7 +98,7 @@ a timeout to occur.</p>
 <dt>
 <tt class="descname">loaded</tt></dt>
 <dd><p>An object containing the names of the files that have been loaded (or
-requested) so far.  <tt class="docutils literal"><span class="pre">MathJax.Ajax.loaded[&quot;file&quot;]</span></tt> will be
+requested) so far.  <tt class="docutils literal"><span class="pre">MathJax.Ajax.loaded["file"]</span></tt> will be
 non-<tt class="docutils literal"><span class="pre">null</span></tt> when the file has been loaded, with the value being
 the <tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS</span></tt> value of the load attempt.</p>
 </dd></dl>
@@ -128,7 +125,7 @@ the <a class="reference internal" href="#loadHook" title="loadHook"><tt class="x
 <dl class="method">
 <dt id="Require">
 <tt class="descname">Require</tt><big>(</big><em>file</em><span class="optional">[</span>, <em>callback</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Require" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads the given file if it hasn&#8217;t been already. The file must be a
+<dd><p>Loads the given file if it hasn’t been already. The file must be a
 JavaScript file or a CSS stylesheet; i.e., it must end in <tt class="docutils literal"><span class="pre">.js</span></tt>
 or <tt class="docutils literal"><span class="pre">.css</span></tt>.  Alternatively, it can be an object with a single
 <cite>key:value</cite> pair where the <cite>key</cite> is one of <tt class="docutils literal"><span class="pre">js</span></tt> or <tt class="docutils literal"><span class="pre">css</span></tt> and
@@ -146,12 +143,12 @@ will be <tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS.OK</s
 loaded, the callback will be called immediately and the file will
 not be loaded again.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; name of the file to be loaded</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>file</strong> — name of the file to be loaded</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -168,12 +165,12 @@ not be loaded again.</p>
 <dd><p>Used internally to load a given file without checking if it
 already has been loaded, or where it is to be found.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; name of the file to be loaded</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>file</strong> — name of the file to be loaded</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -196,11 +193,11 @@ executed, passing them the status of the load
 (<tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS.OK</span></tt> or <tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS.ERROR</span></tt>) as
 their last parameter.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; name of the file that has been loaded</li>
+<li><strong>file</strong> — name of the file that has been loaded</li>
 </ul>
 </td>
 </tr>
@@ -214,17 +211,17 @@ their last parameter.</p>
 <dl class="method">
 <dt id="loadTimeout">
 <tt class="descname">loadTimeout</tt><big>(</big><em>file</em><big>)</big><a class="headerlink" href="#loadTimeout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Called when the timeout period is over and the file hasn&#8217;t loaded.
+<dd><p>Called when the timeout period is over and the file hasn’t loaded.
 This indicates an error condition, and the
 <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.loadError()</span></tt> method will be executed, then the
-file&#8217;s callback will be run with <tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS.ERROR</span></tt> as
+file’s callback will be run with <tt class="docutils literal"><span class="pre">MathJax.Ajax.STATUS.ERROR</span></tt> as
 its parameter.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; name of the file that timed out</li>
+<li><strong>file</strong> — name of the file that timed out</li>
 </ul>
 </td>
 </tr>
@@ -241,11 +238,11 @@ its parameter.</p>
 <dd><p>The default error handler called when a file fails to load.  It
 puts a warning message into the MathJax message box on screen.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; the name of the file that failed to load</li>
+<li><strong>file</strong> — the name of the file that failed to load</li>
 </ul>
 </td>
 </tr>
@@ -264,12 +261,12 @@ loaded.  The file load operation needs to be started when this
 method is called, so it can be used to register a hook for a file
 that may be loaded in the future.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; the name of the file to wait for</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>file</strong> — the name of the file to wait for</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -289,11 +286,11 @@ will never be an explicit <a class="reference internal" href="#Load" title="Load
 them), so that load-hooks and other load-related events can be
 properly processed when the <a class="reference internal" href="#loadComplete" title="loadComplete"><tt class="xref py py-meth docutils literal"><span class="pre">loadComplete()</span></tt></a> occurs.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file1, file2, ...</strong> &#8212; the names of the files in the combined file</li>
+<li><strong>file1, file2, ...</strong> — the names of the files in the combined file</li>
 </ul>
 </td>
 </tr>
@@ -311,14 +308,14 @@ properly processed when the <a class="reference internal" href="#loadComplete" t
 either be a string containing a stylesheet definition, or an
 object containing a <a class="reference internal" href="../CSS-styles.html#css-style-objects"><em>CSS Style Object</em></a>.
 For example:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Styles</span><span class="p">(</span><span class="s2">&quot;body {font-family: serif; font-style: italic}&quot;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Styles</span><span class="p">(</span><span class="s2">"body {font-family: serif; font-style: italic}"</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>and</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Styles</span><span class="p">({</span>
   <span class="nx">body</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;font-family&quot;</span><span class="o">:</span> <span class="s2">&quot;serif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;font-style&quot;</span><span class="o">:</span>  <span class="s2">&quot;italic&quot;</span>
+    <span class="s2">"font-family"</span><span class="o">:</span> <span class="s2">"serif"</span><span class="p">,</span>
+    <span class="s2">"font-style"</span><span class="o">:</span>  <span class="s2">"italic"</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -327,12 +324,12 @@ For example:</p>
 <p>The callback routine is called when the stylesheet has been
 created and is available for use.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>styles</strong> &#8212; CSS style object for the styles to set</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>styles</strong> — CSS style object for the styles to set</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -355,11 +352,11 @@ large group rather than making several smaller calls.</p>
 <dd><p>Returns a complete URL to a file (replacing <tt class="docutils literal"><span class="pre">[MathJax]</span></tt> with the
 actual root URL location).</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>file</strong> &#8212; the file name possibly including <tt class="docutils literal"><span class="pre">[MathJax]</span></tt></li>
+<li><strong>file</strong> — the file name possibly including <tt class="docutils literal"><span class="pre">[MathJax]</span></tt></li>
 </ul>
 </td>
 </tr>
@@ -389,18 +386,16 @@ actual root URL location).</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="hub.html"
-                        title="previous chapter">The MathJax.Hub Object</a></p>
+  <p class="topless"><a href="hub.html" title="previous chapter">The MathJax.Hub Object</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="message.html"
-                        title="next chapter">The MathJax.Message Object</a></p>
+  <p class="topless"><a href="message.html" title="next chapter">The MathJax.Message Object</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -415,22 +410,19 @@ actual root URL location).</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="message.html" title="The MathJax.Message Object"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="hub.html" title="The MathJax.Hub Object"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >The MathJax API</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="message.html" title="The MathJax.Message Object">next</a> |</li>
+        <li class="right">
+          <a href="hub.html" title="The MathJax.Hub Object">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

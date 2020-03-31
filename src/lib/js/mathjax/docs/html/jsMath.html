@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Converting to MathJax from jsMath &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Converting to MathJax from jsMath — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="The MathJax Processing Model" href="model.html" />
-    <link rel="prev" title="Migrating from MathJax v1.0 to v1.1" href="upgrade.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="model.html" rel="next" title="The MathJax Processing Model"/>
+    <link href="upgrade.html" rel="prev" title="Migrating from MathJax v1.0 to v1.1"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="model.html" title="The MathJax Processing Model"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="upgrade.html" title="Migrating from MathJax v1.0 to v1.1"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="model.html" title="The MathJax Processing Model">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="upgrade.html" title="Migrating from MathJax v1.0 to v1.1">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -58,20 +55,20 @@ in the browser by a user viewing your web pages.  If you are using
 jsMath with its <tt class="docutils literal"><span class="pre">tex2math</span></tt> preprocessor, then switching to MathJax
 should be easy, and is simply a matter of configuring MathJax
 appropriately.  See the section on <a class="reference internal" href="configuration.html#loading"><em>Loading and Configuring MathJax</em></a> for details.</p>
-<p>On the other hand, if you are using jsMath&#8217;s <tt class="docutils literal"><span class="pre">&lt;span</span>
-<span class="pre">class=&quot;math&quot;&gt;...&lt;/span&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">class=&quot;math&quot;&gt;...&lt;/div&gt;</span></tt> tags to
-mark the mathematics in your document, then you should use MathJax&#8217;s
+<p>On the other hand, if you are using jsMath’s <tt class="docutils literal"><span class="pre">&lt;span</span>
+<span class="pre">class="math"&gt;...&lt;/span&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;div</span> <span class="pre">class="math"&gt;...&lt;/div&gt;</span></tt> tags to
+mark the mathematics in your document, then you should use MathJax’s
 <tt class="docutils literal"><span class="pre">jsMath2jax</span></tt> preprocessor when you switch to MathJax.  To do this,
-include <tt class="docutils literal"><span class="pre">&quot;jsMath2jax.js&quot;</span></tt> in the <cite>extensions</cite> array of your
-configuration, with the <cite>jax</cite> array set to include <tt class="docutils literal"><span class="pre">&quot;input/TeX&quot;</span></tt>.  For
+include <tt class="docutils literal"><span class="pre">"jsMath2jax.js"</span></tt> in the <cite>extensions</cite> array of your
+configuration, with the <cite>jax</cite> array set to include <tt class="docutils literal"><span class="pre">"input/TeX"</span></tt>.  For
 example,</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/x-mathjax-config&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/x-mathjax-config"</span><span class="nt">&gt;</span>
    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;jsMath2jax.js&quot;</span><span class="p">]</span>
+    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"jsMath2jax.js"</span><span class="p">]</span>
   <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 <span class="nt">&lt;script</span>
-<span class="nt">  </span><span class="na">src=</span><span class="s">&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;</span><span class="nt">&gt;</span>
+<span class="nt">  </span><span class="na">src=</span><span class="s">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/script&gt;</span>
 </pre></div>
 </div>
@@ -83,9 +80,9 @@ configuration options</em></a> section.</p>
 <p>If you are generating your jsMath documents programmatically, it would be
 better to convert from generating the jsMath <tt class="docutils literal"><span class="pre">&lt;span&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;div&gt;</span></tt> tags
 to producing the corresponding MathJax <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tags.  You would use
-<tt class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">type=&quot;math/tex&quot;&gt;</span></tt> in place of <tt class="docutils literal"><span class="pre">&lt;span</span> <span class="pre">class=&quot;math&quot;&gt;</span></tt> and
-<tt class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">type=&quot;math/tex;</span> <span class="pre">mode=display&quot;&gt;</span></tt> in place of <tt class="docutils literal"><span class="pre">&lt;div</span>
-<span class="pre">class=&quot;math&quot;&gt;</span></tt>.  See the section on <a class="reference internal" href="model.html#mathjax-script-tags"><em>How mathematics is stored in the
+<tt class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">type="math/tex"&gt;</span></tt> in place of <tt class="docutils literal"><span class="pre">&lt;span</span> <span class="pre">class="math"&gt;</span></tt> and
+<tt class="docutils literal"><span class="pre">&lt;script</span> <span class="pre">type="math/tex;</span> <span class="pre">mode=display"&gt;</span></tt> in place of <tt class="docutils literal"><span class="pre">&lt;div</span>
+<span class="pre">class="math"&gt;</span></tt>.  See the section on <a class="reference internal" href="model.html#mathjax-script-tags"><em>How mathematics is stored in the
 page</em></a> for more details.</p>
 </div>
 
@@ -96,18 +93,16 @@ page</em></a> for more details.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="upgrade.html"
-                        title="previous chapter">Migrating from MathJax v1.0 to v1.1</a></p>
+  <p class="topless"><a href="upgrade.html" title="previous chapter">Migrating from MathJax v1.0 to v1.1</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="model.html"
-                        title="next chapter">The MathJax Processing Model</a></p>
+  <p class="topless"><a href="model.html" title="next chapter">The MathJax Processing Model</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -122,21 +117,18 @@ page</em></a> for more details.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="model.html" title="The MathJax Processing Model"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="upgrade.html" title="Migrating from MathJax v1.0 to v1.1"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="model.html" title="The MathJax Processing Model">next</a> |</li>
+        <li class="right">
+          <a href="upgrade.html" title="Migrating from MathJax v1.0 to v1.1">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

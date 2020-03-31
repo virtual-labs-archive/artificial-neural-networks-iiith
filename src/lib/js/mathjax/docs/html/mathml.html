@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>MathJax MathML Support &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>MathJax MathML Support — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="MathJax Output Formats" href="output.html" />
-    <link rel="prev" title="MathJax TeX and LaTeX Support" href="tex.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="output.html" rel="next" title="MathJax Output Formats"/>
+    <link href="tex.html" rel="prev" title="MathJax TeX and LaTeX Support"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="output.html" title="MathJax Output Formats"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="tex.html" title="MathJax TeX and LaTeX Support"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="output.html" title="MathJax Output Formats">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="tex.html" title="MathJax TeX and LaTeX Support">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -57,17 +54,17 @@ output processor.  The first of these looks for <tt class="docutils literal"><sp
 your document and marks them for later processing by MathJax.  The
 second converts the MathML to the internal format used by MathJax, and
 the third turns the internal format into MathML within the page so
-that it can be displayed by the browser&#8217;s native MathML support.</p>
-<p>Because of MathJax&#8217;s modular design, you do not need to use all three
+that it can be displayed by the browser’s native MathML support.</p>
+<p>Because of MathJax’s modular design, you do not need to use all three
 of these components.  For example, you could use the <cite>tex2jax</cite>
 preprocessor and the TeX input processor, but the NativeMML output
 processor, so that your mathematics is entered in TeX format, but
 displayed as MathML.  Or you could use the <cite>mml2jax</cite> preprocessor and
 MathML input processor with the HTML-CSS output processor to make
-MathML available in browsers that don&#8217;t have native MathML support.
+MathML available in browsers that don’t have native MathML support.
 It is also possible to have MathJax select the output processor for
 you so that MathML is used in those browsers that support it, while
-HTML-CSS is used for those that don&#8217;t.  See the <a class="reference internal" href="config-files.html#common-configurations"><em>common
+HTML-CSS is used for those that don’t.  See the <a class="reference internal" href="config-files.html#common-configurations"><em>common
 configurations</em></a> section for details and
 examples.</p>
 <p>Of course it is also possible to use all three components together.
@@ -96,16 +93,16 @@ browsers, so you should avoid the named entities whenever possible.
 If you must use named entities, you may need to declare them in the
 <cite>DOCTYPE</cite> declaration by hand.</p>
 <p>When you use MathML in an HTML document rather than an XHTML one
-(MathJax will work woth both), you should not use the &#8220;self-closing&#8221;
+(MathJax will work woth both), you should not use the “self-closing”
 form for tags with no content, but should use separate open and close
 tags.  That is, use</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;mspace</span> <span class="na">width=</span><span class="s">&quot;thinmathspace&quot;</span><span class="nt">&gt;&lt;/mspace&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;mspace</span> <span class="na">width=</span><span class="s">"thinmathspace"</span><span class="nt">&gt;&lt;/mspace&gt;</span>
 </pre></div>
 </div>
-<p>rather than <tt class="docutils literal"><span class="pre">&lt;mspace</span> <span class="pre">width=&quot;thinmathspace</span> <span class="pre">/&gt;</span></tt>.  This is because HTML
+<p>rather than <tt class="docutils literal"><span class="pre">&lt;mspace</span> <span class="pre">width="thinmathspace</span> <span class="pre">/&gt;</span></tt>.  This is because HTML
 does not have self-closing tags, and some browsers will get the
 nesting of tags wrong if you attempt to use them.  For example, with
-<tt class="docutils literal"><span class="pre">&lt;mspace</span> <span class="pre">width=&quot;1em&quot;</span> <span class="pre">/&gt;</span></tt>, since there is no closing tag, the rest of
+<tt class="docutils literal"><span class="pre">&lt;mspace</span> <span class="pre">width="1em"</span> <span class="pre">/&gt;</span></tt>, since there is no closing tag, the rest of
 the mathematics will become the content of the <tt class="docutils literal"><span class="pre">&lt;mspace&gt;</span></tt> tag; but
 since <tt class="docutils literal"><span class="pre">&lt;mspace&gt;</span></tt> should have no content, the rest of the mathematics
 will not be displayed.  This is a common error that should be avoided.</p>
@@ -146,18 +143,16 @@ children of <tt class="docutils literal"><span class="pre">mrow</span></tt> or i
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="tex.html"
-                        title="previous chapter">MathJax TeX and LaTeX Support</a></p>
+  <p class="topless"><a href="tex.html" title="previous chapter">MathJax TeX and LaTeX Support</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="output.html"
-                        title="next chapter">MathJax Output Formats</a></p>
+  <p class="topless"><a href="output.html" title="next chapter">MathJax Output Formats</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -172,21 +167,18 @@ children of <tt class="docutils literal"><span class="pre">mrow</span></tt> or i
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="output.html" title="MathJax Output Formats"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="tex.html" title="MathJax TeX and LaTeX Support"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="output.html" title="MathJax Output Formats">next</a> |</li>
+        <li class="right">
+          <a href="tex.html" title="MathJax TeX and LaTeX Support">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

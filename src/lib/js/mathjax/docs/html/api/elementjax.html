@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The MathJax.ElementJax Class &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The MathJax.ElementJax Class — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="The MathJax API" href="index.html" />
-    <link rel="next" title="The Base Jax Class" href="jax.html" />
-    <link rel="prev" title="The MathJax.OutputJax Class" href="outputjax.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="The MathJax API"/>
+    <link href="jax.html" rel="next" title="The Base Jax Class"/>
+    <link href="outputjax.html" rel="prev" title="The MathJax.OutputJax Class"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="jax.html" title="The Base Jax Class"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="outputjax.html" title="The MathJax.OutputJax Class"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">The MathJax API</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="jax.html" title="The Base Jax Class">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="outputjax.html" title="The MathJax.OutputJax Class">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>  
 
@@ -82,7 +79,7 @@ that class.</p>
 <dl class="describe">
 <dt>
 <tt class="descname">directory</tt></dt>
-<dd><p>The directory where the jax files are stored (e.g., <tt class="docutils literal"><span class="pre">&quot;[MathJax]/jax/element/mml&quot;</span></tt>).</p>
+<dd><p>The directory where the jax files are stored (e.g., <tt class="docutils literal"><span class="pre">"[MathJax]/jax/element/mml"</span></tt>).</p>
 </dd></dl>
 
 </div>
@@ -106,7 +103,7 @@ the future, this will be changed to the name of the output jax.)</p>
 <dt>
 <tt class="descname">inputID</tt></dt>
 <dd><p>The DOM <cite>id</cite> of the <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> tag that generated this element
-(if it doesn&#8217;t have one initially, the MathJax hub will supply
+(if it doesn’t have one initially, the MathJax hub will supply
 one).  Note that this is not a reference to the element itself;
 that element will have a reference to this element jax, and if
 <cite>inputID</cite> were a reference back, that would cause a reference
@@ -141,12 +138,12 @@ reprocesses the mathematics.  (I.e., updates the equation to the
 new one given by <cite>text</cite>).  When the processing is complete, the
 <cite>callback</cite>, if any, is called.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>text</strong> &#8212; the new mathematics source string for the element</li>
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>text</strong> — the new mathematics source string for the element</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -165,11 +162,11 @@ there are changes to the CSS styles that would affect the layout
 of the mathematics, for example.  The <cite>callback</cite>, if any, is
 called when the process completes.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><ul class="first simple">
-<li><strong>callback</strong> &#8212; the callback specification</li>
+<li><strong>callback</strong> — the callback specification</li>
 </ul>
 </td>
 </tr>
@@ -188,9 +185,9 @@ not remove the original <tt class="docutils literal"><span class="pre">&lt;scrip
 considered unprocessed, and the next call to
 <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.hub.Typeset()</span></tt> will re-display it.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Returns :</th><td class="field-body"><tt class="docutils literal"><span class="pre">null</span></tt></td>
 </tr>
 </tbody>
@@ -203,9 +200,9 @@ considered unprocessed, and the next call to
 <dd><p>Returns a reference to the original <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> DOM element
 associated to this element jax.</p>
 <table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
+<colgroup><col class="field-name"></col>
+<col class="field-body"></col>
+</colgroup><tbody valign="top">
 <tr class="field"><th class="field-name">Returns :</th><td class="field-body">the <tt class="docutils literal"><span class="pre">&lt;script&gt;</span></tt> element</td>
 </tr>
 </tbody>
@@ -237,18 +234,16 @@ contextual menu.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="outputjax.html"
-                        title="previous chapter">The MathJax.OutputJax Class</a></p>
+  <p class="topless"><a href="outputjax.html" title="previous chapter">The MathJax.OutputJax Class</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="jax.html"
-                        title="next chapter">The Base Jax Class</a></p>
+  <p class="topless"><a href="jax.html" title="next chapter">The Base Jax Class</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -263,22 +258,19 @@ contextual menu.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="jax.html" title="The Base Jax Class"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="outputjax.html" title="The MathJax.OutputJax Class"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >The MathJax API</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="jax.html" title="The Base Jax Class">next</a> |</li>
+        <li class="right">
+          <a href="outputjax.html" title="The MathJax.OutputJax Class">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">The MathJax API</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

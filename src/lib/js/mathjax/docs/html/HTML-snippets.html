@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Describing HTML snippets &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Describing HTML snippets — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="CSS Style Objects" href="CSS-styles.html" />
-    <link rel="prev" title="The MathJax Object-Oriented Programming Model" href="api/object.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="CSS-styles.html" rel="next" title="CSS Style Objects"/>
+    <link href="api/object.html" rel="prev" title="The MathJax Object-Oriented Programming Model"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="CSS-styles.html" title="CSS Style Objects"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="api/object.html" title="The MathJax Object-Oriented Programming Model"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="CSS-styles.html" title="CSS Style Objects">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="api/object.html" title="The MathJax Object-Oriented Programming Model">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -61,54 +58,54 @@ the HTML tree.  Those elements are one of two things: either a string,
 which represents text to be included in the snippet, or an array,
 which represents an HTML tag to be included.  In the latter case, the
 array consists of three items: a string that is the tag name (e.g.,
-&#8220;img&#8221;), an optional object that gives attributes for the tag (as
+“img”), an optional object that gives attributes for the tag (as
 described below), and an optional HTML snippet array that gives the
 contents of the tag.</p>
 <p>When attributes are provided, they are given as <cite>name:value</cite> pairs,
 with the <cite>name</cite> giving the attribute name, and <cite>value</cite> giving its
 value.  For example</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="p">[[</span><span class="s2">&quot;img&quot;</span><span class="p">,{</span><span class="nx">src</span><span class="o">:</span><span class="s2">&quot;/images/mypic.jpg&quot;</span><span class="p">}]]</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">[[</span><span class="s2">"img"</span><span class="p">,{</span><span class="nx">src</span><span class="o">:</span><span class="s2">"/images/mypic.jpg"</span><span class="p">}]]</span>
 </pre></div>
 </div>
 <p>represents an HTML snippet that includes one element: an <tt class="docutils literal"><span class="pre">&lt;img&gt;</span></tt> tag
 with <tt class="docutils literal"><span class="pre">src</span></tt> set to <tt class="docutils literal"><span class="pre">/images/mypic.jpg</span></tt>.  That is, this is
 equivalent to</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;/images/mypic.jpg&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/images/mypic.jpg"</span><span class="nt">&gt;</span>
 </pre></div>
 </div>
 <p>Note that the snippet has two sets of square brackets.  The outermost
 one is for the array that holds the snippet, and the innermost set is
 because the first (and only) element in the snippet is a tag, not
-text.  Note that the code <tt class="docutils literal"><span class="pre">[&quot;img&quot;,{src:&quot;/images/mypic.jpg&quot;}]</span></tt>
+text.  Note that the code <tt class="docutils literal"><span class="pre">["img",{src:"/images/mypic.jpg"}]</span></tt>
 is invalid as an HTML snippet.  It would represent a snippet that
-starts with &#8220;img&#8221; as text in the snippet (not a tag), but the second
+starts with “img” as text in the snippet (not a tag), but the second
 item is neither a string nor an array, and so is illegal.  This is a
 common mistake that should be avoided.</p>
 <p>A more complex example is the following:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="p">[</span>
-  <span class="s2">&quot;Please read the &quot;</span><span class="p">,</span>
-  <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,{</span><span class="nx">href</span><span class="o">:</span><span class="s2">&quot;instructions.html&quot;</span><span class="p">},[</span><span class="s2">&quot;instructions&quot;</span><span class="p">]],</span>
-  <span class="s2">&quot; carefully before proceeding&quot;</span>
+  <span class="s2">"Please read the "</span><span class="p">,</span>
+  <span class="p">[</span><span class="s2">"a"</span><span class="p">,{</span><span class="nx">href</span><span class="o">:</span><span class="s2">"instructions.html"</span><span class="p">},[</span><span class="s2">"instructions"</span><span class="p">]],</span>
+  <span class="s2">" carefully before proceeding"</span>
 <span class="p">]</span>
 </pre></div>
 </div>
 <p>which is equivalent to</p>
-<div class="highlight-html"><div class="highlight"><pre>please read the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;instructions.html&quot;</span><span class="nt">&gt;</span>instructions<span class="nt">&lt;/a&gt;</span> carefully
+<div class="highlight-html"><div class="highlight"><pre>please read the <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"instructions.html"</span><span class="nt">&gt;</span>instructions<span class="nt">&lt;/a&gt;</span> carefully
 before proceeding.
 </pre></div>
 </div>
 <p>A final example shows how to set style attributes on an object:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="p">[[</span><span class="s2">&quot;span&quot;</span><span class="p">,</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">[[</span><span class="s2">"span"</span><span class="p">,</span>
   <span class="p">{</span>
-    <span class="nx">id</span><span class="o">:</span><span class="s2">&quot;mySpan&quot;</span><span class="p">,</span>
-    <span class="nx">style</span><span class="o">:</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;font-weight&quot;</span><span class="o">:</span><span class="s2">&quot;bold&quot;</span><span class="p">}</span>
+    <span class="nx">id</span><span class="o">:</span><span class="s2">"mySpan"</span><span class="p">,</span>
+    <span class="nx">style</span><span class="o">:</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="s2">"red"</span><span class="p">,</span> <span class="s2">"font-weight"</span><span class="o">:</span><span class="s2">"bold"</span><span class="p">}</span>
   <span class="p">},</span>
-  <span class="p">[</span><span class="s2">&quot; This is bold text shown in red &quot;</span><span class="p">]</span>
+  <span class="p">[</span><span class="s2">" This is bold text shown in red "</span><span class="p">]</span>
 <span class="p">]]</span>
 </pre></div>
 </div>
 <p>which is equivalent to</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">&quot;mySpan&quot;</span> <span class="na">style=</span><span class="s">&quot;color: red; font-weight: bold;&quot;</span><span class="nt">&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"mySpan"</span> <span class="na">style=</span><span class="s">"color: red; font-weight: bold;"</span><span class="nt">&gt;</span>
 This is bold text shown in red
 <span class="nt">&lt;/span&gt;</span>
 </pre></div>
@@ -122,18 +119,16 @@ This is bold text shown in red
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="api/object.html"
-                        title="previous chapter">The MathJax Object-Oriented Programming Model</a></p>
+  <p class="topless"><a href="api/object.html" title="previous chapter">The MathJax Object-Oriented Programming Model</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="CSS-styles.html"
-                        title="next chapter">CSS Style Objects</a></p>
+  <p class="topless"><a href="CSS-styles.html" title="next chapter">CSS Style Objects</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -148,21 +143,18 @@ This is bold text shown in red
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="CSS-styles.html" title="CSS Style Objects"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="api/object.html" title="The MathJax Object-Oriented Programming Model"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="CSS-styles.html" title="CSS Style Objects">next</a> |</li>
+        <li class="right">
+          <a href="api/object.html" title="The MathJax Object-Oriented Programming Model">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

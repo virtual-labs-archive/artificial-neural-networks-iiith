@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
 <title>MathJax Dynamic Math Test Page</title>
 <!-- Copyright (c) 2010-2011 Design Science, Inc. -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"/>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -12,7 +15,7 @@
     jax: ["input/TeX","output/HTML-CSS"],
   });
 </script>
-<script type="text/javascript" src="../MathJax.js"></script>
+<script src="../MathJax.js" type="text/javascript"></script>
 
 <style>
 input {margin-top: .7em}
@@ -26,7 +29,7 @@ input {margin-top: .7em}
 .box {position: relative}
 </style>
 </head>
-<body>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <script>
   //
@@ -74,14 +77,15 @@ input {margin-top: .7em}
 </script>
 
 <p>
-Type some \(\rm\TeX\) code and press RETURN:<br /> 
-<input id="MathInput" size="80" onchange="UpdateMath(this.value)" />
+Type some \(\rm\TeX\) code and press RETURN:<br/> 
+<input id="MathInput" onchange="UpdateMath(this.value)" size="80"/>
 </p>
 
 <p>You typed:</p>
 <div class="box" id="box" style="visibility:hidden">
-<div id="MathOutput" class="output">$${}$$</div>
+<div class="output" id="MathOutput">$${}$$</div>
 </div>
 
-</body>
-</html>
+
+
+</body></html>

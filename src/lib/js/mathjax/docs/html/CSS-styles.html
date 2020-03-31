@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>CSS Style Objects &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>CSS Style Objects — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="Glossary" href="glossary.html" />
-    <link rel="prev" title="Describing HTML snippets" href="HTML-snippets.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="glossary.html" rel="next" title="Glossary"/>
+    <link href="HTML-snippets.html" rel="prev" title="Describing HTML snippets"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="glossary.html" title="Glossary"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="HTML-snippets.html" title="Describing HTML snippets"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="glossary.html" title="Glossary">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="HTML-snippets.html" title="Describing HTML snippets">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -59,7 +56,7 @@ CSS declarations.  The main CSS style object is a collection of
 defined, and the <cite>value</cite> is an object that gives the style for that
 selector.  Most often, the selector will need to be enclosed in
 quotation marks, as it will contain special characters, so you would
-need to use <tt class="docutils literal"><span class="pre">&quot;#myID&quot;</span></tt> rather than just <tt class="docutils literal"><span class="pre">#myID</span></tt> and <tt class="docutils literal"><span class="pre">&quot;ul</span> <span class="pre">li&quot;</span></tt>
+need to use <tt class="docutils literal"><span class="pre">"#myID"</span></tt> rather than just <tt class="docutils literal"><span class="pre">#myID</span></tt> and <tt class="docutils literal"><span class="pre">"ul</span> <span class="pre">li"</span></tt>
 rather than just <tt class="docutils literal"><span class="pre">ul</span> <span class="pre">li</span></tt>.</p>
 <p>The value used to define the CSS style can either be a string
 containing the CSS definition, or a javascript object that is itself a
@@ -73,17 +70,17 @@ quotation marks as well.</p>
 declaration:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
 
-  <span class="s2">&quot;.MathJax .merror&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;background-color&quot;</span><span class="o">:</span> <span class="s2">&quot;#FFFF88&quot;</span><span class="p">,</span>
-    <span class="nx">color</span><span class="o">:</span>   <span class="s2">&quot;#CC0000&quot;</span><span class="p">,</span>
-    <span class="nx">border</span><span class="o">:</span>  <span class="s2">&quot;1px solid #CC0000&quot;</span><span class="p">,</span>
-    <span class="nx">padding</span><span class="o">:</span> <span class="s2">&quot;1px 3px&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;font-family&quot;</span><span class="o">:</span> <span class="s2">&quot;serif&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;font-style&quot;</span><span class="o">:</span> <span class="s2">&quot;normal&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;font-size&quot;</span><span class="o">:</span>  <span class="s2">&quot;90%&quot;</span>
+  <span class="s2">".MathJax .merror"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">"background-color"</span><span class="o">:</span> <span class="s2">"#FFFF88"</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span>   <span class="s2">"#CC0000"</span><span class="p">,</span>
+    <span class="nx">border</span><span class="o">:</span>  <span class="s2">"1px solid #CC0000"</span><span class="p">,</span>
+    <span class="nx">padding</span><span class="o">:</span> <span class="s2">"1px 3px"</span><span class="p">,</span>
+    <span class="s2">"font-family"</span><span class="o">:</span> <span class="s2">"serif"</span><span class="p">,</span>
+    <span class="s2">"font-style"</span><span class="o">:</span> <span class="s2">"normal"</span><span class="p">,</span>
+    <span class="s2">"font-size"</span><span class="o">:</span>  <span class="s2">"90%"</span>
   <span class="p">},</span>
 
-  <span class="s2">&quot;.MathJax_Preview&quot;</span><span class="o">:</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span> <span class="s2">&quot;#888888&quot;</span><span class="p">},</span>
+  <span class="s2">".MathJax_Preview"</span><span class="o">:</span> <span class="p">{</span><span class="nx">color</span><span class="o">:</span> <span class="s2">"#888888"</span><span class="p">},</span>
 
 <span class="p">}</span>
 </pre></div>
@@ -94,17 +91,17 @@ border, and so on, and a second for <tt class="docutils literal"><span class="pr
 color.</p>
 <p>You can add as many such definitions to a <tt class="docutils literal"><span class="pre">styles</span></tt> object as you
 wish.  Note, however, that since this is a JavaScript object, the
-selectors must be unique (e.g., you can&#8217;t use two definitions for
-<tt class="docutils literal"><span class="pre">&quot;img&quot;</span></tt>, for example, as only the last one would be saved).  If you
+selectors must be unique (e.g., you can’t use two definitions for
+<tt class="docutils literal"><span class="pre">"img"</span></tt>, for example, as only the last one would be saved).  If you
 need to use more than one entry for a single selector, you can add
 comments like <tt class="docutils literal"><span class="pre">/*</span> <span class="pre">1</span> <span class="pre">*/</span></tt> and <tt class="docutils literal"><span class="pre">/*</span> <span class="pre">2</span> <span class="pre">*/</span></tt> to the selector to make them
 unique.</p>
-<p>It is possible to include selectors like <tt class="docutils literal"><span class="pre">&quot;&#64;media</span> <span class="pre">print&quot;</span></tt>, in which
+<p>It is possible to include selectors like <tt class="docutils literal"><span class="pre">"@media</span> <span class="pre">print"</span></tt>, in which
 case the value is a CSS style object.  For example:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">styles</span><span class="o">:</span> <span class="p">{</span>
-  <span class="s2">&quot;@media print&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;.MathJax .merror&quot;</span><span class="o">:</span> <span class="p">{</span>
-       <span class="s2">&quot;background-color&quot;</span><span class="o">:</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span>
+  <span class="s2">"@media print"</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">".MathJax .merror"</span><span class="o">:</span> <span class="p">{</span>
+       <span class="s2">"background-color"</span><span class="o">:</span> <span class="s2">"white"</span><span class="p">,</span>
        <span class="nx">border</span><span class="o">:</span> <span class="mi">0</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -125,18 +122,16 @@ samples.  In particular, the <tt class="docutils literal"><span class="pre">exte
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="HTML-snippets.html"
-                        title="previous chapter">Describing HTML snippets</a></p>
+  <p class="topless"><a href="HTML-snippets.html" title="previous chapter">Describing HTML snippets</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="glossary.html"
-                        title="next chapter">Glossary</a></p>
+  <p class="topless"><a href="glossary.html" title="next chapter">Glossary</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -151,21 +146,18 @@ samples.  In particular, the <tt class="docutils literal"><span class="pre">exte
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="glossary.html" title="Glossary"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="HTML-snippets.html" title="Describing HTML snippets"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="glossary.html" title="Glossary">next</a> |</li>
+        <li class="right">
+          <a href="HTML-snippets.html" title="Describing HTML snippets">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

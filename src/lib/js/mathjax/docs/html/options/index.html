@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Configuration Objects &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>Configuration Objects — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="next" title="The Core Configuration Options" href="hub.html" />
-    <link rel="prev" title="Common Configurations" href="../config-files.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="hub.html" rel="next" title="The Core Configuration Options"/>
+    <link href="../config-files.html" rel="prev" title="Common Configurations"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="hub.html" title="The Core Configuration Options"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="../config-files.html" title="Common Configurations"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="hub.html" title="The Core Configuration Options">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="../config-files.html" title="Common Configurations">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -72,12 +69,12 @@ configuration options for the component.</p>
 <p>For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
   <span class="nx">showProcessingMessages</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span> <span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
+  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">"input/TeX"</span><span class="p">,</span> <span class="s2">"output/HTML-CSS"</span><span class="p">],</span>
   <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">TagSide</span><span class="o">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+    <span class="nx">TagSide</span><span class="o">:</span> <span class="s2">"left"</span><span class="p">,</span>
     <span class="nx">Macros</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">RR</span><span class="o">:</span> <span class="s1">&#39;{\\bf R}&#39;</span><span class="p">,</span>
-      <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;{\\bf #1}&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+      <span class="nx">RR</span><span class="o">:</span> <span class="s1">'{\\bf R}'</span><span class="p">,</span>
+      <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">'{\\bf #1}'</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">});</span>
@@ -86,13 +83,13 @@ configuration options for the component.</p>
 <p>is a configuration that includes two settings for the MathJax Hub (one
 for <cite>showProcessingMessages</cite> and one for the <cite>jax</cite> array), and a
 configuration object for the TeX input processor.  The latter includes
-a setting for the TeX input processor&#8217;s <cite>TagSide</cite> option (to set tags
+a setting for the TeX input processor’s <cite>TagSide</cite> option (to set tags
 on the left rather than the right) and a setting for <cite>Macros</cite>, which
 defines new TeX macros (in this case, two macros, one called <tt class="docutils literal"><span class="pre">\RR</span></tt>
-that produces a bold &#8220;R&#8221;, and one called <tt class="docutils literal"><span class="pre">\bold</span></tt> that puts is
+that produces a bold “R”, and one called <tt class="docutils literal"><span class="pre">\bold</span></tt> that puts is
 argument in bold face).</p>
 <p>The <tt class="docutils literal"><span class="pre">config/default.js</span></tt> file is another example that shows nearly
-all the configuration options for all of MathJax&#8217;s components.</p>
+all the configuration options for all of MathJax’s components.</p>
 <div class="section" id="configuration-options-by-component">
 <h2>Configuration Options by Component<a class="headerlink" href="#configuration-options-by-component" title="Permalink to this headline">¶</a></h2>
 <p>The individual options are explained in the following sections, which
@@ -145,18 +142,16 @@ are categorized by the component they affect.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../config-files.html"
-                        title="previous chapter">Common Configurations</a></p>
+  <p class="topless"><a href="../config-files.html" title="previous chapter">Common Configurations</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="hub.html"
-                        title="next chapter">The Core Configuration Options</a></p>
+  <p class="topless"><a href="hub.html" title="next chapter">The Core Configuration Options</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -171,21 +166,18 @@ are categorized by the component they affect.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="hub.html" title="The Core Configuration Options"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="../config-files.html" title="Common Configurations"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="hub.html" title="The Core Configuration Options">next</a> |</li>
+        <li class="right">
+          <a href="../config-files.html" title="Common Configurations">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Synchronizing your code with MathJax &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Synchronizing your code with MathJax — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="Using Callbacks" href="callbacks.html" />
-    <link rel="prev" title="The MathJax Startup Sequence" href="startup.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="callbacks.html" rel="next" title="Using Callbacks"/>
+    <link href="startup.html" rel="prev" title="The MathJax Startup Sequence"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="callbacks.html" title="Using Callbacks"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="startup.html" title="The MathJax Startup Sequence"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="callbacks.html" title="Using Callbacks">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="startup.html" title="The MathJax Startup Sequence">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -71,7 +68,7 @@ finished.  Callbacks are similar to event handlers that you attach to
 DOM elements, and are called when a certain action occurs.  See the
 <a class="reference internal" href="api/callback.html#api-callback"><em>Callback Object</em></a> reference page for details of
 how to specify a callback.</p>
-<p><strong>Queues</strong> are MathJax&#8217;s means of synchronizing actions that must be
+<p><strong>Queues</strong> are MathJax’s means of synchronizing actions that must be
 performed sequentially, even when they involve asynchronous events
 like loading files or dynamically creating stylesheets.  The actions
 that you put in the queue are <cite>Callback</cite> objects that will be performed
@@ -83,13 +80,13 @@ not to MathJax as a whole.  See the <a class="reference internal" href="api/queu
 reference page for more details.</p>
 <p><strong>Signals</strong> are another means of synchronizing your own code with MathJax.
 Many of the important actions that MathJax takes (like typesetting new math
-on the page, or loading an external component) are &#8220;announced&#8221; by posting a
+on the page, or loading an external component) are “announced” by posting a
 message to a special object called a <cite>Signal</cite>.  Your code can register an
 interest in receiving one or more of these signals by providing a callback
 to be called when the signal is posted.  When the signal arrives, MathJax
 will call your code.  This works somewhat like an event handler, except
 that many different types of events can go through the same signal, and the
-signals have a &#8220;memory&#8221;, meaning that if you register an interest in a
+signals have a “memory”, meaning that if you register an interest in a
 particular type of signal and that signal has already occurred, you will be
 told about the past occurrences as well as any future ones.  See the
 <a class="reference internal" href="api/signal.html#api-signal"><em>Signal Object</em></a> reference page for more details.  See
@@ -112,18 +109,16 @@ directory for a working example of using signals.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="startup.html"
-                        title="previous chapter">The MathJax Startup Sequence</a></p>
+  <p class="topless"><a href="startup.html" title="previous chapter">The MathJax Startup Sequence</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="callbacks.html"
-                        title="next chapter">Using Callbacks</a></p>
+  <p class="topless"><a href="callbacks.html" title="next chapter">Using Callbacks</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -138,21 +133,18 @@ directory for a working example of using signals.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="callbacks.html" title="Using Callbacks"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="startup.html" title="The MathJax Startup Sequence"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="callbacks.html" title="Using Callbacks">next</a> |</li>
+        <li class="right">
+          <a href="startup.html" title="The MathJax Startup Sequence">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>
