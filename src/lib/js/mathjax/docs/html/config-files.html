@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Common Configurations &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Common Configurations — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,29 +18,26 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="next" title="Configuration Objects" href="options/index.html" />
-    <link rel="prev" title="Loading and Configuring MathJax" href="configuration.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="options/index.html" rel="next" title="Configuration Objects"/>
+    <link href="configuration.html" rel="prev" title="Loading and Configuring MathJax"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="options/index.html" title="Configuration Objects"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="configuration.html" title="Loading and Configuring MathJax"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="options/index.html" title="Configuration Objects">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="configuration.html" title="Loading and Configuring MathJax">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>  
 
@@ -56,7 +53,7 @@
 the possible configuration options together with comments explaining them,
 so you can use that file to customize MathJax to your needs.  Simply load
 it via</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;path-to-MathJax/MathJax.js?config=default&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"path-to-MathJax/MathJax.js?config=default"</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 </div>
 <p>where <tt class="docutils literal"><span class="pre">path-to-MathJax</span></tt> is the URL to the MathJax directory on your
@@ -70,13 +67,13 @@ ones.  See <a class="reference internal" href="configuration.html#loading"><em>L
 details about how to load configurations, and how to modify the parameters
 for a configuration file.</p>
 <p>The following sections describe the contents of the combined configuration
-files.  Each comes in two flavors: a standard version and a &#8220;full&#8221; version.
+files.  Each comes in two flavors: a standard version and a “full” version.
 The standard version simply defines the output processor(s) that are part
-of the configuration, but doesn&#8217;t load the code that implements the output
+of the configuration, but doesn’t load the code that implements the output
 processor; the full version loads the complete output processors, so
 everything that MathJax needs for the page should be loaded up front, and
 there will be no delay once the page is ready to be processed.  To obtain
-the &#8220;full&#8221; version, add <tt class="docutils literal"><span class="pre">-full</span></tt> to the end of the configuration file
+the “full” version, add <tt class="docutils literal"><span class="pre">-full</span></tt> to the end of the configuration file
 name.</p>
 <div class="section" id="the-tex-ams-mml-htmlormml-configuration-file">
 <h2>The <tt class="docutils literal"><span class="pre">TeX-AMS-MML_HTMLorMML</span></tt> configuration file<a class="headerlink" href="#the-tex-ams-mml-htmlormml-configuration-file" title="Permalink to this headline">¶</a></h2>
@@ -87,11 +84,11 @@ AMSsymbols, noErrors, and noUndefined TeX extensions, both the native
 MathML and HTML-with-CSS output processor definitions, and the MathMenu and
 MathZoom extensions.  It is equivalent to the following configuration:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;MMLorHTML.js&quot;</span><span class="p">],</span>
-  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span><span class="s2">&quot;input/MathML&quot;</span><span class="p">,</span><span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">,</span><span class="s2">&quot;output/NativeMML&quot;</span><span class="p">],</span>
-  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;tex2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;mml2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathMenu.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathZoom.js&quot;</span><span class="p">],</span>
+  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">"MMLorHTML.js"</span><span class="p">],</span>
+  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">"input/TeX"</span><span class="p">,</span><span class="s2">"input/MathML"</span><span class="p">,</span><span class="s2">"output/HTML-CSS"</span><span class="p">,</span><span class="s2">"output/NativeMML"</span><span class="p">],</span>
+  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"tex2jax.js"</span><span class="p">,</span><span class="s2">"mml2jax.js"</span><span class="p">,</span><span class="s2">"MathMenu.js"</span><span class="p">,</span><span class="s2">"MathZoom.js"</span><span class="p">],</span>
   <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;AMSmath.js&quot;</span><span class="p">,</span><span class="s2">&quot;AMSsymbols.js&quot;</span><span class="p">,</span><span class="s2">&quot;noErrors.js&quot;</span><span class="p">,</span><span class="s2">&quot;noUndefined.js&quot;</span><span class="p">]</span>
+    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"AMSmath.js"</span><span class="p">,</span><span class="s2">"AMSsymbols.js"</span><span class="p">,</span><span class="s2">"noErrors.js"</span><span class="p">,</span><span class="s2">"noUndefined.js"</span><span class="p">]</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -119,7 +116,7 @@ details on the options that control the <tt class="docutils literal"><span class
 <h2>The <tt class="docutils literal"><span class="pre">TeX-AMS_HTML</span></tt> configuration file<a class="headerlink" href="#the-tex-ams-html-configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>This configuration file is for sites that only use TeX format for their
 mathematics, and that want the output to be as close to TeX output as
-possible.  This uses the HTML-CSS output jax (even when the user&#8217;s browser
+possible.  This uses the HTML-CSS output jax (even when the user’s browser
 understands MathML).  The user can still use the MathJax contextual menu
 to select the NativeMML output jax if they desire.</p>
 <p>This file includes all the important MathJax components for TeX input and
@@ -128,10 +125,10 @@ AMSmath, AMSsymbols, noErrors, and noUndefined TeX extensions, the
 HTML-with-CSS output processor definition, and the MathMenu and MathZoom
 extensions.  It is equivalent to the following configuration:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span><span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">],</span>
-  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;tex2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathMenu.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathZoom.js&quot;</span><span class="p">],</span>
+  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">"input/TeX"</span><span class="p">,</span><span class="s2">"output/HTML-CSS"</span><span class="p">],</span>
+  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"tex2jax.js"</span><span class="p">,</span><span class="s2">"MathMenu.js"</span><span class="p">,</span><span class="s2">"MathZoom.js"</span><span class="p">],</span>
   <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;AMSmath.js&quot;</span><span class="p">,</span><span class="s2">&quot;AMSsymbols.js&quot;</span><span class="p">,</span><span class="s2">&quot;noErrors.js&quot;</span><span class="p">,</span><span class="s2">&quot;noUndefined.js&quot;</span><span class="p">]</span>
+    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"AMSmath.js"</span><span class="p">,</span><span class="s2">"AMSsymbols.js"</span><span class="p">,</span><span class="s2">"noErrors.js"</span><span class="p">,</span><span class="s2">"noUndefined.js"</span><span class="p">]</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -159,9 +156,9 @@ and output, including the <cite>mml2jax</cite> preprocessor and MathML input jax
 NativeMML and HTML-CSS output processor definition files, and the MathMenu
 and MathZoom extensions.  It is equivalent to the following configuration:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;MMLorHTML.js&quot;</span><span class="p">],</span>
-  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/MathML&quot;</span><span class="p">,</span><span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">,</span><span class="s2">&quot;output/NativeMML&quot;</span><span class="p">],</span>
-  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;mml2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathMenu.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathZoom.js&quot;</span><span class="p">]</span>
+  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">"MMLorHTML.js"</span><span class="p">],</span>
+  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">"input/MathML"</span><span class="p">,</span><span class="s2">"output/HTML-CSS"</span><span class="p">,</span><span class="s2">"output/NativeMML"</span><span class="p">],</span>
+  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"mml2jax.js"</span><span class="p">,</span><span class="s2">"MathMenu.js"</span><span class="p">,</span><span class="s2">"MathZoom.js"</span><span class="p">]</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -187,15 +184,15 @@ details on the options that control the <tt class="docutils literal"><span class
 designed for assistive technology, particularly for those with visual
 challenges.  It is equivalent to the following configuration:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
-  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;MMLorHTML.js&quot;</span><span class="p">],</span>
-  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;input/TeX&quot;</span><span class="p">,</span><span class="s2">&quot;input/MathML&quot;</span><span class="p">,</span><span class="s2">&quot;output/HTML-CSS&quot;</span><span class="p">,</span><span class="s2">&quot;output/NativeMML&quot;</span><span class="p">],</span>
-  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;tex2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;mml2jax.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathMenu.js&quot;</span><span class="p">,</span><span class="s2">&quot;MathZoom.js&quot;</span><span class="p">],</span>
+  <span class="nx">config</span><span class="o">:</span> <span class="p">[</span><span class="s2">"MMLorHTML.js"</span><span class="p">],</span>
+  <span class="nx">jax</span><span class="o">:</span> <span class="p">[</span><span class="s2">"input/TeX"</span><span class="p">,</span><span class="s2">"input/MathML"</span><span class="p">,</span><span class="s2">"output/HTML-CSS"</span><span class="p">,</span><span class="s2">"output/NativeMML"</span><span class="p">],</span>
+  <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"tex2jax.js"</span><span class="p">,</span><span class="s2">"mml2jax.js"</span><span class="p">,</span><span class="s2">"MathMenu.js"</span><span class="p">,</span><span class="s2">"MathZoom.js"</span><span class="p">],</span>
   <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;AMSmath.js&quot;</span><span class="p">,</span><span class="s2">&quot;AMSsymbols.js&quot;</span><span class="p">,</span><span class="s2">&quot;noErrors.js&quot;</span><span class="p">,</span><span class="s2">&quot;noUndefined.js&quot;</span><span class="p">]</span>
+    <span class="nx">extensions</span><span class="o">:</span> <span class="p">[</span><span class="s2">"AMSmath.js"</span><span class="p">,</span><span class="s2">"AMSsymbols.js"</span><span class="p">,</span><span class="s2">"noErrors.js"</span><span class="p">,</span><span class="s2">"noUndefined.js"</span><span class="p">]</span>
   <span class="p">},</span>
   <span class="nx">NativeMML</span><span class="o">:</span> <span class="p">{</span> <span class="nx">showMathMenuMSIE</span><span class="o">:</span> <span class="kc">false</span> <span class="p">},</span>
-  <span class="nx">menuSettings</span><span class="o">:</span> <span class="p">{</span> <span class="nx">zoom</span><span class="o">:</span> <span class="s2">&quot;Double-Click&quot;</span> <span class="p">},</span>
-  <span class="nx">errorSettings</span><span class="o">:</span> <span class="p">{</span> <span class="nx">message</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;[Math Error]&quot;</span><span class="p">]</span> <span class="p">}</span>
+  <span class="nx">menuSettings</span><span class="o">:</span> <span class="p">{</span> <span class="nx">zoom</span><span class="o">:</span> <span class="s2">"Double-Click"</span> <span class="p">},</span>
+  <span class="nx">errorSettings</span><span class="o">:</span> <span class="p">{</span> <span class="nx">message</span><span class="o">:</span> <span class="p">[</span><span class="s2">"[Math Error]"</span><span class="p">]</span> <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
 </div>
@@ -230,18 +227,16 @@ is normally loaded on demand.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="configuration.html"
-                        title="previous chapter">Loading and Configuring MathJax</a></p>
+  <p class="topless"><a href="configuration.html" title="previous chapter">Loading and Configuring MathJax</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="options/index.html"
-                        title="next chapter">Configuration Objects</a></p>
+  <p class="topless"><a href="options/index.html" title="next chapter">Configuration Objects</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -256,21 +251,18 @@ is normally loaded on demand.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="options/index.html" title="Configuration Objects"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="configuration.html" title="Loading and Configuring MathJax"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="options/index.html" title="Configuration Objects">next</a> |</li>
+        <li class="right">
+          <a href="configuration.html" title="Loading and Configuring MathJax">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

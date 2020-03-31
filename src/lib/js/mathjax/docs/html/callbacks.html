@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Using Callbacks &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Using Callbacks — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="up" title="Synchronizing your code with MathJax" href="synchronize.html" />
-    <link rel="next" title="Using Queues" href="queues.html" />
-    <link rel="prev" title="Synchronizing your code with MathJax" href="synchronize.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="synchronize.html" rel="up" title="Synchronizing your code with MathJax"/>
+    <link href="queues.html" rel="next" title="Using Queues"/>
+    <link href="synchronize.html" rel="prev" title="Synchronizing your code with MathJax"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="queues.html" title="Using Queues"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="synchronize.html" title="Synchronizing your code with MathJax"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="synchronize.html" accesskey="U">Synchronizing your code with MathJax</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="queues.html" title="Using Queues">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="synchronize.html" title="Synchronizing your code with MathJax">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="synchronize.html">Synchronizing your code with MathJax</a> »</li> 
       </ul>
     </div>  
 
@@ -53,9 +50,9 @@
             
   <div class="section" id="using-callbacks">
 <span id="id1"></span><h1>Using Callbacks<a class="headerlink" href="#using-callbacks" title="Permalink to this headline">¶</a></h1>
-<p>A &#8220;callback&#8221; is a function that MathJax calls when it completes an
+<p>A “callback” is a function that MathJax calls when it completes an
 action that may occur asynchronously (like loading a file).  Many of
-MathJax&#8217;s functions operate asynchronously, and MathJax uses callbacks
+MathJax’s functions operate asynchronously, and MathJax uses callbacks
 to allow you to synchronize your code with the action of those
 functions.  The <cite>MathJax.Callback</cite> structure manages these callbacks.
 Callbacks can include not only a function to call, but also data to be
@@ -70,8 +67,8 @@ receiving information about the signals as they occur.</p>
 <p>A number of methods in <cite>MathJax.Hub</cite> and <cite>MathJax.Ajax</cite> accept
 callback specifications as arguments and return callback structures.
 These routines always will return a callback even when none was
-specified in the arguments, and in that case, the callback is a &#8220;do
-nothing&#8221; callback.  The reason for this is so that the resulting
+specified in the arguments, and in that case, the callback is a “do
+nothing” callback.  The reason for this is so that the resulting
 callback can be used in a <cite>MathJax.Callback.Queue</cite> for synchronization
 purposes, so that the actions following it in the queue will not be
 performed until after the callback has been fired.</p>
@@ -95,41 +92,41 @@ called.</p>
 <p>For example, the <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.Require()</span></tt> method can accept a
 callback as its second argument (it will be called when the file given
 as the first argument is loaded and executed).  So you can call</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/config/myConfig.js&quot;</span><span class="p">,</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My configuration file is loaded&quot;</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/config/myConfig.js"</span><span class="p">,</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s2">"My configuration file is loaded"</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>and an alert will appear when the file is loaded.  An example of
 passing arguments to the callback function includes the following:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">loadHook</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;loadHook: &quot;</span><span class="o">+</span><span class="nx">x</span><span class="p">)}</span>
-<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/config/myConfig.js&quot;</span><span class="p">,[</span><span class="nx">loadHook</span><span class="p">,</span><span class="s2">&quot;myConfig&quot;</span><span class="p">]);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">loadHook</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">"loadHook: "</span><span class="o">+</span><span class="nx">x</span><span class="p">)}</span>
+<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/config/myConfig.js"</span><span class="p">,[</span><span class="nx">loadHook</span><span class="p">,</span><span class="s2">"myConfig"</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p>Here, the <tt class="docutils literal"><span class="pre">loadHook()</span></tt> function accepts one argument and generates
 an alert that includes the value passed to it.  The callback in the
-<tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.Require()</span></tt> call is <tt class="docutils literal"><span class="pre">[loadHook,&quot;myConfig&quot;]</span></tt>,
-which means that (the equivalent of) <tt class="docutils literal"><span class="pre">loadHook(&quot;myConfig&quot;)</span></tt> will be
+<tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.Require()</span></tt> call is <tt class="docutils literal"><span class="pre">[loadHook,"myConfig"]</span></tt>,
+which means that (the equivalent of) <tt class="docutils literal"><span class="pre">loadHook("myConfig")</span></tt> will be
 performed when the file is loaded.  The result should be an alert with
 the text <cite>loadHook: myConfig</cite>.</p>
 <p>The callback for the <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.Require()</span></tt> method actually
 gets called with a status value, in addition to any parameters already
 included in the callback specification, that indicates whether the
 file loaded successfully, or failed for some reason (perhaps the file
-couldn&#8217;t be found, or it failed to compile and run).  So you could use</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/config/myConfig.js&quot;</span><span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+couldn’t be found, or it failed to compile and run).  So you could use</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/config/myConfig.js"</span><span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">STATUS</span><span class="p">.</span><span class="nx">OK</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My configuration file is loaded&quot;</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"My configuration file is loaded"</span><span class="p">);</span>
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;My configuration file failed to load!&quot;</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s2">"My configuration file failed to load!"</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
 </div>
 <p>to check if the file loaded properly.  With additional parameters, the
 example might be</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">loadHook</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;loadHook: &quot;</span><span class="o">+</span><span class="nx">x</span><span class="o">+</span><span class="s2">&quot; has status &quot;</span><span class="o">+</span><span class="nx">status</span><span class="p">)}</span>
-<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/config/myConfig.js&quot;</span><span class="p">,[</span><span class="nx">loadHook</span><span class="p">,</span><span class="s2">&quot;myConfig&quot;</span><span class="p">]);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">loadHook</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">"loadHook: "</span><span class="o">+</span><span class="nx">x</span><span class="o">+</span><span class="s2">" has status "</span><span class="o">+</span><span class="nx">status</span><span class="p">)}</span>
+<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/config/myConfig.js"</span><span class="p">,[</span><span class="nx">loadHook</span><span class="p">,</span><span class="s2">"myConfig"</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p>Note that the parameters given in the callback specification are used
@@ -143,14 +140,14 @@ being called.  It allows you to access other methods or properties of
 the object without knowing explicitly where the object is stored.</p>
 <p>For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">aPerson</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">firstname</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="nx">lastname</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
-  <span class="nx">showName</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firstname</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="p">)}</span>
+  <span class="nx">firstname</span><span class="o">:</span> <span class="s2">"John"</span><span class="p">,</span>
+  <span class="nx">lastname</span><span class="o">:</span> <span class="s2">"Smith"</span><span class="p">,</span>
+  <span class="nx">showName</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firstname</span><span class="o">+</span><span class="s2">" "</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="p">)}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>creates an object that contains three items, a <cite>firstname</cite>, and
-<cite>lastname</cite>, and a method that shows the person&#8217;s full name in an
+<cite>lastname</cite>, and a method that shows the person’s full name in an
 alert.  So <tt class="docutils literal"><span class="pre">aPerson.showName()</span></tt> would cause an alert with the text
 <tt class="docutils literal"><span class="pre">John</span> <span class="pre">Smith</span></tt> to appear.  Note, however that this only works if the
 method is called as <tt class="docutils literal"><span class="pre">aPerson.showName()</span></tt>; if instead you did</p>
@@ -163,19 +160,19 @@ and the alert will probably show <tt class="docutils literal"><span class="pre">
 case, <tt class="docutils literal"><span class="pre">f</span></tt> will be called with <tt class="docutils literal"><span class="pre">this</span></tt> set to the <tt class="docutils literal"><span class="pre">window</span></tt>
 variable, and so <tt class="docutils literal"><span class="pre">this.firstname</span></tt> and <tt class="docutils literal"><span class="pre">this.lastname</span></tt> will refer
 to undefined values.)</p>
-<p>Because of this, it is difficult to use an object&#8217;s method as a
+<p>Because of this, it is difficult to use an object’s method as a
 callback if you refer to it as a function directly.  For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">var</span> <span class="nx">aFile</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;[MathJax]/config/myConfig.js&quot;</span><span class="p">,</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">"[MathJax]/config/myConfig.js"</span><span class="p">,</span>
   <span class="nx">onload</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="o">+</span><span class="s2">&quot; is loaded with status &quot;</span><span class="o">+</span><span class="nx">status</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="o">+</span><span class="s2">" is loaded with status "</span><span class="o">+</span><span class="nx">status</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">};</span>
 
 <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="nx">aFile</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="nx">aFile</span><span class="p">.</span><span class="nx">onload</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>would produce an alert indicating that &#8220;undefined&#8221; was loaded with a
+<p>would produce an alert indicating that “undefined” was loaded with a
 particular status.  That is because <tt class="docutils literal"><span class="pre">aFile.onload</span></tt> is a reference to
 the <cite>onload</cite> method, which is just a function, and the association
 with the <cite>aFile</cite> object is lost.  One could do</p>
@@ -186,7 +183,7 @@ with the <cite>aFile</cite> object is lost.  One could do</p>
 is not really needed.  Instead, MathJax provides an alternative
 specification for a callback that allows you to specify both the
 method and the object it comes from:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="nx">aFile</span><span class="p">.</span><span class="nx">name</span><span class="p">,[</span><span class="s2">&quot;onload&quot;</span><span class="p">,</span><span class="nx">aFile</span><span class="p">]);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="nx">aFile</span><span class="p">.</span><span class="nx">name</span><span class="p">,[</span><span class="s2">"onload"</span><span class="p">,</span><span class="nx">aFile</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p>This requests that the callback should call <tt class="docutils literal"><span class="pre">aFile.onload</span></tt> as the
@@ -194,15 +191,15 @@ function, which will maintain the connection between <tt class="docutils literal
 method, thus preserving the correct value for <cite>this</cite> within the method.</p>
 <p>As in the previous cases, you can pass parameters to the method as
 well by including them in the array that specifies the callback:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;filename&quot;</span><span class="p">,[</span><span class="s2">&quot;method&quot;</span><span class="p">,</span><span class="nx">object</span><span class="p">,</span><span class="nx">arg1</span><span class="p">,</span><span class="nx">arg2</span><span class="p">,...]);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"filename"</span><span class="p">,[</span><span class="s2">"method"</span><span class="p">,</span><span class="nx">object</span><span class="p">,</span><span class="nx">arg1</span><span class="p">,</span><span class="nx">arg2</span><span class="p">,...]);</span>
 </pre></div>
 </div>
 <p>This approach is useful when you are pushing a callback for one of
-MathJax&#8217;s Hub routines into the MathJax processing queue.  For example,</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">([</span><span class="s2">&quot;Typeset&quot;</span><span class="p">,</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">,</span><span class="s2">&quot;MathDiv&quot;</span><span class="p">]);</span>
+MathJax’s Hub routines into the MathJax processing queue.  For example,</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">([</span><span class="s2">"Typeset"</span><span class="p">,</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">,</span><span class="s2">"MathDiv"</span><span class="p">]);</span>
 </pre></div>
 </div>
-<p>pushes the equivalent of <tt class="docutils literal"><span class="pre">MathJax.Hub.Typeset(&quot;MathDiv&quot;)</span></tt> into the
+<p>pushes the equivalent of <tt class="docutils literal"><span class="pre">MathJax.Hub.Typeset("MathDiv")</span></tt> into the
 processing queue.</p>
 <p>See the <a class="reference internal" href="api/callback.html#api-callback"><em>Callback Object</em></a> reference pages for more
 information about the valid methods of specifying a callback.</p>
@@ -212,26 +209,26 @@ information about the valid methods of specifying a callback.</p>
 <p>When you call a method that accepts a callback, you usually pass it a
 callback specification (like in the examples above), which <em>describes</em>
 a callback (the method will create the actual <cite>Callback</cite> object, and
-return that to you as its return value).  You don&#8217;t usually create
+return that to you as its return value).  You don’t usually create
 <cite>Callback</cite> objects directly yourself.</p>
 <p>There are times, however, when you may wish to create a callback
-object for use with functions that don&#8217;t create callbacks for you.
+object for use with functions that don’t create callbacks for you.
 For example, the <tt class="docutils literal"><span class="pre">setTimeout()</span></tt> function can take a function as its
 argument, and you may want that function to be a method of an object,
 and would run into the problem described in the previous section if
-you simply passed the object&#8217;s method to <tt class="docutils literal"><span class="pre">setTimeout()</span></tt>.  Or you
+you simply passed the object’s method to <tt class="docutils literal"><span class="pre">setTimeout()</span></tt>.  Or you
 might want to pass an argument to the function called by
 <tt class="docutils literal"><span class="pre">setTimeout()</span></tt>.  (Altough the <tt class="docutils literal"><span class="pre">setTimeout()</span></tt> function can accept
 additional arguements that are supposed to be passed on to the code
 when it is called, Internet Explorer does not implement that feature,
-so you can&#8217;t rely on it.)  You can use a <cite>Callback</cite> object to
+so you can’t rely on it.)  You can use a <cite>Callback</cite> object to
 do this, and the <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Callback()</span></tt> method will create one for
 you.  For example,</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;x = &quot;</span><span class="o">+</span><span class="nx">x</span><span class="p">)}</span>
-<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">([</span><span class="nx">f</span><span class="p">,</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">]),</span><span class="mi">500</span><span class="p">);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="s2">"x = "</span><span class="o">+</span><span class="nx">x</span><span class="p">)}</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">([</span><span class="nx">f</span><span class="p">,</span><span class="s2">"Hello World!"</span><span class="p">]),</span><span class="mi">500</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>would create a callback that calls <tt class="docutils literal"><span class="pre">f(&quot;Hello</span> <span class="pre">World!&quot;)</span></tt>, and
+<p>would create a callback that calls <tt class="docutils literal"><span class="pre">f("Hello</span> <span class="pre">World!")</span></tt>, and
 schedules it to be called in half a second.</p>
 </div>
 </div>
@@ -256,18 +253,16 @@ schedules it to be called in half a second.</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="synchronize.html"
-                        title="previous chapter">Synchronizing your code with MathJax</a></p>
+  <p class="topless"><a href="synchronize.html" title="previous chapter">Synchronizing your code with MathJax</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="queues.html"
-                        title="next chapter">Using Queues</a></p>
+  <p class="topless"><a href="queues.html" title="next chapter">Using Queues</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -282,22 +277,19 @@ schedules it to be called in half a second.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="queues.html" title="Using Queues"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="synchronize.html" title="Synchronizing your code with MathJax"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="synchronize.html" >Synchronizing your code with MathJax</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="queues.html" title="Using Queues">next</a> |</li>
+        <li class="right">
+          <a href="synchronize.html" title="Synchronizing your code with MathJax">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="synchronize.html">Synchronizing your code with MathJax</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

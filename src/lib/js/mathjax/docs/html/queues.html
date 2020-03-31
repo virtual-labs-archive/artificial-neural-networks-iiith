@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>Using Queues &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Using Queues — MathJax v1.1 documentation</title>
+    <link href="_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script src="_static/jquery.js" type="text/javascript"></script>
+    <script src="_static/underscore.js" type="text/javascript"></script>
+    <script src="_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="index.html" />
-    <link rel="up" title="Synchronizing your code with MathJax" href="synchronize.html" />
-    <link rel="next" title="Using Signals" href="signals.html" />
-    <link rel="prev" title="Using Callbacks" href="callbacks.html" /> 
+    <link href="index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="synchronize.html" rel="up" title="Synchronizing your code with MathJax"/>
+    <link href="signals.html" rel="next" title="Using Signals"/>
+    <link href="callbacks.html" rel="prev" title="Using Callbacks"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="signals.html" title="Using Signals"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="callbacks.html" title="Using Callbacks"
-             accesskey="P">previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="synchronize.html" accesskey="U">Synchronizing your code with MathJax</a> &raquo;</li> 
+          <a accesskey="I" href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="signals.html" title="Using Signals">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="callbacks.html" title="Using Callbacks">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="synchronize.html">Synchronizing your code with MathJax</a> »</li> 
       </ul>
     </div>  
 
@@ -53,7 +50,7 @@
             
   <div class="section" id="using-queues">
 <span id="id1"></span><h1>Using Queues<a class="headerlink" href="#using-queues" title="Permalink to this headline">¶</a></h1>
-<p>The <cite>callback queue</cite> is one of MathJax&#8217;s main tools for synchronizing
+<p>The <cite>callback queue</cite> is one of MathJax’s main tools for synchronizing
 its actions, both internally, and with external programs, like
 javascript code that you may write as part of dynamic web pages.
 Because many actions in MathJax (like loading files) operate
@@ -67,7 +64,7 @@ called, and then processing of the commands is resumed.  In this way,
 if a command starts an asynchronous operation like loading a file, it
 can return the callback for that file-load operation and the queue
 will wait until the file has loaded before continuing.  Thus a queue
-can be used to guarantee that commands don&#8217;t get performed until other
+can be used to guarantee that commands don’t get performed until other
 ones are known to be finished, even if those commands usually operate
 asynchronously.</p>
 <div class="section" id="constructing-queues">
@@ -104,12 +101,12 @@ that could operate asynchronously.  For example:</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)}</span>
 <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-  <span class="p">[</span><span class="s2">&quot;Require&quot;</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">&quot;[MathJax]/extensions/AMSmath.js&quot;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s2">"Require"</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">"[MathJax]/extensions/AMSmath.js"</span><span class="p">],</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>Here, the command <tt class="docutils literal"><span class="pre">MathJax.Ajax.Require(&quot;[MathJax]/extensions/AMSmath.js&quot;)</span></tt>
+<p>Here, the command <tt class="docutils literal"><span class="pre">MathJax.Ajax.Require("[MathJax]/extensions/AMSmath.js")</span></tt>
 is queued between two calls to <tt class="docutils literal"><span class="pre">f</span></tt>.  The first call to <tt class="docutils literal"><span class="pre">f(1)</span></tt> will
 be made immediately, then the <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Ajax.Require()</span></tt> statement
 will be performed.  Since the <tt class="docutils literal"><span class="pre">Require</span></tt> method loads a file, it
@@ -119,7 +116,7 @@ object that will be called when the file is loaded.  The call to
 effectively synchronizing the second call to <tt class="docutils literal"><span class="pre">f</span></tt> with the completion
 of the file loading.  This is equivalent to</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">f</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/extensions/AMSmath.js&quot;</span><span class="p">,</span> <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
+<span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/extensions/AMSmath.js"</span><span class="p">,</span> <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p>since the <tt class="docutils literal"><span class="pre">Require()</span></tt> command allows you to specify a (single)
@@ -128,9 +125,9 @@ however, that the queue could be used to synchronize several file
 loads along with multiple function calls, so is more flexible.</p>
 <p>For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span>
-  <span class="p">[</span><span class="s2">&quot;Require&quot;</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">&quot;[MathJax]/extensions/AMSmath.js&quot;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s2">"Require"</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">"[MathJax]/extensions/AMSmath.js"</span><span class="p">],</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-  <span class="p">[</span><span class="s2">&quot;Require&quot;</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">&quot;[MathJax]/config/local/AMSmathAdditions.js&quot;</span><span class="p">],</span>
+  <span class="p">[</span><span class="s2">"Require"</span><span class="p">,</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">,</span> <span class="s2">"[MathJax]/config/local/AMSmathAdditions.js"</span><span class="p">],</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="p">);</span>
 </pre></div>
@@ -147,7 +144,7 @@ itself, then the queue will wait for that action to be performed
 before proceeding.  For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span>
      <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-     <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/extensions/AMSmath.js&quot;</span><span class="p">),</span>
+     <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/extensions/AMSmath.js"</span><span class="p">),</span>
      <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
 <span class="p">);</span>
 </pre></div>
@@ -163,16 +160,16 @@ executed before the call to <tt class="docutils literal"><span class="pre">f(1)<
 file load is guaranteed not to begin until after <tt class="docutils literal"><span class="pre">f(1)</span></tt> is executed.</p>
 <p>As a further example, consider</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span>
-  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/extensions/AMSmath.js&quot;</span><span class="p">),</span>
+  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/extensions/AMSmath.js"</span><span class="p">),</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;[MathJax]/config/local/AMSmathAdditions.js&quot;</span><span class="p">),</span>
+  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"[MathJax]/config/local/AMSmathAdditions.js"</span><span class="p">),</span>
   <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="p">);</span>
 </pre></div>
 </div>
-<p>in comparison to the example above that uses <tt class="docutils literal"><span class="pre">[&quot;Require&quot;,</span>
-<span class="pre">MathJax.Ajax,</span> <span class="pre">&quot;[MathJax]/extensions/AMSmath.js&quot;]</span></tt> and <tt class="docutils literal"><span class="pre">[&quot;Require&quot;,</span>
-<span class="pre">MathJax.Ajax,</span> <span class="pre">&quot;[MathJax]/config/local/AMSmathAdditions.js&quot;]</span></tt> instead.  In that
+<p>in comparison to the example above that uses <tt class="docutils literal"><span class="pre">["Require",</span>
+<span class="pre">MathJax.Ajax,</span> <span class="pre">"[MathJax]/extensions/AMSmath.js"]</span></tt> and <tt class="docutils literal"><span class="pre">["Require",</span>
+<span class="pre">MathJax.Ajax,</span> <span class="pre">"[MathJax]/config/local/AMSmathAdditions.js"]</span></tt> instead.  In that
 example, <tt class="docutils literal"><span class="pre">AMSmath.js</span></tt> is loaded, then <tt class="docutils literal"><span class="pre">f(1)</span></tt> is called, then the
 local additions are loaded, then <tt class="docutils literal"><span class="pre">f(2)</span></tt> is called.</p>
 <p>Here, however, both file loads are started before the queue is
@@ -187,16 +184,16 @@ after both files are loaded.</p>
 files simultaneously, and wait until all of them are loaded (in
 whatever order) to perform some command.  For instance,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Callback</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span>
-    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;file1.js&quot;</span><span class="p">),</span>
-    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;file2.js&quot;</span><span class="p">),</span>
-    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;file3.js&quot;</span><span class="p">),</span>
-    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">&quot;file4.js&quot;</span><span class="p">),</span>
-    <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="s2">&quot;all done&quot;</span><span class="p">]</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"file1.js"</span><span class="p">),</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"file2.js"</span><span class="p">),</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"file3.js"</span><span class="p">),</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Ajax</span><span class="p">.</span><span class="nx">Require</span><span class="p">(</span><span class="s2">"file4.js"</span><span class="p">),</span>
+    <span class="p">[</span><span class="nx">f</span><span class="p">,</span> <span class="s2">"all done"</span><span class="p">]</span>
 <span class="p">);</span>
 </pre></div>
 </div>
 <p>starts four files loading all at once, and waits for all four to
-complete before calling <tt class="docutils literal"><span class="pre">f(&quot;all</span> <span class="pre">done&quot;)</span></tt>. The order in which they
+complete before calling <tt class="docutils literal"><span class="pre">f("all</span> <span class="pre">done")</span></tt>. The order in which they
 complete is immaterial, and they all are being requested
 simultaneously.</p>
 </div>
@@ -227,12 +224,12 @@ have code that relies on the mathematics being visible on screen, you
 will need to break that out into a separate operation that is
 synchronized with the typesetting via the MathJax queue.</p>
 <p>Furthermore, your own typesetting calls may need to wait for file loading
-to occur that is already underway, so even if you don&#8217;t need to access
+to occur that is already underway, so even if you don’t need to access
 the mathematics after it is typeset, you may still need to queue the
 typeset command in order to make sure it is properly synchronized with
 <em>previous</em> typeset calls.  For instance, if an earlier call
 started loading an extension and you start another typeset call before
-that extension is fully loaded, MathJax&#8217;s internal state may be in
+that extension is fully loaded, MathJax’s internal state may be in
 flux, and it may not be prepared to handle another typeset operation
 yet.  This is even more important if you are using other libraries
 that may call MathJax, in which case your code may not be aware of the
@@ -245,19 +242,19 @@ asynchronously; you should use the MathJax queue to perform it and
 any actions that rely on its results.</p>
 <p>To place an action in the MathJax queue, use the
 <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Queue()</span></tt> command.  For example</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">([</span><span class="s2">&quot;Typeset&quot;</span><span class="p">,</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">,</span><span class="s2">&quot;MathDiv&quot;</span><span class="p">]);</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">([</span><span class="s2">"Typeset"</span><span class="p">,</span><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">,</span><span class="s2">"MathDiv"</span><span class="p">]);</span>
 </pre></div>
 </div>
-<p>would queue the command <tt class="docutils literal"><span class="pre">MathJax.Hub.Typeset(&quot;MathDiv&quot;)</span></tt>, causing
+<p>would queue the command <tt class="docutils literal"><span class="pre">MathJax.Hub.Typeset("MathDiv")</span></tt>, causing
 the contents of the DOM element with <cite>id</cite> equal to <tt class="docutils literal"><span class="pre">MathDiv</span></tt> to be
 typeset.</p>
 <p>One of the uses of the MathJax queue is to allow you to synchronize an
 action with the startup process for MathJax.  If you want to have a
 function performed after MathJax has become completely set up (and
 performed its initial typesetting of the page), you can push it onto
-the <tt class="docutils literal"><span class="pre">MathJax.Hub.queue</span></tt> so that it won&#8217;t be performed until MathJax
+the <tt class="docutils literal"><span class="pre">MathJax.Hub.queue</span></tt> so that it won’t be performed until MathJax
 finishes everything it has queued when it was loaded.  For example,</p>
-<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;/MathJax/MathJax.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/MathJax/MathJax.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
   <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="c1">// ... your startup commands here ...</span>
@@ -285,18 +282,16 @@ finishes everything it has queued when it was loaded.  For example,</p>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="callbacks.html"
-                        title="previous chapter">Using Callbacks</a></p>
+  <p class="topless"><a href="callbacks.html" title="previous chapter">Using Callbacks</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="signals.html"
-                        title="next chapter">Using Signals</a></p>
+  <p class="topless"><a href="signals.html" title="next chapter">Using Signals</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -311,22 +306,19 @@ finishes everything it has queued when it was loaded.  For example,</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="signals.html" title="Using Signals"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="callbacks.html" title="Using Callbacks"
-             >previous</a> |</li>
-        <li><a href="index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="synchronize.html" >Synchronizing your code with MathJax</a> &raquo;</li> 
+          <a href="genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="signals.html" title="Using Signals">next</a> |</li>
+        <li class="right">
+          <a href="callbacks.html" title="Using Callbacks">previous</a> |</li>
+        <li><a href="index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="synchronize.html">Synchronizing your code with MathJax</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

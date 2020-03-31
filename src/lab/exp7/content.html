@@ -1,31 +1,30 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head> <title>Artificial Neural Networks </title> </head>
-<body>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--> <title>Artificial Neural Networks </title> </head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
       <!-- <img src="../images/logo.jpg" /> -->
 
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -47,7 +46,7 @@ edit -->
     menu, number of sections, an optional sidebar and a closing 
     footer-->
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
         Competitive learning neural networks 
@@ -57,7 +56,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -74,33 +73,30 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/objective.jpg" />
+	    <img src="../images/objective.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Objective
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-          <div id="experiment-article-section-1-content" 
-          class="content">	
+          <div class="content" id="experiment-article-section-1-content">	
             <p>
-<P>The objective of this experiment is to understand the capture of the features in the space of input patterns with the help of Competitive learning neural networks (CLNN). </P>
-<OL>
-	<OL>
-		<OL>
+</p><p>The objective of this experiment is to understand the capture of the features in the space of input patterns with the help of Competitive learning neural networks (CLNN). </p>
+<ol>
+	<ol>
+		<ol>
 
-		</OL>
-	</OL>
-</OL>
-<P><BR><BR>
+		</ol>
+	</ol>
+</ol>
+<p><br/><br/>
             </p>
 
 
@@ -113,28 +109,25 @@ edit -->
 
 
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-      </section>
+      
 
       <section id="experiment-article-section-2">
    
-        <div id="experiment-article-section-2-icon" 
-        class="icon">
+        <div class="icon" id="experiment-article-section-2-icon">
 	  <!-- Enclose the icon image of your lab.-->
-	<img src="../images/theory.jpg" />
+	<img src="../images/theory.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-2-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-2-heading">
          Tutorial 
         </div>
 
-        <div id="experiment-article-section-2-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-2-content">
 
         
 
 <h3>CLFFNN - An Introduction</h3>
-<P>
+<p>
 In this experiment we consider pattern recognition tasks that a network
 of the type shown in Fig. 1  below can perform. The network consists
 of an input layer of linear units. The output of each of these units is
@@ -157,16 +150,16 @@ the resulting network performs pattern clustering or grouping, provided the
 feedback connections in the output layer are all inhibitory. 
 The unit with largest output for a given input is called winner, and 
 the learning law is called winner-take-all learning.
-</P>
-<P>
+</p>
+<p>
 		<!--Figure HERE -->
 		
-<table width = "750"><tr><td height = "450">
+</p><table width="750"><tbody><tr><td height="450">
         <img src="images/CLNN.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 1: </b><em>Basic competitive learning network.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 1: </b><em>Basic competitive learning network.</em></caption>
         </table>
 
-</P>
+<p></p>
 
         <h3>Analysis of feature mapping network</h3>
 <p>
@@ -197,74 +190,74 @@ the input pattern space as in the case of a textured image. At any
 given time only a few of the input units may be turned on, and hence
 only the corresponding links are activated. 
 </p>
-<P>
+<p>
 		<!--Figure HERE -->
-	    <table width = "800"><tr><td height = "500">
+	    </p><table width="800"><tbody><tr><td height="500">
 	<img src="images/FeatureMapping.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 2: </b><em>Illustration of SOM networks.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 2: </b><em>Illustration of SOM networks.</em></caption>
 	</table>
-</P>
-<P>
+<p></p>
+<p>
 The self-organization network is trained as follows: The weights
 are set to random initial values. When an input vector \(x\) is applied,
 the winning unit \(k\) in the output layer is identified such that
-<OL><OL><OL>
-<P> 
+</p><ol><ol><ol>
+<p> 
 ||<b>x</b> - <b>w</b>\(_k\) || \(\le\) ||<b>x</b> - <b>w</b>\(_i\) ||  \(\forall\) \(i \qquad(1)\) 
-</P>
+</p>
 <p> 
 where <b>w</b>\(_i\) is the weight vector leading to the unit \(i\) in the output layer.
 </p>
-</OL></OL></OL>
-<P>
+</ol></ol></ol>
+<p>
 The weights associated with the winning unit k and its neighbouring
 units m, identified by a neighbourhood function \( \lambda(k, m) \), are updated
 using the expression
-</P>
-<OL><OL><OL>
-<P> 
+</p>
+<ol><ol><ol>
+<p> 
 \( \Delta{w_m} = \eta{*}\lambda{(k,m)(x-w_m)} \qquad(2)\) 
-</P>
-</OL></OL></OL>
-<P>
+</p>
+</ol></ol></ol>
+<p>
 The neighbourhood function \( \lambda(k, m)~\)  is maximum for \(m = k.~\) A suitable
 choice for \( \lambda(k, m)~\) is a Gaussian function of the type
-</P>
-<OL><OL><OL>
-<P> 
+</p>
+<ol><ol><ol>
+<p> 
 \( \lambda(k,m) = ({1/}\sqrt{2\pi}\sigma) * exp(-||\)<b>r</b>\(_k\)-<b>r</b>\(_m||)^2/2\sigma^2 \qquad(3)\) 
-</P>
-</OL></OL></OL>
-<P>
+</p>
+</ol></ol></ol>
+<p>
 where <b>r</b>\(_k \) refers to the position of the \(k^{th}\) unit in the 2-D plane of the
 output units. The width of the Gaussian function, described by \( \sigma\), is
 gradually decreased to reduce the neighbourhood region in successive
 iterations of the training process. Even the learning rate parameter
 \(\eta\) can be changed as a function of time during the training phase. The
 weights are renormalized each time after the update.
-</P>
-<P>
-<h3>Following is an algorithm for implementing the self-organizing feature map learning.</h3>
-<OL><OL><OL>
+</p>
+<p>
+</p><h3>Following is an algorithm for implementing the self-organizing feature map learning.</h3>
+<ol><ol><ol>
 
-<LI><P>Initialize the weights from \(M\) inputs to the \(N\) output units to small
-random values. Initialize the size of the neighbourhood region \( R(0)\). </P>
-<LI><P>Present a new input <b><i>a</i></b>.</P>
-<LI><P>Compute the distance \(d_i\) between the input and the weight on each output
+<li><p>Initialize the weights from \(M\) inputs to the \(N\) output units to small
+random values. Initialize the size of the neighbourhood region \( R(0)\). </p>
+</li><li><p>Present a new input <b><i>a</i></b>.</p>
+</li><li><p>Compute the distance \(d_i\) between the input and the weight on each output
 unit \(i\) as 
 \(    d_i = \sum\limits_{j=1}^M [a_j(t)-w_{ij}(t)]^2 ,\) \(for\) \(i = 1,2.. N,~\)    
 where \(a_i(t)\) is the input to the \(j^{th}\) input unit at time \(t\) and \(w_{ij}\) 
 is the weight on the \(j^{th}\) input unit to the \(i^{th}\) output unit.
-<LI><P>
+</p></li><li><p>
 Select the output unit \(k\) with minimum distance
 \( k =\) index of \([\min(d_i)]\) over \(i\)
-</P>
-<LI><P>Update weight to node \(k\) and its neighbours \(w_{ij}(t+1) = w_{ij}(t) + \eta(t)(a_j(t)- w_{ij}(t))\) 
+</p>
+</li><li><p>Update weight to node \(k\) and its neighbours \(w_{ij}(t+1) = w_{ij}(t) + \eta(t)(a_j(t)- w_{ij}(t))\) 
 for \( i\) \( \epsilon\) \(R_k(t)\) \(and\) \(j=1,2...M, ~ \) where \(\eta(t)\) is the learning rate parameter 
-\( (0 \lt \eta(t) \lt 1) \) that decreases with time.</P>
-<LI><P>Repeat steps 2 to 5 for all inputs several times</P>
-</OL></OL></OL>
-</P>
+\( (0 \lt \eta(t) \lt 1) \) that decreases with time.</p>
+</li><li><p>Repeat steps 2 to 5 for all inputs several times</p>
+</li></ol></ol></ol>
+<p></p>
 
           </div>
         </section>
@@ -273,18 +266,15 @@ for \( i\) \( \epsilon\) \(R_k(t)\) \(and\) \(j=1,2...M, ~ \) where \(\eta(t)\) 
 
       <section id="experiment-article-section-3">
 
-        <div id="experiment-article-section-3-icon" 
-        class="icon">
-	<img src="../images/simulation.jpg" />
+        <div class="icon" id="experiment-article-section-3-icon">
+	<img src="../images/simulation.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-3-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-3-heading">
         Illustration 
         </div>
 
-        <div id="experiment-article-section-3-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-3-content">
 
 <h3>CLNN for feature mapping</h3>
 
@@ -295,43 +285,43 @@ Here we first use the experiment to generate a set of random data points followi
 pattern. For this we have the option to choose between the number of points and the type of pattern that 
 can be generated. 
           </p>
-<P>
+<p>
 <!--Figure HERE -->
-<table width = "700"><tr><td height = "200">
+</p><table width="700"><tbody><tr><td height="200">
             <img src="images/clnn_illustration_1.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 1: </b><em>Illustration of the initial user inputs.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 1: </b><em>Illustration of the initial user inputs.</em></caption>
                 </table>		
-</P>
-<P>
+<p></p>
+<p>
 We can choose the iteration step size, which later generates a number of nodes (typically more than
 twice the number of data points choosen). These nodes generated would be randomly distributed across 
 the available space. 
-</P>
-<P>
+</p>
+<p>
 <!--Figure HERE -->
-<table width = "800"><tr><td height = "600">
+</p><table width="800"><tbody><tr><td height="600">
             <img src="images/CL3.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 2: </b><em>Illustration of the initial state of SOM.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 2: </b><em>Illustration of the initial state of SOM.</em></caption>
                 </table>		
-</P>
-<P>
+<p></p>
+<p>
 After going through a number of iterations, we finally notice that the nodes in the network settle in 
 such a way that the network tries to capture the distribution of the pattern generated from the data points. 
-</P>
-<P>
+</p>
+<p>
 <!--Figure HERE -->
-<table width = "800"><tr><td height = "600">
+</p><table width="800"><tbody><tr><td height="600">
             <img src="images/CL4.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 3: </b><em>Illustration of the state of SOM after 20 iterations.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 3: </b><em>Illustration of the state of SOM after 20 iterations.</em></caption>
                 </table>
-</P>
-<P>
+<p></p>
+<p>
 <!--Figure HERE -->
-<table width = "800"><tr><td height = "500">
+</p><table width="800"><tbody><tr><td height="500">
             <img src="images/CL5.png" style="height:90%;width:90%"/></td></tr>
-	<caption align="bottom"><b>Figure 4: </b><em>Illustration of the state of SOM after 100 iterations.</em></caption>
+	</tbody><caption align="bottom"><b>Figure 4: </b><em>Illustration of the state of SOM after 100 iterations.</em></caption>
                 </table>		
-</P>
+<p></p>
         </div>
 
         </section>
@@ -341,30 +331,27 @@ such a way that the network tries to capture the distribution of the pattern gen
 
       <section id="experiment-article-section-4">
 
-        <div id="experiment-article-section-4-icon" 
-        class="icon">
-	<img src="../images/procedure.jpg" />
+        <div class="icon" id="experiment-article-section-4-icon">
+	<img src="../images/procedure.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-4-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-4-heading">
          Procedure 
         </div>
 
-        <div id="experiment-article-section-4-content" 
-        class="content">
+        <div class="content" id="experiment-article-section-4-content">
           <p>
-<UL>
-	<LI><P>Choose from the available 'Type of mapping' dropdown menu, the option of 2D-2D mapping.</P>
-	<LI><P>Choose from the 'Region', 'No. of data points', 'No. of iterations' dropdown menus, the type of pattern for the data, the number of data points and 
-	required number of iterations respectively. </P>
+</p><ul>
+	<li><p>Choose from the available 'Type of mapping' dropdown menu, the option of 2D-2D mapping.</p>
+	</li><li><p>Choose from the 'Region', 'No. of data points', 'No. of iterations' dropdown menus, the type of pattern for the data, the number of data points and 
+	required number of iterations respectively. </p>
         <!--the pattern required to be observed by the data set being generated, 'No. of data points' and 'No. of iterations' dropdown menus, 
 	respective options to generate appropriate required data.</P>	-->
-	<LI><P>Click on the 'Generate data' button to generate the specific data points and the nodes of the network.</P>
-	<LI><P>Vary the iteration step size between '1' and 'No. of iterations' chosen, and then click the 'Next iteration' button to see the output of the experiment after different iterations.</P>
-</UL>
+	</li><li><p>Click on the 'Generate data' button to generate the specific data points and the nodes of the network.</p>
+	</li><li><p>Vary the iteration step size between '1' and 'No. of iterations' chosen, and then click the 'Next iteration' button to see the output of the experiment after different iterations.</p>
+</li></ul>
 	        
-          </p>
+          <p></p>
         </div>
 
         </section>
@@ -374,19 +361,16 @@ such a way that the network tries to capture the distribution of the pattern gen
 
       <section id="experiment-article-section-5">
 
-        <div id="experiment-article-section-5-icon" 
-        class="icon">
-	<img src="../images/simulation.jpg" />
+        <div class="icon" id="experiment-article-section-5-icon">
+	<img src="../images/simulation.jpg"/>
 	</div>
 
-        <div id="experiment-article-section-5-heading" 
-        class="heading">
+        <div class="heading" id="experiment-article-section-5-heading">
         Experiment 
         </div>
 
-        <div id="experiment-article-section-5-content" 
-        class="content">
-        <p>        <IFRAME src="clnn.php" width="1200" height="1200" >     </IFRAME> </p>
+        <div class="content" id="experiment-article-section-5-content">
+        <p>        <iframe height="1200" src="clnn.php" width="1200">     </iframe> </p>
 
         </div>
 
@@ -396,34 +380,31 @@ such a way that the network tries to capture the distribution of the pattern gen
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-6">
       
-          <div id="experiment-article-section-6-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-6-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-6-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-6-heading">
            Observations 
           </div>
 
-          <div id="experiment-article-section-6-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-6-content">
             During the course of performance of the experiments, we understand the following: 
             <p>
-	<OL>
-		<OL>
-			<UL>
+	</p><ol>
+		<ol>
+			<ul>
 			<!--	<LI><P>The 2D-1D pattern mapping can be achieved better when we have more number of nodes to capture it.</P> -->
-				<LI><P>The number of iterations help in capturing the pattern in an efficient way. But the network weights generally saturate after some iterations.</P>
-				<LI><P>There is no significant change in the weight values of the nodes of CLNN after some iterations.</P>			
-				<LI><P>There cannot be an accurate capture of pattern, but a better approximation can be reached with more nodes in the network.</P>
-			</UL>
-		</OL>
-	</OL>
+				<li><p>The number of iterations help in capturing the pattern in an efficient way. But the network weights generally saturate after some iterations.</p>
+				</li><li><p>There is no significant change in the weight values of the nodes of CLNN after some iterations.</p>			
+				</li><li><p>There cannot be an accurate capture of pattern, but a better approximation can be reached with more nodes in the network.</p>
+			</li></ul>
+		</ol>
+	</ol>
             
   
-            </p>
+            <p></p>
 
           </div>
 
@@ -433,32 +414,29 @@ such a way that the network tries to capture the distribution of the pattern gen
  <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
         <section id="experiment-article-section-7">
       
-          <div id="experiment-article-section-7-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-7-icon">
 	    <!-- Enclose the icon image of your lab.-->
-	<img src="../images/manual.jpg" />
+	<img src="../images/manual.jpg"/>
 	  </div>
 
-          <div id="experiment-article-section-7-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-7-heading">
            Assignment 
           </div>
 
-          <div id="experiment-article-section-7-content" 
-          class="content">
+          <div class="content" id="experiment-article-section-7-content">
 
 <p>
-<OL>
-	<OL>
-		<OL>
-			<LI><P>What are the components of a competitive learning network? </P>
-			<LI><P>Explain the difference between pattern clustering and feature mapping. </P>
-			<LI><P>What is a self-organizing network?</P>
-			<LI><P>What are the salient features of the Kohonen's self-organizing learning algorithm?</P>
-		</OL>
-	</OL>
-</OL>
- </p>
+</p><ol>
+	<ol>
+		<ol>
+			<li><p>What are the components of a competitive learning network? </p>
+			</li><li><p>Explain the difference between pattern clustering and feature mapping. </p>
+			</li><li><p>What is a self-organizing network?</p>
+			</li><li><p>What are the salient features of the Kohonen's self-organizing learning algorithm?</p>
+		</li></ol>
+	</ol>
+</ol>
+ <p></p>
         
           </div>
 
@@ -468,30 +446,27 @@ such a way that the network tries to capture the distribution of the pattern gen
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
 <section id="experiment-article-section-8">
-	<div id="experiment-article-section-8-icon" 
-	class="icon">
+	<div class="icon" id="experiment-article-section-8-icon">
 
 	<!-- Enclose the icon image of your lab.-->
-	<img src="../images/readings.jpg" />
+	<img src="../images/readings.jpg"/>
 	</div>
-	<div id="experiment-article-section-8-heading" 
-	class="heading">
+	<div class="heading" id="experiment-article-section-8-heading">
 	References
 	</div>
-	<div id="experiment-article-section-8-content"                                                          
-	class="content">
+	<div class="content" id="experiment-article-section-8-content">
 <p>
-	<OL>
-		<OL>
-			<UL>
-			<LI><P>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, p. 201, 1999.</P>
-			<LI><P>T. Kohonen, "Self-organized formation of topologically correct feature maps", <i>Biol. Cybernet.</i>, vol. 43, pp. 59-69, 1982b.</P>
-			<LI><P>T. Kohonen, <i>Self-organization and Associative Memory</i>, 3rd ed., Berlin: Springer-Verlag, 1989.</P>
-			<LI><P>T. Kohonen, "Analysis of simple self-organizing process",<i> Biol. Cybernet.</i>, vol. 44, pp. 135-140, 1982a.</P>
-			</UL>
-		</OL>
-	</OL>
-</p>
+	</p><ol>
+		<ol>
+			<ul>
+			<li><p>B. Yegnanarayana, <i>Artificial Neural Networks</i>, New Delhi, India : Prentice-Hall of India, p. 201, 1999.</p>
+			</li><li><p>T. Kohonen, "Self-organized formation of topologically correct feature maps", <i>Biol. Cybernet.</i>, vol. 43, pp. 59-69, 1982b.</p>
+			</li><li><p>T. Kohonen, <i>Self-organization and Associative Memory</i>, 3rd ed., Berlin: Springer-Verlag, 1989.</p>
+			</li><li><p>T. Kohonen, "Analysis of simple self-organizing process",<i> Biol. Cybernet.</i>, vol. 44, pp. 135-140, 1982a.</p>
+			</li></ul>
+		</ol>
+	</ol>
+<p></p>
 
 </div>
 
@@ -504,7 +479,7 @@ such a way that the network tries to capture the distribution of the pattern gen
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
-    <aside id="lab-article-sidebar" class="default">
+    <aside class="default" id="lab-article-sidebar">
       <!-- put the content that you want to appear in the 
       sidebar -->	
     </aside>
@@ -512,29 +487,67 @@ such a way that the network tries to capture the distribution of the pattern gen
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
-      <!-- Put the content that you want to appear here -->
-    </footer>
+    <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
   </article>
 
 
   <!-- Links to other labs, about us page can be kept the lab 
   footer-->
-  <footer id="lab-footer" class="default">
+  <footer class="default" id="lab-footer">
     <!-- Put the content here-->
   </footer>
 
-  <footer id="lab-header" class="heading">
+  <footer class="heading" id="lab-header">
   <!-- Put the content here-->
-  <div id="lab-header-heading" class="heading">
+  <div class="heading" id="lab-header-heading">
   <!-- Write the name of your lab and link it to the home page
   of your lab. -->
 
   <center>
-  <table><tr>
-  <td><a href="http://speech.iiit.ac.in/" target=_blank><font size=-3>Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
-  </tr></table>
+  <table><tbody><tr>
+  <td><a href="http://speech.iiit.ac.in/" target="_blank"><font size="-3">Developed at the Speech and Vision Lab, IIIT Hyderabad</font></a></td>
+  </tr></tbody></table>
   </center>
   </div>
 
@@ -542,5 +555,6 @@ such a way that the network tries to capture the distribution of the pattern gen
 
 </div>		
 
-</body>
-</html>
+
+
+</body></html>

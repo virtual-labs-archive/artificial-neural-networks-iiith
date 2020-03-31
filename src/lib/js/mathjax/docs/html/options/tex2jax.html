@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The tex2jax Preprocessor &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The tex2jax Preprocessor — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="Configuration Objects" href="index.html" />
-    <link rel="next" title="The mml2jax Preprocessor" href="mml2jax.html" />
-    <link rel="prev" title="The Core Configuration Options" href="hub.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="Configuration Objects"/>
+    <link href="mml2jax.html" rel="next" title="The mml2jax Preprocessor"/>
+    <link href="hub.html" rel="prev" title="The Core Configuration Options"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="mml2jax.html" title="The mml2jax Preprocessor"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="hub.html" title="The Core Configuration Options"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Configuration Objects</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="mml2jax.html" title="The mml2jax Preprocessor">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="hub.html" title="The Core Configuration Options">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>  
 
@@ -54,13 +51,13 @@
   <div class="section" id="the-tex2jax-preprocessor">
 <span id="configure-tex2jax"></span><h1>The tex2jax Preprocessor<a class="headerlink" href="#the-tex2jax-preprocessor" title="Permalink to this headline">¶</a></h1>
 <p>The options below control the operation of the <cite>tex2jax</cite> preprocessor
-that is run when you include <tt class="docutils literal"><span class="pre">&quot;tex2jax.js&quot;</span></tt> in the <cite>extensions</cite> array
+that is run when you include <tt class="docutils literal"><span class="pre">"tex2jax.js"</span></tt> in the <cite>extensions</cite> array
 of your configuration.  They are listed with their default values.  To
 set any of these options, include a <tt class="docutils literal"><span class="pre">tex2jax</span></tt> section in your
 <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Config()</span></tt> call.  For example</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
   <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;\\(&#39;</span><span class="p">,</span><span class="s1">&#39;\\)&#39;</span><span class="p">]</span> <span class="p">]</span>
+    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'\\('</span><span class="p">,</span><span class="s1">'\\)'</span><span class="p">]</span> <span class="p">]</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </pre></div>
@@ -74,7 +71,7 @@ preprocessor.</p>
 delimiters.  The first in each pair is the initial delimiter and
 the second is the terminal delimiter.  You can have as many pairs
 as you want.  For example,</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">&#39;$&#39;</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;\\(&#39;</span><span class="p">,</span><span class="s1">&#39;\\)&#39;</span><span class="p">]</span> <span class="p">]</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s1">'$'</span><span class="p">,</span><span class="s1">'$'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'\\('</span><span class="p">,</span><span class="s1">'\\)'</span><span class="p">]</span> <span class="p">]</span>
 </pre></div>
 </div>
 <p>would cause <cite>tex2jax</cite> to look for <tt class="docutils literal"><span class="pre">$...$</span></tt> and <tt class="docutils literal"><span class="pre">\(...\)</span></tt> as
@@ -82,7 +79,7 @@ delimiters for inline mathematics.  (Note that the single dollar
 signs are not enabled by default because they are used too
 frequently in normal text, so if you want to use them for math
 delimiters, you must specify them explicitly.)</p>
-<p>Note that the delimiters can&#8217;t look like HTML tags (i.e., can&#8217;t
+<p>Note that the delimiters can’t look like HTML tags (i.e., can’t
 include the less-than sign), as these would be turned into tags by
 the browser before MathJax has the chance to run.  You can only
 include text, not tags, as your math delimiters.</p>
@@ -95,7 +92,7 @@ include text, not tags, as your math delimiters.</p>
 displayed equations.  The first in each pair is the initial
 delimiter and the second is the terminal delimiter.  You can have
 as many pairs as you want.</p>
-<p>Note that the delimiters can&#8217;t look like HTML tags (i.e., can&#8217;t
+<p>Note that the delimiters can’t look like HTML tags (i.e., can’t
 include the less-than sign), as these would be turned into tags by
 the browser before MathJax has the chance to run.  You can only
 include text, not tags, as your math delimiters.</p>
@@ -125,21 +122,21 @@ not be processed outside of math mode.</p>
 
 <dl class="describe">
 <dt>
-<tt class="descname">preview: &quot;TeX&quot;</tt></dt>
+<tt class="descname">preview: "TeX"</tt></dt>
 <dd><p>This controls whether <cite>tex2jax</cite> inserts <tt class="docutils literal"><span class="pre">MathJax_Preview</span></tt> spans
 to make a preview available, and what preview to use, when it
 locates in-line or display mathematics in the page.  The default
-is <tt class="docutils literal"><span class="pre">&quot;TeX&quot;</span></tt>, which means use the TeX code as the preview (which
+is <tt class="docutils literal"><span class="pre">"TeX"</span></tt>, which means use the TeX code as the preview (which
 will be visible until it is processed by MathJax).  Set to
-<tt class="docutils literal"><span class="pre">&quot;none&quot;</span></tt> to prevent previews from being inserted (the math
+<tt class="docutils literal"><span class="pre">"none"</span></tt> to prevent previews from being inserted (the math
 will simply disappear until it is typeset).  Set to an array
 containing the description of an HTML snippet in order to use the
 same preview for all equations on the page.</p>
 <p>Examples:</p>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">preview</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;[math]&quot;</span><span class="p">],</span>     <span class="c1">//  insert the text &quot;[math]&quot; as the preview</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">preview</span><span class="o">:</span> <span class="p">[</span><span class="s2">"[math]"</span><span class="p">],</span>     <span class="c1">//  insert the text "[math]" as the preview</span>
 </pre></div>
 </div>
-<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">preview</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&quot;img&quot;</span><span class="p">,{</span><span class="nx">src</span><span class="o">:</span> <span class="s2">&quot;/images/mypic.jpg&quot;</span><span class="p">}]],</span>  <span class="c1">// insert an image as the preview</span>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">preview</span><span class="o">:</span> <span class="p">[[</span><span class="s2">"img"</span><span class="p">,{</span><span class="nx">src</span><span class="o">:</span> <span class="s2">"/images/mypic.jpg"</span><span class="p">}]],</span>  <span class="c1">// insert an image as the preview</span>
 </pre></div>
 </div>
 <p>See the <a class="reference internal" href="../HTML-snippets.html#html-snippets"><em>description of HTML snippets</em></a> for
@@ -148,7 +145,7 @@ details on how to represent HTML code in this way.</p>
 
 <dl class="describe">
 <dt>
-<tt class="descname">skipTags: [&quot;script&quot;,&quot;noscript&quot;,&quot;style&quot;,&quot;textarea&quot;,&quot;pre&quot;,&quot;code&quot;]</tt></dt>
+<tt class="descname">skipTags: ["script","noscript","style","textarea","pre","code"]</tt></dt>
 <dd><p>This array lists the names of the tags whose contents should not
 be processed by <cite>tex2jax</cite> (other than to look for ignore/process
 classes as listed below).  You can add to (or remove from) this
@@ -158,7 +155,7 @@ contexts.</p>
 
 <dl class="describe">
 <dt>
-<tt class="descname">ignoreClass: &quot;tex2jax_ignore&quot;</tt></dt>
+<tt class="descname">ignoreClass: "tex2jax_ignore"</tt></dt>
 <dd><p>This is the class name used to mark elements whose contents should
 not be processed by tex2jax (other than to look for the
 <tt class="docutils literal"><span class="pre">processClass</span></tt> pattern below).  Note that this is a regular
@@ -172,7 +169,7 @@ contents.</p>
 
 <dl class="describe">
 <dt>
-<tt class="descname">processClass: &quot;tex2jax_process&quot;</tt></dt>
+<tt class="descname">processClass: "tex2jax_process"</tt></dt>
 <dd><p>This is the class name used to mark elements whose contents
 <em>should</em> be processed by <cite>tex2jax</cite>.  This is used to turn on
 processing within tags that have been marked as ignored or skipped
@@ -193,18 +190,16 @@ been marked as ignored above.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="hub.html"
-                        title="previous chapter">The Core Configuration Options</a></p>
+  <p class="topless"><a href="hub.html" title="previous chapter">The Core Configuration Options</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="mml2jax.html"
-                        title="next chapter">The mml2jax Preprocessor</a></p>
+  <p class="topless"><a href="mml2jax.html" title="next chapter">The mml2jax Preprocessor</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -219,22 +214,19 @@ been marked as ignored above.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="mml2jax.html" title="The mml2jax Preprocessor"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="hub.html" title="The Core Configuration Options"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >Configuration Objects</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="mml2jax.html" title="The mml2jax Preprocessor">next</a> |</li>
+        <li class="right">
+          <a href="hub.html" title="The Core Configuration Options">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The TeX input processor &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The TeX input processor — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="Configuration Objects" href="index.html" />
-    <link rel="next" title="The MathML input processor" href="MathML.html" />
-    <link rel="prev" title="The jsMath2jax Preprocessor" href="jsMath2jax.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="Configuration Objects"/>
+    <link href="MathML.html" rel="next" title="The MathML input processor"/>
+    <link href="jsMath2jax.html" rel="prev" title="The jsMath2jax Preprocessor"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="MathML.html" title="The MathML input processor"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="jsMath2jax.html" title="The jsMath2jax Preprocessor"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Configuration Objects</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="MathML.html" title="The MathML input processor">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="jsMath2jax.html" title="The jsMath2jax Preprocessor">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>  
 
@@ -54,15 +51,15 @@
   <div class="section" id="the-tex-input-processor">
 <span id="configure-tex"></span><h1>The TeX input processor<a class="headerlink" href="#the-tex-input-processor" title="Permalink to this headline">¶</a></h1>
 <p>The options below control the operation of the TeX input processor
-that is run when you include <tt class="docutils literal"><span class="pre">&quot;input/TeX&quot;</span></tt> in the <cite>jax</cite> array of
+that is run when you include <tt class="docutils literal"><span class="pre">"input/TeX"</span></tt> in the <cite>jax</cite> array of
 your configuration.  They are listed with their default values.  To
 set any of these options, include a <tt class="docutils literal"><span class="pre">TeX</span></tt> section in your
 <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Config()</span></tt> call.  For example</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
   <span class="nx">TeX</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">Macros</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">RR</span><span class="o">:</span> <span class="s1">&#39;{\\bf R}&#39;</span><span class="p">,</span>
-      <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;{\\bf #1}&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+      <span class="nx">RR</span><span class="o">:</span> <span class="s1">'{\\bf R}'</span><span class="p">,</span>
+      <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">'{\\bf #1}'</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">});</span>
@@ -72,21 +69,21 @@ set any of these options, include a <tt class="docutils literal"><span class="pr
 to be defined within the TeX input processor.</p>
 <dl class="describe">
 <dt>
-<tt class="descname">TagSide: &quot;right&quot;</tt></dt>
+<tt class="descname">TagSide: "right"</tt></dt>
 <dd><p>This specifies the side on which <tt class="docutils literal"><span class="pre">\tag{}</span></tt> macros will place the
-tags.  Set it to <tt class="docutils literal"><span class="pre">&quot;left&quot;</span></tt> to place the tags on the left-hand side.</p>
+tags.  Set it to <tt class="docutils literal"><span class="pre">"left"</span></tt> to place the tags on the left-hand side.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
-<tt class="descname">TagIndent: &quot;.8em&quot;</tt></dt>
+<tt class="descname">TagIndent: ".8em"</tt></dt>
 <dd><p>This is the amount of indentation (from the right or left) for the
 tags produced by the <tt class="docutils literal"><span class="pre">\tag{}</span></tt> macro.</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
-<tt class="descname">MultLineWidth: &quot;85%&quot;</tt></dt>
+<tt class="descname">MultLineWidth: "85%"</tt></dt>
 <dd><p>The width to use for the <cite>multline</cite> environment that is part of
 the <tt class="docutils literal"><span class="pre">AMSmath</span></tt> extension.  This width gives room for tags at
 either side of the equation, but if you are displaying mathematics
@@ -107,13 +104,13 @@ backslashes in the replacement text must be doubled to prevent them
 from acting as javascript escape characters.</p>
 <p>For example,</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Macros</span><span class="o">:</span> <span class="p">{</span>
-  <span class="nx">RR</span><span class="o">:</span> <span class="s1">&#39;{\\bf R}&#39;</span><span class="p">,</span>
-  <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;{\\bf #1}&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+  <span class="nx">RR</span><span class="o">:</span> <span class="s1">'{\\bf R}'</span><span class="p">,</span>
+  <span class="nx">bold</span><span class="o">:</span> <span class="p">[</span><span class="s1">'{\\bf #1}'</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>would ask the TeX processor to define two new macros:  <tt class="docutils literal"><span class="pre">\RR</span></tt>,
-which produces a bold-face &#8220;R&#8221;, and <tt class="docutils literal"><span class="pre">\bold{...}</span></tt>, which takes one
+which produces a bold-face “R”, and <tt class="docutils literal"><span class="pre">\bold{...}</span></tt>, which takes one
 parameter and sets it in the bold-face font.</p>
 </dd></dl>
 
@@ -129,7 +126,7 @@ macro substitutions allowed in any expression processed by MathJax.</p>
 <dt>
 <tt class="descname">MAXBUFFER: 5*1024</tt></dt>
 <dd><p>Because a definition of the form <tt class="docutils literal"><span class="pre">\def\x{\x</span> <span class="pre">aaa}</span> <span class="pre">\x</span></tt> would loop
-infinitely, and at the same time stack up lots of a&#8217;s in MathJax&#8217;s
+infinitely, and at the same time stack up lots of a’s in MathJax’s
 equation buffer, the <cite>MAXBUFFER</cite> constant is used to limit the size of
 the string being processed by MathJax.  It is set to 5KB, which should
 be sufficient for any reasonable equation.</p>
@@ -144,18 +141,16 @@ be sufficient for any reasonable equation.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="jsMath2jax.html"
-                        title="previous chapter">The jsMath2jax Preprocessor</a></p>
+  <p class="topless"><a href="jsMath2jax.html" title="previous chapter">The jsMath2jax Preprocessor</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="MathML.html"
-                        title="next chapter">The MathML input processor</a></p>
+  <p class="topless"><a href="MathML.html" title="next chapter">The MathML input processor</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -170,22 +165,19 @@ be sufficient for any reasonable equation.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="MathML.html" title="The MathML input processor"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="jsMath2jax.html" title="The jsMath2jax Preprocessor"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >Configuration Objects</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="MathML.html" title="The MathML input processor">next</a> |</li>
+        <li class="right">
+          <a href="jsMath2jax.html" title="The jsMath2jax Preprocessor">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>

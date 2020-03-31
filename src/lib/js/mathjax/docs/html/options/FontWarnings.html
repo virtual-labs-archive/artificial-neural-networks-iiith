@@ -1,14 +1,14 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
     
-    <title>The FontWarnings extension &mdash; MathJax v1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/mj.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <title>The FontWarnings extension — MathJax v1.1 documentation</title>
+    <link href="../_static/mj.css" rel="stylesheet" type="text/css"/>
+    <link href="../_static/pygments.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -18,31 +18,28 @@
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src="../_static/jquery.js" type="text/javascript"></script>
+    <script src="../_static/underscore.js" type="text/javascript"></script>
+    <script src="../_static/doctools.js" type="text/javascript"></script>
     <!--<script type="text/javascript" src="../../../MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-    <link rel="top" title="MathJax v1.1 documentation" href="../index.html" />
-    <link rel="up" title="Configuration Objects" href="index.html" />
-    <link rel="next" title="Using MathJax in popular web platforms" href="../platforms/index.html" />
-    <link rel="prev" title="The MathZoom extension" href="MathZoom.html" /> 
+    <link href="../index.html" rel="top" title="MathJax v1.1 documentation"/>
+    <link href="index.html" rel="up" title="Configuration Objects"/>
+    <link href="../platforms/index.html" rel="next" title="Using MathJax in popular web platforms"/>
+    <link href="MathZoom.html" rel="prev" title="The MathZoom extension"/> 
   </head>
-  <body>
+  <body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
     
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../platforms/index.html" title="Using MathJax in popular web platforms"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="MathZoom.html" title="The MathZoom extension"
-             accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Configuration Objects</a> &raquo;</li> 
+          <a accesskey="I" href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a accesskey="N" href="../platforms/index.html" title="Using MathJax in popular web platforms">next</a> |</li>
+        <li class="right">
+          <a accesskey="P" href="MathZoom.html" title="The MathZoom extension">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a accesskey="U" href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>  
 
@@ -54,7 +51,7 @@
   <div class="section" id="the-fontwarnings-extension">
 <span id="configure-fontwarnings"></span><h1>The FontWarnings extension<a class="headerlink" href="#the-fontwarnings-extension" title="Permalink to this headline">¶</a></h1>
 <p>The options below control the operation of the <cite>FontWarnings</cite>
-extension that is run when you include <tt class="docutils literal"><span class="pre">&quot;FontWarnings.js&quot;</span></tt> in the
+extension that is run when you include <tt class="docutils literal"><span class="pre">"FontWarnings.js"</span></tt> in the
 <cite>extensions</cite> array of your configuration.  They are listed with their
 default values.  To set any of these options, include a
 <tt class="docutils literal"><span class="pre">FontWarnings</span></tt> section in your <tt class="xref py py-meth docutils literal"><span class="pre">MathJax.Hub.Config()</span></tt> call.
@@ -86,15 +83,15 @@ three messages that you can redefine to suit your needs:</p>
 <dt>
 <tt class="descname">webFont: [ ... ]</tt></dt>
 <dd><p>The message used for when MathJax uses web-based fonts (rather
-than local fonts installed on the user&#8217;s system).</p>
+than local fonts installed on the user’s system).</p>
 </dd></dl>
 
 <dl class="describe">
 <dt>
 <tt class="descname">imageFonts: [ ... ]</tt></dt>
 <dd><p>The message used for when MathJax must use image fonts rather
-than local or web-based fonts (for those browsers that don&#8217;t
-handle the <tt class="docutils literal"><span class="pre">&#64;font-face</span></tt> CSS directive).</p>
+than local or web-based fonts (for those browsers that don’t
+handle the <tt class="docutils literal"><span class="pre">@font-face</span></tt> CSS directive).</p>
 </dd></dl>
 
 <dl class="describe">
@@ -116,19 +113,19 @@ Note that in addition to the usual rules for defining such
 snippets, the FontWarnings snippets can include references to
 pre-defined snippets (that represent elements common to all three
 messages).  These are defined below in the <tt class="docutils literal"><span class="pre">HTML</span></tt> block, and are
-referenced using <tt class="docutils literal"><span class="pre">[&quot;name&quot;]</span></tt> within the snippet, where <cite>name</cite> is
+referenced using <tt class="docutils literal"><span class="pre">["name"]</span></tt> within the snippet, where <cite>name</cite> is
 the name of one of the snippets defined in the <tt class="docutils literal"><span class="pre">HTML</span></tt>
 configuration block.  For example</p>
 <div class="highlight-javascript"><div class="highlight"><pre><span class="nx">Message</span><span class="o">:</span> <span class="p">{</span>
   <span class="nx">noFonts</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s2">&quot;closeBox&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;MathJax is unable to locate a font to use to display &quot;</span><span class="p">,</span>
-    <span class="s2">&quot;its mathematics, and image fonts are not available, so it &quot;</span><span class="p">,</span>
-    <span class="s2">&quot;is falling back on generic unicode characters in hopes that &quot;</span><span class="p">,</span>
-    <span class="s2">&quot;your browser will be able to display them.  Some characters &quot;</span><span class="p">,</span>
-    <span class="s2">&quot;may not show up properly, or possibly not at all.&quot;</span><span class="p">,</span>
-    <span class="p">[</span><span class="s2">&quot;fonts&quot;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;webfonts&quot;</span><span class="p">]</span>
+    <span class="p">[</span><span class="s2">"closeBox"</span><span class="p">],</span>
+    <span class="s2">"MathJax is unable to locate a font to use to display "</span><span class="p">,</span>
+    <span class="s2">"its mathematics, and image fonts are not available, so it "</span><span class="p">,</span>
+    <span class="s2">"is falling back on generic unicode characters in hopes that "</span><span class="p">,</span>
+    <span class="s2">"your browser will be able to display them.  Some characters "</span><span class="p">,</span>
+    <span class="s2">"may not show up properly, or possibly not at all."</span><span class="p">,</span>
+    <span class="p">[</span><span class="s2">"fonts"</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">"webfonts"</span><span class="p">]</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
@@ -142,7 +139,7 @@ declared in the <tt class="docutils literal"><span class="pre">HTML</span></tt> 
 <tt class="descname">HTML: { ... }</tt></dt>
 <dd><p>This object defines HTML snippets that are common to more than one
 message in the <tt class="docutils literal"><span class="pre">Message</span></tt> section above.  They can be included in
-other HTML snippets by by using <tt class="docutils literal"><span class="pre">[&quot;name&quot;]</span></tt> in an HTML snippet,
+other HTML snippets by by using <tt class="docutils literal"><span class="pre">["name"]</span></tt> in an HTML snippet,
 where <cite>name</cite> refers to the name of the snippet in the <tt class="docutils literal"><span class="pre">HTML</span></tt>
 block.  The pre-defined snippets are:</p>
 <dl class="describe">
@@ -215,18 +212,16 @@ The default is 1.5 seconds.</p>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="MathZoom.html"
-                        title="previous chapter">The MathZoom extension</a></p>
+  <p class="topless"><a href="MathZoom.html" title="previous chapter">The MathZoom extension</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../platforms/index.html"
-                        title="next chapter">Using MathJax in popular web platforms</a></p>
+  <p class="topless"><a href="../platforms/index.html" title="next chapter">Using MathJax in popular web platforms</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" size="18" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+    <form action="../search.html" class="search" method="get">
+      <input name="q" size="18" type="text"/>
+      <input type="submit" value="Go"/>
+      <input name="check_keywords" type="hidden" value="yes"/>
+      <input name="area" type="hidden" value="default"/>
     </form>
     <p class="searchtip" style="font-size: 90%">
     Enter search terms or a module, class or function name.
@@ -241,22 +236,19 @@ The default is 1.5 seconds.</p>
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="../platforms/index.html" title="Using MathJax in popular web platforms"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="MathZoom.html" title="The MathZoom extension"
-             >previous</a> |</li>
-        <li><a href="../index.html">MathJax v1.1 documentation</a> &raquo;</li>
-          <li><a href="index.html" >Configuration Objects</a> &raquo;</li> 
+          <a href="../genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="../platforms/index.html" title="Using MathJax in popular web platforms">next</a> |</li>
+        <li class="right">
+          <a href="MathZoom.html" title="The MathZoom extension">previous</a> |</li>
+        <li><a href="../index.html">MathJax v1.1 documentation</a> »</li>
+          <li><a href="index.html">Configuration Objects</a> »</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2011 Design Science.
+        © Copyright 2011 Design Science.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
     
-  </body>
-</html>
+  
+</body></html>
